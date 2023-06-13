@@ -1,0 +1,18 @@
+@import '@/core/styles/media-queries';
+
+.container {
+    width: 75%;
+    margin: 16px auto 24px;
+
+    @include media(xlarge) {
+        width: 1100px;
+    }
+
+    @include media(medium) {
+        width: 85%;
+    }
+
+    @include media(small) {
+        width: 100%;
+    }
+}

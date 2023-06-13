@@ -1,0 +1,17 @@
+@import '@/core/styles/variables';
+
+.button {
+    background-color: $primary;
+    border: none;
+    padding: 12px 48px;
+    width: fit-content;
+    color: white;
+    font-size: $text-medium;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primary-hover;
+    }
+}

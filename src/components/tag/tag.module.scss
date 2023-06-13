@@ -1,0 +1,10 @@
+@import '@/core/styles/variables';
+
+.container {
+    text-transform: uppercase;
+    font-size: $text-xxsmall;
+    border-radius: $border-radius;
+    padding: 3px 8px;
+    width: fit-content;
+    font-weight: normal;
+}

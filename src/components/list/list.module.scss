@@ -1,0 +1,107 @@
+@import '@/core/styles/media-queries';
+@import '@/core/styles/variables';
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+
+    &_featured {
+        display: grid;
+        grid-template-areas:
+            'post0 post1'
+            'post0 post2';
+        grid-auto-columns: 65% auto auto;
+        gap: 24px;
+
+        @include media(small) {
+            grid-template-areas:
+                'post0 post0'
+                'post1 post2';
+            grid-auto-columns: auto auto;
+        }
+
+        @include media(xsmall) {
+            grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+            grid-template-areas: unset;
+        }
+    }
+
+    &_item {
+        &0 {
+            grid-area: post0;
+
+            @include media(xsmall) {
+                grid-area: unset;
+            }
+        }
+
+        &1 {
+            grid-area: post1;
+
+            @include media(xsmall) {
+                grid-area: unset;
+            }
+
+            &>a>div>img {
+                min-height: 150px;
+                max-height: 150px;
+                object-fit: cover;
+
+                @include media(xsmall) {
+                    max-height: 100%;
+                }
+            }
+        }
+
+        &2 {
+            grid-area: post2;
+
+            @include media(xsmall) {
+                grid-area: unset;
+            }
+
+            &>a>div>img {
+                min-height: 150px;
+                max-height: 150px;
+                object-fit: cover;
+
+                @include media(xsmall) {
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+        margin-top: 24px;
+        color: $text-regular;
+        font-weight: 700;
+        font-size: $text-large;
+        margin-bottom: 24px;
+    }
+
+    &__button {
+        text-decoration: none;
+        font-size: $text-small;
+        color: $text-regular;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        margin-left: auto;
+
+        &:hover {
+            color: $link;
+        }
+
+        &>span {
+            margin-left: 8px;
+        }
+    }
+}

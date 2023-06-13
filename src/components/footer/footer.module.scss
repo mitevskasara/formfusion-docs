@@ -1,0 +1,60 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.footer {
+    border-top: 1px solid $border;
+    margin-top: 64px;
+    font-size: $text-xsmall;
+    color: white;
+    background-color: $footer;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        text-align: right;
+        font-size: $text-small;
+
+        &__social {
+            display: flex;
+            gap: 16px;
+            font-size: 20px;
+
+            &>a {
+                text-decoration: none;
+                color: white;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        &>b {
+            margin-bottom: 16px;
+            color: $text-secondary;
+        }
+
+        &__privacy {
+            margin-top: 16px;
+
+            &>a {
+                text-decoration: none;
+                color: $text-regular;
+                font-size: $text-medium;
+            }
+        }
+
+        @include media(small) {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+            gap: 32px;
+        }
+    }
+}
