@@ -1,0 +1,47 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        margin: auto;
+
+        &_menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+
+            &>a {
+                font-size: $text-small;
+                font-weight: bold;
+                color: #1A1A2E;
+                text-decoration: none;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            @include media(xsmall) {
+                gap: 10px;
+            }
+        }
+    }
+
+    @include media(small) {
+        padding: 16px 24px;
+    }
+}

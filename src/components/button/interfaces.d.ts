@@ -1,0 +1,3 @@
+interface Button {
+    title: string;
+}
