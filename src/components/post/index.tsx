@@ -42,7 +42,7 @@ const Post = ({ data, featured = false }: Props) => {
                                 ? styles.container__content__description_featured
                                 : styles.container__content__description
                         }>
-                        {description.slice(0, 300)}
+                        {description.slice(0, 500)}
                     </h3>
                     <div className={styles.container__content__tags}>
                         {data.labels?.slice(0, 2).map((label) => (
