@@ -58,7 +58,7 @@
 
             &_featured {
                 @extend .container__content__description;
-                -webkit-line-clamp: 7;
+                -webkit-line-clamp: 5;
 
                 @include media(small) {
                     -webkit-line-clamp: 4;
