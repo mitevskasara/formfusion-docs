@@ -1,5 +1,5 @@
-import Post from '@/components/post';
-import Container from '@/components/container';
+import Post from '@/components/Post';
+import Container from '@/components/Container';
 import styles from './list.module.scss';
 
 const List = ({ items, title, seeMore = false, featured }: ListProps) => {
@@ -16,12 +16,7 @@ const List = ({ items, title, seeMore = false, featured }: ListProps) => {
                     </a>
                 )}
             </div>
-            <div
-                className={
-                    featured
-                        ? styles.list_featured
-                        : styles.list
-                }>
+            <div className={featured ? styles.list_featured : styles.list}>
                 {items?.map((item: any, index: number) => (
                     <div
                         key={index}
@@ -30,10 +25,7 @@ const List = ({ items, title, seeMore = false, featured }: ListProps) => {
                                 ? styles[`list_item${index}`]
                                 : styles.list_item
                         }>
-                        <Post
-                            data={item}
-                            featured={featured && index === 0}
-                        />
+                        <Post data={item} featured={featured && index === 0} />
                     </div>
                 ))}
             </div>

@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next';
-import Layout from '@/components/layout';
-import Details from '@/components/details';
-import List from '@/components/list';
+import PageLayout from '@/components/PageLayout';
+import PostDetails from '@/components/Details';
+import List from '@/components/List';
 import { API_KEY, API_URL, DOMAIN } from '@/constants/api';
 import { decode } from '@/utils/general';
 import styles from '@/components/layout/layout.module.scss';
@@ -10,27 +10,25 @@ type Props = {
     data?: Post & any;
     errors?: string;
     other: Post[];
+    theme: any;
 };
 
-const DetailsPage = ({ data, other }: Props) => {
+const Details = ({ data, other, theme }: Props) => {
     const image = data?.images ? data.images[0]?.url : '';
     let plainText = data?.content?.replace(/<[^>]+>/g, '');
     return (
-        <Layout
-            title={`${data ? data.title : ''} | OurLife`}
+        <PageLayout
+            theme={theme}
+            title={`${data ? data.title : ''} | Core Lab UI`}
             description={plainText?.slice(0, 320)}
             image={image}
             keywords={data.labels?.join(',')}
-            url={`${DOMAIN}/posts/${data.id}`}>
+            url={`${DOMAIN}/blog/${data.id}`}>
             <div className={styles.container}>
-                <Details data={data} />
-                <List
-                    items={other}
-                    title="Similar posts"
-                    seeMore
-                />{' '}
+                <PostDetails data={data} />
+                <List items={other} title="Similar posts" seeMore />{' '}
             </div>
-        </Layout>
+        </PageLayout>
     );
 };
 
@@ -52,4 +50,4 @@ export const getServerSideProps: GetServerSideProps = async ({
     return { props: { data: details, other: allPosts?.items } };
 };
 
-export default DetailsPage;
+export default Details;
