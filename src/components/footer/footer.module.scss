@@ -23,7 +23,7 @@
             gap: 16px;
             font-size: 20px;
 
-            &>a {
+            & > a {
                 text-decoration: none;
                 color: white;
                 cursor: pointer;
@@ -34,7 +34,7 @@
             }
         }
 
-        &>b {
+        & > b {
             margin-bottom: 16px;
             color: $text-secondary;
         }
@@ -42,7 +42,7 @@
         &__privacy {
             margin-top: 16px;
 
-            &>a {
+            & > a {
                 text-decoration: none;
                 color: $text-regular;
                 font-size: $text-medium;

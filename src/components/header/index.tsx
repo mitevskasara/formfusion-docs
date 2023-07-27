@@ -1,24 +1,14 @@
-import Link from 'next/link';
+import CUIHeader from '@corelabui/classic/Header';
 import Image from 'next/image';
 import styles from './header.module.scss';
+import headerItems from '@/constants/headerItems';
 
-const Header = () => {
+const Header = ({ theme }: { theme: string }) => {
     return (
-        <header className={styles.header}>
-            <a href="/">
-                <Image
-                    src="/assets/logo.webp"
-                    alt="logo.webp"
-                    width={60}
-                    height={29}
-                />
-            </a>
-            <nav className={styles.header__nav_menu}>
-                <Link href="/">Home</Link>
-                <Link href="/templates">Templates</Link>
-                <Link href="/posts">Archive</Link>
-            </nav>
-        </header>
+        <CUIHeader
+            logo={`/assets/logo/${theme}/logo.svg`}
+            items={headerItems}
+        />
     );
 };
 
