@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Container from '@/components/Container';
 import styles from './footer.module.scss';
 
@@ -8,7 +7,7 @@ const Footer = () => {
             <Container>
                 <div className={styles.footer__block}>
                     <span>
-                        Copyright © 2023 SyntaxStream. All rights reserved.
+                        Copyright © 2023 Core Lab UI. All rights reserved.
                     </span>
                     <div className={styles.footer__block__social}>
                         <a
