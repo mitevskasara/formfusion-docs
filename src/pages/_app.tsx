@@ -1,6 +1,6 @@
 import { Montserrat } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import ThemeProvider from '@corelabui/classic/ThemeProvider';
+import ThemeProvider from 'corelabui/ThemeProvider';
 import {
     defaultTheme,
     darkTheme,
@@ -8,18 +8,18 @@ import {
     springTheme,
     summerTheme,
     fallTheme
-} from '@corelabui/classic/Theme';
+} from 'corelabui/Theme';
 import '../../public/assets/fonts/style.css';
 import '../styles/globals.css';
 import '../styles/prism.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const font = Montserrat({ subsets: ['latin'] });
 
 const customTheme = {
     ...winterTheme,
     fontFamily: 'inherit',
-    body1: '0.9em'
+    body1: '1em'
 };
 
 const THEMES = {
@@ -33,7 +33,7 @@ const THEMES = {
 } as any;
 
 export default function MyApp({ Component, pageProps }: any) {
-    const [custom, setTheme] = useState<string>('custom');
+    const [custom, setTheme] = useState<string>('winter');
     return (
         <ThemeProvider
             theme={{

@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from 'react';
-import Button from '@corelabui/classic/Button';
+import Button from 'corelabui/Button';
 import Prism from 'prismjs';
 import { copy } from '@/utils/general';
 import styles from './code.module.scss';

@@ -1,0 +1,32 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.menu {
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 25px;
+    height: 2px;
+    background-color: $primary;
+    margin: 5px 0;
+    transition: 0.4s;
+
+    @include media(xsmall) {
+        margin: 5px 16px;
+    }
+}
+
+.menu_open .bar1 {
+    transform: translate(0, 7px) rotate(-45deg);
+}
+
+.menu_open .bar2 {
+    opacity: 0;
+}
+
+.menu_open .bar3 {
+    transform: translate(0, -7px) rotate(45deg);
+}

@@ -51,5 +51,5 @@
             "type": "string"
         }
     },
-    "code": "import Button from '@corelabui/classic/Button';\n\nfunction App() {\n\treturn (\n\t\t<Button\n\t\t\tonClick={() => console.log('Hello Corelab UI')} \n\t\t\tPROPS_PLACEHOLDER>\n\t\t\tClick me!\n\t\t</Button>\n\t);\n}"
+    "code": "import Button from 'corelabui/Button';\n\nfunction App() {\n\treturn (\n\t\t<Button\n\t\t\tonClick={() => console.log('Hello Corelab UI')} \n\t\t\tPROPS_PLACEHOLDER>\n\t\t\tClick me!\n\t\t</Button>\n\t);\n}"
 }

@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Typography from '@corelabui/classic/Typography';
-import Button from '@corelabui/classic/Button';
-import Highlight from '@corelabui/classic/Highlight';
-import Table from '@corelabui/classic/Table';
+import Typography from 'corelabui/Typography';
+import Button from 'corelabui/Button';
+import Highlight from 'corelabui/Highlight';
+import Table from 'corelabui/Table';
 import DocsLayout from '@/components/DocsLayout';
 import {
     defaultTheme,
@@ -12,7 +12,7 @@ import {
     springTheme,
     summerTheme,
     fallTheme
-} from '@corelabui/classic/Theme';
+} from 'corelabui/Theme';
 import Code from '@/components/Code';
 import { GET_STARTED } from '@/constants/tableOfContents';
 import {

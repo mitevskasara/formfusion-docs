@@ -1,0 +1,47 @@
+{
+    "key": "form",
+    "title": "Form",
+    "url": "https: //developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes",
+    "description": "The Form component serves as a small wrapper for an HTML form element that manages the context and passes it down to its children components. It accepts all native HTML form properties and includes the following as listed bellow",
+    "props": [
+        {
+            "name": "children",
+            "type": "Node",
+            "default": "",
+            "description": "Children of the Form element such as Input, Textarea, Labels, Buttons etc",
+            "required": true
+        },
+        {
+            "name": "onSubmit",
+            "type": "function",
+            "default": "",
+            "description": "The function that is called when the form is submitted. It returns the values object that contains all fields values",
+            "required": true
+        },
+        {
+            "name": "initialValues",
+            "type": "object",
+            "default": "",
+            "description": "Default values of the form fields",
+            "required": false
+        },
+        {
+            "name": "validateOnChange",
+            "type": "boolean",
+            "default": "false",
+            "description": "If the form should trigger validation and show errors while typing",
+            "required": false
+        },
+        {
+            "name": "validateOnBlur",
+            "type": "boolean",
+            "default": "true",
+            "description": "If the form should trigger validation and show errors when the field is out of focus",
+            "required": false
+        }
+    ],
+    "exampleUrl": "https://codesandbox.io/embed/rfm-basic-form-example-nvg3rr?fontsize=14&hidenavigation=1&theme=dark&view=editor",
+    "exampleTitle": "RFM Basic Form example",
+    "nextUrl": "/forms/api/input",
+    "nextUrlTitle": "Input"
+}

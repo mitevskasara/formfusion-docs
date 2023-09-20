@@ -1,4 +1,4 @@
-import CUIHeader from '@corelabui/classic/Header';
+import CUIHeader from 'corelabui/Header';
 import Image from 'next/image';
 import styles from './header.module.scss';
 import headerItems from '@/constants/headerItems';
