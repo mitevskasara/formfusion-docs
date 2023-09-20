@@ -18,9 +18,24 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: '/',
+                destination: '/forms',
+                permanent: false
+            },
+            {
+                source: '/blog',
+                destination: '/forms',
+                permanent: false
+            },
+            {
                 source: '/docs',
-                destination: '/docs/overview/introduction',
-                permanent: true
+                destination: '/forms',
+                permanent: false
+            },
+            {
+                source: '/privacy',
+                destination: '/forms',
+                permanent: false
             }
         ];
     }

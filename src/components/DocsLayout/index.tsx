@@ -1,9 +1,9 @@
 import React, { ReactNode, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Header from '@corelabui/classic/Header';
-import Navigation from '@corelabui/classic/Navigation';
-import Flex, { FlexItem } from '@corelabui/classic/Flex';
-import TableOfContents from '@corelabui/classic/TableOfContents';
+import Header from 'corelabui/Header';
+import Navigation from 'corelabui/Navigation';
+import Flex, { FlexItem } from 'corelabui/Flex';
+import TableOfContents from 'corelabui/TableOfContents';
 import headerItems from '@/constants/headerItems';
 import navigationItems from '@/constants/navigationItems';
 import PageLayout from '../Layout';

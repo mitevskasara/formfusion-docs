@@ -19,3 +19,16 @@ export const copy = (str: any) => {
 export const encode = (url: string) => url.replaceAll('.html', '');
 
 export const decode = (url: string) => url + '.html';
+
+export const capitalize = (string: string) =>
+    string.charAt(0).toUpperCase() + string.slice(1);
+
+export const camelCaseToLabel = (string: string) => {
+    const result = string.replace(/([A-Z])/g, ' $1').trim();
+    return result.charAt(0).toUpperCase() + result.slice(1);
+};
+
+export const typeToLabel = (string: string) => {
+    const result = string.replace(/-/g, ' ').trim();
+    return result.charAt(0).toUpperCase() + result.slice(1);
+};

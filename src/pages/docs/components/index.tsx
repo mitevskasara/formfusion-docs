@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import DocsLayout from '@/components/DocsLayout';
-import Typography from '@corelabui/classic/Typography';
-import Grid, { GridItem } from '@corelabui/classic/Grid';
-import Card from '@corelabui/classic/Card';
+import Typography from 'corelabui/Typography';
+import Grid, { GridItem } from 'corelabui/Grid';
+import Card from 'corelabui/Card';
 import navigationItems from '@/constants/navigationItems';
 import { COMPONENTS } from '@/constants/tableOfContents';
 import styles from './components.module.scss';

@@ -1,0 +1,212 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+$header-height: 3em;
+$sidebar-width: 10em;
+$side-padding: 2em;
+
+.container {
+    display: flex;
+    padding: 0 $side-padding;
+    margin-top: $header-height;
+
+    @include media(small) {
+        flex-direction: column;
+    }
+}
+
+.header {
+    height: $header-height;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    padding: 0.5em $side-padding;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    width: 50%;
+    margin: 3em auto;
+
+    @include media(medium) {
+        margin-left: calc($sidebar-width + 2em);
+        width: 80%;
+    }
+
+    @include media(small) {
+        margin: 1.5em 0;
+        width: 100%;
+    }
+
+    &__section {
+        &:not(:first-child) {
+            margin: 4em 0;
+        }
+
+        &__example {
+            &__playground {
+                display: flex;
+                flex: 1 1;
+                gap: 20px;
+
+                @include media(small) {
+                    flex-direction: column-reverse;
+                }
+
+                & > div:first-child {
+                    flex: 1;
+                }
+
+                &__form {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    flex: 2;
+                    margin: auto;
+                    padding: 2em;
+
+                    @include media(medium) {
+                        flex: 2;
+                    }
+                }
+            }
+        }
+
+        &__types {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &__codeLink {
+                background-color: $primary;
+                border-radius: $border-radius;
+                padding: 0.5em 1em;
+                color: white;
+                font-size: 0.9em;
+                display: flex;
+                align-items: center;
+
+                & > span {
+                    font-size: 1.5em;
+                    margin-right: 0.5em;
+                }
+
+                &:hover {
+                    background-color: $primary-hover;
+                }
+            }
+        }
+    }
+}
+
+.properties {
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+
+    &__list {
+        &__item {
+            padding: 0.3em 0em;
+        }
+
+        &_required {
+            color: $success;
+            margin: 0em 1em;
+            font-size: 0.9em;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $primary;
+        padding: 0.1em 0.3em;
+        border: 1px solid transparent;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid $primary;
+            border-radius: $border-radius;
+        }
+    }
+}
+
+.list {
+    &__item {
+        line-height: 2;
+    }
+}
+
+.link {
+    text-decoration: none;
+    color: $primary;
+
+    &:hover {
+        color: $primary-hover;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 2em;
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        &__info {
+            font-size: 14px;
+            margin: 0;
+            line-height: 1.5;
+
+            &_correct > span {
+                color: $success;
+            }
+
+            &_incorrect > span {
+                color: #ca4f4f;
+            }
+        }
+    }
+
+    &__field__label {
+        font-weight: 600;
+    }
+
+    &__field__error {
+        color: #ca4f4f;
+        font-size: 14px;
+    }
+}
+
+.countryDropdown {
+    width: 20%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+
+    & > a {
+        cursor: pointer;
+        color: $primary;
+        font-weight: 500;
+    }
+}
+
+.description > a {
+    text-decoration: none;
+    color: $primary;
+
+    &:hover {
+        color: $primary-hover;
+    }
+}

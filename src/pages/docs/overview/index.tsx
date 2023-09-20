@@ -1,6 +1,6 @@
 import DocsLayout from '@/components/DocsLayout';
-import Typography from '@corelabui/classic/Typography';
-import Table from '@corelabui/classic/Table';
+import Typography from 'corelabui/Typography';
+import Table from 'corelabui/Table';
 import browsers from '@/constants/browsers';
 import { INTRODUCTION } from '@/constants/tableOfContents';
 import styles from './overview.module.scss';

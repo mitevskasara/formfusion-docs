@@ -1,0 +1,40 @@
+{
+    "key": "input",
+    "title": "Input",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes",
+    "description": "The Input component is based on the native HTML input element with extended list of types that describes the type of field and applies the corresponding validation pattern. The type of field is applied through the type property. The Input components has access to the Form handler functions and utilities and should be used as a child in the Form component.",
+    "props": [
+        {
+            "name": "type",
+            "type": "string",
+            "default": "text",
+            "description": "Type of the input element that defines its validation pattern. See all available types <a href='/forms/api/types'>here</a>",
+            "required": false
+        },
+        {
+            "name": "validation",
+            "type": "object",
+            "default": "native validityState",
+            "description": "Overrides the native <a href='https://developer.mozilla.org/en-US/docs/Web/API/ValidityState' target='_blank'>validityState</a> error messages",
+            "required": false
+        },
+        {
+            "name": "label",
+            "type": "string",
+            "default": "",
+            "description": "Label of the input field. Recommended for accessibility",
+            "required": false
+        },
+        {
+            "name": "classes",
+            "type": "{ field: string; label: string; error: string; }",
+            "default": "",
+            "description": "Classes applied to the input, label and error elements",
+            "required": false
+        }
+    ],
+    "exampleUrl": "https://codesandbox.io/embed/rfm-basic-input-usage-95ws8y?fontsize=14&hidenavigation=1&theme=dark&view=preview",
+    "exampleTitle": "RFM Basic Input usage",
+    "nextUrl": "/forms/api/textarea",
+    "nextUrlTitle": "Textarea"
+}

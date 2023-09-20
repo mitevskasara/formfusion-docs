@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Button from '@corelabui/classic/Button';
-import Typography from '@corelabui/classic/Typography';
-import Checkbox from '@corelabui/classic/Checkbox';
-import Input from '@corelabui/classic/Input';
-import Select from '@corelabui/classic/Select';
-import Table from '@corelabui/classic/Table';
+import Button from 'corelabui/Button';
+import Typography from 'corelabui/Typography';
+import Checkbox from 'corelabui/Checkbox';
+import Input from 'corelabui/Input';
+import Select from 'corelabui/Select';
+import Table from 'corelabui/Table';
 import DocsLayout from '@/components/DocsLayout';
 import Code from '@/components/Code';
 import tableOfContents from '@/constants/tableOfContents';

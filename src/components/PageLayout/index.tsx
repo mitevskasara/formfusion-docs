@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import Header from '@corelabui/classic/Header';
+import Header from 'corelabui/Header';
 import headerItems from '@/constants/headerItems';
 import Layout from '@/components/Layout';
 import Container from '@/components/Container';
