@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from 'react';
 import Image from 'next/image';
 import LeftSidebar from '@/components/LeftSidebar';
-import PageLayout from '@/components/Layout';
+import Layout from '@/components/Layout';
 import HamburgerMenu from '@/components/HamburgerMenu';
 import classes from './layout.module.scss';
 
@@ -12,7 +12,7 @@ type Props = {
 const FormsLayout = ({ children }: Props) => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <PageLayout>
+        <Layout>
             <header className={classes.header}>
                 <div className={classes.header__left}>
                     <div className={classes.header__left__menuIcon}>
@@ -56,7 +56,7 @@ const FormsLayout = ({ children }: Props) => {
                 <LeftSidebar open={isOpen} toggle={setIsOpen} />
                 <main className={classes.main}>{children}</main>
             </div>
-        </PageLayout>
+        </Layout>
     );
 };
 
