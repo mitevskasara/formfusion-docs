@@ -7,7 +7,7 @@ import TableOfContents from 'corelabui/TableOfContents';
 import headerItems from '@/constants/headerItems';
 import navigationItems from '@/constants/navigationItems';
 import PageLayout from '@/components/PageLayout';
-import Container from '@/components/Container';
+import Container from '../Container';
 import styles from './layout.module.scss';
 
 type Props = {
