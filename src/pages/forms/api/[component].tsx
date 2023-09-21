@@ -11,33 +11,38 @@ const Forms = ({ data }: { data: Component }) => {
         <FormsLayout>
             <section>
                 <Typography variant="heading4" htmlElement="h2">
-                    {data.title}
+                    {data?.title}
                 </Typography>
                 <Typography variant="body1">
                     <span
-                        dangerouslySetInnerHTML={{ __html: data.description }}
+                        dangerouslySetInnerHTML={{ __html: data?.description }}
                         className={classes.description}
                     />
                 </Typography>
                 <br />
                 <Typography variant="heading5" htmlElement="h3">
-                    {data.title} properties
+                    {data?.title} properties
                 </Typography>
                 <Typography variant="body1">
                     Props of the
-                    <a href={data.url} className={classes.link} target="_blank">
+                    <a
+                        href={data?.url}
+                        className={classes.link}
+                        target="_blank">
                         &nbsp;native component&nbsp;
                     </a>
                     are also available.
                 </Typography>
                 <table>
                     <tbody>
-                        {data.props.map((prop: Props) => (
-                            <tr id={`${data.key}-${prop.name}`} key={prop.name}>
+                        {data?.props.map((prop: Props) => (
+                            <tr
+                                id={`${data?.key}-${prop.name}`}
+                                key={prop.name}>
                                 <td className={classes.properties}>
                                     <a
                                         className={classes.properties__link}
-                                        href={`#${data.key}-${prop.name}`}>
+                                        href={`#${data?.key}-${prop.name}`}>
                                         #
                                     </a>
                                     <dl className={classes.properties__list}>
@@ -111,7 +116,7 @@ const Forms = ({ data }: { data: Component }) => {
                 </Typography>
                 <br />
                 <iframe
-                    src={data.exampleUrl}
+                    src={data?.exampleUrl}
                     style={{
                         width: '100%',
                         height: '500px',
@@ -119,7 +124,7 @@ const Forms = ({ data }: { data: Component }) => {
                         borderRadius: '4px',
                         overflow: 'hidden'
                     }}
-                    title={data.exampleTitle}
+                    title={data?.exampleTitle}
                     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
                     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
                 />
@@ -128,7 +133,7 @@ const Forms = ({ data }: { data: Component }) => {
                 <Typography variant="caption" align="right">
                     Next
                 </Typography>
-                <Link href={data.nextUrl}>{data.nextUrlTitle}</Link>
+                <Link href={data?.nextUrl}>{data?.nextUrlTitle}</Link>
             </footer>
         </FormsLayout>
     );
@@ -147,8 +152,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: any) {
     try {
-        const data = require(`./data/${params.component}.json`);
-
+        const data = require(`@/data/${params.component}.json`);
         return {
             props: {
                 data
