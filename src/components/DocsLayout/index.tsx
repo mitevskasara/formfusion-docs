@@ -6,7 +6,7 @@ import Flex, { FlexItem } from 'corelabui/Flex';
 import TableOfContents from 'corelabui/TableOfContents';
 import headerItems from '@/constants/headerItems';
 import navigationItems from '@/constants/navigationItems';
-import PageLayout from '@/components/Layout';
+import PageLayout from '@/components/PageLayout';
 import Container from '@/components/Container';
 import styles from './layout.module.scss';
 
