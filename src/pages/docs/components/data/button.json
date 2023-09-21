@@ -1,0 +1,55 @@
+{
+    "title": "Button",
+    "description": "Button is a core user interface element, used for triggering an action or event.",
+    "usage": [
+        "Form Submissions",
+        "Dialogs and Modals",
+        "Call-to-Action (CTA)",
+        "Navigation",
+        "Confirmations and Alerts",
+        "Cancel or Reset Actions",
+        "Social Sharing",
+        "Filtering and Sorting",
+        "Play/Pause Controls",
+        "Increment/Decrement Values",
+        "Menu or Dropdown Activation",
+        "Logout or Sign Out and many more"
+    ],
+    "props": {
+        "title": {
+            "required": false,
+            "default": "Button",
+            "type": "string"
+        },
+        "variant": {
+            "required": false,
+            "default": "primary",
+            "type": "string",
+            "options": ["primary", "secondary", "text"]
+        },
+        "size": {
+            "required": false,
+            "default": "medium",
+            "type": "string",
+            "options": ["small", "medium", "large"]
+        },
+        "loading": {
+            "required": false,
+            "default": false,
+            "type": "boolean",
+            "options": [true, false]
+        },
+        "disabled": {
+            "required": false,
+            "default": false,
+            "type": "boolean",
+            "options": [true, false]
+        },
+        "width": {
+            "required": false,
+            "default": "fit-content",
+            "type": "string"
+        }
+    },
+    "code": "import Button from 'corelabui/Button';\n\nfunction App() {\n\treturn (\n\t\t<Button\n\t\t\tonClick={() => console.log('Hello Corelab UI')} \n\t\t\tPROPS_PLACEHOLDER>\n\t\t\tClick me!\n\t\t</Button>\n\t);\n}"
+}

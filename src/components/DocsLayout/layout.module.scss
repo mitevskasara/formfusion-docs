@@ -1,0 +1,64 @@
+@import '@/core/styles/media-queries';
+
+.layout {
+    display: flex;
+
+    &__header {
+        @include media(medium) {
+            padding: 0.5em 1em !important;
+        }
+
+        @include media(small) {
+            padding: 0.5em 1em !important;
+        }
+
+        &__inner {
+            width: 90%;
+            max-width: 90% !important;
+
+            @include media(xlarge) {
+                max-width: 1600px !important;
+            }
+
+            @include media(medium) {
+                max-width: 100% !important;
+                width: 100%;
+            }
+
+            @include media(small) {
+                max-width: 100% !important;
+                width: 100%;
+            }
+        }
+    }
+
+    &__main {
+        position: relative;
+
+        & > div:nth-child(3) {
+            @include media(medium) {
+                display: none;
+            }
+        }
+
+        & > div:nth-child(1) {
+            @include media(small) {
+                display: none;
+            }
+        }
+
+        &__scroll {
+            height: calc(100vh - 71px - 2em);
+        }
+    }
+
+    &__left {
+        position: sticky;
+        top: calc(71px + 2em);
+    }
+
+    &__right {
+        position: sticky;
+        top: calc(71px + 2em);
+    }
+}

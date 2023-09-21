@@ -3,33 +3,23 @@
         @media (max-width: 599px) {
             @content;
         }
-    }
-
-    @else if $size ==small {
+    } @else if $size ==small {
         @media (max-width: 900px) {
             @content;
         }
-    }
-
-    @else if $size ==smedium {
+    } @else if $size ==smedium {
         @media (max-width: 995px) {
             @content;
         }
-    }
-
-    @else if $size ==medium {
+    } @else if $size ==medium {
         @media (max-width: 1200px) {
             @content;
         }
-    }
-
-    @else if $size ==large {
+    } @else if $size ==large {
         @media (max-width: 1600px) {
             @content;
         }
-    }
-
-    @else if $size ==xlarge {
+    } @else if $size ==xlarge {
         @media (min-width: 1601px) {
             @content;
         }
