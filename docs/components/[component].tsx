@@ -8,7 +8,7 @@ import Table from 'corelabui/Table';
 import DocsLayout from '@/components/DocsLayout';
 import Code from '@/components/Code';
 import tableOfContents from '@/constants/tableOfContents';
-import buttonApi from './api/button';
+import buttonApi from '../data/api/button';
 import styles from './components.module.scss';
 
 const HEADERS = ['Name', 'Type', 'Default', 'Description'];
