@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import Container from '@/components/container';
+import Container from '@/components/Container';
 import styles from './footer.module.scss';
 
 const Footer = () => {
@@ -7,7 +6,9 @@ const Footer = () => {
         <footer className={styles.footer}>
             <Container>
                 <div className={styles.footer__block}>
-                    <span>Copyright © 2023 SyntaxStream. All rights reserved.</span>
+                    <span>
+                        Copyright © 2023 Core Lab UI. All rights reserved.
+                    </span>
                     <div className={styles.footer__block__social}>
                         <a
                             href="https://www.facebook.com"
@@ -39,7 +40,6 @@ const Footer = () => {
                     </div>
                 </div>
             </Container>
-
         </footer>
     );
 };

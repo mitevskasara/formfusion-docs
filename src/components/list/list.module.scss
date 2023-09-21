@@ -43,7 +43,7 @@
                 grid-area: unset;
             }
 
-            &>a>div>img {
+            & > a > div > img {
                 min-height: 150px;
                 max-height: 150px;
                 object-fit: cover;
@@ -61,7 +61,7 @@
                 grid-area: unset;
             }
 
-            &>a>div>img {
+            & > a > div > img {
                 min-height: 150px;
                 max-height: 150px;
                 object-fit: cover;
@@ -100,7 +100,7 @@
             color: $link;
         }
 
-        &>span {
+        & > span {
             margin-left: 8px;
         }
     }

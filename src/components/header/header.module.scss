@@ -24,17 +24,6 @@
             align-items: center;
             gap: 24px;
 
-            &>a {
-                font-size: $text-small;
-                font-weight: bold;
-                color: #1A1A2E;
-                text-decoration: none;
-
-                &:hover {
-                    color: $primary;
-                }
-            }
-
             @include media(xsmall) {
                 gap: 10px;
             }

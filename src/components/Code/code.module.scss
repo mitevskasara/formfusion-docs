@@ -1,0 +1,30 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.container {
+    max-width: 100%;
+}
+
+.pre {
+    padding: 1em 0px;
+    border-radius: var(--border-radius);
+    width: -webkit-fill-available;
+    max-width: -webkit-fill-available;
+    display: flex;
+    align-items: baseline;
+    overflow-x: auto;
+    position: relative;
+    margin: 0px !important;
+
+    & > code {
+        padding: 1em;
+        font-size: 0.7em;
+    }
+
+    & > div {
+        margin: 0px 1em 0px auto;
+        position: absolute;
+        top: 1em;
+        right: 0px;
+    }
+}

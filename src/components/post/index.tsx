@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import Tag from '@/components/tag';
-import { formatDate } from '@/utils/date-format';
+import Tag from '@/components/Tag';
+import { formatDate } from '@/utils/dateFormat';
 import { encode } from '@/utils/general';
 import styles from './post.module.scss';
 import Image from 'next/image';
@@ -13,8 +13,8 @@ const Post = ({ data, featured = false }: Props) => {
 
     return (
         <Link
-            href="/posts/[year]/[month]/[path]"
-            as={`/posts${path}`}
+            href="/blog/[year]/[month]/[path]"
+            as={`/blog${path}`}
             className={styles.link}>
             <div className={styles.container}>
                 <Image

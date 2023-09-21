@@ -1,8 +1,8 @@
 import React from 'react';
 // import Tag from '@/components/tag';
-import Share from '@/components/share';
+import Share from '@/components/Share';
 import { DOMAIN } from '@/constants/api';
-import { formatDate } from '@/utils/date-format';
+import { formatDate } from '@/utils/dateFormat';
 import styles from './details.module.scss';
 
 const Details = ({ data }: Props) => {
@@ -24,7 +24,7 @@ const Details = ({ data }: Props) => {
                 dangerouslySetInnerHTML={{ __html: data.content }}
             />
             <Share
-                link={`${DOMAIN}/posts/${data.id}`}
+                link={`${DOMAIN}/blog/${data.id}`}
                 image={image}
                 text={data.title}
             />

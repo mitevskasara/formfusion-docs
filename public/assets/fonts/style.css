@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?wn9vjg');
-  src:  url('fonts/icomoon.eot?wn9vjg#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?wn9vjg') format('truetype'),
-    url('fonts/icomoon.woff?wn9vjg') format('woff'),
-    url('fonts/icomoon.svg?wn9vjg#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?6vl1hq');
+  src:  url('fonts/icomoon.eot?6vl1hq#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?6vl1hq') format('truetype'),
+    url('fonts/icomoon.woff?6vl1hq') format('woff'),
+    url('fonts/icomoon.svg?6vl1hq#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,11 +25,70 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-codesandbox:before {
+  content: "\e910";
+}
+.icon-electron:before {
+  content: "\e9e8";
+  color: #47848f;
+}
+.icon-googlechrome:before {
+  content: "\ea41";
+  color: #4285f4;
+}
+.icon-microsoftedge:before {
+  content: "\eb00";
+  color: #0078d7;
+}
+.icon-mozillafirefox:before {
+  content: "\eb19";
+  color: #ff7139;
+}
+.icon-opera:before {
+  content: "\eb47";
+  color: #ff1b2d;
+}
+.icon-safari:before {
+  content: "\ebb1";
+}
 .icon-gmail:before {
   content: "\e907";
 }
-.icon-arrow-right:before {
-  content: "\e901";
+.icon-summer:before {
+  content: "\e90f";
+}
+.icon-light:before {
+  content: "\e90b";
+}
+.icon-dark:before {
+  content: "\e90c";
+}
+.icon-winter:before {
+  content: "\e90d";
+}
+.icon-github:before {
+  content: "\e906";
+}
+.icon-linkedin:before {
+  content: "\e900";
+}
+.icon-twitter:before {
+  content: "\e902";
+}
+.icon-instagram:before {
+  content: "\e903";
+}
+.icon-spring:before {
+  content: "\e90a";
+}
+.icon-light:before {
+  content: "\e90b";
+}
+.icon-dark:before {
+  content: "\e90c";
+}
+.icon-winter:before {
+  content: "\e90d";
 }
 .icon-github:before {
   content: "\e906";
@@ -48,4 +107,16 @@
 }
 .icon-facebook:before {
   content: "\e905";
+}
+.icon-fall:before {
+  content: "\e90e";
+}
+.icon-hour-glass:before {
+  content: "\e909";
+}
+.icon-check:before {
+  content: "\e908";
+}
+.icon-arrow-right:before {
+  content: "\e901";
 }

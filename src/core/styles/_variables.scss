@@ -1,14 +1,17 @@
-$primary: #131a26;
+$primary: #023e8a;
+$primary-hover: #0077b6;
 $secondary: #131a26;
 $secondary-light: #f6c391;
 $green: #c7d5d6;
-$primary-hover: #131a26;
+
+$success: #34955e;
+$info: #2c73a2;
 
 $footer: #131a26;
 
 $border: #d4d4d4;
 $fields-border: #d4d4d4;
-$border-radius: 5px;
+$border-radius: 3px;
 $box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
 $text-regular: #000000;
@@ -22,4 +25,8 @@ $text-medium: 18px;
 $text-large: 22px;
 $text-xlarge: 40px;
 
-$background: #1A1A2E;
+$background: #1a1a2e;
+
+$header-height: 3em;
+$sidebar-width: 12em;
+$side-padding: 2em;
