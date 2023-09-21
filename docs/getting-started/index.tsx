@@ -4,7 +4,7 @@ import Typography from 'corelabui/Typography';
 import Button from 'corelabui/Button';
 import Highlight from 'corelabui/Highlight';
 import Table from 'corelabui/Table';
-import DocsLayout from '@/components/DocsLayout';
+import DocsLayout from '../DocsLayout';
 import {
     defaultTheme,
     darkTheme,

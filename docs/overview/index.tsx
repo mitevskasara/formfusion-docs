@@ -1,4 +1,4 @@
-import DocsLayout from '@/components/DocsLayout';
+import DocsLayout from '../DocsLayout';
 import Typography from 'corelabui/Typography';
 import Table from 'corelabui/Table';
 import browsers from '@/constants/browsers';

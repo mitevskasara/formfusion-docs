@@ -5,7 +5,7 @@ import Checkbox from 'corelabui/Checkbox';
 import Input from 'corelabui/Input';
 import Select from 'corelabui/Select';
 import Table from 'corelabui/Table';
-import DocsLayout from '@/components/DocsLayout';
+import DocsLayout from '../DocsLayout';
 import Code from '@/components/Code';
 import tableOfContents from '@/constants/tableOfContents';
 import buttonApi from '../data/api/button';
@@ -51,8 +51,7 @@ const Component = ({ theme, data }: Props) => {
         return Object.entries(obj)
             .map(
                 ([key, value]) =>
-                    `${key}=${
-                        typeof value === 'string' ? `"${value}"` : `{${value}}`
+                    `${key}=${typeof value === 'string' ? `"${value}"` : `{${value}}`
                     }`
             )
             .join('\n\t\t\t');
