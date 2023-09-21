@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from 'react';
+import React, { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import Header from 'corelabui/Header';
 import Navigation from 'corelabui/Navigation';
@@ -6,8 +6,8 @@ import Flex, { FlexItem } from 'corelabui/Flex';
 import TableOfContents from 'corelabui/TableOfContents';
 import headerItems from '@/constants/headerItems';
 import navigationItems from '@/constants/navigationItems';
-import PageLayout from '../Layout';
-import Container from '../Container';
+import PageLayout from '@/components/Layout';
+import Container from '@/components/Container';
 import styles from './layout.module.scss';
 
 type Props = {
