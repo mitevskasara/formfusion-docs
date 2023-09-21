@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import DocsLayout from '@/components/DocsLayout';
+import DocsLayout from '../DocsLayout';
 import Typography from 'corelabui/Typography';
 import Grid, { GridItem } from 'corelabui/Grid';
 import Card from 'corelabui/Card';

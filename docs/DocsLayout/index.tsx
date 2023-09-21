@@ -7,7 +7,7 @@ import TableOfContents from 'corelabui/TableOfContents';
 import headerItems from '@/constants/headerItems';
 import navigationItems from '@/constants/navigationItems';
 import PageLayout from '@/components/PageLayout';
-import Container from '../Container';
+import Container from '../../src/components/Container';
 import styles from './layout.module.scss';
 
 type Props = {
@@ -23,9 +23,8 @@ const DocsLayout = ({ children, theme, tableOfContents }: Props) => {
         <PageLayout>
             <div className={styles.layout}>
                 <Header
-                    logo={`/assets/logo/${
-                        theme === 'custom' ? 'default' : theme
-                    }/logo.svg`}
+                    logo={`/assets/logo/${theme === 'custom' ? 'default' : theme
+                        }/logo.svg`}
                     items={headerItems}
                     classes={{
                         root: styles.layout__header,
