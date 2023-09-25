@@ -28,7 +28,7 @@ const Forms = ({ data }: { data: Component }) => {
                 </Typography>
                 <Typography variant="body1">
                     Props of the
-                    <Link href={data?.url ?? '#'} target="_blank">
+                    <Link href={data?.url ?? ''} target="_blank">
                         &nbsp;native component&nbsp;
                     </Link>
                     are also available.
@@ -131,7 +131,7 @@ const Forms = ({ data }: { data: Component }) => {
                 <Typography variant="caption" align="right">
                     Next
                 </Typography>
-                <Link href={data?.nextUrl ?? '#'}>{data?.nextUrlTitle}</Link>
+                <Link href={data?.nextUrl ?? ''}>{data?.nextUrlTitle}</Link>
             </footer>
         </FormsLayout>
     );
@@ -150,7 +150,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: any) {
     try {
-        const data = require(`@/data/${params.component}.json`);
+        const data = await require(`@/data/${params.component}.json`);
         return {
             props: {
                 data
