@@ -2,14 +2,14 @@ import { Dispatch, SetStateAction } from 'react';
 import HamburgerMenu from '@/components/HamburgerMenu';
 import Image from 'next/image';
 import Link from '@/components/Link';
-import classes from './header.module.scss';
+import classes from './customHeader.module.scss';
 
-interface HeaderProps {
+interface CustomHeaderProps {
     open: boolean;
     toggle: Dispatch<SetStateAction<boolean>>;
 }
 
-const Header = ({ open, toggle }: HeaderProps) => {
+const CustomHeader = ({ open, toggle }: CustomHeaderProps) => {
     return (
         <header className={classes.header}>
             <div className={classes.header__left}>
@@ -53,4 +53,4 @@ const Header = ({ open, toggle }: HeaderProps) => {
     );
 };
 
-export default Header;
+export default CustomHeader;
