@@ -2,78 +2,88 @@ import React, { useState } from 'react';
 import Table from 'corelabui/Table';
 import Typography from 'corelabui/Typography';
 import Select from 'corelabui/Select';
-import Link from 'corelabui/Link';
-import { Form, Input, types as RFMtypes } from '@corelabui/rfm';
-import FormsLayout from '@/components/FormsLayout';
+import { Form, Input, patterns as RFMPatterns } from '@corelabui/rfm';
+
 import Property from '@/components/Property';
-import info from '@/constants/types';
-import classes from '../forms.module.scss';
+import FormsLayout from '@/components/MainLayout';
+
+import patterns from '@/constants/patterns';
 import countries from '@/constants/countries';
-import { typeToLabel } from '@/utils/general';
+
+import { camelCaseToLabel } from '@/utils/general';
+
+import classes from '../forms.module.scss';
 
 export const HEADERS = ['Type', 'Description'];
 
-const types = RFMtypes
+const types = RFMPatterns
     ? [
-          ...Object.keys(RFMtypes).map((type) => {
-              return !type.startsWith('postal-code')
+          ...Object.keys(RFMPatterns).map((type) => {
+              return !type.startsWith('postalCode')
                   ? {
                         type: <Property>{type}</Property>,
-                        desc: info[type].description
+                        desc: patterns[type]?.description
                     }
                   : {};
           }),
           {
-              type: <Property>{`postal-code-{country_code}`}</Property>,
-              desc: info['postal-code'].description
+              type: <Property>postalCode</Property>,
+              desc: patterns['postalCode'].description
           }
       ]
     : [];
 
-const options = Object.keys(RFMtypes).reduce(
-    (acc: { label: string; value: string }[], type) => {
-        if (!type.startsWith('postal-code')) {
-            acc.push({ value: type, label: typeToLabel(type) });
-        }
-        return acc;
-    },
-    []
-);
+const options = Object.keys(RFMPatterns).map((type) => {
+    return !type.startsWith('postalCode')
+        ? { value: type, label: camelCaseToLabel(type) }
+        : { value: 'postalCode', label: 'Postal code' };
+});
 
-options.push({ value: 'postal-code', label: 'Postal code' });
-
-const Types = () => {
+const Patterns = () => {
+    const [pattern, setPattern] = useState(options[0].value);
     const [country, setCountry] = useState<string>('gb');
-    const [type, setType] = useState(options[0].value);
 
     return (
         <FormsLayout>
             <section className={classes.main__section}>
                 <Typography variant="heading4" htmlElement="h2">
-                    Input types
+                    Validation patterns
                 </Typography>
                 <Typography variant="body1">
-                    <strong>React Form Manager</strong> extends the list
-                    of&nbsp;
-                    <a
-                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
-                        target="_blank"
-                        className={classes.link}>
-                        native
+                    Similar to&nbsp;
+                    <a href="/forms/api/types" className={classes.link}>
+                        Input types,{' '}
                     </a>
-                    &nbsp;input types with a large and thoroughly tested
-                    collection of types that define and apply a corresponding
-                    validation pattern out-of-box to the input field without the
-                    hassle of writing your own patterns, validation functions or
-                    testing for each input field in your form.
+                    <strong>React Form Manager</strong> provides a collection of
+                    thoroughly tested JavaScript regular expressions that can be
+                    directly applied to the pattern attribute of an input field.
+                    The main difference between{' '}
+                    <a
+                        href="/forms/api/types"
+                        className={classes.link}
+                        target="_blank">
+                        Input types{' '}
+                    </a>
+                    and validation patterns is that the patterns collection
+                    includes dynamic validation such as: minimum/maximum
+                    required chars/letters/numbers, specific domain validation,
+                    minimum/maximum letters range i.e any validation that
+                    requires a specific parameter to construct a pattern.
                     <br />
                     <br />
-                    Only pass the preffered type prop to the input and{' '}
-                    <strong>RFM</strong> takes care of everything.
+                    The{' '}
+                    <a href="/forms/api/types" className={classes.link}>
+                        Input types collection{' '}
+                    </a>{' '}
+                    uses part of these validation patterns as a base buy they
+                    are also exposed for usage when you need a dynamic
+                    validation or you don't want to use the Input component
+                    provided by <strong>RFM</strong>. To use, pass the preffered
+                    pattern as <code>pattern</code> prop to the input.
                     <br />
                     <br />
-                    Here is a list of all types <strong>RFM</strong> currently
-                    contains:
+                    Here is a list of all validation patterns{' '}
+                    <strong>RFM</strong> currently contains:
                 </Typography>
                 <br />
                 <Table headers={HEADERS} data={types} />
@@ -91,14 +101,15 @@ const Types = () => {
                         Open in <b>&nbsp;CodeSandbox</b>
                     </a>
                 </div>
+                <br />
                 <Select
-                    placeholder="Select input type"
+                    placeholder="Select pattern"
                     options={options}
-                    onChange={(value: string) => setType(value)}
-                    value={type}
-                    label="Select an input type to test"
+                    onChange={(value: string) => setPattern(value)}
+                    value={pattern}
+                    label="Select a validation pattern to test"
                 />
-                {type === 'postal-code' ? (
+                {pattern === 'postalCode' ? (
                     <Form className={classes.form} validateOnChange>
                         <div className={classes.form__field}>
                             <Typography variant="subtitle2" htmlElement="label">
@@ -116,7 +127,7 @@ const Types = () => {
                             <Input
                                 id={`postal-code-${country}`}
                                 name={`postal-code-${country}`}
-                                type={`postal-code-${country}`}
+                                pattern={RFMPatterns.postalCode[country]}
                                 classes={{
                                     label: classes.form__field__label,
                                     error: classes.form__field__error
@@ -125,7 +136,7 @@ const Types = () => {
                             <Typography
                                 variant="body1"
                                 className={classes.form__field__info}>
-                                {info[`postal-code-${country}`].info}
+                                {patterns[pattern][country].info}
                                 <br />
                                 <br />
                                 <span
@@ -133,7 +144,7 @@ const Types = () => {
                                         classes.form__field__info_correct
                                     }
                                     dangerouslySetInnerHTML={{
-                                        __html: info[`postal-code-${country}`]
+                                        __html: patterns[pattern][country]
                                             .correct
                                     }}
                                 />
@@ -143,7 +154,7 @@ const Types = () => {
                                         classes.form__field__info_incorrect
                                     }
                                     dangerouslySetInnerHTML={{
-                                        __html: info[`postal-code-${country}`]
+                                        __html: patterns[pattern][country]
                                             .incorrect
                                     }}
                                 />
@@ -154,10 +165,16 @@ const Types = () => {
                     <Form className={classes.form} validateOnChange>
                         <div className={classes.form__field}>
                             <Input
-                                id={type}
-                                name={type}
-                                type={type}
-                                label={`Input type: ${type}`}
+                                id={pattern}
+                                name={pattern}
+                                pattern={
+                                    typeof RFMPatterns[pattern] === 'function'
+                                        ? pattern.includes('Range')
+                                            ? RFMPatterns[pattern](1, 5)
+                                            : RFMPatterns[pattern](5)
+                                        : RFMPatterns[pattern]
+                                }
+                                label={`Pattern: ${pattern}`}
                                 classes={{
                                     label: classes.form__field__label,
                                     error: classes.form__field__error
@@ -166,7 +183,7 @@ const Types = () => {
                             <Typography
                                 variant="body1"
                                 className={classes.form__field__info}>
-                                {info[type].info}
+                                {patterns[pattern].info}
                                 <br />
                                 <br />
                                 <span
@@ -174,7 +191,7 @@ const Types = () => {
                                         classes.form__field__info_correct
                                     }
                                     dangerouslySetInnerHTML={{
-                                        __html: info[type].correct
+                                        __html: patterns[pattern].correct
                                     }}
                                 />
                                 <br />
@@ -183,7 +200,7 @@ const Types = () => {
                                         classes.form__field__info_incorrect
                                     }
                                     dangerouslySetInnerHTML={{
-                                        __html: info[type].incorrect
+                                        __html: patterns[pattern].incorrect
                                     }}
                                 />
                             </Typography>
@@ -191,14 +208,8 @@ const Types = () => {
                     </Form>
                 )}
             </section>
-            <footer className={classes.footer}>
-                <Typography variant="caption" align="right">
-                    Next
-                </Typography>
-                <Link href="/forms/api/patterns">Validation patterns</Link>
-            </footer>
         </FormsLayout>
     );
 };
 
-export default Types;
+export default Patterns;

@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react';
-import NAV from '@/constants/leftSidebarNav';
+import NAV from '@/constants/navigation';
 import { winterTheme } from 'corelabui/Theme';
 import Typography from 'corelabui/Typography';
 import classes from './leftSidebar.module.scss';

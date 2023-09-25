@@ -1,9 +1,12 @@
 import React from 'react';
 import Link from 'corelabui/Link';
 import Typography from 'corelabui/Typography';
-import FormsLayout from '@/components/FormsLayout';
+
+import FormsLayout from '@/components/MainLayout';
 import Property from '@/components/Property';
-import { Component, Props } from '@/pages/forms/interfaces';
+
+import { Component, Props } from '../interfaces';
+
 import classes from '../forms.module.scss';
 
 const Forms = ({ data }: { data: Component }) => {
