@@ -1,9 +1,11 @@
 import React, { Dispatch, SetStateAction } from 'react';
-import NAV from '@/constants/navigation';
+import { useRouter } from 'next/router';
 import { winterTheme } from 'corelabui/Theme';
 import Typography from 'corelabui/Typography';
+
+import NAV from '@/constants/navigation';
+
 import classes from './leftSidebar.module.scss';
-import { useRouter } from 'next/router';
 
 interface Props {
     open: boolean;
