@@ -1,0 +1,32 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+$header-height: 3em;
+$sidebar-width: 10em;
+$side-padding: 2em;
+
+.container {
+    display: flex;
+    padding: 0 $side-padding;
+    margin-top: $header-height;
+
+    @include media(small) {
+        flex-direction: column;
+    }
+}
+
+.main {
+    width: 50%;
+    max-width: 1200px;
+    margin: 3em auto;
+
+    @include media(medium) {
+        margin-left: calc($sidebar-width + 4em);
+        width: 80%;
+    }
+
+    @include media(small) {
+        margin: 1.5em 0;
+        width: 100%;
+    }
+}

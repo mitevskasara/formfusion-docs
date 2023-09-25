@@ -2,9 +2,11 @@ import React from 'react';
 import Link from 'corelabui/Link';
 import Typography from 'corelabui/Typography';
 import { patterns } from '@corelabui/rfm';
+
 import Code from '@/components/Code';
+import MainLayout from '@/components/MainLayout';
+
 import classes from './forms.module.scss';
-import FormsLayout from '@/components/FormsLayout';
 
 const toIgnore = [
     'email',
@@ -22,7 +24,7 @@ const toIgnore = [
 
 const Forms = () => {
     return (
-        <FormsLayout>
+        <MainLayout>
             <section className={classes.main__section} id="introduction">
                 <Typography variant="heading4" htmlElement="h2">
                     Introduction
@@ -163,7 +165,7 @@ const Forms = () => {
                 </Typography>
                 <Link href="/forms/api/form">API</Link>
             </footer>
-        </FormsLayout>
+        </MainLayout>
     );
 };
 
