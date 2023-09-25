@@ -1,8 +1,8 @@
 import React, { ReactNode, useState } from 'react';
 import Head from 'next/head';
 
-import Header from '../Header';
-import LeftSidebar from '../LeftSidebar';
+import Header from '@/components/Header';
+import LeftSidebar from '@/components/LeftSidebar';
 
 import classes from './main.module.scss';
 

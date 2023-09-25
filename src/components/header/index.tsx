@@ -1,9 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
-import Image from 'next/image';
-
 import HamburgerMenu from '@/components/HamburgerMenu';
+import Image from 'next/image';
 import Link from '@/components/Link';
-
 import classes from './header.module.scss';
 
 interface HeaderProps {
