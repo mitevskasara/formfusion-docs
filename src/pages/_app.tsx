@@ -10,9 +10,9 @@ import {
     fallTheme
 } from 'corelabui/Theme';
 
-import '../public/assets/fonts/style.css';
-import '../src/core/styles/globals.css';
-import '../src/core/styles/prism.css';
+import '../../public/assets/fonts/style.css';
+import '../core/styles/globals.css';
+import '../core/styles/prism.css';
 import { useState } from 'react';
 
 const font = Montserrat({ subsets: ['latin'] });

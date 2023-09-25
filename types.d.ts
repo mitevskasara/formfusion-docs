@@ -23,6 +23,5 @@ declare module 'corelabui/Quote';
 declare module 'corelabui/Popup';
 declare module 'corelabui/Layout';
 declare module 'corelabui/ThemeProvider';
-declare module 'corelabui/Header';
 
 declare module '@corelabui/rfm';
