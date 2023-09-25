@@ -1,8 +1,10 @@
 import { Dispatch, SetStateAction } from 'react';
-import HamburgerMenu from '@/components/HamburgerMenu';
 import Image from 'next/image';
+
+import HamburgerMenu from '@/components/HamburgerMenu';
 import Link from '@/components/Link';
-import classes from './customHeader.module.scss';
+
+import classes from './header.module.scss';
 
 interface CustomHeaderProps {
     open: boolean;
@@ -25,28 +27,32 @@ const CustomHeader = ({ open, toggle }: CustomHeaderProps) => {
             </div>
             <div className={classes.header__right}>
                 <Link
-                    href={`https://www.facebook.com/corelabui`}
+                    href="https://www.facebook.com/corelabui"
                     target="_blank"
                     title="Share on Facebook"
                     icon="facebook"
+                    className={classes.header__right__link}
                 />
                 <Link
-                    href={`https://instagram.com/corelabui`}
+                    href="https://instagram.com/corelabui"
                     target="_blank"
                     title="Share on whatsapp"
                     icon="instagram"
+                    className={classes.header__right__link}
                 />
                 <Link
-                    href={`https://www.linkedin.com/corelabui`}
+                    href="https://www.linkedin.com/corelabui"
                     target="_blank"
                     title="Share on Linkedin"
                     icon="linkedin"
+                    className={classes.header__right__link}
                 />
                 <Link
-                    href={`https://github.com/mitevskasara`}
+                    href="https://github.com/mitevskasara"
                     target="_blank"
                     title="Share on Twitter"
                     icon="github"
+                    className={classes.header__right__link}
                 />
             </div>
         </header>

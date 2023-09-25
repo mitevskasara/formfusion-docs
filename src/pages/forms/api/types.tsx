@@ -87,7 +87,7 @@ const Types = () => {
                         Try it out
                     </Typography>
                     <Link
-                        // className={classes.main__section__types__codeLink}
+                        className={classes.main__section__types__codeLink}
                         href="https://codesandbox.io/embed/rfm-basic-types-usage-t7c8sn?fontsize=14&hidenavigation=1&theme=dark"
                         target="_blank"
                         icon="codesandbox">

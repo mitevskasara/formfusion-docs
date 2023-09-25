@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from 'react';
 import Head from 'next/head';
 
-import CustomHeader from '@/components/CustomHeader';
+import Header from '@/components/Header';
 import LeftSidebar from '@/components/LeftSidebar';
 
 import classes from './main.module.scss';
@@ -44,7 +44,7 @@ const MainLayout = ({
                 <meta property="og:image" content={image} />
                 <meta name="keywords" content={keywords}></meta>
             </Head>
-            <CustomHeader open={isOpen} toggle={setIsOpen} />
+            <Header open={isOpen} toggle={setIsOpen} />
             <div className={classes.container}>
                 <LeftSidebar open={isOpen} toggle={setIsOpen} />
                 <main className={classes.main}>{children}</main>

@@ -5,12 +5,13 @@ interface LinkProps extends Partial<HTMLAnchorElement & any> {
     icon?: string;
 }
 
-const Link = ({ href, icon, ...props }: LinkProps) => {
+const Link = ({ icon, href, children, className, ...props }: LinkProps) => {
     return (
-        <NextLink href={props.href}>
-            <a {...props} className={classes.link}>
+        <NextLink href={href} {...props}>
+            <span className={`${className} ${classes.link}`}>
+                {children}
                 {icon && <span className={`icon-${icon}`} />}
-            </a>
+            </span>
         </NextLink>
     );
 };
