@@ -1,16 +1,20 @@
 import React, { Dispatch, SetStateAction } from 'react';
-import NAV from '@/constants/leftSidebarNav';
+import { useRouter } from 'next/router';
 import { winterTheme } from 'corelabui/Theme';
 import Typography from 'corelabui/Typography';
+
+import Link from '@/components/Link';
+
+import NAV from '@/constants/navigation';
+
 import classes from './leftSidebar.module.scss';
-import { useRouter } from 'next/router';
 
 interface Props {
     open: boolean;
     toggle: Dispatch<SetStateAction<boolean>>;
 }
 
-const LeftSidebar = ({ open, toggle }: Props) => {
+const LeftSidebar = ({ open }: Props) => {
     const { asPath } = useRouter();
     const isActive = (url: string) => url === asPath;
 
@@ -20,7 +24,7 @@ const LeftSidebar = ({ open, toggle }: Props) => {
         <aside className={classses}>
             <dl className={classes.leftSidebar__navigation}>
                 <dt className={classes.leftSidebar__navigation__item}>
-                    <a href="/forms#introduction" className={classes.link}>
+                    <Link href="/forms#introduction">
                         <Typography
                             variant="body1"
                             margin={false}
@@ -30,7 +34,7 @@ const LeftSidebar = ({ open, toggle }: Props) => {
                             }>
                             Introduction
                         </Typography>
-                    </a>
+                    </Link>
                 </dt>
                 <dt className={classes.leftSidebar__navigation__item}>
                     <Typography
@@ -57,9 +61,7 @@ const LeftSidebar = ({ open, toggle }: Props) => {
                                         className={
                                             classes.leftSidebar__navigation__sublist__item
                                         }>
-                                        <a
-                                            href="/forms#installation"
-                                            className={classes.link}>
+                                        <Link href="/forms#installation">
                                             <Typography
                                                 variant="body1"
                                                 margin={false}
@@ -70,12 +72,10 @@ const LeftSidebar = ({ open, toggle }: Props) => {
                                                 }>
                                                 Installation
                                             </Typography>
-                                        </a>
+                                        </Link>
                                     </dt>
                                     <dt>
-                                        <a
-                                            href="/forms#example"
-                                            className={classes.link}>
+                                        <Link href="/forms#example">
                                             <Typography
                                                 variant="body1"
                                                 margin={false}
@@ -86,7 +86,7 @@ const LeftSidebar = ({ open, toggle }: Props) => {
                                                 }>
                                                 Example
                                             </Typography>
-                                        </a>
+                                        </Link>
                                     </dt>
                                 </dl>
                             </dd>
@@ -120,9 +120,7 @@ const LeftSidebar = ({ open, toggle }: Props) => {
                                             className={
                                                 classes.leftSidebar__navigation__sublist__item
                                             }>
-                                            <a
-                                                href={item.url}
-                                                className={classes.link}>
+                                            <Link href={item.url}>
                                                 <Typography
                                                     variant="body1"
                                                     margin={false}
@@ -132,7 +130,7 @@ const LeftSidebar = ({ open, toggle }: Props) => {
                                                     }>
                                                     {item.title}
                                                 </Typography>
-                                            </a>
+                                            </Link>
                                         </dt>
                                     ))}
                                 </dl>

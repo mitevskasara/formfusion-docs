@@ -1,3 +1,0 @@
-interface Button {
-    title: string;
-}

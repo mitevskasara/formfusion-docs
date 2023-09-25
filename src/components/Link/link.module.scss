@@ -1,0 +1,10 @@
+@import '@/core/styles/variables';
+
+.link {
+    text-decoration: none;
+    color: $primary;
+
+    &:hover {
+        color: $primary-hover;
+    }
+}
