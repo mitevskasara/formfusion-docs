@@ -28,7 +28,7 @@ const Forms = ({ data }: { data: Component }) => {
                 </Typography>
                 <Typography variant="body1">
                     Props of the
-                    <Link href={data?.url} target="_blank">
+                    <Link href={data?.url ?? '#'} target="_blank">
                         &nbsp;native component&nbsp;
                     </Link>
                     are also available.
@@ -40,9 +40,7 @@ const Forms = ({ data }: { data: Component }) => {
                                 id={`${data?.key}-${prop.name}`}
                                 key={prop.name}>
                                 <td className={classes.properties}>
-                                    <Link
-                                        className={classes.properties__link}
-                                        href={`#${data?.key}-${prop.name}`}>
+                                    <Link href={`#${data?.key}-${prop.name}`}>
                                         #
                                     </Link>
                                     <dl className={classes.properties__list}>
@@ -133,7 +131,7 @@ const Forms = ({ data }: { data: Component }) => {
                 <Typography variant="caption" align="right">
                     Next
                 </Typography>
-                <Link href={data?.nextUrl}>{data?.nextUrlTitle}</Link>
+                <Link href={data?.nextUrl ?? '#'}>{data?.nextUrlTitle}</Link>
             </footer>
         </FormsLayout>
     );
