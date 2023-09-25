@@ -140,15 +140,6 @@ $side-padding: 2em;
     }
 }
 
-.link {
-    text-decoration: none;
-    color: $primary;
-
-    &:hover {
-        color: $primary-hover;
-    }
-}
-
 .form {
     display: flex;
     flex-direction: column;
