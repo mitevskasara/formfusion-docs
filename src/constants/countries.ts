@@ -1,4 +1,4 @@
-export default [
+const countries = [
     {
         label: 'Andorra',
         value: 'AD'
@@ -376,3 +376,5 @@ export default [
         value: 'ZA'
     }
 ];
+
+export default countries;

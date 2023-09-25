@@ -1,5 +1,10 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import Head from 'next/head';
+
+import Header from '@/components/Header';
+import LeftSidebar from '@/components/LeftSidebar';
+
+import classes from './main.module.scss';
 
 type Props = {
     children?: ReactNode;
@@ -10,7 +15,7 @@ type Props = {
     url?: string;
 };
 
-const Layout = ({
+const MainLayout = ({
     children,
     url,
     title,
@@ -18,6 +23,7 @@ const Layout = ({
     description,
     keywords
 }: Props) => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
     return (
         <div>
             <Head>
@@ -38,9 +44,13 @@ const Layout = ({
                 <meta property="og:image" content={image} />
                 <meta name="keywords" content={keywords}></meta>
             </Head>
-            {children}
+            <Header open={isOpen} toggle={setIsOpen} />
+            <div className={classes.container}>
+                <LeftSidebar open={isOpen} toggle={setIsOpen} />
+                <main className={classes.main}>{children}</main>
+            </div>
         </div>
     );
 };
 
-export default Layout;
+export default MainLayout;

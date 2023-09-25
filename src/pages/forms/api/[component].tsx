@@ -1,9 +1,12 @@
 import React from 'react';
-import Link from 'corelabui/Link';
 import Typography from 'corelabui/Typography';
-import FormsLayout from '@/components/FormsLayout';
+
+import FormsLayout from '@/components/MainLayout';
 import Property from '@/components/Property';
-import { Component, Props } from '@/pages/forms/interfaces';
+import Link from '@/components/Link';
+
+import { Component, Props } from '../interfaces';
+
 import classes from '../forms.module.scss';
 
 const Forms = ({ data }: { data: Component }) => {
@@ -25,12 +28,9 @@ const Forms = ({ data }: { data: Component }) => {
                 </Typography>
                 <Typography variant="body1">
                     Props of the
-                    <a
-                        href={data?.url}
-                        className={classes.link}
-                        target="_blank">
+                    <Link href={data?.url ?? ''} target="_blank">
                         &nbsp;native component&nbsp;
-                    </a>
+                    </Link>
                     are also available.
                 </Typography>
                 <table>
@@ -40,11 +40,9 @@ const Forms = ({ data }: { data: Component }) => {
                                 id={`${data?.key}-${prop.name}`}
                                 key={prop.name}>
                                 <td className={classes.properties}>
-                                    <a
-                                        className={classes.properties__link}
-                                        href={`#${data?.key}-${prop.name}`}>
+                                    <Link href={`#${data?.key}-${prop.name}`}>
                                         #
-                                    </a>
+                                    </Link>
                                     <dl className={classes.properties__list}>
                                         <dt
                                             className={
@@ -133,7 +131,7 @@ const Forms = ({ data }: { data: Component }) => {
                 <Typography variant="caption" align="right">
                     Next
                 </Typography>
-                <Link href={data?.nextUrl}>{data?.nextUrlTitle}</Link>
+                <Link href={data?.nextUrl ?? ''}>{data?.nextUrlTitle}</Link>
             </footer>
         </FormsLayout>
     );
@@ -152,7 +150,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: any) {
     try {
-        const data = require(`@/data/${params.component}.json`);
+        const data = await require(`@/data/${params.component}.json`);
         return {
             props: {
                 data

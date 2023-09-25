@@ -9,9 +9,10 @@ import {
     summerTheme,
     fallTheme
 } from 'corelabui/Theme';
+
 import '../../public/assets/fonts/style.css';
-import '../styles/globals.css';
-import '../styles/prism.css';
+import '../core/styles/globals.css';
+import '../core/styles/prism.css';
 import { useState } from 'react';
 
 const font = Montserrat({ subsets: ['latin'] });

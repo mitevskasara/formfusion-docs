@@ -2,13 +2,18 @@ import React, { useState } from 'react';
 import Table from 'corelabui/Table';
 import Typography from 'corelabui/Typography';
 import Select from 'corelabui/Select';
-import FormsLayout from '@/components/FormsLayout';
 import { Form, Input, patterns as RFMPatterns } from '@corelabui/rfm';
+
+import Property from '@/components/Property';
+import FormsLayout from '@/components/MainLayout';
+import Link from '@/components/Link';
+
 import patterns from '@/constants/patterns';
 import countries from '@/constants/countries';
+
 import { camelCaseToLabel } from '@/utils/general';
+
 import classes from '../forms.module.scss';
-import Property from '@/components/Property';
 
 export const HEADERS = ['Type', 'Description'];
 
@@ -47,19 +52,14 @@ const Patterns = () => {
                 </Typography>
                 <Typography variant="body1">
                     Similar to&nbsp;
-                    <a href="/forms/api/types" className={classes.link}>
-                        Input types,{' '}
-                    </a>
+                    <Link href="/forms/api/types">Input types, </Link>
                     <strong>React Form Manager</strong> provides a collection of
                     thoroughly tested JavaScript regular expressions that can be
                     directly applied to the pattern attribute of an input field.
-                    The main difference between{' '}
-                    <a
-                        href="/forms/api/types"
-                        className={classes.link}
-                        target="_blank">
-                        Input types{' '}
-                    </a>
+                    The main difference between&nbsp;
+                    <Link href="/forms/api/types" target="_blank">
+                        Input types&nbsp;
+                    </Link>
                     and validation patterns is that the patterns collection
                     includes dynamic validation such as: minimum/maximum
                     required chars/letters/numbers, specific domain validation,
@@ -67,18 +67,18 @@ const Patterns = () => {
                     requires a specific parameter to construct a pattern.
                     <br />
                     <br />
-                    The{' '}
-                    <a href="/forms/api/types" className={classes.link}>
-                        Input types collection{' '}
-                    </a>{' '}
-                    uses part of these validation patterns as a base buy they
-                    are also exposed for usage when you need a dynamic
-                    validation or you don't want to use the Input component
+                    The&nbsp;
+                    <Link href="/forms/api/types">
+                        Input types collection&nbsp;
+                    </Link>
+                    &nbsp; uses part of these validation patterns as a base buy
+                    they are also exposed for usage when you need a dynamic
+                    validation or you don&apos;t want to use the Input component
                     provided by <strong>RFM</strong>. To use, pass the preffered
                     pattern as <code>pattern</code> prop to the input.
                     <br />
                     <br />
-                    Here is a list of all validation patterns{' '}
+                    Here is a list of all validation patterns&nbsp;
                     <strong>RFM</strong> currently contains:
                 </Typography>
                 <br />
@@ -89,13 +89,13 @@ const Patterns = () => {
                     <Typography variant="heading5" htmlElement="h3">
                         Try it out
                     </Typography>
-                    <a
+                    <Link
                         className={classes.main__section__types__codeLink}
                         href="https://codesandbox.io/embed/rfm-basic-types-usage-t7c8sn?fontsize=14&hidenavigation=1&theme=dark"
-                        target="_blank">
-                        <span className="icon-codesandbox" />
+                        target="_blank"
+                        icon="codesandbox">
                         Open in <b>&nbsp;CodeSandbox</b>
-                    </a>
+                    </Link>
                 </div>
                 <br />
                 <Select

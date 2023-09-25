@@ -2,14 +2,18 @@ import React, { useState } from 'react';
 import Table from 'corelabui/Table';
 import Typography from 'corelabui/Typography';
 import Select from 'corelabui/Select';
-import Link from 'corelabui/Link';
 import { Form, Input, types as RFMtypes } from '@corelabui/rfm';
-import FormsLayout from '@/components/FormsLayout';
+
+import FormsLayout from '@/components/MainLayout';
 import Property from '@/components/Property';
+import Link from '@/components/Link';
+
 import info from '@/constants/types';
-import classes from '../forms.module.scss';
 import countries from '@/constants/countries';
+
 import { typeToLabel } from '@/utils/general';
+
+import classes from '../forms.module.scss';
 
 export const HEADERS = ['Type', 'Description'];
 
@@ -55,12 +59,11 @@ const Types = () => {
                 <Typography variant="body1">
                     <strong>React Form Manager</strong> extends the list
                     of&nbsp;
-                    <a
+                    <Link
                         href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
-                        target="_blank"
-                        className={classes.link}>
+                        target="_blank">
                         native
-                    </a>
+                    </Link>
                     &nbsp;input types with a large and thoroughly tested
                     collection of types that define and apply a corresponding
                     validation pattern out-of-box to the input field without the
@@ -68,7 +71,7 @@ const Types = () => {
                     testing for each input field in your form.
                     <br />
                     <br />
-                    Only pass the preffered type prop to the input and{' '}
+                    Only pass the preffered type prop to the input and&nbsp;
                     <strong>RFM</strong> takes care of everything.
                     <br />
                     <br />
@@ -83,13 +86,13 @@ const Types = () => {
                     <Typography variant="heading5" htmlElement="h3">
                         Try it out
                     </Typography>
-                    <a
+                    <Link
                         className={classes.main__section__types__codeLink}
                         href="https://codesandbox.io/embed/rfm-basic-types-usage-t7c8sn?fontsize=14&hidenavigation=1&theme=dark"
-                        target="_blank">
-                        <span className="icon-codesandbox" />
+                        target="_blank"
+                        icon="codesandbox">
                         Open in <b>&nbsp;CodeSandbox</b>
-                    </a>
+                    </Link>
                 </div>
                 <Select
                     placeholder="Select input type"

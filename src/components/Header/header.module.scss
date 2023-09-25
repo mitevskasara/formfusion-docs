@@ -1,0 +1,49 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.header {
+    height: $header-height;
+    position: fixed;
+    top: 0;
+    width: -webkit-fill-available;
+    background-color: white;
+    z-index: 1;
+    padding: 0.5em $side-padding;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        &__menuIcon {
+            display: none;
+
+            @include media(small) {
+                display: block;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        &__link {
+            background-color: $primary;
+            color: white;
+            padding: 0.3em;
+            display: flex;
+            align-items: center;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: $primary-hover;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
+
 import classes from './hamburgerMenu.module.scss';
 
 interface HamburgerMenuProps {
