@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from 'react';
 
 import LeftSidebar from '@/components/LeftSidebar';
-import Layout from '@/components/Layout';
+import Layout from '@/components/PageLayout';
 import Header from '@/components/Header';
 
 import classes from './main.module.scss';
