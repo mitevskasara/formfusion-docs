@@ -1,10 +1,10 @@
 import React from 'react';
-import Link from 'corelabui/Link';
 import Typography from 'corelabui/Typography';
 import { patterns } from '@corelabui/rfm';
 
 import Code from '@/components/Code';
 import MainLayout from '@/components/MainLayout';
+import Link from '@/components/Link';
 
 import classes from './forms.module.scss';
 
@@ -42,16 +42,15 @@ const Forms = () => {
                 <Typography variant="body1">
                     <strong>React Form Manager</strong> leverages the native
                     HTML
-                    <a
+                    <Link
                         href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation"
-                        className={classes.link}
                         target="_blank">
                         &nbsp;form validation&nbsp;
-                    </a>
-                    by extending the list of{' '}
-                    <a href="/forms/api/types" className={classes.link}>
+                    </Link>
+                    by extending the list of&nbsp;
+                    <Link href="/forms/api/types">
                         native input types&nbsp;
-                    </a>
+                    </Link>
                     and provides a large collection of thoroughly tested and
                     ready to use validation patterns such as:
                 </Typography>
@@ -74,15 +73,12 @@ const Forms = () => {
                     <li>
                         <Typography variant="body1" margin={false}>
                             and many more - See full list&nbsp;
-                            <a
-                                href="/forms/api/patterns"
-                                className={classes.link}>
-                                here
-                            </a>
+                            <Link href="/forms/api/patterns">here</Link>
                         </Typography>
                     </li>
                 </ul>
-                <br />{' '}
+                <br />
+                &nbsp;
                 <Typography variant="heading5" htmlElement="h3">
                     Features
                 </Typography>
@@ -141,7 +137,7 @@ const Forms = () => {
                     Example
                 </Typography>
                 <Typography variant="body1">
-                    Here's an example of using React Form Manager for a
+                    Here&apos;s an example of using React Form Manager for a
                     straightforward uncontrolled form with username field with
                     validation
                 </Typography>

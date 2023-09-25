@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
 
 import HamburgerMenu from '@/components/HamburgerMenu';
+import Link from '@/components/Link';
 
 import classes from './header.module.scss';
 
@@ -25,30 +26,30 @@ const Header = ({ open, toggle }: HeaderProps) => {
                 />
             </div>
             <div className={classes.header__right}>
-                <a
+                <Link
                     href={`https://www.facebook.com/corelabui`}
                     target="_blank"
-                    title="Share on Facebook">
-                    <span className="icon-facebook" />
-                </a>
-                <a
+                    title="Share on Facebook"
+                    icon="facebook"
+                />
+                <Link
                     href={`https://instagram.com/corelabui`}
                     target="_blank"
-                    title="Share on whatsapp">
-                    <span className="icon-instagram" />
-                </a>
-                <a
+                    title="Share on whatsapp"
+                    icon="instagram"
+                />
+                <Link
                     href={`https://www.linkedin.com/corelabui`}
                     target="_blank"
-                    title="Share on Linkedin">
-                    <span className="icon-linkedin" />
-                </a>
-                <a
+                    title="Share on Linkedin"
+                    icon="linkedin"
+                />
+                <Link
                     href={`https://github.com/mitevskasara`}
                     target="_blank"
-                    title="Share on Twitter">
-                    <span className="icon-github" />
-                </a>
+                    title="Share on Twitter"
+                    icon="github"
+                />
             </div>
         </header>
     );
