@@ -32,7 +32,8 @@ const Types = () => {
         <MainLayout
             {...{
                 ...META_DATA,
-                title: `${META_DATA.title} | Input types`
+                title: `${META_DATA.title} | Input types`,
+                canonical: `https://www.corelabui.com/forms/api/types`
             }}>
             <Section title="Input types" margin={false}>
                 <Typography variant="body1">
