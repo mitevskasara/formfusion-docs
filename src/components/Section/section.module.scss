@@ -1,0 +1,9 @@
+@import '@/core/styles/variables';
+
+.section {
+    margin: 4em 0;
+
+    &_noMargin {
+        margin: 0;
+    }
+}
