@@ -1,6 +1,6 @@
 import Typography from 'corelabui/Typography';
 
-import classes from './Section.module.scss';
+import classes from './section.module.scss';
 import { HTMLAttributes, LegacyRef, forwardRef } from 'react';
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
