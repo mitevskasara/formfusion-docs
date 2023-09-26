@@ -1,61 +1,40 @@
 import React, { useState } from 'react';
-import Table from 'corelabui/Table';
 import Typography from 'corelabui/Typography';
+import Highlight from 'corelabui/Highlight';
 import Select from 'corelabui/Select';
-import { Form, Input, types as RFMtypes } from '@corelabui/rfm';
+import Button from 'corelabui/Button';
+import Flex from 'corelabui/Flex';
+import { types as RFMtypes } from '@corelabui/rfm';
 
-import FormsLayout from '@/components/MainLayout';
-import Property from '@/components/Property';
+import MainLayout from '@/components/MainLayout';
 import Link from '@/components/Link';
+import FooterNavigation from '@/components/FooterNavigation';
+import Section from '@/components/Section';
+import Table from '@/components/Table';
+import Form from '@/components/Form';
+import Input from '@/components/Input';
+import HTMLText from '@/components/HTMLText';
 
 import info from '@/constants/types';
 import countries from '@/constants/countries';
+import META_DATA from '@/constants/metaData';
+import { TYPES_TABLE_HEADERS, typesToTableData } from '@/constants/tables';
+import { typesToOptions } from '@/utils/dataTransform';
 
-import { typeToLabel } from '@/utils/general';
-
-import classes from '../forms.module.scss';
-
-export const HEADERS = ['Type', 'Description'];
-
-const types = RFMtypes
-    ? [
-          ...Object.keys(RFMtypes).map((type) => {
-              return !type.startsWith('postal-code')
-                  ? {
-                        type: <Property>{type}</Property>,
-                        desc: info[type].description
-                    }
-                  : {};
-          }),
-          {
-              type: <Property>{`postal-code-{country_code}`}</Property>,
-              desc: info['postal-code'].description
-          }
-      ]
-    : [];
-
-const options = Object.keys(RFMtypes).reduce(
-    (acc: { label: string; value: string }[], type) => {
-        if (!type.startsWith('postal-code')) {
-            acc.push({ value: type, label: typeToLabel(type) });
-        }
-        return acc;
-    },
-    []
-);
-
-options.push({ value: 'postal-code', label: 'Postal code' });
+const TYPES_TABLE_DATA = typesToTableData(RFMtypes);
+const options = typesToOptions(RFMtypes);
 
 const Types = () => {
     const [country, setCountry] = useState<string>('gb');
     const [type, setType] = useState(options[0].value);
 
     return (
-        <FormsLayout>
-            <section className={classes.main__section}>
-                <Typography variant="heading4" htmlElement="h2">
-                    Input types
-                </Typography>
+        <MainLayout
+            {...{
+                ...META_DATA,
+                title: `${META_DATA.title} | Input types`
+            }}>
+            <Section title="Input types" margin={false}>
                 <Typography variant="body1">
                     <strong>React Form Manager</strong> extends the list
                     of&nbsp;
@@ -66,9 +45,9 @@ const Types = () => {
                     </Link>
                     &nbsp;input types with a large and thoroughly tested
                     collection of types that define and apply a corresponding
-                    validation pattern out-of-box to the input field without the
-                    hassle of writing your own patterns, validation functions or
-                    testing for each input field in your form.
+                    validation pattern to the input field without the hassle of
+                    writing your own patterns, validation functions or testing
+                    for each input field in your form.
                     <br />
                     <br />
                     Only pass the preffered type prop to the input and&nbsp;
@@ -79,21 +58,25 @@ const Types = () => {
                     contains:
                 </Typography>
                 <br />
-                <Table headers={HEADERS} data={types} />
-                <br />
-                <br />
-                <div className={classes.main__section__types}>
-                    <Typography variant="heading5" htmlElement="h3">
+                <Table headers={TYPES_TABLE_HEADERS} data={TYPES_TABLE_DATA} />
+                <Flex justifyContent="space-between" margin="3em 0 2em 0">
+                    <Typography
+                        variant="heading5"
+                        htmlElement="h3"
+                        margin={false}>
                         Try it out
                     </Typography>
-                    <Link
-                        className={classes.main__section__types__codeLink}
-                        href="https://codesandbox.io/embed/rfm-basic-types-usage-t7c8sn?fontsize=14&hidenavigation=1&theme=dark"
-                        target="_blank"
-                        icon="codesandbox">
-                        Open in <b>&nbsp;CodeSandbox</b>
-                    </Link>
-                </div>
+                    <Button>
+                        <Link
+                            href="https://codesandbox.io/embed/rfm-basic-types-usage-t7c8sn?fontsize=14&hidenavigation=1&theme=dark"
+                            target="_blank"
+                            icon="codesandbox"
+                            internal={false}
+                            color="white">
+                            Open in <b>&nbsp;CodeSandbox&nbsp;</b>
+                        </Link>
+                    </Button>
+                </Flex>
                 <Select
                     placeholder="Select input type"
                     options={options}
@@ -102,8 +85,8 @@ const Types = () => {
                     label="Select an input type to test"
                 />
                 {type === 'postal-code' ? (
-                    <Form className={classes.form} validateOnChange>
-                        <div className={classes.form__field}>
+                    <Form validateOnChange>
+                        <Flex direction="column" gap="0.5em">
                             <Typography variant="subtitle2" htmlElement="label">
                                 Pattern for: {country} postal code
                             </Typography>
@@ -114,93 +97,67 @@ const Types = () => {
                                     setCountry(value.toLowerCase())
                                 }
                                 value={country.toUpperCase()}
-                                className={classes.countryDropdown}
                             />
                             <Input
                                 id={`postal-code-${country}`}
                                 name={`postal-code-${country}`}
                                 type={`postal-code-${country}`}
-                                classes={{
-                                    label: classes.form__field__label,
-                                    error: classes.form__field__error
-                                }}
                             />
-                            <Typography
-                                variant="body1"
-                                className={classes.form__field__info}>
+                            <Typography variant="body1">
                                 {info[`postal-code-${country}`].info}
                                 <br />
                                 <br />
-                                <span
-                                    className={
-                                        classes.form__field__info_correct
-                                    }
-                                    dangerouslySetInnerHTML={{
-                                        __html: info[`postal-code-${country}`]
-                                            .correct
-                                    }}
-                                />
+                                <Highlight color="#296140">
+                                    <HTMLText
+                                        text={
+                                            info[`postal-code-${country}`]
+                                                .correct
+                                        }
+                                    />
+                                </Highlight>
                                 <br />
-                                <span
-                                    className={
-                                        classes.form__field__info_incorrect
-                                    }
-                                    dangerouslySetInnerHTML={{
-                                        __html: info[`postal-code-${country}`]
-                                            .incorrect
-                                    }}
-                                />
+                                <Highlight color="#aa1d1d">
+                                    <HTMLText
+                                        text={
+                                            info[`postal-code-${country}`]
+                                                .incorrect
+                                        }
+                                    />
+                                </Highlight>
                             </Typography>
-                        </div>
+                        </Flex>
                     </Form>
                 ) : (
-                    <Form className={classes.form} validateOnChange>
-                        <div className={classes.form__field}>
+                    <Form validateOnChange>
+                        <Flex direction="column" gap="0.5em">
                             <Input
                                 id={type}
                                 name={type}
                                 type={type}
                                 label={`Input type: ${type}`}
-                                classes={{
-                                    label: classes.form__field__label,
-                                    error: classes.form__field__error
-                                }}
                             />
-                            <Typography
-                                variant="body1"
-                                className={classes.form__field__info}>
+                            <Typography variant="caption">
                                 {info[type].info}
-                                <br />
-                                <br />
-                                <span
-                                    className={
-                                        classes.form__field__info_correct
-                                    }
-                                    dangerouslySetInnerHTML={{
-                                        __html: info[type].correct
-                                    }}
-                                />
-                                <br />
-                                <span
-                                    className={
-                                        classes.form__field__info_incorrect
-                                    }
-                                    dangerouslySetInnerHTML={{
-                                        __html: info[type].incorrect
-                                    }}
-                                />
                             </Typography>
-                        </div>
+                            <br />
+                            <Typography variant="body1">
+                                <Highlight color="#296140">
+                                    <HTMLText text={info[type].correct} />
+                                </Highlight>
+                                <br />
+                                <Highlight color="#aa1d1d">
+                                    <HTMLText text={info[type].incorrect} />
+                                </Highlight>
+                            </Typography>
+                        </Flex>
                     </Form>
                 )}
-            </section>
-            <footer className={classes.footer}>
-                <Typography variant="caption" align="right">
-                    Next
-                </Typography>
-                <Link href="/forms/api/patterns">Validation patterns</Link>
-            </footer>
-        </FormsLayout>
+            </Section>
+            <FooterNavigation
+                url="/forms/api/patterns"
+                title="Validation patterns"
+            />
+        </MainLayout>
     );
 };
 
