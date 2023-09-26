@@ -13,6 +13,7 @@ type Props = {
     image?: string;
     keywords?: string;
     url?: string;
+    canonical?: string;
 };
 
 const MainLayout = ({
@@ -21,7 +22,8 @@ const MainLayout = ({
     title,
     image = '',
     description,
-    keywords
+    keywords,
+    canonical = 'https://www.corelabui.com/forms'
 }: Props) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     return (
@@ -43,6 +45,7 @@ const MainLayout = ({
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={image} />
                 <meta name="keywords" content={keywords}></meta>
+                <link rel="canonical" href={canonical} />
             </Head>
             <Header open={isOpen} toggle={setIsOpen} />
             <div className={classes.container}>

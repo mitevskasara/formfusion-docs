@@ -23,7 +23,8 @@ const Forms = ({ data }: { data: Component }) => {
         <MainLayout
             {...{
                 ...META_DATA,
-                title: `${META_DATA.title} | ${capitalize(data?.key)}`
+                title: `${META_DATA.title} | ${capitalize(data?.key)}`,
+                canonical: `https://www.corelabui.com/forms/api/${data?.key}`
             }}>
             <Section title={data?.title} margin={false}>
                 <Typography variant="body1">

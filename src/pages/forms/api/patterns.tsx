@@ -35,7 +35,8 @@ const Patterns = () => {
         <MainLayout
             {...{
                 ...META_DATA,
-                title: `${META_DATA.title} | Patterns`
+                title: `${META_DATA.title} | Patterns`,
+                canonical: `https://www.corelabui.com/forms/api/patterns`
             }}>
             <Section title="Validation patterns" margin={false}>
                 <Typography variant="body1">
