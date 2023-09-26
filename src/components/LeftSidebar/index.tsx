@@ -8,6 +8,7 @@ import Link from '@/components/Link';
 import NAV from '@/constants/navigation';
 
 import classes from './leftSidebar.module.scss';
+import Accordion from '../Accordion';
 
 interface Props {
     open: boolean;
@@ -22,123 +23,89 @@ const LeftSidebar = ({ open }: Props) => {
     if (open) classses += ` ${classes.leftSidebar_open}`;
     return (
         <aside className={classses}>
-            <dl className={classes.leftSidebar__navigation}>
-                <dt className={classes.leftSidebar__navigation__item}>
-                    <Link href="/forms#introduction">
-                        <Typography
-                            variant="body1"
-                            margin={false}
-                            color={
-                                isActive('/forms#introduction') &&
-                                winterTheme.primary
-                            }>
-                            Introduction
-                        </Typography>
-                    </Link>
-                </dt>
-                <dt className={classes.leftSidebar__navigation__item}>
+            <nav className={classes.leftSidebar__navigation}>
+                <Link href="/forms#introduction">
                     <Typography
                         variant="body1"
+                        htmlElement="span"
                         margin={false}
-                        htmlElement="div">
-                        <details
-                            open
+                        color={
+                            isActive('/forms#introduction') &&
+                            winterTheme.primary
+                        }>
+                        Introduction
+                    </Typography>
+                </Link>
+                <Typography variant="body1" margin={false} htmlElement="div">
+                    <Accordion title="Getting started" open>
+                        <ul
                             className={
-                                classes.leftSidebar__navigation__item_expandable
+                                classes.leftSidebar__navigation__sublist
                             }>
-                            <summary
+                            <li
                                 className={
-                                    classes.leftSidebar__navigation__item_expandable__title
+                                    classes.leftSidebar__navigation__sublist__item
                                 }>
-                                Getting started
-                            </summary>
-                            <dd>
-                                <dl
-                                    className={
-                                        classes.leftSidebar__navigation__sublist
-                                    }>
-                                    <dt
-                                        className={
-                                            classes.leftSidebar__navigation__sublist__item
+                                <Link href="/forms#installation">
+                                    <Typography
+                                        variant="body1"
+                                        margin={false}
+                                        htmlElement="span"
+                                        color={
+                                            isActive('/forms#installation') &&
+                                            winterTheme.primary
                                         }>
-                                        <Link href="/forms#installation">
-                                            <Typography
-                                                variant="body1"
-                                                margin={false}
-                                                color={
-                                                    isActive(
-                                                        '/forms#installation'
-                                                    ) && winterTheme.primary
-                                                }>
-                                                Installation
-                                            </Typography>
-                                        </Link>
-                                    </dt>
-                                    <dt>
-                                        <Link href="/forms#example">
-                                            <Typography
-                                                variant="body1"
-                                                margin={false}
-                                                color={
-                                                    isActive(
-                                                        '/forms#example'
-                                                    ) && winterTheme.primary
-                                                }>
-                                                Example
-                                            </Typography>
-                                        </Link>
-                                    </dt>
-                                </dl>
-                            </dd>
-                        </details>
-                    </Typography>
-                </dt>
-                <dt className={classes.leftSidebar__navigation__item}>
-                    <Typography
-                        variant="body1"
-                        margin={false}
-                        htmlElement="div">
-                        <details
-                            open
+                                        Installation
+                                    </Typography>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/forms#example">
+                                    <Typography
+                                        variant="body1"
+                                        margin={false}
+                                        htmlElement="span"
+                                        color={
+                                            isActive('/forms#example') &&
+                                            winterTheme.primary
+                                        }>
+                                        Example
+                                    </Typography>
+                                </Link>
+                            </li>
+                        </ul>
+                    </Accordion>
+                </Typography>
+                <Typography variant="body1" margin={false} htmlElement="div">
+                    <Accordion title="API" open>
+                        <ul
                             className={
-                                classes.leftSidebar__navigation__item_expandable
+                                classes.leftSidebar__navigation__sublist
                             }>
-                            <summary
-                                className={
-                                    classes.leftSidebar__navigation__item_expandable__title
-                                }>
-                                API
-                            </summary>
-                            <dd>
-                                <dl
+                            {NAV.map((item) => (
+                                <li
+                                    key={item.key}
                                     className={
-                                        classes.leftSidebar__navigation__sublist
+                                        classes.leftSidebar__navigation__sublist__item
                                     }>
-                                    {NAV.map((item) => (
-                                        <dt
-                                            key={item.key}
-                                            className={
-                                                classes.leftSidebar__navigation__sublist__item
+                                    <Link href={item.url}>
+                                        <Typography
+                                            variant="body1"
+                                            margin={false}
+                                            htmlElement="span"
+                                            color={
+                                                isActive(item.url) &&
+                                                winterTheme.primary
                                             }>
-                                            <Link href={item.url}>
-                                                <Typography
-                                                    variant="body1"
-                                                    margin={false}
-                                                    color={
-                                                        isActive(item.url) &&
-                                                        winterTheme.primary
-                                                    }>
-                                                    {item.title}
-                                                </Typography>
-                                            </Link>
-                                        </dt>
-                                    ))}
-                                </dl>
-                            </dd>
-                        </details>
-                    </Typography>
-                </dt>
-            </dl>
+                                            {item.title}
+                                        </Typography>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </Accordion>
+                </Typography>
+            </nav>
         </aside>
     );
 };

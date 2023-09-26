@@ -21,7 +21,7 @@ export const encode = (url: string) => url.replaceAll('.html', '');
 export const decode = (url: string) => url + '.html';
 
 export const capitalize = (string: string) =>
-    string.charAt(0).toUpperCase() + string.slice(1);
+    string ? string.charAt(0).toUpperCase() + string.slice(1) : '';
 
 export const camelCaseToLabel = (string: string) => {
     const result = string.replace(/([A-Z])/g, ' $1').trim();

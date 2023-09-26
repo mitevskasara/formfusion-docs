@@ -7,9 +7,9 @@
     top: 0;
     width: -webkit-fill-available;
     background-color: white;
-    z-index: 1;
+    z-index: 2;
     padding: 0.5em $side-padding;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,11 +19,17 @@
         align-items: center;
         gap: 1em;
 
-        &__menuIcon {
-            display: none;
+        &__logo {
+            &_mobile {
+                display: none;
+
+                @include media(small) {
+                    display: block;
+                }
+            }
 
             @include media(small) {
-                display: block;
+                display: none;
             }
         }
     }
@@ -32,6 +38,10 @@
         display: flex;
         align-items: center;
         gap: 1em;
+
+        @include media(small) {
+            gap: 0.5em;
+        }
 
         &__link {
             background-color: $primary;
@@ -43,6 +53,15 @@
 
             &:hover {
                 background-color: $primary-hover;
+            }
+        }
+
+        &__menuIcon {
+            display: none;
+
+            @include media(small) {
+                display: block;
+                margin-left: 1em;
             }
         }
     }

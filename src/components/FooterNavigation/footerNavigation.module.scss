@@ -1,0 +1,15 @@
+@import '@/core/styles/variables';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 3em;
+
+    & > a {
+        cursor: pointer;
+        color: $primary;
+        font-weight: 500;
+    }
+}
