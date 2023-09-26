@@ -15,14 +15,19 @@ const CustomHeader = ({ open, toggle }: CustomHeaderProps) => {
     return (
         <header className={classes.header}>
             <div className={classes.header__left}>
-                <div className={classes.header__left__menuIcon}>
-                    <HamburgerMenu open={open} setIsOpen={toggle} />
-                </div>
                 <Image
                     src="/assets/logo/winter/logo.svg"
                     width={150}
                     height={39}
                     alt="CoreLab UI logo"
+                    className={classes.header__left__logo}
+                />
+                <Image
+                    src="/assets/logo/winter/logo-icon.svg"
+                    width={27}
+                    height={39}
+                    alt="CoreLab UI logo"
+                    className={classes.header__left__logo_mobile}
                 />
             </div>
             <div className={classes.header__right}>
@@ -54,6 +59,9 @@ const CustomHeader = ({ open, toggle }: CustomHeaderProps) => {
                     icon="github"
                     className={classes.header__right__link}
                 />
+                <div className={classes.header__right__menuIcon}>
+                    <HamburgerMenu open={open} setIsOpen={toggle} />
+                </div>
             </div>
         </header>
     );

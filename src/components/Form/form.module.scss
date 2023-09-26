@@ -1,0 +1,9 @@
+@import '@/core/styles/media-queries';
+@import '@/core/styles/variables';
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 2em;
+}

@@ -11,7 +11,7 @@
         "prettier": "npx prettier --write ."
     },
     "dependencies": {
-        "@corelabui/rfm": "^0.0.4",
+        "@corelabui/rfm": "^0.0.5",
         "@next/bundle-analyzer": "^13.4.2",
         "@types/node": "20.2.5",
         "@types/react": "18.2.7",
