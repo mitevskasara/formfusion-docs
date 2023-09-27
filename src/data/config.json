@@ -1,0 +1,34 @@
+{
+    "key": "config",
+    "title": "Config",
+    "props": [
+        {
+            "name": "values",
+            "type": "{ [field: string]: string }",
+            "default": "",
+            "description": "Contains the values of the form fields. The field key should match the name attribute of each form",
+            "required": false
+        },
+        {
+            "name": "errors",
+            "type": "{ [field: string]: string }",
+            "default": "",
+            "description": "Contains the error messages for each invalid field. The field key should match the name attribute of each form",
+            "required": false
+        },
+        {
+            "name": "touched",
+            "type": "{ [field: string]: string }",
+            "default": "",
+            "description": "Contains all touched fields. The field key should match the name attribute of each form",
+            "required": false
+        },
+        {
+            "name": "resetForm",
+            "type": "() => void",
+            "default": "",
+            "description": "Resets the form",
+            "required": false
+        }
+    ]
+}

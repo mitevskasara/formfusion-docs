@@ -11,13 +11,13 @@
         "prettier": "npx prettier --write ."
     },
     "dependencies": {
-        "@corelabui/rfm": "^0.0.5",
+        "@corelabui/rfm": "^0.0.7",
         "@next/bundle-analyzer": "^13.4.2",
         "@types/node": "20.2.5",
         "@types/react": "18.2.7",
         "@types/react-dom": "18.2.4",
         "@vercel/analytics": "^1.0.1",
-        "corelabui": "^0.0.2",
+        "corelabui": "^0.0.3",
         "dotenv": "^16.0.3",
         "moment": "^2.29.4",
         "next": "13.4.4",
