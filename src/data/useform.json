@@ -1,16 +1,7 @@
 {
-    "key": "form",
-    "title": "Form",
-    "url": "https: //developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes",
-    "description": "The Form component serves as a small wrapper for an HTML form element that manages the context and passes it down to its children components. It accepts all native HTML form properties and includes the following as listed bellow",
+    "key": "useform",
+    "title": "UseForm",
     "props": [
-        {
-            "name": "children",
-            "type": "Node",
-            "default": "",
-            "description": "Children of the Form element such as Input, Textarea, Labels, Buttons etc",
-            "required": true
-        },
         {
             "name": "onSubmit",
             "type": "function",
@@ -39,9 +30,5 @@
             "description": "If the form should trigger validation and show errors when the field is out of focus",
             "required": false
         }
-    ],
-    "exampleUrl": "https://codesandbox.io/s/rfm-basic-form-example-nvg3rr",
-    "exampleTitle": "RFM Basic Form example",
-    "nextUrl": "/forms/api/input",
-    "nextUrlTitle": "Input"
+    ]
 }

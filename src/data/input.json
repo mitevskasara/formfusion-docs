@@ -33,7 +33,7 @@
             "required": false
         }
     ],
-    "exampleUrl": "https://codesandbox.io/embed/rfm-basic-input-usage-95ws8y?fontsize=14&hidenavigation=1&theme=dark&view=preview",
+    "exampleUrl": "https://codesandbox.io/s/rfm-basic-input-usage-95ws8y",
     "exampleTitle": "RFM Basic Input usage",
     "nextUrl": "/forms/api/textarea",
     "nextUrlTitle": "Textarea"
