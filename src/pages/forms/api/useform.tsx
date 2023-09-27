@@ -33,7 +33,7 @@ const UseForm = () => {
                     UseForm can be used when you want to have more control over
                     the form including access to the values and errors objects
                     or when using a different Field component other than the
-                    <strong> RFM's</strong> Input and Textarea components.
+                    <strong> RFM&apos;s</strong> Input and Textarea components.
                 </Typography>
                 <br />
                 <Typography variant="heading5" htmlElement="h3">
