@@ -21,6 +21,16 @@ export default [
         url: '/forms/api/textarea'
     },
     {
+        key: 'useform',
+        title: 'UseForm',
+        url: '/forms/api/useform'
+    },
+    {
+        key: 'connect',
+        title: 'Connect',
+        url: '/forms/api/connect'
+    },
+    {
         key: 'types',
         title: 'Input types',
         url: '/forms/api/types'

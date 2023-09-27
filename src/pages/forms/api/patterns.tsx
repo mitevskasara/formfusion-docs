@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Typography from 'corelabui/Typography';
 import Select from 'corelabui/Select';
 import Flex from 'corelabui/Flex';
 import Button from 'corelabui/Button';
 import Highlight from 'corelabui/Highlight';
-import { patterns as RFMPatterns } from '@corelabui/rfm';
+import Input from 'corelabui/Input';
+import { useForm, connect, patterns as RFMPatterns } from '@corelabui/rfm';
 
 import Property from '@/components/Property';
 import MainLayout from '@/components/MainLayout';
@@ -12,7 +13,6 @@ import Link from '@/components/Link';
 import Section from '@/components/Section';
 import Table from '@/components/Table';
 import Form from '@/components/Form';
-import Input from '@/components/Input';
 import HTMLText from '@/components/HTMLText';
 
 import patterns from '@/constants/patterns';
@@ -30,6 +30,15 @@ const options = patternsToOptions(RFMPatterns);
 const Patterns = () => {
     const [pattern, setPattern] = useState(options[0].value);
     const [country, setCountry] = useState<string>('gb');
+    const config = useForm({ onSubmit: () => {}, validateOnChange: true });
+    const fieldRef = useRef(null);
+
+    const inputType =
+        typeof RFMPatterns[pattern] === 'function'
+            ? pattern.includes('Range')
+                ? RFMPatterns[pattern](1, 5)
+                : RFMPatterns[pattern](5)
+            : RFMPatterns[pattern];
 
     return (
         <MainLayout
@@ -75,13 +84,15 @@ const Patterns = () => {
                     data={PATTERNS_TABLE_DATA}
                 />
                 <br />
-                <br />
-                <Flex justifyContent="space-between" margin="3em 0 2em 0">
+                <Flex
+                    justifyContent="space-between"
+                    alignItems="center"
+                    margin="3em 0 0 0">
                     <Typography
                         variant="heading5"
                         htmlElement="h3"
                         margin={false}>
-                        Try it out
+                        Example
                     </Typography>
                     <Button>
                         <Link
@@ -90,7 +101,7 @@ const Patterns = () => {
                             icon="codesandbox"
                             internal={false}
                             color="white">
-                            Open in <b>&nbsp;CodeSandbox&nbsp;</b>
+                            Try on <b>CodeSandbox&nbsp;</b>
                         </Link>
                     </Button>
                 </Flex>
@@ -105,9 +116,6 @@ const Patterns = () => {
                 {pattern === 'postalCode' ? (
                     <Form validateOnChange>
                         <Flex direction="column" gap="0.5em">
-                            <Typography variant="subtitle2" htmlElement="label">
-                                Pattern for: {country} postal code
-                            </Typography>
                             <Select
                                 placeholder="Select a country"
                                 options={countries}
@@ -115,16 +123,27 @@ const Patterns = () => {
                                     setCountry(value.toLowerCase())
                                 }
                                 value={country.toUpperCase()}
+                                label={`Pattern for: ${country} postal code`}
                             />
+                            <br />
                             <Input
+                                {...connect(
+                                    config,
+                                    fieldRef,
+                                    `postal-code-${country}`
+                                )}
                                 id={`postal-code-${country}`}
                                 name={`postal-code-${country}`}
-                                pattern={RFMPatterns.postalCode[country]}
+                                error={Boolean(
+                                    config.errors[`postal-code-${country}`]
+                                )}
+                                helperText={
+                                    config.errors[`postal-code-${country}`] ||
+                                    patterns[pattern][country].info
+                                }
                             />
+                            <br />
                             <Typography variant="body1">
-                                {patterns[pattern][country].info}
-                                <br />
-                                <br />
                                 <Highlight color="#296140">
                                     <HTMLText
                                         text={
@@ -147,20 +166,16 @@ const Patterns = () => {
                     <Form validateOnChange>
                         <Flex direction="column" gap="0.5em">
                             <Input
+                                {...connect(config, fieldRef, inputType)}
                                 id={pattern}
                                 name={pattern}
-                                pattern={
-                                    typeof RFMPatterns[pattern] === 'function'
-                                        ? pattern.includes('Range')
-                                            ? RFMPatterns[pattern](1, 5)
-                                            : RFMPatterns[pattern](5)
-                                        : RFMPatterns[pattern]
-                                }
                                 label={`Pattern: ${pattern}`}
+                                error={Boolean(config.errors[pattern])}
+                                helperText={
+                                    config.errors[pattern] ||
+                                    patterns[pattern].info
+                                }
                             />
-                            <Typography variant="caption">
-                                {patterns[pattern].info}
-                            </Typography>
                             <br />
                             <Typography variant="body1">
                                 <Highlight color="#296140">
@@ -171,7 +186,7 @@ const Patterns = () => {
                                 <br />
                                 <Highlight color="#aa1d1d">
                                     <HTMLText
-                                        text={patterns[pattern].correct}
+                                        text={patterns[pattern].incorrect}
                                     />
                                 </Highlight>
                             </Typography>

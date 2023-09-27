@@ -32,14 +32,14 @@ const CustomHeader = ({ open, toggle }: CustomHeaderProps) => {
             </div>
             <div className={classes.header__right}>
                 <Link
-                    href="https://www.facebook.com/corelabui"
+                    href="https://www.facebook.com/people/Core-Lab-UI/61551623474518"
                     target="_blank"
                     title="Share on Facebook"
                     icon="facebook"
                     className={classes.header__right__link}
                 />
                 <Link
-                    href="https://instagram.com/corelabui"
+                    href="https://www.instagram.com/corelabui"
                     target="_blank"
                     title="Share on whatsapp"
                     icon="instagram"
@@ -53,7 +53,7 @@ const CustomHeader = ({ open, toggle }: CustomHeaderProps) => {
                     className={classes.header__right__link}
                 />
                 <Link
-                    href="https://github.com/mitevskasara"
+                    href="https://github.com/corelabui"
                     target="_blank"
                     title="Share on Twitter"
                     icon="github"

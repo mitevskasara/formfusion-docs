@@ -1,23 +1,24 @@
 import React, { useRef } from 'react';
 import Typography from 'corelabui/Typography';
+import Flex from 'corelabui/Flex';
+import Button from 'corelabui/Button';
 
 import MainLayout from '@/components/MainLayout';
 import Link from '@/components/Link';
 import FooterNavigation from '@/components/FooterNavigation';
 import Section from '@/components/Section';
-import Playground from '@/components/Playground';
 import PropsTable from '@/components/PropsTable';
 import HTMLText from '@/components/HTMLText';
 
 import META_DATA from '@/constants/metaData';
 import { capitalize } from '@/utils/general';
-import useIsInViewport from '@/hook/useIsInViewport';
 
 import { Component } from './interfaces';
+import Code from '@/components/Code';
+import { COMPONENTS } from '@/constants/examples';
 
 const Forms = ({ data }: { data: Component }) => {
     const exampleRef = useRef<HTMLElement | null>(null);
-    const isInViewport = useIsInViewport(exampleRef);
 
     return (
         <MainLayout
@@ -46,14 +47,30 @@ const Forms = ({ data }: { data: Component }) => {
                 </Typography>
                 <PropsTable data={data} />
             </Section>
-            <Section id="example" subtitle="Example" ref={exampleRef}>
+            <Section id="example" ref={exampleRef}>
+                <Flex
+                    justifyContent="space-between"
+                    alignItems="center"
+                    margin="3em 0 2em 0">
+                    <Typography
+                        variant="heading5"
+                        htmlElement="h3"
+                        margin={false}>
+                        Example
+                    </Typography>
+                    <Button>
+                        <Link
+                            href={data?.exampleUrl}
+                            target="_blank"
+                            icon="codesandbox"
+                            internal={false}
+                            color="white">
+                            Try it out&nbsp;&nbsp;
+                        </Link>
+                    </Button>
+                </Flex>
+                <Code language="javascript">{COMPONENTS[data?.key]}</Code>
                 <br />
-                {isInViewport && (
-                    <Playground
-                        src={data?.exampleUrl}
-                        title={data?.exampleTitle}
-                    />
-                )}
             </Section>
             <FooterNavigation
                 url={data?.nextUrl ?? ''}
