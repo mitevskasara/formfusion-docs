@@ -26,7 +26,8 @@ const UseForm = () => {
                 <Typography variant="body1">
                     The connect method allows you to integrate{' '}
                     <b>React Form Manager </b>
-                    with your own Field component instead of the <b>RFM's</b>
+                    with your own Field component instead of the{' '}
+                    <b>RFM&apos;s</b>
                     <Link href="/forms/api/input"> Input </Link> or
                     <Link href="/forms/api/input"> Textarea </Link>. Connect is
                     also used for integration with UI Libraries. See
