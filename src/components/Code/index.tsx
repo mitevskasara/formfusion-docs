@@ -6,10 +6,12 @@ import styles from './code.module.scss';
 
 const Code = ({
     children,
-    language = 'javascript'
+    language = 'javascript',
+    canCopy = true
 }: {
     children: string;
     language?: string;
+    canCopy?: boolean;
 }) => {
     const codeRef = useRef(null);
     let timer: any = null;
@@ -31,12 +33,15 @@ const Code = ({
                 <code ref={codeRef} className={`language-${language}`}>
                     {children}
                 </code>
-                <Button
-                    title={title}
-                    onClick={onClick}
-                    size="small"
-                    width="75px"
-                />
+                {canCopy && (
+                    <Button
+                        title={title}
+                        onClick={onClick}
+                        size="small"
+                        width="75px"
+                        variant="secondary"
+                    />
+                )}
             </pre>
         </div>
     );

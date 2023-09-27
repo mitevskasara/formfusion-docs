@@ -1,0 +1,27 @@
+{
+    "key": "connect",
+    "title": "connect",
+    "props": [
+        {
+            "name": "config",
+            "type": "object",
+            "default": "",
+            "description": "The form configuration i.e the object that is returned when calling useForm().",
+            "required": true
+        },
+        {
+            "name": "ref",
+            "type": "HTMLInputElement",
+            "default": "",
+            "description": "The ref of the form field. You need to define it and pass it to your custom field component.",
+            "required": false
+        },
+        {
+            "name": "type",
+            "type": "string",
+            "default": "",
+            "description": "The RFM <a href='/forms/api/types'>input type</a> or <a href='/forms/api/types'>validation pattern</a> you want to apply to the field.",
+            "required": false
+        }
+    ]
+}

@@ -26,8 +26,8 @@
             "required": false
         }
     ],
-    "exampleUrl": "https://codesandbox.io/embed/rfm-basic-textarea-usage-8ljznq?fontsize=14&hidenavigation=1&theme=dark",
+    "exampleUrl": "https://codesandbox.io/s/rfm-basic-textarea-usage-8ljznq?file=/src/App.js:0-768",
     "exampleTitle": "RFM Basic Textarea usage",
-    "nextUrl": "/forms/api/types",
-    "nextUrlTitle": "Input types"
+    "nextUrl": "/forms/api/useform",
+    "nextUrlTitle": "UseForm"
 }

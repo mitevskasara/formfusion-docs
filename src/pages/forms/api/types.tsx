@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Typography from 'corelabui/Typography';
 import Highlight from 'corelabui/Highlight';
 import Select from 'corelabui/Select';
 import Button from 'corelabui/Button';
 import Flex from 'corelabui/Flex';
-import { types as RFMtypes } from '@corelabui/rfm';
+import Input from 'corelabui/Input';
+import { useForm, connect, types as RFMtypes } from '@corelabui/rfm';
 
 import MainLayout from '@/components/MainLayout';
 import Link from '@/components/Link';
@@ -12,7 +13,6 @@ import FooterNavigation from '@/components/FooterNavigation';
 import Section from '@/components/Section';
 import Table from '@/components/Table';
 import Form from '@/components/Form';
-import Input from '@/components/Input';
 import HTMLText from '@/components/HTMLText';
 
 import info from '@/constants/types';
@@ -27,6 +27,8 @@ const options = typesToOptions(RFMtypes);
 const Types = () => {
     const [country, setCountry] = useState<string>('gb');
     const [type, setType] = useState(options[0].value);
+    const config = useForm({ onSubmit: () => {}, validateOnChange: true });
+    const fieldRef = useRef(null);
 
     return (
         <MainLayout
@@ -60,12 +62,15 @@ const Types = () => {
                 </Typography>
                 <br />
                 <Table headers={TYPES_TABLE_HEADERS} data={TYPES_TABLE_DATA} />
-                <Flex justifyContent="space-between" margin="3em 0 2em 0">
+                <Flex
+                    justifyContent="space-between"
+                    alignItems="center"
+                    margin="3em 0 0 0">
                     <Typography
                         variant="heading5"
                         htmlElement="h3"
                         margin={false}>
-                        Try it out
+                        Example
                     </Typography>
                     <Button>
                         <Link
@@ -74,10 +79,11 @@ const Types = () => {
                             icon="codesandbox"
                             internal={false}
                             color="white">
-                            Open in <b>&nbsp;CodeSandbox&nbsp;</b>
+                            Try on <b>CodeSandbox&nbsp;</b>
                         </Link>
                     </Button>
                 </Flex>
+                <br />
                 <Select
                     placeholder="Select input type"
                     options={options}
@@ -86,12 +92,10 @@ const Types = () => {
                     label="Select an input type to test"
                 />
                 {type === 'postal-code' ? (
-                    <Form validateOnChange>
+                    <Form config={config}>
                         <Flex direction="column" gap="0.5em">
-                            <Typography variant="subtitle2" htmlElement="label">
-                                Pattern for: {country} postal code
-                            </Typography>
                             <Select
+                                label={`Pattern for: ${country} postal code`}
                                 placeholder="Select a country"
                                 options={countries}
                                 onChange={(value: string) =>
@@ -99,15 +103,26 @@ const Types = () => {
                                 }
                                 value={country.toUpperCase()}
                             />
+                            <br />
                             <Input
+                                {...connect(
+                                    config,
+                                    fieldRef,
+                                    `postal-code-${country}`
+                                )}
                                 id={`postal-code-${country}`}
                                 name={`postal-code-${country}`}
-                                type={`postal-code-${country}`}
+                                error={Boolean(
+                                    config.errors[`postal-code-${country}`]
+                                )}
+                                helperText={
+                                    config.errors[`postal-code-${country}`] ||
+                                    info[`postal-code-${country}`].info
+                                }
                             />
+                            <br />
+                            <br />
                             <Typography variant="body1">
-                                {info[`postal-code-${country}`].info}
-                                <br />
-                                <br />
                                 <Highlight color="#296140">
                                     <HTMLText
                                         text={
@@ -132,14 +147,15 @@ const Types = () => {
                     <Form validateOnChange>
                         <Flex direction="column" gap="0.5em">
                             <Input
+                                {...connect(config, fieldRef, type)}
                                 id={type}
                                 name={type}
-                                type={type}
                                 label={`Input type: ${type}`}
+                                error={Boolean(config.errors[type])}
+                                helperText={
+                                    config.errors[type] || info[type].info
+                                }
                             />
-                            <Typography variant="caption">
-                                {info[type].info}
-                            </Typography>
                             <br />
                             <Typography variant="body1">
                                 <Highlight color="#296140">
