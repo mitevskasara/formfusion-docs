@@ -20,7 +20,7 @@
             "name": "type",
             "type": "string",
             "default": "",
-            "description": "The RFM <a href='/forms/api/types'>input type</a> or <a href='/forms/api/types'>validation pattern</a> you want to apply to the field.",
+            "description": "The RFM <a href='/react-form-manager/api/types'>input type</a> or <a href='/react-form-manager/api/types'>validation pattern</a> you want to apply to the field.",
             "required": false
         }
     ]

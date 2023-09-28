@@ -10,12 +10,12 @@ interface FooterNavigationProps {
 
 const FooterNavigation = ({ url, title }: FooterNavigationProps) => {
     return (
-        <footer className={classes.footer}>
+        <nav className={classes.footer}>
             <Typography variant="caption" align="right">
                 Next
             </Typography>
             <Link href={url}>{title}</Link>
-        </footer>
+        </nav>
     );
 };
 

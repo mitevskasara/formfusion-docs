@@ -8,7 +8,7 @@
             "name": "type",
             "type": "string",
             "default": "text",
-            "description": "Type of the input element that defines its validation pattern. See all available types <a href='/forms/api/types'>here</a>",
+            "description": "Type of the input element that defines its validation pattern. See all available types <a href='/react-form-manager/api/types'>here</a>",
             "required": false
         },
         {
@@ -35,6 +35,6 @@
     ],
     "exampleUrl": "https://codesandbox.io/s/rfm-basic-input-usage-95ws8y",
     "exampleTitle": "RFM Basic Input usage",
-    "nextUrl": "/forms/api/textarea",
+    "nextUrl": "/react-form-manager/api/textarea",
     "nextUrlTitle": "Textarea"
 }

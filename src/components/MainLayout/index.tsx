@@ -1,10 +1,12 @@
-import React, { ReactNode, useState } from 'react';
+import React, { Dispatch, ReactNode, SetStateAction, useState } from 'react';
 import Head from 'next/head';
 
 import Header from '@/components/Header';
 import LeftSidebar from '@/components/LeftSidebar';
+import Footer from '@/components/Footer';
 
 import classes from './main.module.scss';
+import ROUTES from '@/constants/routes';
 
 type Props = {
     children?: ReactNode;
@@ -14,6 +16,8 @@ type Props = {
     keywords?: string;
     url?: string;
     canonical?: string;
+    theme: string;
+    setTheme: Dispatch<SetStateAction<string>>;
 };
 
 const MainLayout = ({
@@ -23,7 +27,9 @@ const MainLayout = ({
     image = '',
     description,
     keywords,
-    canonical = 'https://www.corelabui.com/forms'
+    canonical = `https://www.corelabui.com/${ROUTES.home}`,
+    theme,
+    setTheme
 }: Props) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     return (
@@ -47,10 +53,23 @@ const MainLayout = ({
                 <meta name="keywords" content={keywords}></meta>
                 <link rel="canonical" href={canonical} />
             </Head>
-            <Header open={isOpen} toggle={setIsOpen} />
+            <Header
+                open={isOpen}
+                toggle={setIsOpen}
+                theme={theme}
+                setTheme={setTheme}
+            />
             <div className={classes.container}>
-                <LeftSidebar open={isOpen} toggle={setIsOpen} />
-                <main className={classes.main}>{children}</main>
+                <LeftSidebar
+                    open={isOpen}
+                    toggle={setIsOpen}
+                    theme={theme}
+                    setTheme={setTheme}
+                />
+                <main className={classes.main}>
+                    {children}
+                    <Footer />
+                </main>
             </div>
         </div>
     );

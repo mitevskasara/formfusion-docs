@@ -1,17 +1,23 @@
-@import '@/core/styles/variables';
-
 .link {
-    color: $primary;
+    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
 
     &:hover {
-        color: $primary-hover;
+        color: var(--primary-hover);
     }
 
     &_noColor {
         color: inherit;
+        display: inline-flex;
+        align-items: center;
 
         &:hover {
             color: inherit;
+        }
+
+        & > span {
+            font-size: 20px;
         }
     }
 }

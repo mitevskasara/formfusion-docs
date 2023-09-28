@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import Typography from 'corelabui/Typography';
 import Button from 'corelabui/Button';
 import Flex from 'corelabui/Flex';
@@ -13,17 +13,25 @@ import Code from '@/components/Code';
 import Property from '@/components/Property';
 
 import { USEFORM_USAGE } from '@/constants/examples';
+import ROUTES from '@/constants/routes';
 const useFormParams = require(`@/data/useform.json`);
 const config = require(`@/data/config.json`);
 
-const UseForm = () => {
+interface IUseFormProps {
+    theme: string;
+    setTheme: Dispatch<SetStateAction<string>>;
+}
+
+const UseForm = ({ theme, setTheme }: IUseFormProps) => {
     return (
         <MainLayout
             {...{
                 ...META_DATA,
                 title: `${META_DATA.title} | UseForm`,
-                canonical: `https://www.corelabui.com/forms/api/useform`
-            }}>
+                canonical: `https://www.corelabui.com/${ROUTES.useform}`
+            }}
+            theme={theme}
+            setTheme={setTheme}>
             <Section title="UseForm hook" margin={false}>
                 <Typography variant="body1">
                     UseForm is a custom hook for managing forms that Form
@@ -78,7 +86,7 @@ const UseForm = () => {
                             target="_blank"
                             icon="codesandbox"
                             internal={false}
-                            color="white">
+                            color={'var(--light)'}>
                             Try it out&nbsp;&nbsp;
                         </Link>
                     </Button>
@@ -87,7 +95,7 @@ const UseForm = () => {
                     {USEFORM_USAGE}
                 </Code>
             </Section>
-            <FooterNavigation url="/forms/api/connect" title="Connect" />
+            <FooterNavigation url={`/${ROUTES.connect}`} title="Connect" />
         </MainLayout>
     );
 };

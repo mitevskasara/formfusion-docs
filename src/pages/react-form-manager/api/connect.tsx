@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import Typography from 'corelabui/Typography';
 import Button from 'corelabui/Button';
 import Flex from 'corelabui/Flex';
@@ -12,33 +12,41 @@ import Code from '@/components/Code';
 
 import META_DATA from '@/constants/metaData';
 import { CONNECT_USAGE } from '@/constants/examples';
+import ROUTES from '@/constants/routes';
 const params = require(`@/data/connect.json`);
 
-const UseForm = () => {
+interface IConnectProps {
+    theme: string;
+    setTheme: Dispatch<SetStateAction<string>>;
+}
+
+const Connect = ({ theme, setTheme }: IConnectProps) => {
     return (
         <MainLayout
             {...{
                 ...META_DATA,
                 title: `${META_DATA.title} | Connect`,
-                canonical: `https://www.corelabui.com/forms/api/connect`
-            }}>
+                canonical: `https://www.corelabui.com/${ROUTES.connect}`
+            }}
+            theme={theme}
+            setTheme={setTheme}>
             <Section title="Connect" margin={false}>
                 <Typography variant="body1">
                     The connect method allows you to integrate{' '}
                     <b>React Form Manager </b>
                     with your own Field component instead of the{' '}
-                    <b>RFM&apos;s</b>
-                    <Link href="/forms/api/input"> Input </Link> or
-                    <Link href="/forms/api/input"> Textarea </Link>. Connect is
-                    also used for integration with UI Libraries. See
-                    <Link href="/forms/integrations">
+                    <b>RFM&apos;s&nbsp;</b>
+                    <Link href={`/${ROUTES.input}`}> Input </Link> or
+                    <Link href={`/${ROUTES.textarea}`}>&nbsp;Textarea </Link>.
+                    Connect is also used for integration with UI Libraries. See
+                    <Link href={`${ROUTES.integrations}`}>
                         &nbsp;Integrations
                     </Link>{' '}
                     for more detail instructions.
                     <br />
                     <br />
                     The connect method <b>must</b> be used along with
-                    <Link href="/forms/api/useform"> UseForm</Link>.
+                    <Link href={`${ROUTES.useform}`}>&nbsp;UseForm</Link>.
                 </Typography>
                 <br />
                 <Typography variant="heading5" htmlElement="h3">
@@ -62,7 +70,7 @@ const UseForm = () => {
                             target="_blank"
                             icon="codesandbox"
                             internal={false}
-                            color="white">
+                            color={'var(--light)'}>
                             Try it out&nbsp;&nbsp;
                         </Link>
                     </Button>
@@ -71,9 +79,9 @@ const UseForm = () => {
                     {CONNECT_USAGE}
                 </Code>
             </Section>
-            <FooterNavigation url="/forms/api/types" title="Input types" />
+            <FooterNavigation url={`/${ROUTES.types}`} title="Input types" />
         </MainLayout>
     );
 };
 
-export default UseForm;
+export default Connect;

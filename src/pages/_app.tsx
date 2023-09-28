@@ -1,49 +1,36 @@
+import { useState } from 'react';
 import { Montserrat } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import ThemeProvider from 'corelabui/ThemeProvider';
-import {
-    defaultTheme,
-    darkTheme,
-    winterTheme,
-    springTheme,
-    summerTheme,
-    fallTheme
-} from 'corelabui/Theme';
 
 import '../../public/assets/fonts/style.css';
 import '../core/styles/globals.css';
 import '../core/styles/prism.css';
-import { useState } from 'react';
+import THEMES from '@/core/theme';
+import Storage from '@/utils/storage';
 
 const font = Montserrat({ subsets: ['latin'] });
 
-const customTheme = {
-    ...winterTheme,
-    fontFamily: 'inherit',
-    body1: '1em'
-};
-
-const THEMES = {
-    custom: customTheme,
-    standard: defaultTheme,
-    dark: darkTheme,
-    winter: winterTheme,
-    spring: springTheme,
-    summer: summerTheme,
-    fall: fallTheme
-} as any;
+const defaultTheme = Storage.get('CUI_theme') || 'standard';
 
 export default function MyApp({ Component, pageProps }: any) {
-    const [custom, setTheme] = useState<string>('winter');
+    const [custom, setTheme] = useState<string>(defaultTheme);
+
+    const applyTheme = (theme: string) => {
+        if (!Storage.get('CUI_theme') || Storage.get('CUI_theme') !== theme) {
+            Storage.set('CUI_theme', theme);
+        }
+        setTheme(theme);
+    };
+
     return (
-        <ThemeProvider
-            theme={{
-                ...THEMES[custom],
-                fontFamily: 'inherit',
-                body1: '0.9em'
-            }}>
+        <ThemeProvider theme={THEMES[custom]}>
             <main className={font.className}>
-                <Component {...pageProps} theme={custom} setTheme={setTheme} />
+                <Component
+                    {...pageProps}
+                    theme={custom}
+                    setTheme={applyTheme}
+                />
                 {process.env.MODE === 'PROD' && <Analytics />}
             </main>
         </ThemeProvider>
