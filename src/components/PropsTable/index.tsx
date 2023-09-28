@@ -1,6 +1,6 @@
 import Typography from 'corelabui/Typography';
 
-import { Component, Props } from '@/pages/forms/api/interfaces';
+import { Component, Props } from '@/pages/react-form-manager/api/interfaces';
 import Link from '@/components/Link';
 import Property from '@/components/Property';
 import HTMLText from '@/components//HTMLText';

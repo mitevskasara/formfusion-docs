@@ -1,7 +1,16 @@
 @import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
 
 .list {
+    @include media(small) {
+        padding-left: 1em;
+    }
+
     &__item {
         line-height: 2;
+
+        &::marker {
+            color: var(--text);
+        }
     }
 }

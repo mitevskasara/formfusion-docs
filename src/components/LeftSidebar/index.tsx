@@ -1,21 +1,24 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import { useRouter } from 'next/router';
-import { winterTheme } from 'corelabui/Theme';
 import Typography from 'corelabui/Typography';
 
 import Link from '@/components/Link';
+import Accordion from '@/components/Accordion';
 
+import THEMES from '@/core/theme';
 import NAV from '@/constants/navigation';
+import ROUTES from '@/constants/routes';
 
 import classes from './leftSidebar.module.scss';
-import Accordion from '../Accordion';
 
 interface Props {
     open: boolean;
     toggle: Dispatch<SetStateAction<boolean>>;
+    theme: string;
+    setTheme: Dispatch<SetStateAction<string>>;
 }
 
-const LeftSidebar = ({ open }: Props) => {
+const LeftSidebar = ({ open, theme }: Props) => {
     const { asPath } = useRouter();
     const isActive = (url: string) => url === asPath;
 
@@ -24,14 +27,14 @@ const LeftSidebar = ({ open }: Props) => {
     return (
         <aside className={classses}>
             <nav className={classes.leftSidebar__navigation}>
-                <Link href="/forms#introduction">
+                <Link href={`/${ROUTES.home}#introduction`}>
                     <Typography
                         variant="body1"
                         htmlElement="span"
                         margin={false}
                         color={
-                            isActive('/forms#introduction') &&
-                            winterTheme.primary
+                            isActive(`/${ROUTES.home}#introduction`) &&
+                            THEMES[theme].primary
                         }>
                         Introduction
                     </Typography>
@@ -46,28 +49,30 @@ const LeftSidebar = ({ open }: Props) => {
                                 className={
                                     classes.leftSidebar__navigation__sublist__item
                                 }>
-                                <Link href="/forms#installation">
+                                <Link href={`/${ROUTES.home}#installation`}>
                                     <Typography
                                         variant="body1"
                                         margin={false}
                                         htmlElement="span"
                                         color={
-                                            isActive('/forms#installation') &&
-                                            winterTheme.primary
+                                            isActive(
+                                                `/${ROUTES.home}#installation`
+                                            ) && THEMES[theme].primary
                                         }>
                                         Installation
                                     </Typography>
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/forms#example">
+                                <Link href={`/${ROUTES.home}#example`}>
                                     <Typography
                                         variant="body1"
                                         margin={false}
                                         htmlElement="span"
                                         color={
-                                            isActive('/forms#example') &&
-                                            winterTheme.primary
+                                            isActive(
+                                                `/${ROUTES.home}#example`
+                                            ) && THEMES[theme].primary
                                         }>
                                         Example
                                     </Typography>
@@ -95,7 +100,7 @@ const LeftSidebar = ({ open }: Props) => {
                                             htmlElement="span"
                                             color={
                                                 isActive(item.url) &&
-                                                winterTheme.primary
+                                                THEMES[theme].primary
                                             }>
                                             {item.title}
                                         </Typography>
