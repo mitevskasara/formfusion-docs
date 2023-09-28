@@ -4,13 +4,13 @@
 .input {
     height: 39px;
     padding: 0.5em;
-    border: 1px solid $border;
-    border-radius: $border-radius;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
     outline: none;
 
     &:focus-visible {
         outline: none;
-        border: 1px solid $primary-hover;
+        border: 1px solid var(--primary)-hover;
     }
 
     &:invalid {

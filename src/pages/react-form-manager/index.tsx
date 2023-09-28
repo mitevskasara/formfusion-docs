@@ -1,28 +1,33 @@
-import { useRef } from 'react';
+import { Dispatch, SetStateAction, useRef } from 'react';
 import Typography from 'corelabui/Typography';
 import { patterns } from '@corelabui/rfm';
+import Flex from 'corelabui/Flex';
+import Button from 'corelabui/Button';
 
 import Code from '@/components/Code';
 import MainLayout from '@/components/MainLayout';
 import Link from '@/components/Link';
 import FooterNavigation from '@/components/FooterNavigation';
 import Section from '@/components/Section';
-import Playground from '@/components/Playground';
 import List from '@/components/List';
 import ClientComponent from '@/components/ClientComponent';
-
-import useIsInViewport from '@/hook/useIsInViewport';
 
 import { patternsToList } from '@/utils/dataTransform';
 import FEATURES from '@/constants/features';
 import META_DATA from '@/constants/metaData';
+import ROUTES from '@/constants/routes';
+import { COMPONENTS } from '@/constants/examples';
 
-const Forms = () => {
+interface IReactFormManagerProps {
+    theme: string;
+    setTheme: Dispatch<SetStateAction<string>>;
+}
+
+const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
     const exampleRef = useRef<HTMLElement | null>(null);
-    const isInViewport = useIsInViewport(exampleRef);
 
     return (
-        <MainLayout {...META_DATA}>
+        <MainLayout {...META_DATA} theme={theme} setTheme={setTheme}>
             <Section id="introduction" title="Introduction" margin={false}>
                 <Typography variant="body1">
                     Effortlessly manage forms in your React applications with
@@ -43,7 +48,7 @@ const Forms = () => {
                         &nbsp;form validation&nbsp;
                     </Link>
                     by extending the list of&nbsp;
-                    <Link href="/forms/api/types">
+                    <Link href={`/${ROUTES.types}`}>
                         native input types&nbsp;
                     </Link>
                     and provides a large collection of thoroughly tested and
@@ -67,23 +72,40 @@ const Forms = () => {
                     <Code language="bash">npm i @corelabui/rfm</Code>
                 </ClientComponent>
             </Section>
-            <Section id="example" subtitle="Example" ref={exampleRef}>
+            <Section id="example" ref={exampleRef}>
+                <Flex
+                    justifyContent="space-between"
+                    alignItems="center"
+                    margin="3em 0 2em 0">
+                    <Typography
+                        variant="heading5"
+                        htmlElement="h3"
+                        margin={false}>
+                        Example
+                    </Typography>
+                    <Button>
+                        <Link
+                            href="https://codesandbox.io/s/rfm-basic-form-example-nvg3rr"
+                            target="_blank"
+                            icon="codesandbox"
+                            internal={false}
+                            color={'var(--light)'}>
+                            Try it out&nbsp;&nbsp;
+                        </Link>
+                    </Button>
+                </Flex>
                 <Typography variant="body1">
-                    Here&apos;s an example of using React Form Manager for a
+                    Bellow is an example of using React Form Manager for a
                     straightforward uncontrolled form with username field with
                     validation
                 </Typography>
                 <br />
-                {isInViewport && (
-                    <Playground
-                        src="https://codesandbox.io/embed/rfm-basic-form-example-nvg3rr?fontsize=14&hidenavigation=1&theme=dark&view=editor"
-                        title="RFM Basic Form example"
-                    />
-                )}
+                <Code language="javascript">{COMPONENTS.form}</Code>
+                <br />
             </Section>
-            <FooterNavigation url="/forms/api/form" title="API" />
+            <FooterNavigation url={`/${ROUTES.form}`} title="API" />
         </MainLayout>
     );
 };
 
-export default Forms;
+export default ReactFormManager;

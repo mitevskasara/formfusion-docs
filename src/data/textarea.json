@@ -28,6 +28,6 @@
     ],
     "exampleUrl": "https://codesandbox.io/s/rfm-basic-textarea-usage-8ljznq?file=/src/App.js:0-768",
     "exampleTitle": "RFM Basic Textarea usage",
-    "nextUrl": "/forms/api/useform",
+    "nextUrl": "/react-form-manager/api/useform",
     "nextUrlTitle": "UseForm"
 }

@@ -6,13 +6,13 @@
     position: fixed;
     top: 0;
     width: -webkit-fill-available;
-    background-color: white;
+    background-color: var(--background);
     z-index: 2;
     padding: 0.5em $side-padding;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: var(--box-shadow);
 
     &__left {
         display: flex;
@@ -43,20 +43,6 @@
             gap: 0.5em;
         }
 
-        &__link {
-            background-color: $primary;
-            color: white;
-            padding: 0.3em;
-            display: flex;
-            align-items: center;
-            border-radius: 50%;
-
-            &:hover {
-                background-color: $primary-hover;
-                color: white !important;
-            }
-        }
-
         &__menuIcon {
             display: none;
 
@@ -64,6 +50,12 @@
                 display: block;
                 margin-left: 1em;
             }
+        }
+
+        &__themeButton {
+            font-size: 25px;
+            margin-left: 1em;
+            display: flex;
         }
     }
 }

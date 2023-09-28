@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { Dispatch, SetStateAction, useRef, useState } from 'react';
 import Typography from 'corelabui/Typography';
 import Select from 'corelabui/Select';
 import Flex from 'corelabui/Flex';
@@ -23,11 +23,18 @@ import {
     patternsToTableData
 } from '@/constants/tables';
 import { patternsToOptions } from '@/utils/dataTransform';
+import ROUTES from '@/constants/routes';
+import THEMES from '@/core/theme';
 
 const PATTERNS_TABLE_DATA = patternsToTableData(RFMPatterns);
 const options = patternsToOptions(RFMPatterns);
 
-const Patterns = () => {
+interface IPatternsProps {
+    theme: string;
+    setTheme: Dispatch<SetStateAction<string>>;
+}
+
+const Patterns = ({ theme, setTheme }: IPatternsProps) => {
     const [pattern, setPattern] = useState(options[0].value);
     const [country, setCountry] = useState<string>('gb');
     const config = useForm({ onSubmit: () => {}, validateOnChange: true });
@@ -45,17 +52,19 @@ const Patterns = () => {
             {...{
                 ...META_DATA,
                 title: `${META_DATA.title} | Patterns`,
-                canonical: `https://www.corelabui.com/forms/api/patterns`
-            }}>
+                canonical: `https://www.corelabui.com/${ROUTES.patterns}`
+            }}
+            theme={theme}
+            setTheme={setTheme}>
             <Section title="Validation patterns" margin={false}>
                 <Typography variant="body1">
                     Similar to&nbsp;
-                    <Link href="/forms/api/types">Input types</Link>,&nbsp;
+                    <Link href={`/${ROUTES.types}`}>Input types</Link>,&nbsp;
                     <strong>React Form Manager</strong> provides a collection of
                     thoroughly tested JavaScript regular expressions that can be
                     directly applied to the pattern attribute of an input field.
                     The main difference between&nbsp;
-                    <Link href="/forms/api/types" target="_blank">
+                    <Link href={`/${ROUTES.types}`} target="_blank">
                         Input types
                     </Link>
                     &nbsp;and validation patterns is that the patterns
@@ -67,7 +76,9 @@ const Patterns = () => {
                     <br />
                     <br />
                     The&nbsp;
-                    <Link href="/forms/api/types">Input types collection</Link>
+                    <Link href={`/${ROUTES.types}`}>
+                        Input types collection
+                    </Link>
                     &nbsp;uses part of these validation patterns as base, but
                     they are also exposed for usage when you need a dynamic
                     validation or you don&apos;t want to use the Input component
@@ -100,8 +111,8 @@ const Patterns = () => {
                             target="_blank"
                             icon="codesandbox"
                             internal={false}
-                            color="white">
-                            Try on <b>CodeSandbox&nbsp;</b>
+                            color={'var(--light)'}>
+                            Try on<b>&nbsp;CodeSandbox&nbsp;</b>
                         </Link>
                     </Button>
                 </Flex>
@@ -144,7 +155,7 @@ const Patterns = () => {
                             />
                             <br />
                             <Typography variant="body1">
-                                <Highlight color="#296140">
+                                <Highlight color={THEMES[theme].success}>
                                     <HTMLText
                                         text={
                                             patterns[pattern][country].correct
@@ -152,7 +163,7 @@ const Patterns = () => {
                                     />
                                 </Highlight>
                                 <br />
-                                <Highlight color="#aa1d1d">
+                                <Highlight color={THEMES[theme].error}>
                                     <HTMLText
                                         text={
                                             patterns[pattern][country].incorrect
@@ -178,13 +189,13 @@ const Patterns = () => {
                             />
                             <br />
                             <Typography variant="body1">
-                                <Highlight color="#296140">
+                                <Highlight color={THEMES[theme].success}>
                                     <HTMLText
                                         text={patterns[pattern].correct}
                                     />
                                 </Highlight>
                                 <br />
-                                <Highlight color="#aa1d1d">
+                                <Highlight color={THEMES[theme].error}>
                                     <HTMLText
                                         text={patterns[pattern].incorrect}
                                     />

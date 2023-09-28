@@ -1,0 +1,19 @@
+@import '@/core/styles/variables';
+
+.footer {
+    margin-top: 6em;
+
+    &__link {
+        background-color: var(--primary);
+        color: var(--light);
+        padding: 0.3em;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: var(--primary-hover);
+            color: var(--light) !important;
+        }
+    }
+}

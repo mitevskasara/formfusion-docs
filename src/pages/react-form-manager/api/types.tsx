@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { Dispatch, SetStateAction, useRef, useState } from 'react';
 import Typography from 'corelabui/Typography';
 import Highlight from 'corelabui/Highlight';
 import Select from 'corelabui/Select';
@@ -20,11 +20,18 @@ import countries from '@/constants/countries';
 import META_DATA from '@/constants/metaData';
 import { TYPES_TABLE_HEADERS, typesToTableData } from '@/constants/tables';
 import { typesToOptions } from '@/utils/dataTransform';
+import ROUTES from '@/constants/routes';
+import THEMES from '@/core/theme';
 
 const TYPES_TABLE_DATA = typesToTableData(RFMtypes);
 const options = typesToOptions(RFMtypes);
 
-const Types = () => {
+interface ITypesProps {
+    theme: string;
+    setTheme: Dispatch<SetStateAction<string>>;
+}
+
+const Types = ({ theme, setTheme }: ITypesProps) => {
     const [country, setCountry] = useState<string>('gb');
     const [type, setType] = useState(options[0].value);
     const config = useForm({ onSubmit: () => {}, validateOnChange: true });
@@ -35,8 +42,10 @@ const Types = () => {
             {...{
                 ...META_DATA,
                 title: `${META_DATA.title} | Input types`,
-                canonical: `https://www.corelabui.com/forms/api/types`
-            }}>
+                canonical: `https://www.corelabui.com/${ROUTES.types}`
+            }}
+            theme={theme}
+            setTheme={setTheme}>
             <Section title="Input types" margin={false}>
                 <Typography variant="body1">
                     <strong>React Form Manager</strong> extends the list
@@ -78,8 +87,8 @@ const Types = () => {
                             target="_blank"
                             icon="codesandbox"
                             internal={false}
-                            color="white">
-                            Try on <b>CodeSandbox&nbsp;</b>
+                            color={'var(--light)'}>
+                            Try on<b>&nbsp;CodeSandbox&nbsp;</b>
                         </Link>
                     </Button>
                 </Flex>
@@ -123,7 +132,7 @@ const Types = () => {
                             <br />
                             <br />
                             <Typography variant="body1">
-                                <Highlight color="#296140">
+                                <Highlight color={THEMES[theme].success}>
                                     <HTMLText
                                         text={
                                             info[`postal-code-${country}`]
@@ -132,7 +141,7 @@ const Types = () => {
                                     />
                                 </Highlight>
                                 <br />
-                                <Highlight color="#aa1d1d">
+                                <Highlight color={THEMES[theme].error}>
                                     <HTMLText
                                         text={
                                             info[`postal-code-${country}`]
@@ -158,11 +167,11 @@ const Types = () => {
                             />
                             <br />
                             <Typography variant="body1">
-                                <Highlight color="#296140">
+                                <Highlight color={THEMES[theme].success}>
                                     <HTMLText text={info[type].correct} />
                                 </Highlight>
                                 <br />
-                                <Highlight color="#aa1d1d">
+                                <Highlight color={THEMES[theme].error}>
                                     <HTMLText text={info[type].incorrect} />
                                 </Highlight>
                             </Typography>
@@ -171,7 +180,7 @@ const Types = () => {
                 )}
             </Section>
             <FooterNavigation
-                url="/forms/api/patterns"
+                url={`/${ROUTES.patterns}`}
                 title="Validation patterns"
             />
         </MainLayout>

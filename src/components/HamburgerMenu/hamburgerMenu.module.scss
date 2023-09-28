@@ -10,7 +10,7 @@
 .bar3 {
     width: 25px;
     height: 2px;
-    background-color: $primary;
+    background-color: var(--primary);
     margin: 5px 0;
     transition: 0.4s;
 

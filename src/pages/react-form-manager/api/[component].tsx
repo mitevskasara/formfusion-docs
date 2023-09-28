@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { Dispatch, SetStateAction, useRef } from 'react';
 import Typography from 'corelabui/Typography';
 import Flex from 'corelabui/Flex';
 import Button from 'corelabui/Button';
@@ -16,8 +16,15 @@ import { capitalize } from '@/utils/general';
 import { Component } from './interfaces';
 import Code from '@/components/Code';
 import { COMPONENTS } from '@/constants/examples';
+import ROUTES from '@/constants/routes';
 
-const Forms = ({ data }: { data: Component }) => {
+interface IApiProps {
+    data: Component;
+    theme: string;
+    setTheme: Dispatch<SetStateAction<string>>;
+}
+
+const API = ({ data, theme, setTheme }: IApiProps) => {
     const exampleRef = useRef<HTMLElement | null>(null);
 
     return (
@@ -25,8 +32,10 @@ const Forms = ({ data }: { data: Component }) => {
             {...{
                 ...META_DATA,
                 title: `${META_DATA.title} | ${capitalize(data?.key)}`,
-                canonical: `https://www.corelabui.com/forms/api/${data?.key}`
-            }}>
+                canonical: `https://www.corelabui.com/${ROUTES.home}/api/${data?.key}`
+            }}
+            theme={theme}
+            setTheme={setTheme}>
             <Section title={data?.title} margin={false}>
                 <Typography variant="body1">
                     <HTMLText text={data?.description} />
@@ -64,7 +73,7 @@ const Forms = ({ data }: { data: Component }) => {
                             target="_blank"
                             icon="codesandbox"
                             internal={false}
-                            color="white">
+                            color={'var(--light)'}>
                             Try it out&nbsp;&nbsp;
                         </Link>
                     </Button>
@@ -111,4 +120,4 @@ export async function getStaticProps({ params }: any) {
     }
 }
 
-export default Forms;
+export default API;

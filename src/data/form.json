@@ -42,6 +42,6 @@
     ],
     "exampleUrl": "https://codesandbox.io/s/rfm-basic-form-example-nvg3rr",
     "exampleTitle": "RFM Basic Form example",
-    "nextUrl": "/forms/api/input",
+    "nextUrl": "/react-form-manager/api/input",
     "nextUrlTitle": "Input"
 }
