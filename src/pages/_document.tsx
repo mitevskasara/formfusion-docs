@@ -26,7 +26,10 @@ export default class MyDocument extends Document {
                     <link rel="manifest" href="/favicon/site.webmanifest" />
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff" />
-                    <meta name="google-site-verification" content="bC7fHyGZ3NACYkZWFw52i_vdkXgxFyq1S3jkQjMdWcI" />
+                    <meta
+                        name="google-site-verification"
+                        content="bC7fHyGZ3NACYkZWFw52i_vdkXgxFyq1S3jkQjMdWcI"
+                    />
                 </Head>
                 <body style={{ margin: 0 }}>
                     <Main />

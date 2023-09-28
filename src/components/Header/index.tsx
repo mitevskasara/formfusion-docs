@@ -38,7 +38,8 @@ const CustomHeader = ({ open, toggle, theme, setTheme }: CustomHeaderProps) => {
                     variant="text"
                     onClick={() =>
                         setTheme(theme === 'standard' ? 'dark' : 'standard')
-                    }>
+                    }
+                    aria-label="Theme icon">
                     <span
                         className={`icon-${
                             theme === 'standard' ? 'dark' : 'light'
