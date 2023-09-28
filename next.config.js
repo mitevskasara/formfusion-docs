@@ -19,22 +19,22 @@ const nextConfig = {
         return [
             {
                 source: '/',
-                destination: '/forms',
+                destination: '/react-form-manager',
                 permanent: false
             },
             {
                 source: '/blog',
-                destination: '/forms',
+                destination: '/react-form-manager',
                 permanent: false
             },
             {
                 source: '/docs',
-                destination: '/forms',
+                destination: '/react-form-manager',
                 permanent: false
             },
             {
                 source: '/privacy',
-                destination: '/forms',
+                destination: '/react-form-manager',
                 permanent: false
             }
         ];

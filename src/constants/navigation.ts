@@ -1,3 +1,5 @@
+import ROUTES from './routes';
+
 export interface Nav {
     key: 'form' | 'input' | 'textarea';
     title: string;
@@ -8,36 +10,36 @@ export default [
     {
         key: 'form',
         title: 'Form',
-        url: '/forms/api/form'
+        url: `/${ROUTES.form}`
     },
     {
         key: 'input',
         title: 'Input',
-        url: '/forms/api/input'
+        url: `/${ROUTES.input}`
     },
     {
         key: 'textarea',
         title: 'Textarea',
-        url: '/forms/api/textarea'
+        url: `/${ROUTES.textarea}`
     },
     {
         key: 'useform',
         title: 'UseForm',
-        url: '/forms/api/useform'
+        url: `/${ROUTES.useform}`
     },
     {
         key: 'connect',
         title: 'Connect',
-        url: '/forms/api/connect'
+        url: `/${ROUTES.connect}`
     },
     {
         key: 'types',
         title: 'Input types',
-        url: '/forms/api/types'
+        url: `/${ROUTES.types}`
     },
     {
         key: 'patterns',
         title: 'Validation patterns',
-        url: '/forms/api/patterns'
+        url: `/${ROUTES.patterns}`
     }
 ] as Nav[];

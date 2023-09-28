@@ -9,7 +9,7 @@
 
     & > a {
         cursor: pointer;
-        color: $primary;
+        color: var(--primary);
         font-weight: 500;
     }
 }

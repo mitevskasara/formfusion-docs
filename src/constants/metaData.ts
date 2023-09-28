@@ -1,5 +1,7 @@
+import ROUTES from './routes';
+
 const META_DATA = {
-    url: 'https://www.corelabui.com/forms',
+    url: `https://www.corelabui.com/${ROUTES.home}`,
     title: 'React Form Manager',
     image: '',
     description:
