@@ -1,4 +1,4 @@
-export default {
+const patterns = {
     minCharacters: {
         info: 'Enter a text to test. For example:',
         correct: '<span>Hello</span> is valid (at least 5 characters)',
@@ -768,3 +768,5 @@ export default {
         }
     }
 } as any;
+
+export default patterns as any;

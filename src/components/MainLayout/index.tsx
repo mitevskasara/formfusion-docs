@@ -5,8 +5,9 @@ import Header from '@/components/Header';
 import LeftSidebar from '@/components/LeftSidebar';
 import Footer from '@/components/Footer';
 
-import classes from './main.module.scss';
 import ROUTES from '@/constants/routes';
+
+import classes from './main.module.scss';
 
 type Props = {
     children?: ReactNode;
