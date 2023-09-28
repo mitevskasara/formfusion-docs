@@ -32,6 +32,7 @@ export default class MyDocument extends Document {
                     <NextScript />
                     {process.env.MODE === 'PROD' && (
                         <Script
+                            id="google-tagmanager-script"
                             async
                             src="https://www.googletagmanager.com/gtag/js?id=G-PNVC81FSRT"
                             strategy="afterInteractive"
@@ -39,6 +40,7 @@ export default class MyDocument extends Document {
                     )}
                     {process.env.MODE === 'PROD' && (
                         <Script
+                            id="google-analytics-script"
                             strategy="afterInteractive"
                             dangerouslySetInnerHTML={{
                                 __html: `window.dataLayer = window.dataLayer || [];
