@@ -100,4 +100,10 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
     );
 };
 
+export async function getStaticProps() {
+    return {
+        props: {}
+    };
+}
+
 export default UseForm;

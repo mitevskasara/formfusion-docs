@@ -108,4 +108,10 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
     );
 };
 
+export async function getStaticProps() {
+    return {
+        props: {}
+    };
+}
+
 export default ReactFormManager;
