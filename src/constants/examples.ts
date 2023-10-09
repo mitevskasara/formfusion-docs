@@ -13,8 +13,8 @@ const MyForm = () => {
 \treturn (
 \t\t<Form config={config}>
 \t\t\t<input
-\t\t\t\t{...connect(config, fieldRef, "alphanumeric")}
-\t\t\t\tid="alphanumeric"
+\t\t\t\t{...connect(config, fieldRef, "alphabetic")}
+\t\t\t\tid="alphabetic"
 \t\t\t\tname="firstName"
 \t\t\t/>
 \t\t\t{config.errors.firstName}
@@ -146,8 +146,176 @@ const MyForm = () => {
 
 export default MyForm;`;
 
+const MUI_USAGE = `import React, { useRef } from "react";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import { Form, useForm, connect } from "@corelabui/rfm";
+
+const MyForm = () => {
+  const fieldRef = useRef(null);
+
+  const onSubmit = (e) => {
+    console.log("Success " + JSON.stringify(e));
+  };
+
+  const config = useForm({
+    onSubmit,
+    validateOnChange: true
+  });
+
+  return (
+    <Form config={config}>
+      <TextField
+        inputProps={{ ...connect(config, fieldRef, "alphabetic") }}
+        id="firstName"
+        name="firstName"
+        label="First name"
+        variant="outlined"
+        error={Boolean(config.errors.firstName)}
+        helperText={config.errors.firstName}
+      />
+      <Button type="submit" variant="contained">
+        Submit
+      </Button>
+    </Form>
+  );
+};
+
+export default MyForm;`;
+
+const ANTDESIGN_USAGE = `
+import React, { useRef } from "react";
+import { Input, Space, Button, Typography } from "antd";
+import { Form, useForm, connect } from "@corelabui/rfm";
+
+const { Text } = Typography;
+
+const MyForm = () => {
+  const fieldRef = useRef(null);
+
+  const onSubmit = (e) => {
+    console.log("Success " + JSON.stringify(e));
+  };
+
+  const config = useForm({
+    onSubmit,
+    validateOnChange: true
+  });
+
+  return (
+    <Form config={config}>
+      <Space direction="vertical" style={{ width: "100%" }}>
+        <Input
+          {...connect(config, fieldRef, "alphabetic")}
+          ref={fieldRef}
+          id="firstName"
+          name="firstName"
+          label="First name"
+          status={config.errors.firstName ? "error" : ""}
+          placeholder="Enter your first name"
+        />
+      </Space>
+      <Text type="danger">{config.errors.firstName}</Text>
+      <Space direction="vertical" style={{ width: "100%", marginTop: "15px" }}>
+        <Button type="primary" htmlType="submit">
+          Submit
+        </Button>
+      </Space>
+    </Form>
+  );
+};
+
+export default MyForm;`;
+
+const CHAKRAUI_USAGE = `
+import React, { useRef } from "react";
+import { Button, Input, Stack, Text } from "@chakra-ui/react";
+import { Form, useForm, connect } from "@corelabui/rfm";
+
+const MyForm = () => {
+  const fieldRef = useRef(null);
+
+  const onSubmit = (e) => {
+    console.log("Success " + JSON.stringify(e));
+  };
+
+  const config = useForm({
+    onSubmit,
+    validateOnChange: true
+  });
+
+  return (
+    <Form config={config}>
+      <Stack spacing={0}>
+        <Input
+          {...connect(config, fieldRef, "alphabetic")}
+          ref={fieldRef}
+          id="firstName"
+          name="firstName"
+          isInvalid={Boolean(config.errors.firstName)}
+          errorBorderColor="crimson"
+          placeholder="Enter your first name"
+        />
+        <Text fontSize="14px" color="tomato">
+          {config.errors.firstName}
+        </Text>
+      </Stack>
+      <Button colorScheme="blue" type="submit">
+        Submit
+      </Button>
+    </Form>
+  );
+};
+
+export default MyForm;
+`;
+
+const REACTSTRAP_USAGE = `
+import React, { useRef } from "react";
+import { Input, Button, FormText } from "reactstrap";
+import { Form, useForm, connect } from "@corelabui/rfm";
+
+const MyForm = () => {
+  const fieldRef = useRef(null);
+
+  const onSubmit = (e) => {
+    console.log("Success " + JSON.stringify(e));
+  };
+
+  const config = useForm({
+    onSubmit,
+    validateOnChange: true
+  });
+
+  return (
+    <Form config={config} className="m-3">
+      <Input
+        {...connect(config, fieldRef, "alphabetic")}
+        invalid={Boolean(config.errors.firstName)}
+        id="firstName"
+        name="firstName"
+      />
+      <FormText>{config.errors.firstName}</FormText>
+      <br />
+      <Button color="primary" type="submit" className="mt-3">
+        Submit
+      </Button>
+    </Form>
+  );
+};
+
+export default MyForm;`;
+
 export const COMPONENTS = {
     form: FORM_USAGE,
     input: INPUT_USAGE,
     textarea: TEXTAREA_USAGE
+} as any;
+
+export const INTEGRATIONS = {
+    mui: MUI_USAGE,
+    antdesign: ANTDESIGN_USAGE,
+    chakraui: CHAKRAUI_USAGE,
+    reactstrap: REACTSTRAP_USAGE
 } as any;

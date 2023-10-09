@@ -84,4 +84,10 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
     );
 };
 
+export async function getStaticProps() {
+    return {
+        props: {}
+    };
+}
+
 export default Connect;
