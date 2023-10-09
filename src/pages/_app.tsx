@@ -3,11 +3,12 @@ import { Montserrat } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import ThemeProvider from 'corelabui/ThemeProvider';
 
+import THEMES from '@/core/theme';
+import Storage from '@/utils/storage';
+
 import '../../public/assets/fonts/style.css';
 import '../core/styles/globals.css';
 import '../core/styles/prism.css';
-import THEMES from '@/core/theme';
-import Storage from '@/utils/storage';
 
 const font = Montserrat({ subsets: ['latin'] });
 

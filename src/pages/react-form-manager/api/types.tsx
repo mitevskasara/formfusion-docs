@@ -187,4 +187,10 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
     );
 };
 
+export async function getStaticProps() {
+    return {
+        props: {}
+    };
+}
+
 export default Types;
