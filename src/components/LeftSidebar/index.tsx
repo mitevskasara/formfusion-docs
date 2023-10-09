@@ -119,7 +119,7 @@ const LeftSidebar = ({ open, theme }: Props) => {
                             </Accordion>
                         </Typography>
                     ) : (
-                        <Link href={item.url}>
+                        <Link href={item.url} key={item.key}>
                             <Typography
                                 variant="body1"
                                 htmlElement="span"
