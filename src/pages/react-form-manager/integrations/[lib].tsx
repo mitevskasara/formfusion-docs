@@ -65,7 +65,7 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                     Note: to successfully use the{' '}
                     <Link href={`/${ROUTES.connect}`}>connect</Link> method you
                     must call it on the low level input that is rendered by{' '}
-                    {data.title}.
+                    {data?.title}.
                 </Typography>
             </Section>
             <Section id="example" ref={exampleRef}>
