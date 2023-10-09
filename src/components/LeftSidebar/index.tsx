@@ -81,35 +81,57 @@ const LeftSidebar = ({ open, theme }: Props) => {
                         </ul>
                     </Accordion>
                 </Typography>
-                <Typography variant="body1" margin={false} htmlElement="div">
-                    <Accordion title="API" open>
-                        <ul
-                            className={
-                                classes.leftSidebar__navigation__sublist
-                            }>
-                            {NAV.map((item) => (
-                                <li
-                                    key={item.key}
+                {NAV.map((item) =>
+                    item.sublist ? (
+                        <Typography
+                            variant="body1"
+                            margin={false}
+                            htmlElement="div"
+                            key={item.key}>
+                            <Accordion title={item.title} open>
+                                <ul
                                     className={
-                                        classes.leftSidebar__navigation__sublist__item
+                                        classes.leftSidebar__navigation__sublist
                                     }>
-                                    <Link href={item.url}>
-                                        <Typography
-                                            variant="body1"
-                                            margin={false}
-                                            htmlElement="span"
-                                            color={
-                                                isActive(item.url) &&
-                                                THEMES[theme].primary
+                                    {item?.sublist?.map((sublistItem) => (
+                                        <li
+                                            key={sublistItem.key}
+                                            className={
+                                                classes.leftSidebar__navigation__sublist__item
                                             }>
-                                            {item.title}
-                                        </Typography>
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </Accordion>
-                </Typography>
+                                            <Link href={sublistItem.url}>
+                                                <Typography
+                                                    variant="body1"
+                                                    margin={false}
+                                                    htmlElement="span"
+                                                    color={
+                                                        isActive(
+                                                            sublistItem.url
+                                                        ) &&
+                                                        THEMES[theme].primary
+                                                    }>
+                                                    {sublistItem.title}
+                                                </Typography>
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </Accordion>
+                        </Typography>
+                    ) : (
+                        <Link href={item.url} key={item.key}>
+                            <Typography
+                                variant="body1"
+                                htmlElement="span"
+                                margin={false}
+                                color={
+                                    isActive(item.url) && THEMES[theme].primary
+                                }>
+                                {item.title}
+                            </Typography>
+                        </Link>
+                    )
+                )}
             </nav>
         </aside>
     );

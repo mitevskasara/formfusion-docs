@@ -28,7 +28,7 @@ const MainLayout = ({
     image = '',
     description,
     keywords,
-    canonical = `https://www.corelabui.com/${ROUTES.home}`,
+    canonical,
     theme,
     setTheme
 }: Props) => {

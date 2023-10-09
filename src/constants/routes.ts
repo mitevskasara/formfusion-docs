@@ -7,7 +7,11 @@ const ROUTES = {
     connect: 'react-form-manager/api/connect',
     types: 'react-form-manager/api/types',
     patterns: 'react-form-manager/api/patterns',
-    integrations: 'react-form-manager/integrations'
+    integrations: 'react-form-manager/integrations',
+    mui: 'react-form-manager/integrations/mui',
+    antdesign: 'react-form-manager/integrations/antdesign',
+    chakraui: 'react-form-manager/integrations/chakraui',
+    reactstrap: 'react-form-manager/integrations/reactstrap'
 } as { [key: string]: string };
 
 export default ROUTES;
