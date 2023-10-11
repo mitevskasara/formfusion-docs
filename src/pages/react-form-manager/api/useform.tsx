@@ -34,14 +34,21 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
             setTheme={setTheme}>
             <Section title="UseForm hook" margin={false}>
                 <Typography variant="body1">
-                    UseForm is a custom hook for managing forms that Form
-                    component uses as a base.
-                    <br />
-                    <br />
-                    UseForm can be used when you want to have more control over
-                    the form including access to the values and errors objects
-                    or when using a different Field component other than the
-                    <strong> RFM&apos;s</strong> Input and Textarea components.
+                    UseForm is a specialized custom hook designed for advanced
+                    form management, serving as the foundational core for the
+                    <Link href={`/${ROUTES.form}`}>&nbsp;Form component</Link>.
+                    This hook comes in handy when you require greater control
+                    over your forms, offering access to essential objects such
+                    as values and errors. It&apos;s particularly valuable when
+                    you opt for alternative Field components that differ from
+                    <strong> React Form Manager&apos;s&nbsp;</strong>
+                    default <Link href={`/${ROUTES.input}`}>Input</Link> and
+                    <Link href={`/${ROUTES.textarea}`}>
+                        &nbsp;Textarea&nbsp;
+                    </Link>
+                    components. With UseForm, you can tailor your form
+                    management to your specific needs, ensuring a flexible and
+                    adaptable solution for your web development projects.
                 </Typography>
                 <br />
                 <Typography variant="heading5" htmlElement="h3">
@@ -54,8 +61,9 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    UseForm returns the whole form configuration as a result to
-                    be used. For example:
+                    The UseForm hook yields the entire form configuration, which
+                    you can utilize to tailor your form management precisely as
+                    desired. Here&apos;s an example of how to implement it:
                 </Typography>
                 <br />
                 <Code language="javascript" canCopy={false}>
@@ -65,8 +73,9 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                 </Code>
                 <br />
                 <Typography variant="body1">
-                    In the code above, <Property>config</Property> will contain
-                    the following configuration:
+                    In the provided code snippet, the{' '}
+                    <Property>config</Property> variable includes the following
+                    essential configuration parameters:
                 </Typography>
                 <PropsTable data={config} />
                 <br />

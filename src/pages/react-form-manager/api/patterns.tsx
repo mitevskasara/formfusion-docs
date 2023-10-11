@@ -14,6 +14,7 @@ import Section from '@/components/Section';
 import Table from '@/components/Table';
 import Form from '@/components/Form';
 import HTMLText from '@/components/HTMLText';
+import FooterNavigation from '@/components/FooterNavigation';
 
 import patterns from '@/constants/patterns';
 import countries from '@/constants/countries';
@@ -79,11 +80,13 @@ const Patterns = ({ theme, setTheme }: IPatternsProps) => {
                     <Link href={`/${ROUTES.types}`}>
                         Input types collection
                     </Link>
-                    &nbsp;uses part of these validation patterns as base, but
-                    they are also exposed for usage when you need a dynamic
-                    validation or you don&apos;t want to use the Input component
-                    provided by <strong>RFM</strong>. To use, pass the preffered
-                    pattern as <Property>pattern</Property> prop to the input.
+                    &nbsp;uses part of these validation patterns as a
+                    foundation, but they are also exposed for usage when you
+                    require more flexibility or when you don&apos;t intend to
+                    use the Input component provided by <strong>RFM</strong>. To
+                    put these patterns to use, simply pass your desired pattern
+                    as the
+                    <Property>&nbsp;pattern</Property> property to the input.
                     <br />
                     <br />
                     Here is a list of all validation patterns&nbsp;
@@ -205,6 +208,7 @@ const Patterns = ({ theme, setTheme }: IPatternsProps) => {
                     </Form>
                 )}
             </Section>
+            <FooterNavigation url={`/${ROUTES.mui}`} title="Material UI" />
         </MainLayout>
     );
 };

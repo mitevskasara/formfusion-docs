@@ -6,28 +6,28 @@
             "name": "values",
             "type": "{ [field: string]: string }",
             "default": "",
-            "description": "Contains the values of the form fields. The field key should match the name attribute of each form",
+            "description": "This object encapsulates the data entered into the form fields. Each field key should correspond to the 'name' attribute of the associated form input.",
             "required": false
         },
         {
             "name": "errors",
             "type": "{ [field: string]: string }",
             "default": "",
-            "description": "Contains the error messages for each invalid field. The field key should match the name attribute of each form",
+            "description": "This object contains error messages relating to to each field that has invalid data. Field keys should align with the 'name' attribute of each form input element.",
             "required": false
         },
         {
             "name": "touched",
             "type": "{ [field: string]: string }",
             "default": "",
-            "description": "Contains all touched fields. The field key should match the name attribute of each form",
+            "description": "This object records all fields that have been interacted with. Each field key should align with the 'name' attribute of the form input.",
             "required": false
         },
         {
             "name": "resetForm",
             "type": "() => void",
             "default": "",
-            "description": "Resets the form",
+            "description": "This function offers the capability to reset the form, providing a clean slate for data entry and submission.",
             "required": false
         }
     ]
