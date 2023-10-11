@@ -6,21 +6,21 @@
             "name": "config",
             "type": "object",
             "default": "",
-            "description": "The form configuration i.e the object that is returned when calling useForm().",
+            "description": "The config parameter pertains to the form configuration, which is the object returned when you invoke the 'useForm()' function.",
             "required": true
         },
         {
             "name": "ref",
             "type": "HTMLInputElement",
             "default": "",
-            "description": "The ref of the form field. You need to define it and pass it to your custom field component.",
+            "description": "The ref parameter corresponds to the reference of the form field. It's important to define and pass this reference to your custom field component.",
             "required": false
         },
         {
             "name": "type",
             "type": "string",
             "default": "",
-            "description": "The RFM <a href='/react-form-manager/api/types'>input type</a> or <a href='/react-form-manager/api/types'>validation pattern</a> you want to apply to the field.",
+            "description": "The RFM <a href='/react-form-manager/api/types'>input type</a> or <a href='/react-form-manager/api/types'>validation pattern</a> you intend to apply to the field.",
             "required": false
         }
     ]

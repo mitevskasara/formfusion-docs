@@ -6,28 +6,28 @@
             "name": "onSubmit",
             "type": "function",
             "default": "",
-            "description": "The function that is called when the form is submitted. It returns the values object that contains all fields values",
+            "description": "This parameter defines the function that is executed when the form is submitted. It plays a crutial role in form handling by returning the values object, which encapsulates all the field values.",
             "required": true
         },
         {
             "name": "initialValues",
             "type": "{ [field: string]: string }",
             "default": "",
-            "description": "Default values of the form fields",
+            "description": "The initialValues parameter allows you to specify the default values for the form fields.",
             "required": false
         },
         {
             "name": "validateOnChange",
             "type": "boolean",
             "default": "false",
-            "description": "If the form should trigger validation and show errors while typing",
+            "description": "Determine whether the form should initiate validation and display errors in real-time while typing.",
             "required": false
         },
         {
             "name": "validateOnBlur",
             "type": "boolean",
             "default": "true",
-            "description": "If the form should trigger validation and show errors when the field is out of focus",
+            "description": "Determine whether the form should initiate validation and display errors when a field loses focus.",
             "required": false
         }
     ]

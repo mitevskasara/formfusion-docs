@@ -41,31 +41,33 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    To integrate <b>React Form Manager</b> with {data?.title}{' '}
-                    you can use the
-                    <Link href={`/${ROUTES.connect}`}>&nbsp;connect</Link>{' '}
-                    method along with
-                    <Link href={`/${ROUTES.useform}`}>&nbsp;UseForm</Link> hook
-                    to initialize the form configuration.
+                    Integrating <b>React Form Manager</b> with {data?.title}
+                    &nbsp; is a straightforward process. To accomplish this, you
+                    can use the{' '}
+                    <Link href={`/${ROUTES.connect}`}>connect&nbsp;</Link>
+                    method along with the{' '}
+                    <Link href={`/${ROUTES.useform}`}>UseForm</Link> hook to
+                    initialize your form's configuration.
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    In order to use the{' '}
-                    <Link href={`/${ROUTES.connect}`}>connect</Link> method, you
-                    need to have access to the form configuration object,
-                    declare and set refs for your input fields and choose the{' '}
-                    <Link href={`/${ROUTES.types}`}>input type</Link> or
+                    For a successful implementation of the connect method,
+                    you'll need access to the form configuration object. It's
+                    also crucial to declare and set references (refs) for your
+                    input fields and select the
+                    <Link href={`/${ROUTES.types}`}>&nbsp;input type</Link> or
                     <Link href={`/${ROUTES.patterns}`}>
-                        &nbsp;validation pattern
-                    </Link>{' '}
-                    you want to use.
+                        &nbsp;validation pattern&nbsp;
+                    </Link>
+                    that aligns with your requirements.
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    Note: to successfully use the{' '}
-                    <Link href={`/${ROUTES.connect}`}>connect</Link> method you
-                    must call it on the low level input that is rendered by{' '}
-                    {data?.title}.
+                    Important Note: To leverage the potential of the connect
+                    method, it's important to call it on the lower-level input
+                    component rendered by {data?.title}. This ensures the
+                    synchronization of React Form Manager with the {data?.title}{' '}
+                    framework.
                 </Typography>
             </Section>
             <Section id="example" ref={exampleRef}>
