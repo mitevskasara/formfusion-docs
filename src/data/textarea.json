@@ -2,27 +2,27 @@
     "key": "textarea",
     "title": "Textarea",
     "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes",
-    "description": "The Textarea component is based on the native HTML textarea element and it has access to the Form handler functions and utilities. It should be used as a child in Form component",
+    "description": "The Textarea component is built upon the native HTML textarea element and it should be used as a child within the Form component to provide access to the Form handler functions and utilities.",
     "props": [
         {
             "name": "validation",
             "type": "object",
             "default": "native validityState",
-            "description": "Overrides the native <a href='https://developer.mozilla.org/en-US/docs/Web/API/ValidityState' target='_blank'>validityState</a> error messages",
+            "description": "Overrides the native <a href='https://developer.mozilla.org/en-US/docs/Web/API/ValidityState' target='_blank'>validityState</a> error messages.",
             "required": false
         },
         {
             "name": "label",
             "type": "string",
             "default": "",
-            "description": "Label of the textarea field. Recommended for accessibility",
+            "description": "Label of the textarea field. Strongly recommended for accessibility, ensuring a more inclusive and user-friendly experience.",
             "required": false
         },
         {
             "name": "classes",
             "type": "{ field: string; label: string; error: string; }",
             "default": "",
-            "description": "Classes applied to the textarea, label and error elements",
+            "description": "Classes applied to the textarea, label and error elements.",
             "required": false
         }
     ],

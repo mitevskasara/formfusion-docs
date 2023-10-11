@@ -184,8 +184,7 @@ const MyForm = () => {
 
 export default MyForm;`;
 
-const ANTDESIGN_USAGE = `
-import React, { useRef } from "react";
+const ANTDESIGN_USAGE = `import React, { useRef } from "react";
 import { Input, Space, Button, Typography } from "antd";
 import { Form, useForm, connect } from "@corelabui/rfm";
 
@@ -228,8 +227,7 @@ const MyForm = () => {
 
 export default MyForm;`;
 
-const CHAKRAUI_USAGE = `
-import React, { useRef } from "react";
+const CHAKRAUI_USAGE = `import React, { useRef } from "react";
 import { Button, Input, Stack, Text } from "@chakra-ui/react";
 import { Form, useForm, connect } from "@corelabui/rfm";
 
@@ -271,8 +269,7 @@ const MyForm = () => {
 export default MyForm;
 `;
 
-const REACTSTRAP_USAGE = `
-import React, { useRef } from "react";
+const REACTSTRAP_USAGE = `import React, { useRef } from "react";
 import { Input, Button, FormText } from "reactstrap";
 import { Form, useForm, connect } from "@corelabui/rfm";
 
