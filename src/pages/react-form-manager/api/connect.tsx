@@ -35,7 +35,7 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
                     The connect method provides you with the flexibility to
                     integrate <strong>React Form Manager </strong>
                     into your custom Field component, offering a alternative to
-                    RFM's default
+                    RFM&apos;s default
                     <Link href={`/${ROUTES.input}`}>&nbsp;Input</Link> or
                     <Link href={`/${ROUTES.textarea}`}>
                         &nbsp;Textarea
@@ -53,8 +53,8 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
                     section.
                     <br />
                     <br />
-                    It's worth highlighting that the connect method works in
-                    synergy with the
+                    It&apos;s worth highlighting that the connect method works
+                    in synergy with the
                     <Link href={`${ROUTES.useform}`}>&nbsp;UseForm</Link> hook,
                     ensuring a harmonious and efficient form management process.
                 </Typography>
