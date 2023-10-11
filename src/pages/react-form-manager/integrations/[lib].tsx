@@ -47,14 +47,14 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                     <Link href={`/${ROUTES.connect}`}>connect&nbsp;</Link>
                     method along with the{' '}
                     <Link href={`/${ROUTES.useform}`}>UseForm</Link> hook to
-                    initialize your form's configuration.
+                    initialize your form&apos;s configuration.
                 </Typography>
                 <br />
                 <Typography variant="body1">
                     For a successful implementation of the connect method,
-                    you'll need access to the form configuration object. It's
-                    also crucial to declare and set references (refs) for your
-                    input fields and select the
+                    you&apos;ll need access to the form configuration object.
+                    It&apos;s also crucial to declare and set references (refs)
+                    for your input fields and select the
                     <Link href={`/${ROUTES.types}`}>&nbsp;input type</Link> or
                     <Link href={`/${ROUTES.patterns}`}>
                         &nbsp;validation pattern&nbsp;
@@ -64,8 +64,8 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 <br />
                 <Typography variant="body1">
                     Important Note: To leverage the potential of the connect
-                    method, it's important to call it on the lower-level input
-                    component rendered by {data?.title}. This ensures the
+                    method, it&apos;s important to call it on the lower-level
+                    input component rendered by {data?.title}. This ensures the
                     synchronization of React Form Manager with the {data?.title}{' '}
                     framework.
                 </Typography>

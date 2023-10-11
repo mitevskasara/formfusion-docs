@@ -39,8 +39,8 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                     <Link href={`/${ROUTES.form}`}>&nbsp;Form component</Link>.
                     This hook comes in handy when you require greater control
                     over your forms, offering access to essential objects such
-                    as values and errors. It's particularly valuable when you
-                    opt for alternative Field components that differ from
+                    as values and errors. It&apos;s particularly valuable when
+                    you opt for alternative Field components that differ from
                     <strong> React Form Manager&apos;s&nbsp;</strong>
                     default <Link href={`/${ROUTES.input}`}>Input</Link> and
                     <Link href={`/${ROUTES.textarea}`}>
@@ -63,7 +63,7 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                 <Typography variant="body1">
                     The UseForm hook yields the entire form configuration, which
                     you can utilize to tailor your form management precisely as
-                    desired. Here's an example of how to implement it:
+                    desired. Here&apos;s an example of how to implement it:
                 </Typography>
                 <br />
                 <Code language="javascript" canCopy={false}>
