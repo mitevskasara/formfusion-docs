@@ -30,13 +30,21 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
         <MainLayout {...META_DATA} theme={theme} setTheme={setTheme}>
             <Section id="introduction" title="Introduction" margin={false}>
                 <Typography variant="body1">
-                    Effortlessly manage forms in your React applications with
-                    the
-                    <strong>&nbsp;React Form Manager&nbsp;</strong>
-                    developed by CoreLab UI. This library provides an efficient
-                    solution for handling forms with built-in validation, full
-                    accessibility and completely customizable look simplifying
-                    the development process and improving user experience.
+                    Revolutionize your React applications with the{' '}
+                    <strong>React Form Manager,&nbsp;</strong>
+                    thoughtfully designed by CoreLab UI. This broad library
+                    offers an efficient solution for managing forms, complete
+                    with built-in validation, exceptional accessibility, and
+                    unparalleled customization capabilities. Optimize your
+                    development process and elevate the user experience with
+                    ease, as you harness the full potential of JavaScript forms
+                    in your React applications.
+                    <br />
+                    <br />
+                    Our library seamlessly integrates with popular design
+                    frameworks including Material UI, Ant Design, Chakra UI, and
+                    Reactstrap, making it the perfect choice for your
+                    React-based projects.
                 </Typography>
                 <br />
                 <Typography variant="body1">
@@ -95,9 +103,10 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                     </Button>
                 </Flex>
                 <Typography variant="body1">
-                    Bellow is an example of using React Form Manager for a
-                    straightforward uncontrolled form with username field with
-                    validation
+                    Below is an example of how{' '}
+                    <strong>React Form Manager</strong> simplifies the creation
+                    of an uncontrolled form with a username field and
+                    validation:
                 </Typography>
                 <br />
                 <Code language="javascript">{COMPONENTS.form}</Code>

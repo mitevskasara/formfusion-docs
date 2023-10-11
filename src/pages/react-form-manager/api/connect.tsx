@@ -32,21 +32,31 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
             setTheme={setTheme}>
             <Section title="Connect" margin={false}>
                 <Typography variant="body1">
-                    The connect method allows you to integrate{' '}
-                    <b>React Form Manager </b>
-                    with your own Field component instead of the{' '}
-                    <b>RFM&apos;s&nbsp;</b>
-                    <Link href={`/${ROUTES.input}`}> Input </Link> or
-                    <Link href={`/${ROUTES.textarea}`}>&nbsp;Textarea </Link>.
-                    Connect is also used for integration with UI Libraries. See
-                    <Link href={`${ROUTES.integrations}`}>
-                        &nbsp;Integrations
+                    The connect method provides you with the flexibility to
+                    integrate <strong>React Form Manager </strong>
+                    into your custom Field component, offering a alternative to
+                    RFM's default
+                    <Link href={`/${ROUTES.input}`}>&nbsp;Input</Link> or
+                    <Link href={`/${ROUTES.textarea}`}>
+                        &nbsp;Textarea
                     </Link>{' '}
-                    for more detail instructions.
+                    elements.
                     <br />
                     <br />
-                    The connect method <b>must</b> be used along with
-                    <Link href={`${ROUTES.useform}`}>&nbsp;UseForm</Link>.
+                    Connect is not limited to just custom Field components; it
+                    also plays a crutial role in integrating{' '}
+                    <strong>React Form Manager </strong> with various UI
+                    libraries, amplifying the potential of your web
+                    applications. For a step-by-step guide on these
+                    integrations, refer to the instructions provided in the{' '}
+                    <Link href={`${ROUTES.integrations}`}>Integrations</Link>{' '}
+                    section.
+                    <br />
+                    <br />
+                    It's worth highlighting that the connect method works in
+                    synergy with the
+                    <Link href={`${ROUTES.useform}`}>&nbsp;UseForm</Link> hook,
+                    ensuring a harmonious and efficient form management process.
                 </Typography>
                 <br />
                 <Typography variant="heading5" htmlElement="h3">
