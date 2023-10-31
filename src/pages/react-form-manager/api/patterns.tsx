@@ -100,8 +100,8 @@ const Patterns = ({
                     require more flexibility or when you don&apos;t intend to
                     use the Input component provided by <strong>RFM</strong>. To
                     put these patterns to use, simply pass your desired pattern
-                    as the
-                    <Property>&nbsp;pattern</Property> property to the input.
+                    as the&nbsp;
+                    <Property>pattern</Property> property to the input.
                     <br />
                     <br />
                     Here is a list of all validation patterns&nbsp;
