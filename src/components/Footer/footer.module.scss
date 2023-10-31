@@ -1,7 +1,12 @@
 @import '@/core/styles/variables';
 
 .footer {
-    margin-top: 6em;
+    background-color: var(--background);
+    height: $footer-height;
+    grid-area: footer;
+    border-top: 1px dashed var(--border-color);
+    z-index: 2;
+    position: relative;
 
     &__link {
         background-color: var(--primary);
