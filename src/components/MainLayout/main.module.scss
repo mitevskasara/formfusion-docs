@@ -6,27 +6,29 @@ $sidebar-width: 10em;
 $side-padding: 2em;
 
 .container {
-    display: flex;
+    display: grid;
+    grid-template-areas: 'header header header header' 'left main main main' 'footer footer footer footer';
+    gap: 2em;
     padding: 0 $side-padding;
-    margin-top: $header-height;
+    max-width: 1200px;
+    margin: $header-height auto 0;
+
+    @include media(xlarge) {
+        max-width: 1400px;
+    }
 
     @include media(small) {
         flex-direction: column;
+        grid-template-areas: 'header header header header' 'main main main main' 'footer footer footer footer';
     }
 }
 
 .main {
-    width: 50%;
-    max-width: 1200px;
-    margin: 3em auto;
-
-    @include media(medium) {
-        margin-left: calc($sidebar-width + 4em);
-        width: 80%;
-    }
+    margin: 1em 0 0 auto;
+    grid-area: main;
 
     @include media(small) {
-        margin: 2em 0;
+        margin: 1em 0;
         width: 100%;
     }
 }

@@ -8,54 +8,65 @@
     width: -webkit-fill-available;
     background-color: var(--background);
     z-index: 2;
-    padding: 0.5em $side-padding;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 0.8em $side-padding 0.5em;
     box-shadow: var(--box-shadow);
+    grid-area: header;
 
-    &__left {
+    &__inner {
         display: flex;
         align-items: center;
-        gap: 1em;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
 
-        &__logo {
-            &_mobile {
+        @include media(xlarge) {
+            max-width: 1400px;
+        }
+
+        &__left {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            &__logo {
+                &_mobile {
+                    display: none;
+
+                    @include media(small) {
+                        display: block;
+                    }
+                }
+
+                // @include media(small) {
+                //     display: none;
+                // }
+            }
+        }
+
+        &__right {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            @include media(small) {
+                gap: 0.5em;
+            }
+
+            &__menuIcon {
                 display: none;
 
                 @include media(small) {
                     display: block;
+                    margin-top: 0.5em;
+                    margin-left: 1em;
                 }
             }
 
-            @include media(small) {
-                display: none;
-            }
-        }
-    }
-
-    &__right {
-        display: flex;
-        align-items: center;
-        gap: 1em;
-
-        @include media(small) {
-            gap: 0.5em;
-        }
-
-        &__menuIcon {
-            display: none;
-
-            @include media(small) {
-                display: block;
+            &__themeButton {
+                font-size: 25px;
                 margin-left: 1em;
+                display: flex;
             }
-        }
-
-        &__themeButton {
-            font-size: 25px;
-            margin-left: 1em;
-            display: flex;
         }
     }
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Montserrat } from 'next/font/google';
+import { Nunito } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import ThemeProvider from 'corelabui/ThemeProvider';
 
@@ -10,7 +10,7 @@ import '../../public/assets/fonts/style.css';
 import '../core/styles/globals.css';
 import '../core/styles/prism.css';
 
-const font = Montserrat({ subsets: ['latin'] });
+const font = Nunito({ subsets: ['latin'] });
 
 const defaultTheme = Storage.get('CUI_theme') || 'standard';
 

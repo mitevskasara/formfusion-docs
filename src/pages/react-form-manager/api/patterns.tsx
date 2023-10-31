@@ -1,11 +1,11 @@
 import React, { Dispatch, SetStateAction, useRef, useState } from 'react';
 import Typography from 'corelabui/Typography';
 import Select from 'corelabui/Select';
-import Flex from 'corelabui/Flex';
+import Flex, { FlexItem } from 'corelabui/Flex';
 import Button from 'corelabui/Button';
 import Highlight from 'corelabui/Highlight';
 import Input from 'corelabui/Input';
-import { useForm, connect, patterns as RFMPatterns } from '@corelabui/rfm';
+import { patterns as RFMPatterns, useForm, connect } from '@corelabui/rfm';
 
 import Property from '@/components/Property';
 import MainLayout from '@/components/MainLayout';
@@ -15,9 +15,9 @@ import Table from '@/components/Table';
 import Form from '@/components/Form';
 import HTMLText from '@/components/HTMLText';
 import FooterNavigation from '@/components/FooterNavigation';
+import Pagination from '@/components/Pagination';
 
 import patterns from '@/constants/patterns';
-import countries from '@/constants/countries';
 import META_DATA from '@/constants/metaData';
 import {
     PATTERNS_TABLE_HEADERS,
@@ -26,26 +26,41 @@ import {
 import { patternsToOptions } from '@/utils/dataTransform';
 import ROUTES from '@/constants/routes';
 import THEMES from '@/core/theme';
+import { ISelectOption } from './interfaces';
 
-const PATTERNS_TABLE_DATA = patternsToTableData(RFMPatterns);
-const options = patternsToOptions(RFMPatterns);
+const LIMIT_PER_PAGE = 25;
 
 interface IPatternsProps {
     theme: string;
     setTheme: Dispatch<SetStateAction<string>>;
+    data: { [key: number]: object[] };
+    pages: number[];
+    options: ISelectOption[];
+    patterns: any;
 }
 
-const Patterns = ({ theme, setTheme }: IPatternsProps) => {
-    const [pattern, setPattern] = useState(options[0].value);
-    const [country, setCountry] = useState<string>('gb');
+const Patterns = ({
+    theme,
+    setTheme,
+    data,
+    pages,
+    options
+}: IPatternsProps) => {
+    const [patternObject, setPattern] = useState(options[0]);
     const config = useForm({ onSubmit: () => {}, validateOnChange: true });
     const fieldRef = useRef(null);
+    const [page, setPage] = useState(1);
+
+    const tableData = data && data[`${page}`];
+    const pattern = patternObject.value;
 
     const inputType =
         typeof RFMPatterns[pattern] === 'function'
             ? pattern.includes('Range')
                 ? RFMPatterns[pattern](1, 5)
                 : RFMPatterns[pattern](5)
+            : patternObject.subtype
+            ? RFMPatterns[patternObject.type][patternObject.subtype]
             : RFMPatterns[pattern];
 
     return (
@@ -85,19 +100,46 @@ const Patterns = ({ theme, setTheme }: IPatternsProps) => {
                     require more flexibility or when you don&apos;t intend to
                     use the Input component provided by <strong>RFM</strong>. To
                     put these patterns to use, simply pass your desired pattern
-                    as the
-                    <Property>&nbsp;pattern</Property> property to the input.
+                    as the&nbsp;
+                    <Property>pattern</Property> property to the input.
                     <br />
                     <br />
                     Here is a list of all validation patterns&nbsp;
                     <strong>RFM</strong> currently contains:
                 </Typography>
                 <br />
-                <Table
-                    headers={PATTERNS_TABLE_HEADERS}
-                    data={PATTERNS_TABLE_DATA}
-                />
-                <br />
+                <Flex
+                    justifyContent="flex-end"
+                    alignItems="center"
+                    margin="0.5em 0"
+                    xs="column-reverse">
+                    {/* <FlexItem flex="1">
+                        <Input
+                            id="search"
+                            placeholder="Search types..."
+                            onChange={(e: any) => setKeyword(e.target.value)}
+                        />
+                    </FlexItem> */}
+                    <FlexItem flex="1">
+                        <Pagination
+                            pages={pages}
+                            activePage={page}
+                            onChange={(page) => setPage(page)}
+                        />
+                    </FlexItem>
+                </Flex>
+                <Table headers={PATTERNS_TABLE_HEADERS} data={tableData} />
+                <Flex
+                    justifyContent="end"
+                    alignItems="center"
+                    margin="0.5em 0"
+                    xs="column-reverse">
+                    <Pagination
+                        pages={pages}
+                        activePage={page}
+                        onChange={(page) => setPage(page)}
+                    />
+                </Flex>
                 <Flex
                     justifyContent="space-between"
                     alignItems="center"
@@ -123,90 +165,41 @@ const Patterns = ({ theme, setTheme }: IPatternsProps) => {
                 <Select
                     placeholder="Select pattern"
                     options={options}
-                    onChange={(value: string) => setPattern(value)}
+                    onChange={(option: ISelectOption) => {
+                        console.log(option);
+                        setPattern(option);
+                    }}
                     value={pattern}
                     label="Select a validation pattern to test"
                 />
-                {pattern === 'postalCode' ? (
-                    <Form validateOnChange>
-                        <Flex direction="column" gap="0.5em">
-                            <Select
-                                placeholder="Select a country"
-                                options={countries}
-                                onChange={(value: string) =>
-                                    setCountry(value.toLowerCase())
-                                }
-                                value={country.toUpperCase()}
-                                label={`Pattern for: ${country} postal code`}
-                            />
+                <Form validateOnChange>
+                    <Flex direction="column" gap="0.5em">
+                        <Input
+                            {...connect(config, fieldRef, inputType)}
+                            id={pattern}
+                            name={pattern}
+                            label={`Pattern: ${pattern}`}
+                            error={Boolean(config.errors[pattern])}
+                            helperText={
+                                config.errors[pattern] ||
+                                patterns[pattern]?.info
+                            }
+                        />
+                        <br />
+                        <Typography variant="body1">
+                            <Highlight color={THEMES[theme].success}>
+                                <HTMLText text={patterns[pattern]?.correct} />
+                            </Highlight>
                             <br />
-                            <Input
-                                {...connect(
-                                    config,
-                                    fieldRef,
-                                    `postal-code-${country}`
-                                )}
-                                id={`postal-code-${country}`}
-                                name={`postal-code-${country}`}
-                                error={Boolean(
-                                    config.errors[`postal-code-${country}`]
-                                )}
-                                helperText={
-                                    config.errors[`postal-code-${country}`] ||
-                                    patterns[pattern][country].info
-                                }
-                            />
-                            <br />
-                            <Typography variant="body1">
-                                <Highlight color={THEMES[theme].success}>
-                                    <HTMLText
-                                        text={
-                                            patterns[pattern][country].correct
-                                        }
-                                    />
-                                </Highlight>
-                                <br />
-                                <Highlight color={THEMES[theme].error}>
-                                    <HTMLText
-                                        text={
-                                            patterns[pattern][country].incorrect
-                                        }
-                                    />
-                                </Highlight>
-                            </Typography>
-                        </Flex>
-                    </Form>
-                ) : (
-                    <Form validateOnChange>
-                        <Flex direction="column" gap="0.5em">
-                            <Input
-                                {...connect(config, fieldRef, inputType)}
-                                id={pattern}
-                                name={pattern}
-                                label={`Pattern: ${pattern}`}
-                                error={Boolean(config.errors[pattern])}
-                                helperText={
-                                    config.errors[pattern] ||
-                                    patterns[pattern].info
-                                }
-                            />
-                            <br />
-                            <Typography variant="body1">
-                                <Highlight color={THEMES[theme].success}>
-                                    <HTMLText
-                                        text={patterns[pattern].correct}
-                                    />
-                                </Highlight>
-                                <br />
-                                <Highlight color={THEMES[theme].error}>
-                                    <HTMLText
-                                        text={patterns[pattern].incorrect}
-                                    />
-                                </Highlight>
-                            </Typography>
-                        </Flex>
-                    </Form>
-                )}
+                            <Highlight color={THEMES[theme].error}>
+                                <HTMLText text={patterns[pattern]?.incorrect} />
+                            </Highlight>
+                        </Typography>
+                    </Flex>
+                </Form>
+                <br />
+                <br />
+                <br />
             </Section>
             <FooterNavigation url={`/${ROUTES.mui}`} title="Material UI" />
         </MainLayout>
@@ -214,8 +207,36 @@ const Patterns = ({ theme, setTheme }: IPatternsProps) => {
 };
 
 export async function getStaticProps() {
+    const { patterns } = await require('@corelabui/rfm');
+    const options = patternsToOptions(patterns);
+    const PATTERNS_TABLE_DATA = patternsToTableData(patterns).filter((d) =>
+        Boolean(d)
+    );
+
+    const paginate = (arr: any[], chunk: number) => {
+        const result: { [key: string]: object[] } = {};
+
+        for (let i = 0; i < arr.length; i += chunk) {
+            const page = arr.slice(i, i + chunk);
+            const key = i / chunk + 1;
+            result[key] = page;
+        }
+
+        return result;
+    };
+
+    const data = paginate(PATTERNS_TABLE_DATA, LIMIT_PER_PAGE);
+    const pages = Array.apply(
+        null,
+        Array(Math.ceil(PATTERNS_TABLE_DATA.length / LIMIT_PER_PAGE))
+    ).map((_y, i) => i + 1);
+
     return {
-        props: {}
+        props: {
+            data,
+            pages,
+            options
+        }
     };
 }
 

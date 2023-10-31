@@ -17,3 +17,10 @@ export interface Component {
     nextUrl: string;
     nextUrlTitle: string;
 }
+
+export interface ISelectOption {
+    label: string;
+    value: string;
+    subtype: string;
+    type: string;
+}

@@ -3,9 +3,9 @@ import Typography from 'corelabui/Typography';
 import Highlight from 'corelabui/Highlight';
 import Select from 'corelabui/Select';
 import Button from 'corelabui/Button';
-import Flex from 'corelabui/Flex';
+import Flex, { FlexItem } from 'corelabui/Flex';
 import Input from 'corelabui/Input';
-import { useForm, connect, types as RFMtypes } from '@corelabui/rfm';
+import { useForm, connect } from '@corelabui/rfm';
 
 import MainLayout from '@/components/MainLayout';
 import Link from '@/components/Link';
@@ -14,6 +14,7 @@ import Section from '@/components/Section';
 import Table from '@/components/Table';
 import Form from '@/components/Form';
 import HTMLText from '@/components/HTMLText';
+import Pagination from '@/components/Pagination';
 
 import info from '@/constants/types';
 import countries from '@/constants/countries';
@@ -22,20 +23,26 @@ import { TYPES_TABLE_HEADERS, typesToTableData } from '@/constants/tables';
 import { typesToOptions } from '@/utils/dataTransform';
 import ROUTES from '@/constants/routes';
 import THEMES from '@/core/theme';
+import { ISelectOption } from './interfaces';
 
-const TYPES_TABLE_DATA = typesToTableData(RFMtypes);
-const options = typesToOptions(RFMtypes);
+const LIMIT_PER_PAGE = 25;
 
 interface ITypesProps {
     theme: string;
     setTheme: Dispatch<SetStateAction<string>>;
+    data: { [key: number]: object[] };
+    pages: number[];
+    options: { label: string; value: string }[];
 }
 
-const Types = ({ theme, setTheme }: ITypesProps) => {
-    const [country, setCountry] = useState<string>('gb');
+const Types = ({ theme, setTheme, data, pages, options }: ITypesProps) => {
     const [type, setType] = useState(options[0].value);
+    const [page, setPage] = useState(1);
+
     const config = useForm({ onSubmit: () => {}, validateOnChange: true });
     const fieldRef = useRef(null);
+
+    const tableData = data && data[`${page}`];
 
     return (
         <MainLayout
@@ -70,7 +77,38 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
                     contains:
                 </Typography>
                 <br />
-                <Table headers={TYPES_TABLE_HEADERS} data={TYPES_TABLE_DATA} />
+                <Flex
+                    justifyContent="flex-end"
+                    alignItems="center"
+                    margin="0.5em 0"
+                    xs="column-reverse">
+                    {/* <FlexItem flex="1">
+                        <Input
+                            id="search"
+                            placeholder="Search types..."
+                            onChange={(e: any) => setKeyword(e.target.value)}
+                        />
+                    </FlexItem> */}
+                    <FlexItem flex="1">
+                        <Pagination
+                            pages={pages}
+                            activePage={page}
+                            onChange={(page) => setPage(page)}
+                        />
+                    </FlexItem>
+                </Flex>
+                <Table headers={TYPES_TABLE_HEADERS} data={tableData} />
+                <Flex
+                    justifyContent="end"
+                    alignItems="center"
+                    margin="0.5em 0"
+                    xs="column-reverse">
+                    <Pagination
+                        pages={pages}
+                        activePage={page}
+                        onChange={(page) => setPage(page)}
+                    />
+                </Flex>
                 <Flex
                     justifyContent="space-between"
                     alignItems="center"
@@ -96,88 +134,35 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
                 <Select
                     placeholder="Select input type"
                     options={options}
-                    onChange={(value: string) => setType(value)}
+                    onChange={(option: ISelectOption) => setType(option.value)}
                     value={type}
                     label="Select an input type to test"
                 />
-                {type === 'postal-code' ? (
-                    <Form config={config}>
-                        <Flex direction="column" gap="0.5em">
-                            <Select
-                                label={`Pattern for: ${country} postal code`}
-                                placeholder="Select a country"
-                                options={countries}
-                                onChange={(value: string) =>
-                                    setCountry(value.toLowerCase())
-                                }
-                                value={country.toUpperCase()}
-                            />
+                <Form validateOnChange>
+                    <Flex direction="column" gap="0.5em">
+                        <Input
+                            {...connect(config, fieldRef, type)}
+                            id={type}
+                            name={type}
+                            label={`Input type: ${type}`}
+                            error={Boolean(config.errors[type])}
+                            helperText={config.errors[type] || info[type]?.info}
+                        />
+                        <br />
+                        <Typography variant="body1">
+                            <Highlight color={THEMES[theme].success}>
+                                <HTMLText text={info[type]?.correct} />
+                            </Highlight>
                             <br />
-                            <Input
-                                {...connect(
-                                    config,
-                                    fieldRef,
-                                    `postal-code-${country}`
-                                )}
-                                id={`postal-code-${country}`}
-                                name={`postal-code-${country}`}
-                                error={Boolean(
-                                    config.errors[`postal-code-${country}`]
-                                )}
-                                helperText={
-                                    config.errors[`postal-code-${country}`] ||
-                                    info[`postal-code-${country}`].info
-                                }
-                            />
-                            <br />
-                            <br />
-                            <Typography variant="body1">
-                                <Highlight color={THEMES[theme].success}>
-                                    <HTMLText
-                                        text={
-                                            info[`postal-code-${country}`]
-                                                .correct
-                                        }
-                                    />
-                                </Highlight>
-                                <br />
-                                <Highlight color={THEMES[theme].error}>
-                                    <HTMLText
-                                        text={
-                                            info[`postal-code-${country}`]
-                                                .incorrect
-                                        }
-                                    />
-                                </Highlight>
-                            </Typography>
-                        </Flex>
-                    </Form>
-                ) : (
-                    <Form validateOnChange>
-                        <Flex direction="column" gap="0.5em">
-                            <Input
-                                {...connect(config, fieldRef, type)}
-                                id={type}
-                                name={type}
-                                label={`Input type: ${type}`}
-                                error={Boolean(config.errors[type])}
-                                helperText={
-                                    config.errors[type] || info[type].info
-                                }
-                            />
-                            <br />
-                            <Typography variant="body1">
-                                <Highlight color={THEMES[theme].success}>
-                                    <HTMLText text={info[type].correct} />
-                                </Highlight>
-                                <br />
-                                <Highlight color={THEMES[theme].error}>
-                                    <HTMLText text={info[type].incorrect} />
-                                </Highlight>
-                            </Typography>
-                        </Flex>
-                    </Form>
-                )}
+                            <Highlight color={THEMES[theme].error}>
+                                <HTMLText text={info[type]?.incorrect} />
+                            </Highlight>
+                        </Typography>
+                    </Flex>
+                </Form>
+                <br />
+                <br />
+                <br />
             </Section>
             <FooterNavigation
                 url={`/${ROUTES.patterns}`}
@@ -188,8 +173,34 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
 };
 
 export async function getStaticProps() {
+    const { types } = await require('@corelabui/rfm');
+    const options = typesToOptions(types);
+    const TYPES_TABLE_DATA = typesToTableData(types).filter((d) => Boolean(d));
+
+    const paginate = (arr: any[], chunk: number) => {
+        const result: { [key: string]: object[] } = {};
+
+        for (let i = 0; i < arr.length; i += chunk) {
+            const page = arr.slice(i, i + chunk);
+            const key = i / chunk + 1;
+            result[key] = page;
+        }
+
+        return result;
+    };
+
+    const data = paginate(TYPES_TABLE_DATA, LIMIT_PER_PAGE);
+    const pages = Array.apply(
+        null,
+        Array(Math.ceil(TYPES_TABLE_DATA.length / LIMIT_PER_PAGE))
+    ).map((_y, i) => i + 1);
+
     return {
-        props: {}
+        props: {
+            data,
+            pages,
+            options
+        }
     };
 }
 
