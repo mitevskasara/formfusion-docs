@@ -67,10 +67,8 @@ const MainLayout = ({
                     theme={theme}
                     setTheme={setTheme}
                 />
-                <main className={classes.main}>
-                    {children}
-                    <Footer />
-                </main>
+                <main className={classes.main}>{children}</main>
+                <Footer />
             </div>
         </div>
     );

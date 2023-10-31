@@ -1,0 +1,47 @@
+@import '@/core/styles/variables';
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.2em;
+
+    &__control {
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: -1px;
+        color: var(--text);
+
+        &_disabled {
+            cursor: initial;
+            color: var(--text-secondary);
+        }
+    }
+
+    &__page {
+        font-size: 0.8em;
+        background: none;
+        border: none;
+        min-width: 25px;
+        cursor: pointer;
+        padding: 0.2em;
+        border: 1px solid transparent;
+        color: var(--text);
+
+        &_active {
+            border: 1px solid var(--primary);
+            border-radius: var(--border-radius);
+            background-color: var(--primary);
+            color: var(--light);
+
+            &:hover {
+                border: 1px solid var(--primary);
+            }
+        }
+
+        &:hover {
+            border: 1px solid var(--secondary-hover);
+            border-radius: var(--border-radius);
+        }
+    }
+}
