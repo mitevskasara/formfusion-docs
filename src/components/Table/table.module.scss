@@ -2,6 +2,8 @@
 @import '@/core/styles/variables';
 
 .table {
+    min-height: 600px;
+
     & > thead > tr > th:nth-child(2) {
         @include media(xsmall) {
             display: none;
@@ -9,6 +11,8 @@
     }
 
     & > tbody > tr > td {
+        vertical-align: baseline;
+
         @include media(xsmall) {
             display: block;
             width: 100%;

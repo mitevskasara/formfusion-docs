@@ -17,41 +17,45 @@ interface CustomHeaderProps {
 const CustomHeader = ({ open, toggle, theme, setTheme }: CustomHeaderProps) => {
     return (
         <header className={classes.header}>
-            <ClientComponent>
-                <div className={classes.header__left}>
-                    <Image
-                        src={`/assets/logo/${theme}/logo.svg`}
-                        width={150}
-                        height={39}
-                        alt="CoreLab UI logo"
-                        className={classes.header__left__logo}
-                    />
-                    <Image
-                        src={`/assets/logo/${theme}/logo-icon.svg`}
-                        width={27}
-                        height={39}
-                        alt="CoreLab UI logo"
-                        className={classes.header__left__logo_mobile}
-                    />
-                </div>
-            </ClientComponent>
-            <div className={classes.header__right}>
+            <div className={classes.header__inner}>
                 <ClientComponent>
-                    <Button
-                        variant="text"
-                        onClick={() =>
-                            setTheme(theme === 'standard' ? 'dark' : 'standard')
-                        }
-                        aria-label="Theme icon">
-                        <span
-                            className={`icon-${
-                                theme === 'standard' ? 'dark' : 'light'
-                            } ${classes.header__right__themeButton}`}
+                    <div className={classes.header__inner__left}>
+                        <Image
+                            src={`/assets/logo/${theme}/logo.svg`}
+                            width={150}
+                            height={39}
+                            alt="CoreLab UI logo"
+                            className={classes.header__inner__left__logo}
                         />
-                    </Button>
+                        {/* <Image
+                            src={`/assets/logo/${theme}/logo-icon.svg`}
+                            width={27}
+                            height={39}
+                            alt="CoreLab UI logo"
+                            className={classes.header__inner__left__logo_mobile}
+                        /> */}
+                    </div>
                 </ClientComponent>
-                <div className={classes.header__right__menuIcon}>
-                    <HamburgerMenu open={open} setIsOpen={toggle} />
+                <div className={classes.header__inner__right}>
+                    <ClientComponent>
+                        <Button
+                            variant="text"
+                            onClick={() =>
+                                setTheme(
+                                    theme === 'standard' ? 'dark' : 'standard'
+                                )
+                            }
+                            aria-label="Theme icon">
+                            <span
+                                className={`icon-${
+                                    theme === 'standard' ? 'dark' : 'light'
+                                } ${classes.header__inner__right__themeButton}`}
+                            />
+                        </Button>
+                    </ClientComponent>
+                    <div className={classes.header__inner__right__menuIcon}>
+                        <HamburgerMenu open={open} setIsOpen={toggle} />
+                    </div>
                 </div>
             </div>
         </header>
