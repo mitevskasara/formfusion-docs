@@ -17,12 +17,12 @@ import HTMLText from '@/components/HTMLText';
 import Pagination from '@/components/Pagination';
 
 import info from '@/constants/types';
-import countries from '@/constants/countries';
 import META_DATA from '@/constants/metaData';
 import { TYPES_TABLE_HEADERS, typesToTableData } from '@/constants/tables';
-import { typesToOptions } from '@/utils/dataTransform';
 import ROUTES from '@/constants/routes';
+
 import THEMES from '@/core/theme';
+
 import { ISelectOption } from './interfaces';
 
 const LIMIT_PER_PAGE = 25;
@@ -174,6 +174,7 @@ const Types = ({ theme, setTheme, data, pages, options }: ITypesProps) => {
 
 export async function getStaticProps() {
     const { types } = await require('@corelabui/rfm');
+    const { typesToOptions } = await require('@/utils/dataTransform');
     const options = typesToOptions(types);
     const TYPES_TABLE_DATA = typesToTableData(types).filter((d) => Boolean(d));
 

@@ -2035,6 +2035,497 @@ export default {
             'Used for validating Zambian postal codes. A valid Zambian postal code consists of 5 digits.'
     },
     'postal-code-zw': null,
+    'passport-number-am': {
+        info: 'Enter a valid/invalid Armenian passport number to test. A valid passport number consists of two letters followed by seven numbers. For example:',
+        correct: '<span>AB1234567</span> is a valid Armenian passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Armenian passport number',
+        description:
+            'Used for Armenian passport number fields. A valid passport number consists of two letters followed by seven numbers.'
+    },
+    'passport-number-ar': {
+        info: 'Enter a valid/invalid Argentine passport number to test. A valid passport number consists of three letters followed by six numbers. For example:',
+        correct: '<span>ABC123456</span> is a valid Argentine passport number',
+        incorrect:
+            '<span>ABCD12345</span> is not a valid Argentine passport number',
+        description:
+            'Used for Argentine passport number fields. A valid passport number consists of three letters followed by six numbers.'
+    },
+    'passport-number-at': {
+        info: 'Enter a valid/invalid Austrian passport number to test. A valid passport number consists of one letter followed by seven numbers. For example:',
+        correct: '<span>A12345678</span> is a valid Austrian passport number',
+        incorrect:
+            '<span>AB123456</span> is not a valid Austrian passport number',
+        description:
+            'Used for Austrian passport number fields. A valid passport number consists of one letter followed by seven numbers.'
+    },
+    'passport-number-au': {
+        info: 'Enter a valid/invalid Australian passport number to test. A valid passport number consists of one letter followed by seven numbers. For example:',
+        correct: '<span>A1234567</span> is a valid Australian passport number',
+        incorrect:
+            '<span>AB123456</span> is not a valid Australian passport number',
+        description:
+            'Used for Australian passport number fields. A valid passport number consists of one letter followed by seven numbers.'
+    },
+    'passport-number-az': {
+        info: 'Enter a valid/invalid Azerbaijani passport number to test. A valid passport number consists of two or three letters followed by seven or eight numbers. For example:',
+        correct:
+            '<span>ABC1234567</span> is a valid Azerbaijani passport number',
+        incorrect:
+            '<span>ABCD12345678</span> is not a valid Azerbaijani passport number',
+        description:
+            'Used for Azerbaijani passport number fields. A valid passport number consists of two or three letters followed by seven or eight numbers.'
+    },
+    'passport-number-be': {
+        info: 'Enter a valid/invalid Belgian passport number to test. A valid passport number consists of two letters followed by six numbers. For example:',
+        correct: '<span>AB123456</span> is a valid Belgian passport number',
+        incorrect:
+            '<span>ABC12345</span> is not a valid Belgian passport number',
+        description:
+            'Used for Belgian passport number fields. A valid passport number consists of two letters followed by six numbers.'
+    },
+    'passport-number-bg': {
+        info: 'Enter a valid/invalid Bulgarian passport number to test. A valid passport number consists of nine numbers. For example:',
+        correct: '<span>123456789</span> is a valid Bulgarian passport number',
+        incorrect:
+            '<span>AB123456</span> is not a valid Bulgarian passport number',
+        description:
+            'Used for Bulgarian passport number fields. A valid passport number consists of nine numbers.'
+    },
+    'passport-number-br2': {
+        info: 'Enter a valid/invalid Brazilian passport number to test. A valid passport number consists of two letters followed by six numbers. For example:',
+        correct: '<span>AB123456</span> is a valid Brazilian passport number',
+        incorrect:
+            '<span>ABC12345</span> is not a valid Brazilian passport number',
+        description:
+            'Used for Brazilian passport number fields. A valid passport number consists of two letters followed by six numbers.'
+    },
+    'passport-number-by': {
+        info: 'Enter a valid/invalid Belarusian passport number to test. A valid passport number consists of two letters followed by seven numbers. For example:',
+        correct: '<span>AB1234567</span> is a valid Belarusian passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Belarusian passport number',
+        description:
+            'Used for Belarusian passport number fields. A valid passport number consists of two letters followed by seven numbers.'
+    },
+    'passport-number-ca': {
+        info: 'Enter a valid/invalid Canadian passport number to test. A valid passport number consists of two letters followed by six numbers. For example:',
+        correct: '<span>AB123456</span> is a valid Canadian passport number',
+        incorrect:
+            '<span>ABC12345</span> is not a valid Canadian passport number',
+        description:
+            'Used for Canadian passport number fields. A valid passport number consists of two letters followed by six numbers.'
+    },
+    'passport-number-ch': {
+        info: 'Enter a valid/invalid Swiss passport number to test. A valid passport number consists of a letter followed by seven numbers. For example:',
+        correct: '<span>A1234567</span> is a valid Swiss passport number',
+        incorrect: '<span>AB123456</span> is not a valid Swiss passport number',
+        description:
+            'Used for Swiss passport number fields. A valid passport number consists of a letter followed by seven numbers.'
+    },
+    'passport-number-cn': {
+        info: 'Enter a valid/invalid Chinese passport number to test. A valid passport number either starts with G followed by eight digits or starts with E followed by any UPPERCASE letter (except I and O) followed by seven digits. For example:',
+        correct: '<span>G12345678</span> is a valid Chinese passport number',
+        incorrect:
+            '<span>EAB1234567</span> is not a valid Chinese passport number',
+        description:
+            'Used for Chinese passport number fields. A valid passport number either starts with G followed by eight digits or starts with E followed by any UPPERCASE letter (except I and O) followed by seven digits.'
+    },
+    'passport-number-cy': {
+        info: 'Enter a valid/invalid Cypriot passport number to test. A valid passport number starts with a letter followed by either six or eight digits. For example:',
+        correct: '<span>A1234567</span> is a valid Cypriot passport number',
+        incorrect:
+            '<span>A12345678</span> is not a valid Cypriot passport number',
+        description:
+            'Used for Cypriot passport number fields. A valid passport number starts with a letter followed by either six or eight digits.'
+    },
+    'passport-number-cz': {
+        info: 'Enter a valid/invalid Czech passport number to test. A valid passport number consists of eight digits. For example:',
+        correct: '<span>12345678</span> is a valid Czech passport number',
+        incorrect: '<span>AB123456</span> is not a valid Czech passport number',
+        description:
+            'Used for Czech passport number fields. A valid passport number consists of eight digits.'
+    },
+    'passport-number-de': {
+        info: 'Enter a valid/invalid German passport number to test. A valid passport number consists of nine characters (letters and/or numbers). For example:',
+        correct: '<span>ABC123456</span> is a valid German passport number',
+        incorrect:
+            '<span>AB!23CD45</span> is not a valid German passport number',
+        description:
+            'Used for German passport number fields. A valid passport number consists of nine characters (letters and/or numbers).'
+    },
+    'passport-number-dk': {
+        info: 'Enter a valid/invalid Danish passport number to test. A valid passport number consists of nine digits. For example:',
+        correct: '<span>123456789</span> is a valid Danish passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid Danish passport number',
+        description:
+            'Used for Danish passport number fields. A valid passport number consists of nine digits.'
+    },
+    'passport-number-dz': {
+        info: 'Enter a valid/invalid Algerian passport number to test. A valid passport number consists of nine digits. For example:',
+        correct: '<span>123456789</span> is a valid Algerian passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid Algerian passport number',
+        description:
+            'Used for Algerian passport number fields. A valid passport number consists of nine digits.'
+    },
+    'passport-number-ee': {
+        info: 'Enter a valid/invalid Estonian passport number to test. A valid passport number either starts with a letter followed by seven digits or starts with two letters followed by seven digits. For example:',
+        correct: '<span>A1234567</span> is a valid Estonian passport number',
+        incorrect:
+            '<span>AB12345678</span> is not a valid Estonian passport number',
+        description:
+            'Used for Estonian passport number fields. A valid passport number either starts with a letter followed by seven digits or starts with two letters followed by seven digits.'
+    },
+    'passport-number-es': {
+        info: 'Enter a valid/invalid Spanish passport number to test. A valid passport number consists of two characters (letters and/or numbers) followed by six digits. For example:',
+        correct: '<span>AB123456</span> is a valid Spanish passport number',
+        incorrect:
+            '<span>ABC12345</span> is not a valid Spanish passport number',
+        description:
+            'Used for Spanish passport number fields. A valid passport number consists of two characters (letters and/or numbers) followed by six digits.'
+    },
+    'passport-number-fi': {
+        info: 'Enter a valid/invalid Finnish passport number to test. A valid passport number consists of two letters followed by seven digits. For example:',
+        correct: '<span>AB1234567</span> is a valid Finnish passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Finnish passport number',
+        description:
+            'Used for Finnish passport number fields. A valid passport number consists of two letters followed by seven digits.'
+    },
+    'passport-number-fr': {
+        info: 'Enter a valid/invalid French passport number to test. A valid passport number consists of two digits followed by two characters (letters and/or numbers) followed by five digits. For example:',
+        correct: '<span>123AB45678</span> is a valid French passport number',
+        incorrect:
+            '<span>ABCD12345</span> is not a valid French passport number',
+        description:
+            'Used for French passport number fields. A valid passport number consists of two digits followed by two characters (letters and/or numbers) followed by five digits.'
+    },
+    'passport-number-gb': {
+        info: 'Enter a valid/invalid British passport number to test. A valid passport number consists of nine digits. For example:',
+        correct: '<span>123456789</span> is a valid British passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid British passport number',
+        description:
+            'Used for British passport number fields. A valid passport number consists of nine digits.'
+    },
+    'passport-number-gr': {
+        info: 'Enter a valid/invalid Greek passport number to test. A valid passport number consists of two letters followed by seven digits. For example:',
+        correct: '<span>AB1234567</span> is a valid Greek passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Greek passport number',
+        description:
+            'Used for Greek passport number fields. A valid passport number consists of two letters followed by seven digits.'
+    },
+    'passport-number-hr': {
+        info: 'Enter a valid/invalid Croatian passport number to test. A valid passport number consists of nine digits. For example:',
+        correct: '<span>123456789</span> is a valid Croatian passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid Croatian passport number',
+        description:
+            'Used for Croatian passport number fields. A valid passport number consists of nine digits.'
+    },
+    'passport-number-hu': {
+        info: 'Enter a valid/invalid Hungarian passport number to test. A valid passport number consists of two letters followed by six or seven digits. For example:',
+        correct: '<span>AB123456</span> is a valid Hungarian passport number',
+        incorrect:
+            '<span>ABC1234567</span> is not a valid Hungarian passport number',
+        description:
+            'Used for Hungarian passport number fields. A valid passport number consists of two letters followed by six or seven digits.'
+    },
+    'passport-number-ie': {
+        info: 'Enter a valid/invalid Irish passport number to test. A valid passport number consists of two characters (letters and/or numbers) followed by seven digits. For example:',
+        correct: '<span>AB1234567</span> is a valid Irish passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Irish passport number',
+        description:
+            'Used for Irish passport number fields. A valid passport number consists of two characters (letters and/or numbers) followed by seven digits.'
+    },
+    'passport-number-in': {
+        info: 'Enter a valid/invalid Indian passport number to test. A valid passport number consists of one character (letter) followed by an optional hyphen and seven digits. For example:',
+        correct: '<span>A1234567</span> is a valid Indian passport number',
+        incorrect:
+            '<span>AB-123456</span> is not a valid Indian passport number',
+        description:
+            'Used for Indian passport number fields. A valid passport number consists of one character (letter) followed by an optional hyphen and seven digits.'
+    },
+    'passport-number-id': {
+        info: 'Enter a valid/invalid Indonesian passport number to test. A valid passport number consists of one character (A, B, or C) followed by seven digits. For example:',
+        correct: '<span>A1234567</span> is a valid Indonesian passport number',
+        incorrect:
+            '<span>ABC1234567</span> is not a valid Indonesian passport number',
+        description:
+            'Used for Indonesian passport number fields. A valid passport number consists of one character (A, B, or C) followed by seven digits.'
+    },
+    'passport-number-ir': {
+        info: 'Enter a valid/invalid Iranian passport number to test. A valid passport number consists of one uppercase letter followed by eight numbers. For example:',
+        correct: '<span>A12345678</span> is a valid Iranian passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid Iranian passport number',
+        description:
+            'Used for Iranian passport number fields. A valid passport number consists of one uppercase letter followed by eight numbers.'
+    },
+    'passport-number-is': {
+        info: 'Enter a valid/invalid Icelandic passport number to test. A valid passport number consists of the letter "A" followed by seven numbers. For example:',
+        correct: '<span>A1234567</span> is a valid Icelandic passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid Icelandic passport number',
+        description:
+            'Used for Icelandic passport number fields. A valid passport number consists of the letter "A" followed by seven numbers.'
+    },
+    'passport-number-it': {
+        info: 'Enter a valid/invalid Italian passport number to test. A valid passport number consists of two alphanumeric characters followed by seven numbers. For example:',
+        correct: '<span>AB1234567</span> is a valid Italian passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Italian passport number',
+        description:
+            'Used for Italian passport number fields. A valid passport number consists of two alphanumeric characters followed by seven numbers.'
+    },
+    'passport-number-jm': {
+        info: 'Enter a valid/invalid Jamaican passport number to test. A valid passport number consists of the letter "A" or "a" followed by seven numbers. For example:',
+        correct: '<span>A1234567</span> is a valid Jamaican passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid Jamaican passport number',
+        description:
+            'Used for Jamaican passport number fields. A valid passport number consists of the letter "A" or "a" followed by seven numbers.'
+    },
+    'passport-number-jp': {
+        info: 'Enter a valid/invalid Japanese passport number to test. A valid passport number consists of two uppercase letters followed by seven numbers. For example:',
+        correct: '<span>AB1234567</span> is a valid Japanese passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Japanese passport number',
+        description:
+            'Used for Japanese passport number fields. A valid passport number consists of two uppercase letters followed by seven numbers.'
+    },
+    'passport-number-kr': {
+        info: 'Enter a valid/invalid South Korean passport number to test. A valid passport number consists of the letter "M" or "S" followed by eight numbers. For example:',
+        correct:
+            '<span>M12345678</span> is a valid South Korean passport number',
+        incorrect:
+            '<span>AB12345678</span> is not a valid South Korean passport number',
+        description:
+            'Used for South Korean passport number fields. A valid passport number consists of the letter "M" or "S" followed by eight numbers.'
+    },
+    'passport-number-kz': {
+        info: 'Enter a valid/invalid Kazakhstani passport number to test. A valid passport number consists of one or more alphanumeric characters followed by seven numbers. For example:',
+        correct:
+            '<span>AB1234567</span> is a valid Kazakhstani passport number',
+        incorrect:
+            '<span>12345678</span> is not a valid Kazakhstani passport number',
+        description:
+            'Used for Kazakhstani passport number fields. A valid passport number consists of one or more alphanumeric characters followed by seven numbers.'
+    },
+    'passport-number-li': {
+        info: 'Enter a valid/invalid Liechtenstein passport number to test. A valid passport number consists of one or more alphanumeric characters followed by five numbers. For example:',
+        correct:
+            '<span>AB12345</span> is a valid Liechtenstein passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Liechtenstein passport number',
+        description:
+            'Used for Liechtenstein passport number fields. A valid passport number consists of one or more alphanumeric characters followed by five numbers.'
+    },
+    'passport-number-lt': {
+        info: 'Enter a valid/invalid Lithuanian passport number to test. A valid passport number consists of eight alphanumeric characters. For example:',
+        correct: '<span>ABCD1234</span> is a valid Lithuanian passport number',
+        incorrect:
+            '<span>12345678</span> is not a valid Lithuanian passport number',
+        description:
+            'Used for Lithuanian passport number fields. A valid passport number consists of eight alphanumeric characters.'
+    },
+    'passport-number-lu': {
+        info: 'Enter a valid/invalid Luxembourgian passport number to test. A valid passport number consists of eight alphanumeric characters. For example:',
+        correct:
+            '<span>ABCD1234</span> is a valid Luxembourgian passport number',
+        incorrect:
+            '<span>12345678</span> is not a valid Luxembourgian passport number',
+        description:
+            'Used for Luxembourgian passport number fields. A valid passport number consists of eight alphanumeric characters.'
+    },
+    'passport-number-lv': {
+        info: 'Enter a valid/invalid Latvian passport number to test. A valid passport number consists of two alphanumeric characters followed by seven numbers. For example:',
+        correct: '<span>AB1234567</span> is a valid Latvian passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Latvian passport number',
+        description:
+            'Used for Latvian passport number fields. A valid passport number consists of two alphanumeric characters followed by seven numbers.'
+    },
+    'passport-number-ly': {
+        info: 'Enter a valid/invalid Libyan passport number to test. A valid passport number consists of eight alphanumeric characters. For example:',
+        correct: '<span>ABCD1234</span> is a valid Libyan passport number',
+        incorrect:
+            '<span>12345678</span> is not a valid Libyan passport number',
+        description:
+            'Used for Libyan passport number fields. A valid passport number consists of eight alphanumeric characters.'
+    },
+    'passport-number-mt': {
+        info: 'Enter a valid/invalid Maltese passport number to test. A valid passport number consists of seven numbers. For example:',
+        correct: '<span>1234567</span> is a valid Maltese passport number',
+        incorrect:
+            '<span>12345678</span> is not a valid Maltese passport number',
+        description:
+            'Used for Maltese passport number fields. A valid passport number consists of seven numbers.'
+    },
+    'passport-number-mz': {
+        info: 'Enter a valid/invalid Mozambican passport number to test. A valid passport number consists of two alphanumeric characters followed by seven numbers, or two numbers followed by two alphanumeric characters and five numbers. For example:',
+        correct:
+            '<span>AB1234567</span> or <span>12AB34567</span> is a valid Mozambican passport number',
+        incorrect:
+            '<span>ABC123456</span> or <span>12345678</span> is not a valid Mozambican passport number',
+        description:
+            'Used for Mozambican passport number fields. A valid passport number consists of two alphanumeric characters followed by seven numbers, or two numbers followed by two alphanumeric characters and five numbers.'
+    },
+    'passport-number-my': {
+        info: 'Enter a valid/invalid Malaysian passport number to test. A valid passport number consists of one of the letters "A", "H", or "K" followed by eight numbers. For example:',
+        correct: '<span>A12345678</span> is a valid Malaysian passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid Malaysian passport number',
+        description:
+            'Used for Malaysian passport number fields. A valid passport number consists of one of the letters "A", "H", or "K" followed by eight numbers.'
+    },
+    'passport-number-mx': {
+        info: 'Enter a valid/invalid Mexican passport number to test. A valid passport number consists of 10 or 11 numbers. For example:',
+        correct:
+            '<span>1234567890</span> or <span>12345678901</span> is a valid Mexican passport number',
+        incorrect:
+            '<span>AB1234567</span> or <span>123456789012</span> is not a valid Mexican passport number',
+        description:
+            'Used for Mexican passport number fields. A valid passport number consists of 10 or 11 numbers.'
+    },
+    'passport-number-nl': {
+        info: 'Enter a valid/invalid Dutch passport number to test. A valid passport number consists of two alphanumeric characters followed by six alphanumeric characters and one number. For example:',
+        correct: '<span>AB1234567</span> is a valid Dutch passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Dutch passport number',
+        description:
+            'Used for Dutch passport number fields. A valid passport number consists of two alphanumeric characters followed by six alphanumeric characters and one number.'
+    },
+    'passport-number-nz': {
+        info: 'Enter a valid/invalid New Zealand passport number to test. A valid passport number consists of one of the letter combinations "L", "D", "F", "H", "E", "A", "P", or "N" followed by six numbers. For example:',
+        correct:
+            '<span>L123456</span> or <span>D123456</span> is a valid New Zealand passport number',
+        incorrect:
+            '<span>AB1234567</span> or <span>12345678</span> is not a valid New Zealand passport number',
+        description:
+            'Used for New Zealand passport number fields. A valid passport number consists of one of the letter combinations "L", "D", "F", "H", "E", "A", "P", or "N" followed by six numbers.'
+    },
+    'passport-number-ph': {
+        info: 'Enter a valid/invalid Philippine passport number to test. A valid passport number consists of one uppercase letter followed by six numbers, or two uppercase letters followed by seven numbers. For example:',
+        correct:
+            '<span>A123456</span> or <span>AB1234567</span> is a valid Philippine passport number',
+        incorrect:
+            '<span>12345678</span> or <span>ABC123456</span> is not a valid Philippine passport number',
+        description:
+            'Used for Philippine passport number fields. A valid passport number consists of one uppercase letter followed by six numbers, or two uppercase letters followed by seven numbers.'
+    },
+    'passport-number-pk': {
+        info: 'Enter a valid/invalid Pakistani passport number to test. A valid passport number consists of two uppercase letters followed by seven numbers. For example:',
+        correct: '<span>AB1234567</span> is a valid Pakistani passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Pakistani passport number',
+        description:
+            'Used for Pakistani passport number fields. A valid passport number consists of two uppercase letters followed by seven numbers.'
+    },
+    'passport-number-pl': {
+        info: 'Enter a valid/invalid Polish passport number to test. A valid passport number consists of two uppercase letters followed by seven numbers. For example:',
+        correct: '<span>AB1234567</span> is a valid Polish passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Polish passport number',
+        description:
+            'Used for Polish passport number fields. A valid passport number consists of two uppercase letters followed by seven numbers.'
+    },
+    'passport-number-pt': {
+        info: 'Enter a valid/invalid Portuguese passport number to test. A valid passport number consists of one uppercase letter followed by six numbers. For example:',
+        correct: '<span>A123456</span> is a valid Portuguese passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid Portuguese passport number',
+        description:
+            'Used for Portuguese passport number fields. A valid passport number consists of one uppercase letter followed by six numbers.'
+    },
+    'passport-number-ro': {
+        info: 'Enter a valid/invalid Romanian passport number to test. A valid passport number consists of eight or nine numbers. For example:',
+        correct:
+            '<span>12345678</span> or <span>123456789</span> is a valid Romanian passport number',
+        incorrect:
+            '<span>AB1234567</span> or <span>1234567890</span> is not a valid Romanian passport number',
+        description:
+            'Used for Romanian passport number fields. A valid passport number consists of eight or nine numbers.'
+    },
+    'passport-number-ru': {
+        info: 'Enter a valid/invalid Russian passport number to test. A valid passport number consists of nine numbers. For example:',
+        correct: '<span>123456789</span> is a valid Russian passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid Russian passport number',
+        description:
+            'Used for Russian passport number fields. A valid passport number consists of nine numbers.'
+    },
+    'passport-number-se': {
+        info: 'Enter a valid/invalid Swedish passport number to test. A valid passport number consists of eight numbers. For example:',
+        correct: '<span>12345678</span> is a valid Swedish passport number',
+        incorrect:
+            '<span>123456789</span> is not a valid Swedish passport number',
+        description:
+            'Used for Swedish passport number fields. A valid passport number consists of eight numbers.'
+    },
+    'passport-number-sl': {
+        info: 'Enter a valid/invalid Slovenian passport number to test. A valid passport number consists of the letter "P" followed by one uppercase letter and seven numbers. For example:',
+        correct: '<span>PB1234567</span> is a valid Slovenian passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Slovenian passport number',
+        description:
+            'Used for Slovenian passport number fields. A valid passport number consists of the letter "P" followed by one uppercase letter and seven numbers.'
+    },
+    'passport-number-sk': {
+        info: 'Enter a valid/invalid Slovakian passport number to test. A valid passport number consists of one alphanumeric character followed by seven numbers. For example:',
+        correct: '<span>A1234567</span> is a valid Slovakian passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Slovakian passport number',
+        description:
+            'Used for Slovakian passport number fields. A valid passport number consists of one alphanumeric character followed by seven numbers.'
+    },
+    'passport-number-th': {
+        info: 'Enter a valid/invalid Thai passport number to test. A valid passport number consists of one or two uppercase letters followed by six or seven numbers. For example:',
+        correct:
+            '<span>A123456</span> or <span>AB1234567</span> is a valid Thai passport number',
+        incorrect:
+            '<span>12345678</span> or <span>ABC123456</span> is not a valid Thai passport number',
+        description:
+            'Used for Thai passport number fields. A valid passport number consists of one or two uppercase letters followed by six or seven numbers.'
+    },
+    'passport-number-tr': {
+        info: 'Enter a valid/invalid Turkish passport number to test. A valid passport number consists of one uppercase letter followed by eight numbers. For example:',
+        correct: '<span>A12345678</span> is a valid Turkish passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid Turkish passport number',
+        description:
+            'Used for Turkish passport number fields. A valid passport number consists of one uppercase letter followed by eight numbers.'
+    },
+    'passport-number-ua': {
+        info: 'Enter a valid/invalid Ukrainian passport number to test. A valid passport number consists of two uppercase letters followed by six numbers. For example:',
+        correct: '<span>AB123456</span> is a valid Ukrainian passport number',
+        incorrect:
+            '<span>ABC123456</span> is not a valid Ukrainian passport number',
+        description:
+            'Used for Ukrainian passport number fields. A valid passport number consists of two uppercase letters followed by six numbers.'
+    },
+    'passport-number-us': {
+        info: 'Enter a valid/invalid United States passport number to test. A valid passport number consists of nine numbers. For example:',
+        correct:
+            '<span>123456789</span> is a valid United States passport number',
+        incorrect:
+            '<span>12345678</span> is not a valid United States passport number',
+        description:
+            'Used for United States passport number fields. A valid passport number consists of nine numbers.'
+    },
+    'passport-number-za': {
+        info: 'Enter a valid/invalid South African passport number to test. A valid passport number consists of one of the letters "T", "A", "M", or "D" followed by eight numbers. For example:',
+        correct:
+            '<span>T12345678</span> is a valid South African passport number',
+        incorrect:
+            '<span>AB1234567</span> is not a valid South African passport number',
+        description:
+            'Used for South African passport number fields. A valid passport number consists of one of the letters "T", "A", "M", or "D" followed by eight numbers.'
+    },
     'iban-ad': {
         info: 'Enter a valid/invalid IBAN number to test. A valid IBAN number specific to Andorra (AD) must start with AD, followed by exactly 2 digits, then 8 more digits, and finally, 12 characters that can be uppercase letters (A-Z) or digits (0-9)',
         correct:
@@ -2659,5 +3150,840 @@ export default {
         incorrect: '<span>XK1234-5678901234</span> is not a valid IBAN.',
         description:
             'Used for validating IBAN (International Bank Account Number) codes specific to Kosovo'
+    },
+    'licence-plate-cz': {
+        info: 'Enter a valid/invalid Czech registration plate number to test. A valid plate number consists of 5 to 8 \
+    characters, which can be either letters A to Z or numbers 0 to 9, with optional hyphens. For example:',
+        correct:
+            '<span>ABC12-34</span> is a valid Czech registration plate number',
+        incorrect:
+            '<span>1234-5678-90</span> is not a valid Czech registration plate number',
+        description:
+            'Used for Czech registration plate fields. A valid plate number consists of 5 to 8 characters, which can be either \
+        letters A to Z or numbers 0 to 9, with optional hyphens.'
+    },
+    'licence-plate-de': {
+        info: 'Enter a valid/invalid German vehicle registration plate number to test. A valid plate number consists of one or two \
+    letters followed by 1 to 4 numbers, with optional hyphens. For example:',
+        correct:
+            '<span>AB-C1234</span> is a valid German registration plate number',
+        incorrect:
+            '<span>ABC12345</span> is not a valid German registration plate number',
+        description:
+            'Used for German vehicle registration plate fields. A valid plate number consists of one or two letters followed by 1 to 4 \
+        numbers, with optional hyphens.'
+    },
+    'licence-plate-li': {
+        info: 'Enter a valid/invalid Liechtenstein registration plate number to test. A valid plate number starts with FL followed by \
+    1 to 5 numbers and optional U or Z. For example:',
+        correct:
+            '<span>FL12345U</span> is a valid Liechtenstein registration plate number',
+        incorrect:
+            '<span>LI-6789</span> is not a valid Liechtenstein registration plate number',
+        description:
+            'Used for Liechtenstein registration plate fields. A valid plate number starts with FL followed by 1 to 5 numbers and \
+        optional U or Z.'
+    },
+    'licence-plate-in': {
+        info: 'Enter a valid/invalid Indian vehicle registration number to test. A valid registration number consists of two letters \
+    followed by 1 to 2 numbers, optional letters, and 4 numbers. For example:',
+        correct:
+            '<span>KA-12AB1234</span> is a valid Indian registration number',
+        incorrect:
+            '<span>1234-ABCD</span> is not a valid Indian registration number',
+        description:
+            'Used for Indian vehicle registration number fields. A valid registration number consists of two letters followed by 1 to \
+        2 numbers, optional letters, and 4 numbers.'
+    },
+    'licence-plate-ar': {
+        info: 'Enter a valid/invalid Argentine vehicle registration plate number to test. A valid plate number consists of either two \
+    letters, a space, three numbers, and two letters OR three letters followed by three numbers. For example:',
+        correct:
+            '<span>AB 123 ABC</span> is a valid Argentine registration plate number',
+        incorrect:
+            '<span>ABC 123</span> is not a valid Argentine registration plate number',
+        description:
+            'Used for Argentine vehicle registration plate fields. A valid plate number consists of either two letters, a space, three \
+        numbers, and two letters OR three letters followed by three numbers.'
+    },
+    'licence-plate-fi': {
+        info: 'Enter a valid/invalid Finnish vehicle registration number to test. A valid registration number consists of 1 to 3 letters \
+    or numbers, optional hyphen, and 1 to 5 letters or numbers. For example:',
+        correct: '<span>ABC-123</span> is a valid Finnish registration number',
+        incorrect:
+            '<span>ABCD-12345</span> is not a valid Finnish registration number',
+        description:
+            'Used for Finnish vehicle registration number fields. A valid registration number consists of 1 to 3 letters or numbers, \
+        optional hyphen, and 1 to 5 letters or numbers.'
+    },
+    'licence-plate-hu': {
+        info: 'Enter a valid/invalid Hungarian vehicle registration number to test. A valid registration number follows specific \
+    patterns for county codes, city codes, and alphanumeric characters. For example:',
+        correct:
+            '<span>ABC-123</span> is a valid Hungarian registration number',
+        incorrect:
+            '<span>AAA-123</span> is not a valid Hungarian registration number',
+        description:
+            'Used for Hungarian vehicle registration number fields. A valid registration number follows specific patterns for county \
+        codes, city codes, and alphanumeric characters.'
+    },
+    'licence-plate-br': {
+        info: 'Enter a valid/invalid Brazilian vehicle registration plate number to test. A valid plate number consists of three letters \
+    followed by one number, one letter, and two numbers OR three letters followed by four numbers. For example:',
+        correct:
+            '<span>ABC1D23</span> is a valid Brazilian registration plate number',
+        incorrect:
+            '<span>AB123CD</span> is not a valid Brazilian registration plate number',
+        description:
+            'Used for Brazilian vehicle registration plate fields. A valid plate number consists of three letters followed by one number, \
+        one letter, and two numbers OR three letters followed by four numbers.'
+    },
+    'licence-plate-pt': {
+        info: 'Enter a valid/invalid Portuguese vehicle registration number to test. A valid registration number consists of either two \
+    letters or two numbers, separated by space, dash, or dot, repeated three times. For example:',
+        correct:
+            '<span>AB 12 CD</span> is a valid Portuguese registration number',
+        incorrect:
+            '<span>ABC-123</span> is not a valid Portuguese registration number',
+        description:
+            'Used for Portuguese vehicle registration number fields. A valid registration number consists of either two letters or two \
+        numbers, separated by space, dash, or dot, repeated three times.'
+    },
+    'licence-plate-al': {
+        info: 'Enter a valid/invalid Albanian vehicle registration plate number to test. A valid plate number consists of two letters \
+    followed by three numbers, optional space or hyphen, and two letters OR the letter R, optional space or hyphen, and three numbers. For example:',
+        correct:
+            '<span>AB 123 AB</span> is a valid Albanian registration plate number',
+        incorrect:
+            '<span>R-456</span> is not a valid Albanian registration plate number',
+        description:
+            'Used for Albanian vehicle registration plate fields. A valid plate number consists of two letters followed by three numbers, \
+        optional space or hyphen, and two letters OR the letter R, optional space or hyphen, and three numbers.'
+    },
+    'licence-plate-se': {
+        info: 'Enter a valid/invalid Swedish vehicle registration number to test. A valid registration number consists of three letters \
+    followed by two numbers and one alphanumeric character OR two to seven letters. For example:',
+        correct: '<span>ABC12D</span> is a valid Swedish registration number',
+        incorrect:
+            '<span>123-AB</span> is not a valid Swedish registration number',
+        description:
+            'Used for Swedish vehicle registration number fields. A valid registration number consists of three letters followed by two \
+        numbers and one alphanumeric character OR two to seven letters.'
+    },
+    'tin-at': {
+        info: 'Enter a valid/invalid Austrian TIN (Tax Identification Number) to test. A valid TIN consists of two digits, a hyphen, three digits, a forward slash, and four digits. For example:',
+        correct: '<span>12-345/6789</span> is a valid Austrian TIN',
+        incorrect: '<span>123456789</span> is not a valid Austrian TIN',
+        description:
+            'Used for Austrian TIN fields. A valid TIN consists of two digits, a hyphen, three digits, a forward slash, and four digits.'
+    },
+    'tin-be': {
+        info: 'Enter a valid/invalid Belgian TIN (Tax Identification Number) to test. A valid TIN consists of eleven digits. For example:',
+        correct: '<span>12345678901</span> is a valid Belgian TIN',
+        incorrect: '<span>123456789</span> is not a valid Belgian TIN',
+        description:
+            'Used for Belgian TIN fields. A valid TIN consists of eleven digits.'
+    },
+    'tin-bg': {
+        info: 'Enter a valid/invalid Bulgarian TIN (Tax Identification Number) to test. A valid TIN consists of ten digits. For example:',
+        correct: '<span>1234567890</span> is a valid Bulgarian TIN',
+        incorrect: '<span>123456789</span> is not a valid Bulgarian TIN',
+        description:
+            'Used for Bulgarian TIN fields. A valid TIN consists of ten digits.'
+    },
+    'tin-cy': {
+        info: 'Enter a valid/invalid Cypriot TIN (Tax Identification Number) to test. A valid TIN consists of seven digits followed by one letter (uppercase or lowercase). For example:',
+        correct: '<span>1234567A</span> is a valid Cypriot TIN',
+        incorrect: '<span>12345678</span> is not a valid Cypriot TIN',
+        description:
+            'Used for Cypriot TIN fields. A valid TIN consists of seven digits followed by one letter (uppercase or lowercase).'
+    },
+    'tin-cz': {
+        info: 'Enter a valid/invalid Czech TIN (Tax Identification Number) to test. A valid TIN consists of six digits, a forward slash, and four digits. For example:',
+        correct: '<span>123456/7890</span> is a valid Czech TIN',
+        incorrect: '<span>1234567890</span> is not a valid Czech TIN',
+        description:
+            'Used for Czech TIN fields. A valid TIN consists of six digits, a forward slash, and four digits.'
+    },
+    'tin-de': {
+        info: 'Enter a valid/invalid German TIN (Tax Identification Number) to test. A valid TIN consists of eleven digits. For example:',
+        correct: '<span>12345678901</span> is a valid German TIN',
+        incorrect: '<span>123456789</span> is not a valid German TIN',
+        description:
+            'Used for German TIN fields. A valid TIN consists of eleven digits.'
+    },
+    'tin-dk': {
+        info: 'Enter a valid/invalid Danish TIN (Tax Identification Number) to test. A valid TIN consists of six digits, a hyphen, and four digits. For example:',
+        correct: '<span>123456-7890</span> is a valid Danish TIN',
+        incorrect: '<span>1234567890</span> is not a valid Danish TIN',
+        description:
+            'Used for Danish TIN fields. A valid TIN consists of six digits, a hyphen, and four digits.'
+    },
+    'tin-ee': {
+        info: 'Enter a valid/invalid Estonian TIN (Tax Identification Number) to test. A valid TIN consists of eleven digits. For example:',
+        correct: '<span>12345678901</span> is a valid Estonian TIN',
+        incorrect: '<span>123456789</span> is not a valid Estonian TIN',
+        description:
+            'Used for Estonian TIN fields. A valid TIN consists of eleven digits.'
+    },
+    'tin-el': {
+        info: 'Enter a valid/invalid Greek TIN (Tax Identification Number) to test. A valid TIN consists of nine digits. For example:',
+        correct: '<span>123456789</span> is a valid Greek TIN',
+        incorrect: '<span>1234567890</span> is not a valid Greek TIN',
+        description:
+            'Used for Greek TIN fields. A valid TIN consists of nine digits.'
+    },
+    'tin-es': {
+        info: 'Enter a valid/invalid Spanish TIN (Tax Identification Number) to test. A valid TIN consists of eight digits followed by one letter (uppercase or lowercase), or one letter (uppercase or lowercase) followed by seven digits and one letter (uppercase or lowercase), or one letter (uppercase or lowercase) followed by seven digits and one letter (uppercase or lowercase), or "XYZxyz" followed by seven nines, or "Mm" followed by seven digits and one letter (uppercase or lowercase). For example:',
+        correct:
+            '<span>12345678A</span> or <span>A1234567B</span> or <span>AB1234567C</span> or <span>XYZ9999999</span> or <span>M1234567D</span> is a valid Spanish TIN',
+        incorrect:
+            '<span>123456789</span> or <span>AB12345678</span> or <span>M12345678</span> is not a valid Spanish TIN',
+        description:
+            'Used for Spanish TIN fields. A valid TIN consists of eight digits followed by one letter (uppercase or lowercase), or one letter (uppercase or lowercase) followed by seven digits and one letter (uppercase or lowercase), or one letter (uppercase or lowercase) followed by seven digits and one letter (uppercase or lowercase), or "XYZxyz" followed by seven nines, or "Mm" followed by seven digits and one letter (uppercase or lowercase).'
+    },
+    'tin-fi': {
+        info: 'Enter a valid/invalid Finnish TIN (Tax Identification Number) to test. A valid TIN consists of six digits followed by "+", "-", "A", or a digit. For example:',
+        correct: '<span>123456+A1</span> is a valid Finnish TIN',
+        incorrect: '<span>1234567890</span> is not a valid Finnish TIN',
+        description:
+            'Used for Finnish TIN fields. A valid TIN consists of six digits followed by "+", "-", "A", or a digit.'
+    },
+    'tin-fr': {
+        info: 'Enter a valid/invalid French TIN (Tax Identification Number) to test. A valid TIN consists of two digits, two spaces, three digits, two spaces, three digits, two spaces, three digits. For example:',
+        correct: '<span>12 34 56 78 90</span> is a valid French TIN',
+        incorrect: '<span>1234567890</span> is not a valid French TIN',
+        description:
+            'Used for French TIN fields. A valid TIN consists of two digits, two spaces, three digits, two spaces, three digits, two spaces, three digits.'
+    },
+    'tin-hr': {
+        info: 'Enter a valid/invalid Croatian TIN (Tax Identification Number) to test. A valid TIN consists of eleven digits. For example:',
+        correct: '<span>12345678901</span> is a valid Croatian TIN',
+        incorrect: '<span>123456789</span> is not a valid Croatian TIN',
+        description:
+            'Used for Croatian TIN fields. A valid TIN consists of eleven digits.'
+    },
+    'tin-hu': {
+        info: 'Enter a valid/invalid Hungarian TIN (Tax Identification Number) to test. A valid TIN consists of ten digits. For example:',
+        correct: '<span>1234567890</span> is a valid Hungarian TIN',
+        incorrect: '<span>123456789</span> is not a valid Hungarian TIN',
+        description:
+            'Used for Hungarian TIN fields. A valid TIN consists of ten digits.'
+    },
+    'tin-ie': {
+        info: 'Enter a valid/invalid Irish TIN (Tax Identification Number) to test. A valid TIN consists of seven digits followed by one letter (uppercase or lowercase), or seven digits followed by one letter (uppercase or lowercase). For example:',
+        correct:
+            '<span>1234567A</span> or <span>1234567a</span> is a valid Irish TIN',
+        incorrect:
+            '<span>123456789</span> or <span>AB1234567</span> is not a valid Irish TIN',
+        description:
+            'Used for Irish TIN fields. A valid TIN consists of seven digits followed by one letter (uppercase or lowercase), or seven digits followed by one letter (uppercase or lowercase).'
+    },
+    'tin-it': {
+        info: 'Enter a valid/invalid Italian TIN (Tax Identification Number) to test. A valid TIN consists of six letters, two digits, two letters, two digits, three letters. For example:',
+        correct: '<span>ABCDEF12GH34IJK</span> is a valid Italian TIN',
+        incorrect: '<span>ABC1234567</span> is not a valid Italian TIN',
+        description:
+            'Used for Italian TIN fields. A valid TIN consists of six letters, two digits, two letters, two digits, three letters.'
+    },
+    'tin-lt': {
+        info: 'Enter a valid/invalid Lithuanian TIN (Tax Identification Number) to test. A valid TIN consists of eleven digits. For example:',
+        correct: '<span>12345678901</span> is a valid Lithuanian TIN',
+        incorrect: '<span>123456789</span> is not a valid Lithuanian TIN',
+        description:
+            'Used for Lithuanian TIN fields. A valid TIN consists of eleven digits.'
+    },
+    'tin-lu': {
+        info: 'Enter a valid/invalid Luxembourgish TIN (Tax Identification Number) to test. A valid TIN consists of thirteen digits. For example:',
+        correct: '<span>1234567890123</span> is a valid Luxembourgish TIN',
+        incorrect: '<span>12345678901</span> is not a valid Luxembourgish TIN',
+        description:
+            'Used for Luxembourgish TIN fields. A valid TIN consists of thirteen digits.'
+    },
+    'tin-lv': {
+        info: 'Enter a valid/invalid Latvian TIN (Tax Identification Number) to test. A valid TIN consists of six digits followed by five digits (optional). For example:',
+        correct:
+            '<span>12345612345</span> or <span>123456</span> is a valid Latvian TIN',
+        incorrect:
+            '<span>1234567890</span> or <span>12345</span> is not a valid Latvian TIN',
+        description:
+            'Used for Latvian TIN fields. A valid TIN consists of six digits followed by five digits (optional).'
+    },
+    'tin-mt': {
+        info: 'Enter a valid/invalid Maltese TIN (Tax Identification Number) to test. A valid TIN consists of four digits, one digit, one letter, "till", seven digits followed by one letter (uppercase or lowercase), or nine digits. For example:',
+        correct:
+            '<span>1234A till 1234567B</span> or <span>123456789</span> is a valid Maltese TIN',
+        incorrect:
+            '<span>12345</span> or <span>1234A till 1234567BC</span> is not a valid Maltese TIN',
+        description:
+            'Used for Maltese TIN fields. A valid TIN consists of four digits, one digit, one letter, "till", seven digits followed by one letter (uppercase or lowercase), or nine digits.'
+    },
+    'tin-nl': {
+        info: 'Enter a valid/invalid Dutch TIN (Tax Identification Number) to test. A valid TIN consists of nine digits. For example:',
+        correct: '<span>123456789</span> is a valid Dutch TIN',
+        incorrect: '<span>1234567890</span> is not a valid Dutch TIN',
+        description:
+            'Used for Dutch TIN fields. A valid TIN consists of nine digits.'
+    },
+    'tin-pl': {
+        info: 'Enter a valid/invalid Polish TIN (Tax Identification Number) to test. A valid TIN consists of ten or nine digits. For example:',
+        correct:
+            '<span>1234567890</span> or <span>123456789</span> is a valid Polish TIN',
+        incorrect: '<span>12345678901</span> is not a valid Polish TIN',
+        description:
+            'Used for Polish TIN fields. A valid TIN consists of ten or nine digits.'
+    },
+    'tin-pt': {
+        info: 'Enter a valid/invalid Portuguese TIN (Tax Identification Number) to test. A valid TIN consists of nine digits. For example:',
+        correct: '<span>123456789</span> is a valid Portuguese TIN',
+        incorrect: '<span>1234567890</span> is not a valid Portuguese TIN',
+        description:
+            'Used for Portuguese TIN fields. A valid TIN consists of nine digits.'
+    },
+    'tin-ro': {
+        info: 'Enter a valid/invalid Romanian TIN (Tax Identification Number) to test. A valid TIN consists of thirteen digits. For example:',
+        correct: '<span>1234567890123</span> is a valid Romanian TIN',
+        incorrect: '<span>12345678901</span> is not a valid Romanian TIN',
+        description:
+            'Used for Romanian TIN fields. A valid TIN consists of thirteen digits.'
+    },
+    'tin-se': {
+        info: 'Enter a valid/invalid Swedish TIN (Tax Identification Number) to test. A valid TIN consists of six digits, a hyphen, and four digits. For example:',
+        correct: '<span>123456-7890</span> is a valid Swedish TIN',
+        incorrect: '<span>1234567890</span> is not a valid Swedish TIN',
+        description:
+            'Used for Swedish TIN fields. A valid TIN consists of six digits, a hyphen, and four digits.'
+    },
+    'tin-si': {
+        info: 'Enter a valid/invalid Slovenian TIN (Tax Identification Number) to test. A valid TIN consists of eight digits. For example:',
+        correct: '<span>12345678</span> is a valid Slovenian TIN',
+        incorrect: '<span>123456789</span> is not a valid Slovenian TIN',
+        description:
+            'Used for Slovenian TIN fields. A valid TIN consists of eight digits.'
+    },
+    'tin-sk': {
+        info: 'Enter a valid/invalid Slovak TIN (Tax Identification Number) to test. A valid TIN consists of eight or eleven digits. For example:',
+        correct:
+            '<span>12345678</span> or <span>12345678901</span> is a valid Slovak TIN',
+        incorrect: '<span>123456789</span> is not a valid Slovak TIN',
+        description:
+            'Used for Slovak TIN fields. A valid TIN consists of eight or eleven digits.'
+    },
+    'vat-at': {
+        info: 'Enter a valid/invalid Austrian VAT number to test. A valid VAT number starts with "AT" followed by eight digits. For example:',
+        correct: '<span>AT12345678</span> is a valid Austrian VAT number',
+        incorrect:
+            '<span>AT123456789</span> is not a valid Austrian VAT number',
+        description:
+            'Used for Austrian VAT number fields. A valid VAT number starts with "AT" followed by eight digits.'
+    },
+    'vat-be': {
+        info: 'Enter a valid/invalid Belgian VAT number to test. A valid VAT number consists of ten digits. For example:',
+        correct: '<span>BE1234567890</span> is a valid Belgian VAT number',
+        incorrect:
+            '<span>BE12345678901</span> is not a valid Belgian VAT number',
+        description:
+            'Used for Belgian VAT number fields. A valid VAT number consists of ten digits.'
+    },
+    'vat-bg': {
+        info: 'Enter a valid/invalid Bulgarian VAT number to test. A valid VAT number starts with "BG" followed by nine or ten digits. For example:',
+        correct:
+            '<span>BG123456789</span> or <span>BG1234567890</span> is a valid Bulgarian VAT number',
+        incorrect:
+            '<span>BG12345678901</span> is not a valid Bulgarian VAT number',
+        description:
+            'Used for Bulgarian VAT number fields. A valid VAT number starts with "BG" followed by nine or ten digits.'
+    },
+    'vat-hr': {
+        info: 'Enter a valid/invalid Croatian VAT number to test. A valid VAT number starts with "HR" followed by eleven digits. For example:',
+        correct: '<span>HR12345678901</span> is a valid Croatian VAT number',
+        incorrect:
+            '<span>HR123456789</span> is not a valid Croatian VAT number',
+        description:
+            'Used for Croatian VAT number fields. A valid VAT number starts with "HR" followed by eleven digits.'
+    },
+    'vat-cy': {
+        info: 'Enter a valid/invalid Cypriot VAT number to test. A valid VAT number starts with "CY" followed by nine alphanumeric characters. For example:',
+        correct: '<span>CY123456789</span> is a valid Cypriot VAT number',
+        incorrect: '<span>CY12345678</span> is not a valid Cypriot VAT number',
+        description:
+            'Used for Cypriot VAT number fields. A valid VAT number starts with "CY" followed by nine alphanumeric characters.'
+    },
+    'vat-cz': {
+        info: 'Enter a valid/invalid Czech VAT number to test. A valid VAT number starts with "CZ" followed by eight, nine, or ten digits. For example:',
+        correct: '<span>CZ123456789</span> is a valid Czech VAT number',
+        incorrect: '<span>CZ12345678</span> is not a valid Czech VAT number',
+        description:
+            'Used for Czech VAT number fields. A valid VAT number starts with "CZ" followed by eight, nine, or ten digits.'
+    },
+    'vat-dk': {
+        info: 'Enter a valid/invalid Danish VAT number to test. A valid VAT number starts with "DK" followed by eight digits. For example:',
+        correct: '<span>DK12345678</span> is a valid Danish VAT number',
+        incorrect: '<span>DK123456789</span> is not a valid Danish VAT number',
+        description:
+            'Used for Danish VAT number fields. A valid VAT number starts with "DK" followed by eight digits.'
+    },
+    'vat-ee': {
+        info: 'Enter a valid/invalid Estonian VAT number to test. A valid VAT number starts with "EE" followed by nine digits. For example:',
+        correct: '<span>EE123456789</span> is a valid Estonian VAT number',
+        incorrect: '<span>EE12345678</span> is not a valid Estonian VAT number',
+        description:
+            'Used for Estonian VAT number fields. A valid VAT number starts with "EE" followed by nine digits.'
+    },
+    'vat-fi': {
+        info: 'Enter a valid/invalid Finnish VAT number to test. A valid VAT number starts with "FI" followed by eight digits. For example:',
+        correct: '<span>FI12345678</span> is a valid Finnish VAT number',
+        incorrect: '<span>FI123456789</span> is not a valid Finnish VAT number',
+        description:
+            'Used for Finnish VAT number fields. A valid VAT number starts with "FI" followed by eight digits.'
+    },
+    'vat-fr': {
+        info: 'Enter a valid/invalid French VAT number to test. A valid VAT number starts with "FR" followed by two letters and nine digits. For example:',
+        correct: '<span>FRAB123456789</span> is a valid French VAT number',
+        incorrect: '<span>FR123456789</span> is not a valid French VAT number',
+        description:
+            'Used for French VAT number fields. A valid VAT number starts with "FR" followed by two letters and nine digits.'
+    },
+    'vat-de': {
+        info: 'Enter a valid/invalid German VAT number to test. A valid VAT number starts with "DE" followed by nine digits. For example:',
+        correct: '<span>DE123456789</span> is a valid German VAT number',
+        incorrect: '<span>DE12345678</span> is not a valid German VAT number',
+        description:
+            'Used for German VAT number fields. A valid VAT number starts with "DE" followed by nine digits.'
+    },
+    'vat-el': {
+        info: 'Enter a valid/invalid Greek VAT number to test. A valid VAT number starts with "EL" followed by nine digits. For example:',
+        correct: '<span>EL123456789</span> is a valid Greek VAT number',
+        incorrect: '<span>EL12345678</span> is not a valid Greek VAT number',
+        description:
+            'Used for Greek VAT number fields. A valid VAT number starts with "EL" followed by nine digits.'
+    },
+    'vat-hu': {
+        info: 'Enter a valid/invalid Hungarian VAT number to test. A valid VAT number starts with "HU" followed by eight digits. For example:',
+        correct: '<span>HU12345678</span> is a valid Hungarian VAT number',
+        incorrect:
+            '<span>HU123456789</span> is not a valid Hungarian VAT number',
+        description:
+            'Used for Hungarian VAT number fields. A valid VAT number starts with "HU" followed by eight digits.'
+    },
+    'vat-ie': {
+        info: 'Enter a valid/invalid Irish VAT number to test. A valid VAT number starts with "IE" followed by seven digits and one letter. For example:',
+        correct: '<span>IE1234567X</span> is a valid Irish VAT number',
+        incorrect: '<span>IE12345678</span> is not a valid Irish VAT number',
+        description:
+            'Used for Irish VAT number fields. A valid VAT number starts with "IE" followed by seven digits and one letter.'
+    },
+    'vat-it': {
+        info: 'Enter a valid/invalid Italian VAT number to test. A valid VAT number starts with "IT" followed by eleven digits. For example:',
+        correct: '<span>IT12345678901</span> is a valid Italian VAT number',
+        incorrect: '<span>IT123456789</span> is not a valid Italian VAT number',
+        description:
+            'Used for Italian VAT number fields. A valid VAT number starts with "IT" followed by eleven digits.'
+    },
+    'vat-lv': {
+        info: 'Enter a valid/invalid Latvian VAT number to test. A valid VAT number starts with "LV" followed by eleven digits. For example:',
+        correct: '<span>LV12345678901</span> is a valid Latvian VAT number',
+        incorrect: '<span>LV123456789</span> is not a valid Latvian VAT number',
+        description:
+            'Used for Latvian VAT number fields. A valid VAT number starts with "LV" followed by eleven digits.'
+    },
+    'vat-lt': {
+        info: 'Enter a valid/invalid Lithuanian VAT number to test. A valid VAT number starts with "LT" followed by nine, ten, or twelve digits. For example:',
+        correct:
+            '<span>LT123456789</span> or <span>LT123456789012</span> is a valid Lithuanian VAT number',
+        incorrect:
+            '<span>LT12345678</span> is not a valid Lithuanian VAT number',
+        description:
+            'Used for Lithuanian VAT number fields. A valid VAT number starts with "LT" followed by nine, ten, or twelve digits.'
+    },
+    'vat-lu': {
+        info: 'Enter a valid/invalid Luxembourg VAT number to test. A valid VAT number starts with "LU" followed by eight digits. For example:',
+        correct: '<span>LU12345678</span> is a valid Luxembourg VAT number',
+        incorrect:
+            '<span>LU123456789</span> is not a valid Luxembourg VAT number',
+        description:
+            'Used for Luxembourg VAT number fields. A valid VAT number starts with "LU" followed by eight digits.'
+    },
+    'vat-mt': {
+        info: 'Enter a valid/invalid Maltese VAT number to test. A valid VAT number starts with "MT" followed by eight digits. For example:',
+        correct: '<span>MT12345678</span> is a valid Maltese VAT number',
+        incorrect: '<span>MT123456789</span> is not a valid Maltese VAT number',
+        description:
+            'Used for Maltese VAT number fields. A valid VAT number starts with "MT" followed by eight digits.'
+    },
+    'vat-nl': {
+        info: 'Enter a valid/invalid Dutch VAT number to test. A valid VAT number starts with "NL" followed by nine digits, the letter "B", and two digits. For example:',
+        correct: '<span>NL123456789B01</span> is a valid Dutch VAT number',
+        incorrect: '<span>NL12345678901</span> is not a valid Dutch VAT number',
+        description:
+            'Used for Dutch VAT number fields. A valid VAT number starts with "NL" followed by nine digits, the letter "B", and two digits.'
+    },
+    'vat-pl': {
+        info: 'Enter a valid/invalid Polish VAT number to test. A valid VAT number starts with "PL" followed by ten digits, or a combination of three groups of two to three digits separated by hyphens. For example:',
+        correct:
+            '<span>PL1234567890</span> or <span>PL123-456-789</span> is a valid Polish VAT number',
+        incorrect:
+            '<span>PL12345678901</span> is not a valid Polish VAT number',
+        description:
+            'Used for Polish VAT number fields. A valid VAT number starts with "PL" followed by ten digits, or a combination of three groups of two to three digits separated by hyphens.'
+    },
+    'vat-pt': {
+        info: 'Enter a valid/invalid Portuguese VAT number to test. There is no specific validation for Portuguese VAT numbers provided.',
+        correct:
+            'No specific validation is provided for Portuguese VAT numbers.',
+        incorrect: null,
+        description:
+            'Used for Portuguese VAT number fields. No specific validation is provided.'
+    },
+    'vat-ro': {
+        info: 'Enter a valid/invalid Romanian VAT number to test. A valid VAT number starts with "RO" followed by two to ten digits. For example:',
+        correct: '<span>RO1234567890</span> is a valid Romanian VAT number',
+        incorrect:
+            '<span>RO12345678901</span> is not a valid Romanian VAT number',
+        description:
+            'Used for Romanian VAT number fields. A valid VAT number starts with "RO" followed by two to ten digits.'
+    },
+    'vat-sk': {
+        info: 'Enter a valid/invalid Slovak VAT number to test. A valid VAT number starts with "SK" followed by ten digits. For example:',
+        correct: '<span>SK1234567890</span> is a valid Slovak VAT number',
+        incorrect: '<span>SK123456789</span> is not a valid Slovak VAT number',
+        description:
+            'Used for Slovak VAT number fields. A valid VAT number starts with "SK" followed by ten digits.'
+    },
+    'vat-si': {
+        info: 'Enter a valid/invalid Slovenian VAT number to test. A valid VAT number starts with "SI" followed by eight digits. For example:',
+        correct: '<span>SI12345678</span> is a valid Slovenian VAT number',
+        incorrect:
+            '<span>SI123456789</span> is not a valid Slovenian VAT number',
+        description:
+            'Used for Slovenian VAT number fields. A valid VAT number starts with "SI" followed by eight digits.'
+    },
+    'vat-es': {
+        info: 'Enter a valid/invalid Spanish VAT number to test. A valid VAT number starts with "ES" followed by a letter, eight digits, and a letter. For example:',
+        correct: '<span>ESX12345678Y</span> is a valid Spanish VAT number',
+        incorrect:
+            '<span>ES123456789Y</span> is not a valid Spanish VAT number',
+        description:
+            'Used for Spanish VAT number fields. A valid VAT number starts with "ES" followed by a letter, eight digits, and a letter.'
+    },
+    'vat-se': {
+        info: 'Enter a valid/invalid Swedish VAT number to test. A valid VAT number starts with "SE" followed by twelve digits. For example:',
+        correct: '<span>SE123456789012</span> is a valid Swedish VAT number',
+        incorrect:
+            '<span>SE1234567890</span> is not a valid Swedish VAT number',
+        description:
+            'Used for Swedish VAT number fields. A valid VAT number starts with "SE" followed by twelve digits.'
+    },
+    'vat-al': {
+        info: 'Enter a valid/invalid Albanian VAT number to test. A valid VAT number starts with "AL" followed by nine characters and ends with a letter. For example:',
+        correct: '<span>AL123456789A</span> is a valid Albanian VAT number',
+        incorrect:
+            '<span>AL123456789</span> is not a valid Albanian VAT number',
+        description:
+            'Used for Albanian VAT number fields. A valid VAT number starts with "AL" followed by nine characters and ends with a letter.'
+    },
+    'vat-mk': {
+        info: 'Enter a valid/invalid Macedonian VAT number to test. A valid VAT number starts with "MK" followed by thirteen digits. For example:',
+        correct:
+            '<span>MK1234567890123</span> is a valid Macedonian VAT number',
+        incorrect:
+            '<span>MK12345678901</span> is not a valid Macedonian VAT number',
+        description:
+            'Used for Macedonian VAT number fields. A valid VAT number starts with "MK" followed by thirteen digits.'
+    },
+    'vat-au': {
+        info: 'Enter a valid/invalid Australian VAT number to test. A valid VAT number starts with "AU" followed by eleven digits. For example:',
+        correct: '<span>AU12345678901</span> is a valid Australian VAT number',
+        incorrect:
+            '<span>AU123456789</span> is not a valid Australian VAT number',
+        description:
+            'Used for Australian VAT number fields. A valid VAT number starts with "AU" followed by eleven digits.'
+    },
+    'vat-by': {
+        info: 'Enter a valid/invalid Belarusian VAT number to test. A valid VAT number starts with "УНП " followed by nine digits. For example:',
+        correct: '<span>УНП 123456789</span> is a valid Belarusian VAT number',
+        incorrect:
+            '<span>УНП123456789</span> is not a valid Belarusian VAT number',
+        description:
+            'Used for Belarusian VAT number fields. A valid VAT number starts with "УНП " followed by nine digits.'
+    },
+    'vat-ca': {
+        info: 'Enter a valid/invalid Canadian VAT number to test. A valid VAT number starts with "CA" followed by nine digits. For example:',
+        correct: '<span>CA123456789</span> is a valid Canadian VAT number',
+        incorrect: '<span>CA12345678</span> is not a valid Canadian VAT number',
+        description:
+            'Used for Canadian VAT number fields. A valid VAT number starts with "CA" followed by nine digits.'
+    },
+    'vat-is': {
+        info: 'Enter a valid/invalid Icelandic VAT number to test. A valid VAT number starts with "IS" followed by five or six digits. For example:',
+        correct: '<span>IS12345</span> is a valid Icelandic VAT number',
+        incorrect: '<span>IS123456</span> is not a valid Icelandic VAT number',
+        description:
+            'Used for Icelandic VAT number fields. A valid VAT number starts with "IS" followed by five or six digits.'
+    },
+    'vat-in': {
+        info: 'Enter a valid/invalid Indian VAT number to test. A valid VAT number starts with "IN" followed by fifteen digits. For example:',
+        correct: '<span>IN1234567890123</span> is a valid Indian VAT number',
+        incorrect:
+            '<span>IN12345678901</span> is not a valid Indian VAT number',
+        description:
+            'Used for Indian VAT number fields. A valid VAT number starts with "IN" followed by fifteen digits.'
+    },
+    'vat-id': {
+        info: 'Enter a valid/invalid Indonesian VAT number to test. A valid VAT number starts with "ID" followed by either fifteen digits or a specific format. For example:',
+        correct:
+            '<span>ID1234567890123</span> or <span>ID12.345.678-901.234</span> is a valid Indonesian VAT number',
+        incorrect:
+            '<span>ID12345678901</span> is not a valid Indonesian VAT number',
+        description:
+            'Used for Indonesian VAT number fields. A valid VAT number starts with "ID" followed by either fifteen digits or a specific format.'
+    },
+    'vat-il': {
+        info: 'Enter a valid/invalid Israeli VAT number to test. A valid VAT number starts with "IL" followed by nine digits. For example:',
+        correct: '<span>IL123456789</span> is a valid Israeli VAT number',
+        incorrect: '<span>IL12345678</span> is not a valid Israeli VAT number',
+        description:
+            'Used for Israeli VAT number fields. A valid VAT number starts with "IL" followed by nine digits.'
+    },
+    'vat-kz': {
+        info: 'Enter a valid/invalid Kazakhstani VAT number to test. A valid VAT number starts with "KZ" followed by nine digits. For example:',
+        correct: '<span>KZ123456789</span> is a valid Kazakhstani VAT number',
+        incorrect:
+            '<span>KZ12345678</span> is not a valid Kazakhstani VAT number',
+        description:
+            'Used for Kazakhstani VAT number fields. A valid VAT number starts with "KZ" followed by nine digits.'
+    },
+    'vat-nz': {
+        info: 'Enter a valid/invalid New Zealand VAT number to test. A valid VAT number starts with "NZ" followed by nine digits. For example:',
+        correct: '<span>NZ123456789</span> is a valid New Zealand VAT number',
+        incorrect:
+            '<span>NZ12345678</span> is not a valid New Zealand VAT number',
+        description:
+            'Used for New Zealand VAT number fields. A valid VAT number starts with "NZ" followed by nine digits.'
+    },
+    'vat-ng': {
+        info: 'Enter a valid/invalid Nigerian VAT number to test. A valid VAT number starts with "NG" followed by either twelve digits or a specific format. For example:',
+        correct:
+            '<span>NG123456789012</span> or <span>NG12345678-1234</span> is a valid Nigerian VAT number',
+        incorrect:
+            '<span>NG12345678901</span> is not a valid Nigerian VAT number',
+        description:
+            'Used for Nigerian VAT number fields. A valid VAT number starts with "NG" followed by either twelve digits or a specific format.'
+    },
+    'vat-no': {
+        info: 'Enter a valid/invalid Norwegian VAT number to test. A valid VAT number starts with "NO" followed by nine digits and ends with "MVA". For example:',
+        correct: '<span>NO123456789MVA</span> is a valid Norwegian VAT number',
+        incorrect:
+            '<span>NO12345678MVA</span> is not a valid Norwegian VAT number',
+        description:
+            'Used for Norwegian VAT number fields. A valid VAT number starts with "NO" followed by nine digits and ends with "MVA".'
+    },
+    'vat-ph': {
+        info: 'Enter a valid/invalid Philippine VAT number to test. A valid VAT number starts with "PH" followed by either twelve digits or a specific format. For example:',
+        correct:
+            '<span>PH123456789012</span> or <span>PH123 456 789 012</span> is a valid Philippine VAT number',
+        incorrect:
+            '<span>PH12345678901</span> is not a valid Philippine VAT number',
+        description:
+            'Used for Philippine VAT number fields. A valid VAT number starts with "PH" followed by either twelve digits or a specific format.'
+    },
+    'vat-ru': {
+        info: 'Enter a valid/invalid Russian VAT number to test. A valid VAT number starts with "RU" followed by either ten or twelve digits. For example:',
+        correct:
+            '<span>RU1234567890</span> or <span>RU123456789012</span> is a valid Russian VAT number',
+        incorrect: '<span>RU123456789</span> is not a valid Russian VAT number',
+        description:
+            'Used for Russian VAT number fields. A valid VAT number starts with "RU" followed by either ten or twelve digits.'
+    },
+    'vat-sm': {
+        info: 'Enter a valid/invalid Sammarinese VAT number to test. A valid VAT number starts with "SM" followed by five digits. For example:',
+        correct: '<span>SM12345</span> is a valid Sammarinese VAT number',
+        incorrect:
+            '<span>SM123456</span> is not a valid Sammarinese VAT number',
+        description:
+            'Used for Sammarinese VAT number fields. A valid VAT number starts with "SM" followed by five digits.'
+    },
+    'vat-sa': {
+        info: 'Enter a valid/invalid Saudi Arabian VAT number to test. A valid VAT number starts with "SA" followed by fifteen digits. For example:',
+        correct:
+            '<span>SA123456789012345</span> is a valid Saudi Arabian VAT number',
+        incorrect:
+            '<span>SA12345678901234</span> is not a valid Saudi Arabian VAT number',
+        description:
+            'Used for Saudi Arabian VAT number fields. A valid VAT number starts with "SA" followed by fifteen digits.'
+    },
+    'vat-rs': {
+        info: 'Enter a valid/invalid Serbian VAT number to test. A valid VAT number starts with "RS" followed by nine digits. For example:',
+        correct: '<span>RS123456789</span> is a valid Serbian VAT number',
+        incorrect: '<span>RS12345678</span> is not a valid Serbian VAT number',
+        description:
+            'Used for Serbian VAT number fields. A valid VAT number starts with "RS" followed by nine digits.'
+    },
+    'vat-ch': null,
+    'vat-tr': {
+        info: 'Enter a valid/invalid Turkish VAT number to test. A valid VAT number starts with "TR" followed by ten digits. For example:',
+        correct: '<span>TR1234567890</span> is a valid Turkish VAT number',
+        incorrect: '<span>TR123456789</span> is not a valid Turkish VAT number',
+        description:
+            'Used for Turkish VAT number fields. A valid VAT number starts with "TR" followed by ten digits.'
+    },
+    'vat-ua': {
+        info: 'Enter a valid/invalid Ukrainian VAT number to test. A valid VAT number starts with "UA" followed by twelve digits. For example:',
+        correct: '<span>UA123456789012</span> is a valid Ukrainian VAT number',
+        incorrect:
+            '<span>UA1234567890</span> is not a valid Ukrainian VAT number',
+        description:
+            'Used for Ukrainian VAT number fields. A valid VAT number starts with "UA" followed by twelve digits.'
+    },
+    'vat-gb': {
+        info: 'Enter a valid/invalid British VAT number to test. A valid VAT number starts with "GB" followed by specific formats. For example:',
+        correct:
+            '<span>GB123 4567 89</span> or <span>GB123456789012</span> or <span>GBHA1234</span> is a valid British VAT number',
+        incorrect: '<span>GB123456789</span> is not a valid British VAT number',
+        description:
+            'Used for British VAT number fields. A valid VAT number starts with "GB" followed by specific formats.'
+    },
+    'vat-uz': {
+        info: 'Enter a valid/invalid Uzbekistani VAT number to test. A valid VAT number starts with "UZ" followed by nine digits. For example:',
+        correct: '<span>UZ123456789</span> is a valid Uzbekistani VAT number',
+        incorrect:
+            '<span>UZ12345678</span> is not a valid Uzbekistani VAT number',
+        description:
+            'Used for Uzbekistani VAT number fields. A valid VAT number starts with "UZ" followed by nine digits.'
+    },
+    'vat-ar': {
+        info: 'Enter a valid/invalid Argentine VAT number to test. A valid VAT number starts with "AR" followed by eleven digits. For example:',
+        correct: '<span>AR12345678901</span> is a valid Argentine VAT number',
+        incorrect:
+            '<span>AR123456789012</span> is not a valid Argentine VAT number',
+        description:
+            'Used for Argentine VAT number fields. A valid VAT number starts with "AR" followed by eleven digits.'
+    },
+    'vat-bo': {
+        info: 'Enter a valid/invalid Bolivian VAT number to test. A valid VAT number starts with "BO" followed by seven digits. For example:',
+        correct: '<span>BO1234567</span> is a valid Bolivian VAT number',
+        incorrect: '<span>BO12345678</span> is not a valid Bolivian VAT number',
+        description:
+            'Used for Bolivian VAT number fields. A valid VAT number starts with "BO" followed by seven digits.'
+    },
+    'vat-br': {
+        info: 'Enter a valid/invalid Brazilian VAT number to test. A valid VAT number starts with "BR" followed by specific formats. For example:',
+        correct:
+            '<span>BR12.345.678/9012-34</span> or <span>BR123.456.789-012</span> is a valid Brazilian VAT number',
+        incorrect:
+            '<span>BR123.456.789</span> is not a valid Brazilian VAT number',
+        description:
+            'Used for Brazilian VAT number fields. A valid VAT number starts with "BR" followed by specific formats.'
+    },
+    'vat-cl': {
+        info: 'Enter a valid/invalid Chilean VAT number to test. A valid VAT number starts with "CL" followed by eight digits, a hyphen, and one digit. For example:',
+        correct: '<span>CL12345678-9</span> is a valid Chilean VAT number',
+        incorrect: '<span>CL123456789</span> is not a valid Chilean VAT number',
+        description:
+            'Used for Chilean VAT number fields. A valid VAT number starts with "CL" followed by eight digits, a hyphen, and one digit.'
+    },
+    'vat-co': {
+        info: 'Enter a valid/invalid Colombian VAT number to test. A valid VAT number starts with "CO" followed by ten digits. For example:',
+        correct: '<span>CO1234567890</span> is a valid Colombian VAT number',
+        incorrect:
+            '<span>CO123456789</span> is not a valid Colombian VAT number',
+        description:
+            'Used for Colombian VAT number fields. A valid VAT number starts with "CO" followed by ten digits.'
+    },
+    'vat-cr': {
+        info: 'Enter a valid/invalid Costa Rican VAT number to test. A valid VAT number starts with "CR" followed by nine to twelve digits. For example:',
+        correct:
+            '<span>CR123456789</span> or <span>CR123456789012</span> is a valid Costa Rican VAT number',
+        incorrect:
+            '<span>CR12345678</span> is not a valid Costa Rican VAT number',
+        description:
+            'Used for Costa Rican VAT number fields. A valid VAT number starts with "CR" followed by nine to twelve digits.'
+    },
+    'vat-ec': {
+        info: 'Enter a valid/invalid Ecuadorian VAT number to test. A valid VAT number starts with "EC" followed by thirteen digits. For example:',
+        correct:
+            '<span>EC1234567890123</span> is a valid Ecuadorian VAT number',
+        incorrect:
+            '<span>EC12345678901</span> is not a valid Ecuadorian VAT number',
+        description:
+            'Used for Ecuadorian VAT number fields. A valid VAT number starts with "EC" followed by thirteen digits.'
+    },
+    'vat-sv': {
+        info: 'Enter a valid/invalid Salvadoran VAT number to test. A valid VAT number starts with "SV" followed by four digits, a hyphen, six digits, a hyphen, three digits, and one digit. For example:',
+        correct:
+            '<span>SV1234-567890-123-4</span> is a valid Salvadoran VAT number',
+        incorrect:
+            '<span>SV1234-567890-1234</span> is not a valid Salvadoran VAT number',
+        description:
+            'Used for Salvadoran VAT number fields. A valid VAT number starts with "SV" followed by four digits, a hyphen, six digits, a hyphen, three digits, and one digit.'
+    },
+    'vat-gt': {
+        info: 'Enter a valid/invalid Guatemalan VAT number to test. A valid VAT number starts with "GT" followed by seven digits, a hyphen, and one digit. For example:',
+        correct: '<span>GT1234567-8</span> is a valid Guatemalan VAT number',
+        incorrect:
+            '<span>GT12345678</span> is not a valid Guatemalan VAT number',
+        description:
+            'Used for Guatemalan VAT number fields. A valid VAT number starts with "GT" followed by seven digits, a hyphen, and one digit.'
+    },
+    'vat-hn': null,
+    'vat-mx': {
+        info: 'Enter a valid/invalid Mexican VAT number to test. A valid VAT number starts with "MX" followed by three or four letters, six digits, and three letters. For example:',
+        correct: '<span>MXABC123456DEF</span> is a valid Mexican VAT number',
+        incorrect:
+            '<span>MXABC1234567DEF</span> is not a valid Mexican VAT number',
+        description:
+            'Used for Mexican VAT number fields. A valid VAT number starts with "MX" followed by three or four letters, six digits, and three letters.'
+    },
+    'vat-ni': {
+        info: 'Enter a valid/invalid Nicaraguan VAT number to test. A valid VAT number starts with "NI" followed by three digits, a hyphen, six digits, a hyphen, and four alphanumeric characters. For example:',
+        correct:
+            '<span>NI123-456789-0123A</span> is a valid Nicaraguan VAT number',
+        incorrect:
+            '<span>NI123-456789-01234</span> is not a valid Nicaraguan VAT number',
+        description:
+            'Used for Nicaraguan VAT number fields. A valid VAT number starts with "NI" followed by three digits, a hyphen, six digits, a hyphen, and four alphanumeric characters.'
+    },
+    'vat-pa': null,
+    'vat-py': {
+        info: 'Enter a valid/invalid Paraguayan VAT number to test. A valid VAT number starts with "PY" followed by six to eight digits, a hyphen, and one digit. For example:',
+        correct: '<span>PY123456-7</span> is a valid Paraguayan VAT number',
+        incorrect:
+            '<span>PY12345678-9</span> is not a valid Paraguayan VAT number',
+        description:
+            'Used for Paraguayan VAT number fields. A valid VAT number starts with "PY" followed by six to eight digits, a hyphen, and one digit.'
+    },
+    'vat-pe': {
+        info: 'Enter a valid/invalid Peruvian VAT number to test. A valid VAT number starts with "PE" followed by eleven digits. For example:',
+        correct: '<span>PE12345678901</span> is a valid Peruvian VAT number',
+        incorrect:
+            '<span>PE1234567890</span> is not a valid Peruvian VAT number',
+        description:
+            'Used for Peruvian VAT number fields. A valid VAT number starts with "PE" followed by eleven digits.'
+    },
+    'vat-do': {
+        info: 'Enter a valid/invalid Dominican VAT number to test. A valid VAT number starts with "DO" followed by specific formats. For example:',
+        correct:
+            '<span>DO1234567890</span> or <span>1-23-45678-9</span> or <span>1-23-456789-1</span> or <span>4-56-78901-2</span> is a valid Dominican VAT number',
+        incorrect:
+            '<span>DO123456789</span> is not a valid Dominican VAT number',
+        description:
+            'Used for Dominican VAT number fields. A valid VAT number starts with "DO" followed by specific formats.'
+    },
+    'vat-uy': {
+        info: 'Enter a valid/invalid Uruguayan VAT number to test. A valid VAT number starts with "UY" followed by twelve digits. For example:',
+        correct: '<span>UY123456789012</span> is a valid Uruguayan VAT number',
+        incorrect:
+            '<span>UY1234567890</span> is not a valid Uruguayan VAT number',
+        description:
+            'Used for Uruguayan VAT number fields. A valid VAT number starts with "UY" followed by twelve digits.'
+    },
+    'vat-ve': {
+        info: 'Enter a valid/invalid Venezuelan VAT number to test. A valid VAT number starts with specific letters followed by a hyphen and either nine digits or eight digits, a hyphen, and one digit. For example:',
+        correct:
+            '<span>VEJ-123456789</span> or <span>VEV-12345678-9</span> is a valid Venezuelan VAT number',
+        incorrect:
+            '<span>VEJ-12345678</span> is not a valid Venezuelan VAT number',
+        description:
+            'Used for Venezuelan VAT number fields. A valid VAT number starts with specific letters followed by a hyphen and either nine digits or eight digits, a hyphen, and one digit.'
     }
 } as any;
