@@ -4,6 +4,10 @@
 .table {
     min-height: 600px;
 
+    & > thead > tr > th:first-child {
+        width: 30%;
+    }
+
     & > thead > tr > th:nth-child(2) {
         @include media(xsmall) {
             display: none;
@@ -12,6 +16,7 @@
 
     & > tbody > tr > td {
         vertical-align: baseline;
+        padding: 1em;
 
         @include media(xsmall) {
             display: block;

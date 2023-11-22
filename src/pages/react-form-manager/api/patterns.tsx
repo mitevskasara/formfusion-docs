@@ -23,7 +23,6 @@ import {
     PATTERNS_TABLE_HEADERS,
     patternsToTableData
 } from '@/constants/tables';
-import { patternsToOptions } from '@/utils/dataTransform';
 import ROUTES from '@/constants/routes';
 import THEMES from '@/core/theme';
 import { ISelectOption } from './interfaces';
@@ -208,6 +207,8 @@ const Patterns = ({
 
 export async function getStaticProps() {
     const { patterns } = await require('@corelabui/rfm');
+    const { patternsToOptions } = await require('@/utils/dataTransform');
+
     const options = patternsToOptions(patterns);
     const PATTERNS_TABLE_DATA = patternsToTableData(patterns).filter((d) =>
         Boolean(d)
