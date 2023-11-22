@@ -26,8 +26,12 @@ export const patternsToTableData = (RFMPatterns: any) => {
     return RFMPatterns
         ? [
               ...Object.keys(RFMPatterns).map((type) => {
-                  return !type.startsWith('postalCode') &&
-                      !type.startsWith('iban') &&
+                  return !type.startsWith('iban') &&
+                      !type.startsWith('licencePlate') &&
+                      !type.startsWith('postalCode') &&
+                      !type.startsWith('passportNumber') &&
+                      !type.startsWith('tin') &&
+                      !type.startsWith('vat') &&
                       PATTERNS_INFO[type]
                       ? {
                             type: {
@@ -60,6 +64,58 @@ export const patternsToTableData = (RFMPatterns: any) => {
                             },
                             desc:
                                 PATTERNS_INFO[`iban.${code}`]?.description ||
+                                null
+                        }
+                      : null
+              ),
+              ...Object.keys(RFMPatterns.licencePlate).map((code) =>
+                  PATTERNS_INFO[`licencePlate.${code}`]
+                      ? {
+                            type: {
+                                text: `<code>licencePlate.${code}</code>`,
+                                node: true
+                            },
+                            desc:
+                                PATTERNS_INFO[`licencePlate.${code}`]
+                                    ?.description || null
+                        }
+                      : null
+              ),
+              ...Object.keys(RFMPatterns.passportNumber).map((code) =>
+                  PATTERNS_INFO[`passportNumber.${code}`]
+                      ? {
+                            type: {
+                                text: `<code>passportNumber.${code}</code>`,
+                                node: true
+                            },
+                            desc:
+                                PATTERNS_INFO[`passportNumber.${code}`]
+                                    ?.description || null
+                        }
+                      : null
+              ),
+              ...Object.keys(RFMPatterns.tin).map((code) =>
+                  PATTERNS_INFO[`tin.${code}`]
+                      ? {
+                            type: {
+                                text: `<code>tin.${code}</code>`,
+                                node: true
+                            },
+                            desc:
+                                PATTERNS_INFO[`tin.${code}`]?.description ||
+                                null
+                        }
+                      : null
+              ),
+              ...Object.keys(RFMPatterns.vat).map((code) =>
+                  PATTERNS_INFO[`vat.${code}`]
+                      ? {
+                            type: {
+                                text: `<code>vat.${code}</code>`,
+                                node: true
+                            },
+                            desc:
+                                PATTERNS_INFO[`vat.${code}`]?.description ||
                                 null
                         }
                       : null
