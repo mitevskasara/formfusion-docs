@@ -23,11 +23,6 @@ const nextConfig = {
     async redirects() {
         return [
             {
-                source: '/',
-                destination: '/react-form-manager',
-                permanent: false
-            },
-            {
                 source: '/blog',
                 destination: '/react-form-manager',
                 permanent: false
