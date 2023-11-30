@@ -1,5 +1,9 @@
 @mixin media($size) {
-    @if $size ==xsmall {
+    @if $size ==xxsmall {
+        @media (max-width: 359px) {
+            @content;
+        }
+    } @else if $size ==xsmall {
         @media (max-width: 599px) {
             @content;
         }
