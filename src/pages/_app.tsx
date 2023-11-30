@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Nunito } from 'next/font/google';
+import { DM_Sans } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import ThemeProvider from 'corelabui/ThemeProvider';
 
@@ -10,7 +10,7 @@ import '../../public/assets/fonts/style.css';
 import '../core/styles/globals.css';
 import '../core/styles/prism.css';
 
-const font = Nunito({ subsets: ['latin'] });
+const font = DM_Sans({ subsets: ['latin'] });
 
 const defaultTheme = Storage.get('CUI_theme') || 'standard';
 
@@ -18,9 +18,9 @@ export default function MyApp({ Component, pageProps }: any) {
     const [custom, setTheme] = useState<string>(defaultTheme);
 
     const applyTheme = (theme: string) => {
-        if (!Storage.get('CUI_theme') || Storage.get('CUI_theme') !== theme) {
-            Storage.set('CUI_theme', theme);
-        }
+        // if (!Storage.get('CUI_theme') || Storage.get('CUI_theme') !== theme) {
+        //     Storage.set('CUI_theme', theme);
+        // }
         setTheme(theme);
     };
 
