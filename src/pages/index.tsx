@@ -1,5 +1,6 @@
-import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Button from 'corelabui/Button';
 import Typography from 'corelabui/Typography';
 import Highlight from 'corelabui/Highlight';
@@ -85,13 +86,13 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                     </div>
                     <div className={classes.header__inner__right}>
                         <div className={classes.header__inner__right__nav}>
-                            <a
+                            <Link
                                 href="/react-form-manager"
                                 className={
                                     classes.header__inner__right__nav__link
                                 }>
                                 Documentation
-                            </a>
+                            </Link>
                         </div>
                         {/* <div className={classes.header__inner__right__menuIcon}>
                             <HamburgerMenu open={false} setIsOpen={() => { }} />
@@ -316,60 +317,62 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                             <Typography variant="heading6" htmlElement="h6">
                                 Resources
                             </Typography>
-                            <a href="/react-form-manager#installation">
+                            <Link href="/react-form-manager#installation">
                                 Installation
-                            </a>
-                            <a href="/react-form-manager#example">Example</a>
-                            <a href="/react-form-manager/api/form">
+                            </Link>
+                            <Link href="/react-form-manager#example">
+                                Example
+                            </Link>
+                            <Link href="/react-form-manager/api/form">
                                 API Reference
-                            </a>
+                            </Link>
                         </nav>
                         <nav
                             className={classes.footer__inner__navigation__item}>
                             <Typography variant="heading6" htmlElement="h6">
                                 Integration
                             </Typography>
-                            <a
+                            <Link
                                 href="/react-form-manager/integrations/mui"
                                 target="_blank">
                                 Material UI
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="/react-form-manager/integrations/antdesign"
                                 target="_blank">
                                 Ant Design
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="/react-form-manager/integrations/chakraui"
                                 target="_blank">
                                 Chakra UI
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="/react-form-manager/integrations/reactstrap"
                                 target="_blank">
                                 Reactstrap
-                            </a>
+                            </Link>
                         </nav>
                         <nav
                             className={classes.footer__inner__navigation__item}>
                             <Typography variant="heading6" htmlElement="h6">
                                 About
                             </Typography>
-                            <a
+                            <Link
                                 href="https://github.com/corelabui"
                                 target="_blank">
                                 Github
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="https://github.com/corelabui"
                                 target="_blank">
                                 Twitter
-                            </a>
-                            <a
+                            </Link>
+                            <Link
                                 href="https://github.com/corelabui"
                                 target="_blank">
                                 Threads
-                            </a>
+                            </Link>
                         </nav>
                         <nav
                             className={classes.footer__inner__navigation__item}>
@@ -385,6 +388,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                     id="email"
                                     name="email"
                                     placeholder="Enter your email"
+                                    type="email"
                                 />
                                 <Button type="submit">Subscribe</Button>
                             </Form>
