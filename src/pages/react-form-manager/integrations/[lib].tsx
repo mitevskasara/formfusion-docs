@@ -52,9 +52,8 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 <br />
                 <Typography variant="body1">
                     For a successful implementation of the connect method,
-                    you&apos;ll need access to the form configuration object.
-                    It&apos;s also crucial to declare and set references (refs)
-                    for your input fields and select the
+                    you&apos;ll need access to the form configuration object and
+                    to select the
                     <Link href={`/${ROUTES.types}`}>&nbsp;input type</Link> or
                     <Link href={`/${ROUTES.patterns}`}>
                         &nbsp;validation pattern&nbsp;
