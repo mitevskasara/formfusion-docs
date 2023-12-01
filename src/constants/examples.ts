@@ -1,9 +1,7 @@
-export const CONNECT_USAGE = `import React, { useRef } from "react";
+export const CONNECT_USAGE = `import React from "react";
 import { Form, useForm, connect } from "@corelabui/rfm";
 
 const MyForm = () => {
-\tconst fieldRef = useRef(null);
-
 \tconst onSubmit = (e) => {
 \t\tconsole.log("Success " + JSON.stringify(e));
 \t};
@@ -13,7 +11,7 @@ const MyForm = () => {
 \treturn (
 \t\t<Form config={config}>
 \t\t\t<input
-\t\t\t\t{...connect(config, fieldRef, "alphabetic")}
+\t\t\t\t{...connect(config, "alphabetic")}
 \t\t\t\tid="alphabetic"
 \t\t\t\tname="firstName"
 \t\t\t/>
@@ -146,15 +144,13 @@ const MyForm = () => {
 
 export default MyForm;`;
 
-const MUI_USAGE = `import React, { useRef } from "react";
+const MUI_USAGE = `import React from "react";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { Form, useForm, connect } from "@corelabui/rfm";
 
 const MyForm = () => {
-  const fieldRef = useRef(null);
-
   const onSubmit = (e) => {
     console.log("Success " + JSON.stringify(e));
   };
@@ -167,7 +163,7 @@ const MyForm = () => {
   return (
     <Form config={config}>
       <TextField
-        inputProps={{ ...connect(config, fieldRef, "alphabetic") }}
+        inputProps={{ ...connect(config, "alphabetic") }}
         id="firstName"
         name="firstName"
         label="First name"
@@ -184,15 +180,13 @@ const MyForm = () => {
 
 export default MyForm;`;
 
-const ANTDESIGN_USAGE = `import React, { useRef } from "react";
+const ANTDESIGN_USAGE = `import React from "react";
 import { Input, Space, Button, Typography } from "antd";
 import { Form, useForm, connect } from "@corelabui/rfm";
 
 const { Text } = Typography;
 
 const MyForm = () => {
-  const fieldRef = useRef(null);
-
   const onSubmit = (e) => {
     console.log("Success " + JSON.stringify(e));
   };
@@ -206,8 +200,7 @@ const MyForm = () => {
     <Form config={config}>
       <Space direction="vertical" style={{ width: "100%" }}>
         <Input
-          {...connect(config, fieldRef, "alphabetic")}
-          ref={fieldRef}
+          {...connect(config, "alphabetic")}
           id="firstName"
           name="firstName"
           label="First name"
@@ -227,13 +220,11 @@ const MyForm = () => {
 
 export default MyForm;`;
 
-const CHAKRAUI_USAGE = `import React, { useRef } from "react";
+const CHAKRAUI_USAGE = `import React from "react";
 import { Button, Input, Stack, Text } from "@chakra-ui/react";
 import { Form, useForm, connect } from "@corelabui/rfm";
 
 const MyForm = () => {
-  const fieldRef = useRef(null);
-
   const onSubmit = (e) => {
     console.log("Success " + JSON.stringify(e));
   };
@@ -247,8 +238,7 @@ const MyForm = () => {
     <Form config={config}>
       <Stack spacing={0}>
         <Input
-          {...connect(config, fieldRef, "alphabetic")}
-          ref={fieldRef}
+          {...connect(config, "alphabetic")}
           id="firstName"
           name="firstName"
           isInvalid={Boolean(config.errors.firstName)}
@@ -269,13 +259,11 @@ const MyForm = () => {
 export default MyForm;
 `;
 
-const REACTSTRAP_USAGE = `import React, { useRef } from "react";
+const REACTSTRAP_USAGE = `import React from "react";
 import { Input, Button, FormText } from "reactstrap";
 import { Form, useForm, connect } from "@corelabui/rfm";
 
 const MyForm = () => {
-  const fieldRef = useRef(null);
-
   const onSubmit = (e) => {
     console.log("Success " + JSON.stringify(e));
   };
@@ -288,7 +276,7 @@ const MyForm = () => {
   return (
     <Form config={config} className="m-3">
       <Input
-        {...connect(config, fieldRef, "alphabetic")}
+        {...connect(config, "alphabetic")}
         invalid={Boolean(config.errors.firstName)}
         id="firstName"
         name="firstName"
