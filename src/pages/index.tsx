@@ -239,7 +239,10 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 <span
                                     className={`${classes.services__list__icon} icon-check`}
                                 />
-                                <Typography variant="body1" htmlElement="span">
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="span"
+                                    margin={false}>
                                     Optimized Form components
                                 </Typography>
                             </li>
@@ -247,7 +250,10 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 <span
                                     className={`${classes.services__list__icon} icon-check`}
                                 />
-                                <Typography variant="body1" htmlElement="span">
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="span"
+                                    margin={false}>
                                     Custom React hooks for greater form control
                                 </Typography>
                             </li>
@@ -255,7 +261,10 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 <span
                                     className={`${classes.services__list__icon} icon-check`}
                                 />
-                                <Typography variant="body1" htmlElement="span">
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="span"
+                                    margin={false}>
                                     Error handling
                                 </Typography>
                             </li>
@@ -265,7 +274,10 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 <span
                                     className={`${classes.services__list__icon} icon-check`}
                                 />
-                                <Typography variant="body1" htmlElement="span">
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="span"
+                                    margin={false}>
                                     500+ Input types
                                 </Typography>
                             </li>
@@ -273,7 +285,10 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 <span
                                     className={`${classes.services__list__icon} icon-check`}
                                 />
-                                <Typography variant="body1" htmlElement="span">
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="span"
+                                    margin={false}>
                                     500+ Validation patterns
                                 </Typography>
                             </li>
@@ -281,7 +296,10 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 <span
                                     className={`${classes.services__list__icon} icon-check`}
                                 />
-                                <Typography variant="body1" htmlElement="span">
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="span"
+                                    margin={false}>
                                     Integration with UI libraries
                                 </Typography>
                             </li>
@@ -401,7 +419,10 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 </Typography>
                             )}
                             {success && (
-                                <Typography variant="body1" htmlElement="span">
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="span"
+                                    margin={false}>
                                     {success}
                                 </Typography>
                             )}
