@@ -10,13 +10,6 @@
             "required": true
         },
         {
-            "name": "ref",
-            "type": "HTMLInputElement",
-            "default": "",
-            "description": "The ref parameter corresponds to the reference of the form field. It's important to define and pass this reference to your custom field component.",
-            "required": false
-        },
-        {
             "name": "type",
             "type": "string",
             "default": "",
