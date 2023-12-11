@@ -93,7 +93,7 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                     </Typography>
                     <Button>
                         <Link
-                            href="https://codesandbox.io/s/rfm-basic-form-example-nvg3rr"
+                            href="https://codesandbox.io/p/sandbox/react-form-manager-basic-payment-form-sjw4ds"
                             target="_blank"
                             icon="codesandbox"
                             internal={false}
@@ -105,7 +105,7 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                 <Typography variant="body1">
                     Below is an example of how{' '}
                     <strong>React Form Manager</strong> simplifies the creation
-                    of an uncontrolled form with a username field and
+                    of an uncontrolled payment form with a card number and ccv
                     validation:
                 </Typography>
                 <br />
