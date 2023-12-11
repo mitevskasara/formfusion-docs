@@ -62,11 +62,20 @@ const MyForm = () => {
 
   return (
     <Form onSubmit={onSubmit}>
+      <h1>Simple payment form</h1>
       <Input
-        id="username"
-        name="username"
-        type="username"
-        label="Username"
+        id="credit-card-number"
+        name="credit-card-number"
+        type="credit-card-number-basic"
+        label="Credit card number"
+        required
+      />
+      <Input id="ccv" name="ccv" type="ccv" label="CCV" required />
+      <Input
+        id="expiry-date"
+        name="expiry-date"
+        type="date"
+        label="Expiry date"
         required
       />
       <button type="submit">Submit</button>
