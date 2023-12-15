@@ -5,7 +5,7 @@
     height: $footer-height;
     grid-area: footer;
     border-top: 1px dashed var(--border-color);
-    z-index: 2;
+    z-index: 1;
     position: relative;
 
     &__link {

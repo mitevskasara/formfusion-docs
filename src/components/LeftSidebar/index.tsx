@@ -7,6 +7,9 @@ import Link from '@/components/Link';
 import Accordion from '@/components/Accordion';
 
 import THEMES from '@/core/theme';
+
+import useClickAwayListener from '@/hook/useClickAwayListener';
+
 import NAV from '@/constants/navigation';
 import ROUTES from '@/constants/routes';
 
@@ -19,14 +22,17 @@ interface Props {
     setTheme: Dispatch<SetStateAction<string>>;
 }
 
-const LeftSidebar = ({ open, theme }: Props) => {
+const LeftSidebar = ({ open, toggle, theme }: Props) => {
     const { asPath } = useRouter();
     const isActive = (url: string) => url === asPath;
 
     let classses = classes.leftSidebar;
     if (open) classses += ` ${classes.leftSidebar_open}`;
+
+    const sidebarRef = useClickAwayListener(() => console.log(''));
+
     return (
-        <aside className={classses}>
+        <aside className={classses} ref={sidebarRef}>
             <Scrollable>
                 <nav className={classes.leftSidebar__navigation}>
                     <Link href={`/${ROUTES.home}#introduction`}>
@@ -54,7 +60,9 @@ const LeftSidebar = ({ open, theme }: Props) => {
                                     className={
                                         classes.leftSidebar__navigation__sublist__item
                                     }>
-                                    <Link href={`/${ROUTES.home}#installation`}>
+                                    <Link
+                                        href={`/${ROUTES.home}#installation`}
+                                        onClick={() => toggle(false)}>
                                         <Typography
                                             variant="body1"
                                             margin={false}
@@ -69,7 +77,9 @@ const LeftSidebar = ({ open, theme }: Props) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href={`/${ROUTES.home}#example`}>
+                                    <Link
+                                        href={`/${ROUTES.home}#example`}
+                                        onClick={() => toggle(false)}>
                                         <Typography
                                             variant="body1"
                                             margin={false}
