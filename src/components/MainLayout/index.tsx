@@ -1,11 +1,15 @@
-import React, { Dispatch, ReactNode, SetStateAction, useState } from 'react';
+import React, {
+    Dispatch,
+    ReactNode,
+    SetStateAction,
+    useEffect,
+    useState
+} from 'react';
 import Head from 'next/head';
 
 import Header from '@/components/Header';
 import LeftSidebar from '@/components/LeftSidebar';
 import Footer from '@/components/Footer';
-
-import ROUTES from '@/constants/routes';
 
 import classes from './main.module.scss';
 
@@ -33,6 +37,15 @@ const MainLayout = ({
     setTheme
 }: Props) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [isOpen]);
+
     return (
         <div>
             <Head>

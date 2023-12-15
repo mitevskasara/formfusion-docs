@@ -6,11 +6,10 @@
     width: $sidebar-width;
     top: calc($header-height);
     left: $side-padding;
-    overflow-y: hidden;
     max-height: calc(100vh - $header-height - 2em);
     padding-right: 2em;
     grid-area: left;
-    z-index: 1;
+    z-index: 2;
 
     &:hover {
         overflow-y: auto;
@@ -23,14 +22,20 @@
         z-index: 1;
         top: calc($header-height + 1em);
         transition: left 0.5s;
+        overflow-y: auto;
+        background-color: var(--background);
     }
 
     &_open {
         left: 0;
-        padding: 0em $side-padding;
-        width: 100vw;
+        padding: 1em $side-padding;
+        width: 50vw;
         background-color: var(--background);
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+
+        @include media(xsmall) {
+            width: 100vw;
+        }
     }
 
     &__navigation {
