@@ -2,7 +2,7 @@
 @import '@/core/styles/media-queries';
 
 .container {
-    max-width: 100%;
+    max-width: calc(100vw - ($side-padding * 2));
 }
 
 .pre {
