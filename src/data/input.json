@@ -33,7 +33,7 @@
             "required": false
         }
     ],
-    "exampleUrl": "https://codesandbox.io/s/rfm-basic-input-usage-95ws8y",
+    "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-agfycc?file=src%2FApp.tsx",
     "exampleTitle": "RFM Basic Input usage",
     "nextUrl": "/react-form-manager/api/textarea",
     "nextUrlTitle": "Textarea"

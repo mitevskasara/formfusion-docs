@@ -151,12 +151,12 @@ const Patterns = ({
                     </Typography>
                     <Button>
                         <Link
-                            href="https://codesandbox.io/embed/rfm-basic-types-usage-t7c8sn?fontsize=14&hidenavigation=1&theme=dark"
+                            href="https://stackblitz.com/edit/vitejs-vite-oioblx?file=src%2FApp.tsx"
                             target="_blank"
-                            icon="codesandbox"
+                            icon="stackblitz"
                             internal={false}
                             color={'var(--light)'}>
-                            Try on<b>&nbsp;CodeSandbox&nbsp;</b>
+                            Try on<b>&nbsp;Stackblitz&nbsp;</b>
                         </Link>
                     </Button>
                 </Flex>
