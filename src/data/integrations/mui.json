@@ -1,7 +1,7 @@
 {
     "key": "mui",
     "title": "Material UI",
-    "exampleUrl": "https://codesandbox.io/s/rfm-basic-mui-integration-example-x9nsxw",
+    "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-g5bbhe?file=src%2FApp.tsx",
     "nextUrl": "/react-form-manager/integrations/antdesign",
     "nextUrlTitle": "Ant Design"
 }

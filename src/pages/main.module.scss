@@ -34,6 +34,45 @@
     padding-top: calc($header-height + 3em);
 }
 
+.section__example {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    border: 1px solid var(--border-color);
+    height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 3px;
+
+    &__code {
+        overflow-y: auto;
+        max-height: 600px;
+        width: 50%;
+    }
+
+    & > form {
+        width: 50%;
+        border: none;
+        margin: 0;
+        background-color: white;
+        border-radius: 0;
+        height: -webkit-fill-available;
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        & > a {
+            padding: 5px 10px 3px;
+            border: 1px solid var(--border-color);
+            border-bottom: 0;
+            margin-bottom: -1px;
+            cursor: pointer;
+        }
+    }
+}
+
 .header {
     height: $header-height;
     position: fixed;

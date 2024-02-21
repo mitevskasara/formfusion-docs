@@ -71,7 +71,7 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                         <Link
                             href={data?.exampleUrl}
                             target="_blank"
-                            icon="codesandbox"
+                            icon="stackblitz"
                             internal={false}
                             color={'var(--light)'}>
                             Try it out&nbsp;&nbsp;
