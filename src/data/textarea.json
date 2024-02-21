@@ -26,7 +26,7 @@
             "required": false
         }
     ],
-    "exampleUrl": "https://codesandbox.io/s/rfm-basic-textarea-usage-8ljznq?file=/src/App.js:0-768",
+    "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-ju6zau?file=src%2FApp.tsx",
     "exampleTitle": "RFM Basic Textarea usage",
     "nextUrl": "/react-form-manager/api/useform",
     "nextUrlTitle": "UseForm"

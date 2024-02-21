@@ -84,7 +84,7 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                         <Link
                             href={data?.exampleUrl}
                             target="_blank"
-                            icon="codesandbox"
+                            icon="stackblitz"
                             internal={false}
                             color={'var(--light)'}>
                             Try it out&nbsp;&nbsp;
@@ -94,10 +94,12 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 <Code language="javascript">{INTEGRATIONS[data?.key]}</Code>
                 <br />
             </Section>
-            <FooterNavigation
-                url={data?.nextUrl ?? ''}
-                title={data?.nextUrlTitle}
-            />
+            {data?.nextUrl && (
+                <FooterNavigation
+                    url={data?.nextUrl ?? ''}
+                    title={data?.nextUrlTitle}
+                />
+            )}
         </MainLayout>
     );
 };

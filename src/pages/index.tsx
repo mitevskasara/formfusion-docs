@@ -6,14 +6,18 @@ import Typography from 'corelabui/Typography';
 import Highlight from 'corelabui/Highlight';
 import Divider from 'corelabui/Divider';
 import Input from 'corelabui/Input';
+import Flex from 'corelabui/Flex';
 import { Form } from '@corelabui/rfm';
 
 import axios from 'axios';
 
 import { copy } from '@/utils/general';
 import ClientComponent from '@/components/ClientComponent';
+import Code from '@/components/Code';
+import FormExample from '@/components/FormExample';
 
 import MAILERLITE_API_KEY from '@/constants/api-key';
+import { COMPONENTS } from '@/constants/examples';
 
 import classes from './main.module.scss';
 
@@ -213,20 +217,26 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                         usage and fully customizable form components.
                     </Typography>
                     <br /> <br />
-                    <iframe
-                        src="https://codesandbox.io/embed/sjw4ds?view=editor+%2B+preview&module=%2Fsrc%2FApp.js&expanddevtools=1"
-                        style={{
-                            width: '100%',
-                            height: '500px',
-                            border: 0,
-                            borderRadius: '4px',
-                            overflow: 'hidden',
-                            marginBottom: '3em'
-                        }}
-                        title="React Form Manager Basic payment form"
-                        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-                    />
+                    <div className={classes.section__example__heading}>
+                        <a
+                            href="https://stackblitz.com/edit/vitejs-vite-ahj7lp?file=src%2FApp.tsx"
+                            target="_blank">
+                            <img
+                                src="/assets/stackblitz_logo.png"
+                                width={100}
+                                height={28}
+                                alt="stackblitz logo"
+                            />
+                        </a>
+                    </div>
+                    <div className={classes.section__example}>
+                        <div className={classes.section__example__code}>
+                            <Code language="javascript">{COMPONENTS.form}</Code>
+                        </div>
+                        <FormExample />
+                    </div>
+                    <br />
+                    <br />
                     <Typography
                         variant="heading5"
                         htmlElement="h4"
