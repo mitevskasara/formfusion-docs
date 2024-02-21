@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?6lch2j');
-  src:  url('fonts/icomoon.eot?6lch2j#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?6lch2j') format('truetype'),
-    url('fonts/icomoon.woff?6lch2j') format('woff'),
-    url('fonts/icomoon.svg?6lch2j#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?k0va0g');
+  src:  url('fonts/icomoon.eot?k0va0g#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?k0va0g') format('truetype'),
+    url('fonts/icomoon.woff?k0va0g') format('woff'),
+    url('fonts/icomoon.svg?k0va0g#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,38 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-stackblitz:before {
+  content: "\e90c";
+}
+.icon-codesandbox:before {
+  content: "\e910";
+}
+.icon-electron:before {
+  content: "\e9e8";
+  color: #47848f;
+}
+.icon-googlechrome:before {
+  content: "\ea41";
+  color: #4285f4;
+}
+.icon-microsoftedge:before {
+  content: "\eb00";
+  color: #0078d7;
+}
+.icon-mozillafirefox:before {
+  content: "\eb19";
+  color: #ff7139;
+}
+.icon-opera:before {
+  content: "\eb47";
+  color: #ff1b2d;
+}
+.icon-safari:before {
+  content: "\ebb1";
+}
+.icon-gmail:before {
+  content: "\e907";
+}
 .icon-chevron-right:before {
   content: "\e90a";
 }
@@ -60,35 +92,6 @@
 }
 .icon-facebook:before {
   content: "\e905";
-}
-.icon-codesandbox:before {
-  content: "\e910";
-}
-.icon-electron:before {
-  content: "\e9e8";
-  color: #47848f;
-}
-.icon-googlechrome:before {
-  content: "\ea41";
-  color: #4285f4;
-}
-.icon-microsoftedge:before {
-  content: "\eb00";
-  color: #0078d7;
-}
-.icon-mozillafirefox:before {
-  content: "\eb19";
-  color: #ff7139;
-}
-.icon-opera:before {
-  content: "\eb47";
-  color: #ff1b2d;
-}
-.icon-safari:before {
-  content: "\ebb1";
-}
-.icon-gmail:before {
-  content: "\e907";
 }
 .icon-hour-glass:before {
   content: "\e909";

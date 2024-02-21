@@ -17,6 +17,7 @@ import FEATURES from '@/constants/features';
 import META_DATA from '@/constants/metaData';
 import ROUTES from '@/constants/routes';
 import { COMPONENTS } from '@/constants/examples';
+import FormExample from '@/components/FormExample';
 
 interface IReactFormManagerProps {
     theme: string;
@@ -93,9 +94,9 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                     </Typography>
                     <Button>
                         <Link
-                            href="https://codesandbox.io/p/sandbox/react-form-manager-basic-payment-form-sjw4ds"
+                            href="https://stackblitz.com/edit/vitejs-vite-ahj7lp?file=src%2FApp.tsx"
                             target="_blank"
-                            icon="codesandbox"
+                            icon="stackblitz"
                             internal={false}
                             color={'var(--light)'}>
                             Try it out&nbsp;&nbsp;
@@ -111,6 +112,11 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                 <br />
                 <Code language="javascript">{COMPONENTS.form}</Code>
                 <br />
+                <br />
+                <Typography variant="heading5" htmlElement="h3">
+                    Preview
+                </Typography>
+                <FormExample />
             </Section>
             <FooterNavigation url={`/${ROUTES.form}`} title="API" />
         </MainLayout>

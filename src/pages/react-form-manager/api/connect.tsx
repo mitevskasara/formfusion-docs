@@ -76,9 +76,9 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
                     </Typography>
                     <Button>
                         <Link
-                            href="https://codesandbox.io/s/rfm-basic-connect-usage-l623rp"
+                            href="https://stackblitz.com/edit/vitejs-vite-iuykvw?file=src%2FApp.tsx"
                             target="_blank"
-                            icon="codesandbox"
+                            icon="stackblitz"
                             internal={false}
                             color={'var(--light)'}>
                             Try it out&nbsp;&nbsp;

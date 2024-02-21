@@ -91,9 +91,9 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                     </Typography>
                     <Button>
                         <Link
-                            href="https://codesandbox.io/s/rfm-useform-usage-wvq56j?file=/src/App.js:768-774"
+                            href="https://stackblitz.com/edit/vitejs-vite-pxpcbc?file=src%2FApp.tsx"
                             target="_blank"
-                            icon="codesandbox"
+                            icon="stackblitz"
                             internal={false}
                             color={'var(--light)'}>
                             Try it out&nbsp;&nbsp;
