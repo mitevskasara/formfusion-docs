@@ -24,6 +24,13 @@
             "required": false
         },
         {
+            "name": "setFieldValue",
+            "type": "(key: string, value: any) => void",
+            "default": "",
+            "description": "This function allows using custom form fields that are not using the Input or Textarea components",
+            "required": false
+        },
+        {
             "name": "resetForm",
             "type": "() => void",
             "default": "",
