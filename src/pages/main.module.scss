@@ -57,6 +57,18 @@
             width: -webkit-fill-available;
             max-height: auto;
         }
+
+        & > div {
+            @include media(small) {
+                max-width: 100%;
+            }
+
+            & > pre {
+                @include media(small) {
+                    font-size: x-small;
+                }
+            }
+        }
     }
 
     & > form {

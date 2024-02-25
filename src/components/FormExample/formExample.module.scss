@@ -26,7 +26,7 @@
         background-color: var(--surface-light);
     }
 
-    &__input_field:invalid {
+    &__input_field[aria-invalid='true']:not(:focus) {
         border: 1px solid var(--error);
     }
 
