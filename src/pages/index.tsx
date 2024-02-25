@@ -195,7 +195,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 variant="body1"
                                 htmlElement="p"
                                 align="center">
-                                Efficient but minimal library that does not rely
+                                Minimal yet efficient library that does not rely
                                 on any external dependencies
                             </Typography>
                         </div>
