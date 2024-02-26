@@ -2,7 +2,7 @@ import ROUTES from './routes';
 
 const META_DATA = {
     url: `https://www.corelabui.com/${ROUTES.home}`,
-    title: 'React Form Manager',
+    title: 'CorelabUI | React Form Manager',
     image: '/meta-image.png',
     description:
         'Effortlessly manage forms in your React applications with the React Form Manager\

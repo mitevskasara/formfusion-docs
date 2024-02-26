@@ -67,7 +67,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
     return (
         <>
             <Head>
-                <title>{title}</title>
+                <title>{META_DATA.title}</title>
                 <meta charSet="utf-8" />
                 <meta
                     name="viewport"
