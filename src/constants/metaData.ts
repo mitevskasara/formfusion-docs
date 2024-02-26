@@ -3,10 +3,10 @@ import ROUTES from './routes';
 const META_DATA = {
     url: `https://www.corelabui.com/${ROUTES.home}`,
     title: 'React Form Manager',
-    image: '',
+    image: '/meta-image.png',
     description:
         'Effortlessly manage forms in your React applications with the React Form Manager\
-    developed by CoreLab UI.This library provides an efficient\
+    developed by CoreLab UI. This library provides an efficient\
     solution for handling forms with built -in validation, full\
     accessibility and completely customizable look simplifying\
     the development process and improving user experience.',
