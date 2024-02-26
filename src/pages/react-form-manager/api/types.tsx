@@ -173,7 +173,7 @@ const Types = ({ theme, setTheme, data, pages, options }: ITypesProps) => {
 };
 
 export async function getStaticProps() {
-    const { types } = await require('@corelabui/rfm');
+    const types = await require('@/constants/rfm/types').default;
     const { typesToOptions } = await require('@/utils/dataTransform');
     const options = typesToOptions(types);
     const TYPES_TABLE_DATA = typesToTableData(types).filter((d) => Boolean(d));
