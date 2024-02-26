@@ -20,6 +20,8 @@ import MAILERLITE_API_KEY from '@/constants/api-key';
 import { COMPONENTS } from '@/constants/examples';
 
 import classes from './main.module.scss';
+import Head from 'next/head';
+import META_DATA from '@/constants/metaData';
 
 interface IMainPageProps {
     theme: string;
@@ -64,6 +66,28 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
 
     return (
         <>
+            <Head>
+                <title>{title}</title>
+                <meta charSet="utf-8" />
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0, width=device-width"
+                />
+                <meta property="title" content={META_DATA.title} />
+                <meta name="description" content={META_DATA.description} />
+                <meta property="image" content={META_DATA.image} />
+
+                <meta property="og:url" content="https://www.corelabui.com" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content={title} />
+                <meta
+                    property="og:description"
+                    content={META_DATA.description}
+                />
+                <meta property="og:image" content={META_DATA.image} />
+                <meta name="keywords" content={META_DATA.keywords}></meta>
+                <link rel="canonical" href="https://www.corelabui.com" />
+            </Head>
             <header className={classes.header}>
                 <div className={classes.header__inner}>
                     <div className={classes.header__inner__left}>
