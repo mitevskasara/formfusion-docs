@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction, useState } from 'react';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from 'corelabui/Button';
@@ -6,7 +7,6 @@ import Typography from 'corelabui/Typography';
 import Highlight from 'corelabui/Highlight';
 import Divider from 'corelabui/Divider';
 import Input from 'corelabui/Input';
-import Flex from 'corelabui/Flex';
 import { Form } from '@corelabui/rfm';
 
 import axios from 'axios';
@@ -20,7 +20,6 @@ import MAILERLITE_API_KEY from '@/constants/api-key';
 import { COMPONENTS } from '@/constants/examples';
 
 import classes from './main.module.scss';
-import Head from 'next/head';
 import META_DATA from '@/constants/metaData';
 
 interface IMainPageProps {
@@ -176,7 +175,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                         <div className={classes.features__card__inner}>
                             <Typography
                                 variant="heading5"
-                                htmlElement="h3"
+                                htmlElement="h2"
                                 align="center">
                                 Built-in validation
                             </Typography>
@@ -193,7 +192,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                         <div className={classes.features__card__inner}>
                             <Typography
                                 variant="heading5"
-                                htmlElement="h3"
+                                htmlElement="h2"
                                 align="center">
                                 Intuitive
                             </Typography>
@@ -211,7 +210,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                         <div className={classes.features__card__inner}>
                             <Typography
                                 variant="heading5"
-                                htmlElement="h3"
+                                htmlElement="h2"
                                 align="center">
                                 Lightweight
                             </Typography>
@@ -245,7 +244,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                         <a
                             href="https://stackblitz.com/edit/vitejs-vite-ahj7lp?file=src%2FApp.tsx"
                             target="_blank">
-                            <img
+                            <Image
                                 src="/assets/stackblitz_logo.png"
                                 width={100}
                                 height={28}
@@ -366,7 +365,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                     <div className={classes.footer__inner__navigation}>
                         <nav
                             className={classes.footer__inner__navigation__item}>
-                            <Typography variant="heading6" htmlElement="h6">
+                            <Typography variant="heading6" htmlElement="h3">
                                 Resources
                             </Typography>
                             <Link href="/react-form-manager#installation">
@@ -381,7 +380,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                         </nav>
                         <nav
                             className={classes.footer__inner__navigation__item}>
-                            <Typography variant="heading6" htmlElement="h6">
+                            <Typography variant="heading6" htmlElement="h3">
                                 Integration
                             </Typography>
                             <Link
@@ -407,7 +406,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                         </nav>
                         <nav
                             className={classes.footer__inner__navigation__item}>
-                            <Typography variant="heading6" htmlElement="h6">
+                            <Typography variant="heading6" htmlElement="h3">
                                 About
                             </Typography>
                             <Link
@@ -428,7 +427,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                         </nav>
                         <nav
                             className={classes.footer__inner__navigation__item}>
-                            <Typography variant="heading6" htmlElement="h6">
+                            <Typography variant="heading6" htmlElement="h3">
                                 Subscribe to our newsletter
                             </Typography>
                             <Form

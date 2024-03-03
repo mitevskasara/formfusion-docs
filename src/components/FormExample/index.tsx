@@ -10,7 +10,7 @@ const FormExample = () => {
 
     return (
         <Form onSubmit={onSubmit} validateOnChange className={classes.form}>
-            <Typography variant="heading5" htmlElement="h5">
+            <Typography variant="heading5" htmlElement="h3">
                 Simple payment form
             </Typography>
             <Input
