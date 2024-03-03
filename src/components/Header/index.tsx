@@ -18,41 +18,35 @@ const CustomHeader = ({ open, toggle, theme, setTheme }: CustomHeaderProps) => {
     return (
         <header className={classes.header}>
             <div className={classes.header__inner}>
-                <ClientComponent>
-                    <div className={classes.header__inner__left}>
-                        <Image
-                            src={`/assets/logo/${theme}/logo.svg`}
-                            width={150}
-                            height={39}
-                            alt="CoreLab UI logo"
-                            className={classes.header__inner__left__logo}
-                        />
-                        {/* <Image
+                <div className={classes.header__inner__left}>
+                    <Image
+                        src={`/assets/logo/${theme}/logo.svg`}
+                        width={150}
+                        height={39}
+                        alt="CoreLab UI logo"
+                        className={classes.header__inner__left__logo}
+                    />
+                    {/* <Image
                             src={`/assets/logo/${theme}/logo-icon.svg`}
                             width={27}
                             height={39}
                             alt="CoreLab UI logo"
                             className={classes.header__inner__left__logo_mobile}
                         /> */}
-                    </div>
-                </ClientComponent>
+                </div>
                 <div className={classes.header__inner__right}>
-                    <ClientComponent>
-                        <Button
-                            variant="text"
-                            onClick={() =>
-                                setTheme(
-                                    theme === 'standard' ? 'dark' : 'standard'
-                                )
-                            }
-                            aria-label="Theme icon">
-                            <span
-                                className={`icon-${
-                                    theme === 'standard' ? 'dark' : 'light'
-                                } ${classes.header__inner__right__themeButton}`}
-                            />
-                        </Button>
-                    </ClientComponent>
+                    <Button
+                        variant="text"
+                        onClick={() =>
+                            setTheme(theme === 'standard' ? 'dark' : 'standard')
+                        }
+                        aria-label="Theme icon">
+                        <span
+                            className={`icon-${
+                                theme === 'standard' ? 'dark' : 'light'
+                            } ${classes.header__inner__right__themeButton}`}
+                        />
+                    </Button>
                     <div className={classes.header__inner__right__menuIcon}>
                         <HamburgerMenu open={open} setIsOpen={toggle} />
                     </div>

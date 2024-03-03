@@ -1,5 +1,23 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, {
+    Html,
+    Head,
+    Main,
+    NextScript,
+    DocumentContext
+} from 'next/document';
 import Script from 'next/script';
+import { generateStyle } from 'corelabui/Theme';
+import { stylesheet as typographyStylesheet } from 'corelabui/Typography';
+import { stylesheet as highlightStylesheet } from 'corelabui/Highlight';
+import { stylesheet as buttonStylesheet } from 'corelabui/Button';
+import { stylesheet as dividerStylesheet } from 'corelabui/Divider';
+import { stylesheet as inputStylesheet } from 'corelabui/Input';
+import { stylesheet as selectStylesheet } from 'corelabui/Select';
+import {
+    stylesheet as flexStylesheet,
+    flexItemStylesheet
+} from 'corelabui/Flex';
+import THEMES, { scrollBarStyle } from '@/core/theme';
 
 export default class MyDocument extends Document {
     render() {
@@ -8,22 +26,15 @@ export default class MyDocument extends Document {
                 <Head>
                     {process.env.mode === 'PROD' && (
                         <Script
-                            id="google-tagmanager-script"
-                            async
-                            src="https://www.googletagmanager.com/gtag/js?id=G-PNVC81FSRT"
-                            strategy="afterInteractive"
-                        />
-                    )}
-                    {process.env.mode === 'PROD' && (
-                        <Script
+                            defer
                             id="google-analytics-script"
                             strategy="afterInteractive"
                             dangerouslySetInnerHTML={{
                                 __html: `window.dataLayer = window.dataLayer || [];
-                                        function gtag(){dataLayer.push(arguments);}
-                                        gtag('js', new Date());
+									function gtag(){dataLayer.push(arguments);}
+									gtag('js', new Date());
 
-                                        gtag('config', 'G-PNVC81FSRT');`
+									gtag('config', 'G-PNVC81FSRT');`
                             }}
                         />
                     )}
@@ -53,6 +64,7 @@ export default class MyDocument extends Document {
                     />
                     {process.env.mode === 'PROD' && (
                         <Script
+                            defer
                             id="google-tag-manager"
                             strategy="afterInteractive"
                             dangerouslySetInnerHTML={{
@@ -61,6 +73,32 @@ export default class MyDocument extends Document {
                             }}
                         />
                     )}
+                    <style id="CoreLabUI">
+                        {generateStyle(THEMES.standard)}
+                    </style>
+                    <style id="CoreLabUI-scrollbar">{scrollBarStyle}</style>
+                    <style id={typographyStylesheet.id}>
+                        {typographyStylesheet.style}
+                    </style>
+                    <style id={highlightStylesheet.id}>
+                        {highlightStylesheet.style}
+                    </style>
+                    <style id={buttonStylesheet.id}>
+                        {buttonStylesheet.style}
+                    </style>
+                    <style id={dividerStylesheet.id}>
+                        {dividerStylesheet.style}
+                    </style>
+                    <style id={inputStylesheet.id}>
+                        {inputStylesheet.style}
+                    </style>
+                    <style id={selectStylesheet.id}>
+                        {selectStylesheet.style}
+                    </style>
+                    <style id={flexStylesheet.id}>{flexStylesheet.style}</style>
+                    <style id={flexItemStylesheet.id}>
+                        {flexItemStylesheet.style}
+                    </style>
                 </Head>
                 <body style={{ margin: 0 }}>
                     {process.env.mode === 'PROD' && (

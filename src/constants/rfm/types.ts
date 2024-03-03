@@ -56,7 +56,7 @@ Object.keys(patterns).map((key) =>
     })
 );
 
-export default {
+const types = {
     ...restTypes,
     ...postalCodeTypes,
     ...ibanTypes,
@@ -66,3 +66,5 @@ export default {
     ...vatTypes,
     ...phoneTypes
 };
+
+export default types;
