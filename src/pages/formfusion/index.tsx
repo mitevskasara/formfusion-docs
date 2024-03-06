@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useRef } from 'react';
 import Typography from 'corelabui/Typography';
-import { patterns } from '@corelabui/rfm';
+import { patterns } from 'formfusion';
 import Flex from 'corelabui/Flex';
 import Button from 'corelabui/Button';
 
@@ -18,6 +18,7 @@ import META_DATA from '@/constants/metaData';
 import ROUTES from '@/constants/routes';
 import { COMPONENTS } from '@/constants/examples';
 import FormExample from '@/components/FormExample';
+import GridList from '@/components/GridList';
 
 interface IReactFormManagerProps {
     theme: string;
@@ -28,11 +29,17 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
     const exampleRef = useRef<HTMLElement | null>(null);
 
     return (
-        <MainLayout {...META_DATA} theme={theme} setTheme={setTheme}>
+        <MainLayout
+            {...{
+                ...META_DATA,
+                canonical: 'https://www.corelabui.com/formfusion'
+            }}
+            theme={theme}
+            setTheme={setTheme}>
             <Section id="introduction" title="Introduction" margin={false}>
                 <Typography variant="body1">
                     Revolutionize your React applications with the{' '}
-                    <strong>React Form Manager,&nbsp;</strong>
+                    <strong>FormFusion,&nbsp;</strong>
                     thoughtfully designed by CoreLab UI. This broad library
                     offers an efficient solution for managing forms, complete
                     with built-in validation, exceptional accessibility, and
@@ -49,21 +56,21 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    <strong>React Form Manager</strong> leverages the native
-                    HTML
+                    <strong>FormFusion</strong> leverages the native HTML&nbsp;
                     <Link
                         href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation"
                         target="_blank">
-                        &nbsp;form validation&nbsp;
+                        form validation
                     </Link>
-                    by extending the list of&nbsp;
-                    <Link href={`/${ROUTES.types}`}>
-                        native input types&nbsp;
-                    </Link>
-                    and provides a large collection of thoroughly tested and
-                    ready to use validation patterns such as:
+                    &nbsp;by extending the list of&nbsp;
+                    <Link href={`/${ROUTES.types}`}>native input types</Link>
+                    &nbsp;and provides a large collection of thoroughly tested
+                    and ready to use validation patterns such as:
                 </Typography>
-                <List items={patternsToList(patterns)} />
+                <GridList items={patternsToList(patterns)} />
+                <Link href="/api/patterns" style={{ float: 'right' }}>
+                    See full list here
+                </Link>
                 <br />
                 &nbsp;
                 <Typography variant="heading5" htmlElement="h3">
@@ -78,7 +85,7 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                 </Typography>
                 <br />
                 <ClientComponent>
-                    <Code language="bash">npm i @corelabui/rfm</Code>
+                    <Code language="bash">npm i formfusion</Code>
                 </ClientComponent>
             </Section>
             <Section id="example" ref={exampleRef}>
@@ -104,10 +111,9 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                     </Button>
                 </Flex>
                 <Typography variant="body1">
-                    Below is an example of how{' '}
-                    <strong>React Form Manager</strong> simplifies the creation
-                    of an uncontrolled payment form with a card number and ccv
-                    validation:
+                    Below is an example of how <strong>FormFusion</strong>{' '}
+                    simplifies the creation of an uncontrolled payment form with
+                    a card number and ccv validation:
                 </Typography>
                 <br />
                 <Code language="javascript">{COMPONENTS.form}</Code>

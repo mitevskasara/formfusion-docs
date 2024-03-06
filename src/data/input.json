@@ -8,7 +8,14 @@
             "name": "type",
             "type": "string",
             "default": "text",
-            "description": "The 'type' property determines the validation pattern associated with the input element. See all available types <a href='/react-form-manager/api/types'>here</a>.",
+            "description": "The 'type' property determines the validation pattern associated with the input element. See all available types <a href='/formfusion/api/types'>here</a>.",
+            "required": false
+        },
+        {
+            "name": "mask",
+            "type": "string",
+            "default": "",
+            "description": "The 'mask' property determines the masking pattern associated with the input element. Read more <a href='/formfusion/api/masking'>here</a>.",
             "required": false
         },
         {
@@ -34,7 +41,7 @@
         }
     ],
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-agfycc?file=src%2FApp.tsx",
-    "exampleTitle": "RFM Basic Input usage",
-    "nextUrl": "/react-form-manager/api/textarea",
+    "exampleTitle": "FormFusion Basic Input usage",
+    "nextUrl": "/formfusion/api/textarea",
     "nextUrlTitle": "Textarea"
 }

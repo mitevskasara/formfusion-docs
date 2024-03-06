@@ -24,5 +24,3 @@ declare module 'corelabui/Popup';
 declare module 'corelabui/Layout';
 declare module 'corelabui/ThemeProvider';
 declare module 'corelabui/Hightlight';
-
-declare module '@corelabui/rfm';

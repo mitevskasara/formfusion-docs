@@ -1,10 +1,4 @@
-import Document, {
-    Html,
-    Head,
-    Main,
-    NextScript,
-    DocumentContext
-} from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script';
 import { generateStyle } from 'corelabui/Theme';
 import { stylesheet as typographyStylesheet } from 'corelabui/Typography';
@@ -22,7 +16,7 @@ import THEMES, { scrollBarStyle } from '@/core/theme';
 export default class MyDocument extends Document {
     render() {
         return (
-            <Html lang="fr" style={{ scrollBehavior: 'smooth' }}>
+            <Html lang="en" style={{ scrollBehavior: 'smooth' }}>
                 <Head>
                     {process.env.mode === 'PROD' && (
                         <Script

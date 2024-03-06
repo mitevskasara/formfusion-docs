@@ -1,0 +1,31 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.list {
+    padding-left: 0px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5em;
+
+    @include media(xsmall) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include media(xxsmall) {
+        grid-template-columns: 1fr;
+    }
+
+    &__item {
+        line-height: 2;
+
+        &::marker {
+            color: var(--text);
+        }
+
+        & > p > code {
+            display: block;
+            text-align: center;
+        }
+    }
+}

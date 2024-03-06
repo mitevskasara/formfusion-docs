@@ -7,12 +7,11 @@ import Typography from 'corelabui/Typography';
 import Highlight from 'corelabui/Highlight';
 import Divider from 'corelabui/Divider';
 import Input from 'corelabui/Input';
-import { Form } from '@corelabui/rfm';
+import { Form } from 'formfusion';
 
 import axios from 'axios';
 
 import { copy } from '@/utils/general';
-import ClientComponent from '@/components/ClientComponent';
 import Code from '@/components/Code';
 import FormExample from '@/components/FormExample';
 
@@ -21,6 +20,7 @@ import { COMPONENTS } from '@/constants/examples';
 
 import classes from './main.module.scss';
 import META_DATA from '@/constants/metaData';
+import LPHeader from '@/components/LPHeader';
 
 interface IMainPageProps {
     theme: string;
@@ -35,7 +35,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
     const [success, setSuccess] = useState('');
 
     const onClick = () => {
-        copy('npm i @corelabui/rfm');
+        copy('npm i formfusion');
         setTitle('Copied!');
         timer = setTimeout(() => setTitle('Copy'), 3000);
     };
@@ -87,82 +87,57 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                 <meta name="keywords" content={META_DATA.keywords}></meta>
                 <link rel="canonical" href="https://www.corelabui.com" />
             </Head>
-            <header className={classes.header}>
-                <div className={classes.header__inner}>
-                    <div className={classes.header__inner__left}>
-                        <ClientComponent>
-                            <Image
-                                src={`/assets/logo/${theme}/logo.svg`}
-                                width={220}
-                                height={57}
-                                alt="CoreLab UI logo"
-                                className={classes.header__inner__left__logo}
-                            />
-                        </ClientComponent>
-                        <ClientComponent>
-                            <Image
-                                src={`/assets/logo/${theme}/logo-icon.svg`}
-                                width={27}
-                                height={39}
-                                alt="CoreLab UI logo"
-                                className={
-                                    classes.header__inner__left__logo_mobile
-                                }
-                            />
-                        </ClientComponent>
-                    </div>
-                    <div className={classes.header__inner__right}>
-                        <div className={classes.header__inner__right__nav}>
-                            <Link
-                                href="/react-form-manager"
-                                className={
-                                    classes.header__inner__right__nav__link
-                                }>
-                                Documentation
-                            </Link>
-                        </div>
-                        {/* <div className={classes.header__inner__right__menuIcon}>
-                            <HamburgerMenu open={false} setIsOpen={() => { }} />
-                        </div> */}
-                    </div>
-                </div>
-            </header>
-            <section className={classes.section}>
-                <div className={`${classes.section__inner} ${classes.hero}`}>
+            <LPHeader />
+            <section className={`${classes.section} ${classes.hero}`}>
+                <div
+                    className={`${classes.section__inner} ${classes.hero__inner}`}>
                     <Typography
                         variant="heading1"
                         htmlElement="h1"
-                        align="center">
+                        align="center"
+                        color="var(--light)">
                         The&nbsp;
                         <Highlight
                             textGradient={{
                                 direction: 'left',
-                                colors: '#e9bbc4,#023e8a'
+                                colors: '#FFFFFF,var(--accent),#9f7121'
                             }}>
                             ultimate way&nbsp;
                         </Highlight>
-                        <br />
-                        to build forms&nbsp;
-                        <br />
-                        in React
+                        to build forms&nbsp;in React
                     </Typography>
-                    <div className={classes.hero__action}>
+                    <Typography
+                        variant="heading6"
+                        htmlElement="h2"
+                        align="center"
+                        color="var(--light)">
+                        FormFusion is a lightweight library for buidling forms
+                        in React that offers built-in validation, input masking,
+                        error handling & more.
+                    </Typography>
+                    <div className={classes.hero__inner__action}>
                         <div
-                            className={classes.hero__action__code}
+                            className={classes.hero__inner__action__code}
                             title="Copy"
                             onClick={onClick}
                             role="button">
                             <span
-                                className={classes.hero__action__code__tooltip}>
+                                className={
+                                    classes.hero__inner__action__code__tooltip
+                                }>
                                 {title}
                             </span>
-                            <code className={classes.hero__action__code__inner}>
-                                <span>npm i&nbsp;</span>@corelabui/rfm
+                            <code
+                                className={
+                                    classes.hero__inner__action__code__inner
+                                }>
+                                <span>npm i&nbsp;</span>formfusion
                             </code>
                         </div>
                         <Button
                             size="large"
-                            onClick={() => goTo('/react-form-manager')}>
+                            variant="secondary"
+                            onClick={() => goTo('/formfusion')}>
                             Get started
                         </Button>
                     </div>
@@ -176,13 +151,15 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                             <Typography
                                 variant="heading5"
                                 htmlElement="h2"
-                                align="center">
+                                align="center"
+                                color="var(--accent)">
                                 Built-in validation
                             </Typography>
                             <Typography
                                 variant="body1"
                                 htmlElement="p"
-                                align="center">
+                                align="center"
+                                color="var(--light)">
                                 Provides a large collection of thoroughly tested
                                 and ready to use validation patterns
                             </Typography>
@@ -193,13 +170,15 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                             <Typography
                                 variant="heading5"
                                 htmlElement="h2"
-                                align="center">
+                                align="center"
+                                color="var(--accent)">
                                 Intuitive
                             </Typography>
                             <Typography
                                 variant="body1"
                                 htmlElement="p"
-                                align="center">
+                                align="center"
+                                color="var(--light)">
                                 Practical solution based on native HTML form
                                 features neatly packaged into familiar React
                                 components and hooks. No learning required
@@ -211,33 +190,202 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                             <Typography
                                 variant="heading5"
                                 htmlElement="h2"
-                                align="center">
+                                align="center"
+                                color="var(--accent)">
                                 Lightweight
                             </Typography>
                             <Typography
                                 variant="body1"
                                 htmlElement="p"
-                                align="center">
+                                align="center"
+                                color="var(--light)">
                                 Minimal yet efficient library that does not rely
                                 on any external dependencies
                             </Typography>
                         </div>
                     </div>
                 </div>
+                <br /> <br />
             </section>
-            <section className={classes.section}>
-                <div className={classes.section__inner}>
+            <section className={`${classes.section} ${classes.services}`}>
+                <div className={classes.services__inner}>
                     <Typography
-                        variant="heading4"
+                        variant="heading6"
+                        htmlElement="h2"
+                        align="center"
+                        color="var(--accent)">
+                        Features
+                    </Typography>
+                    <Typography
+                        variant="heading3"
                         htmlElement="h2"
                         align="center">
-                        React Form Manager in Action
+                        Why FormFusion?
+                    </Typography>
+                    <div className={classes.services__inner__cards}>
+                        <div className={classes.services__inner__cards__card}>
+                            <Typography
+                                variant="heading5"
+                                htmlElement="h2"
+                                margin={false}
+                                color="var(--primary)">
+                                Optimized Form components
+                            </Typography>
+                            <br />
+                            <Typography
+                                variant="body1"
+                                htmlElement="p"
+                                margin={false}>
+                                Utilize FormFusion&apos;s optimized form
+                                components to streamline your development
+                                process. The components are designed for
+                                efficiency, ensuring fast rendering and minimal
+                                resource usage. With these optimized components,
+                                you can build forms that deliver excellent
+                                performance, enhancing the overall user
+                                experience of your applications.
+                            </Typography>
+                        </div>
+                        <div className={classes.services__inner__cards__card}>
+                            <Typography
+                                variant="heading5"
+                                htmlElement="h2"
+                                margin={false}
+                                color="var(--primary)">
+                                Custom React hooks for greater form control
+                            </Typography>
+                            <br />
+                            <Typography
+                                variant="body1"
+                                htmlElement="p"
+                                margin={false}>
+                                Elevate your form control game with
+                                FormFusion&apos;s custom React hooks. These
+                                hooks make managing forms a breeze, giving you
+                                more control and flexibility. Easily integrate
+                                them into your projects for smoother form
+                                handling, validation, and state management,
+                                effortlessly improving the user experience.
+                            </Typography>
+                        </div>
+                        <div className={classes.services__inner__cards__card}>
+                            <Typography
+                                variant="heading5"
+                                htmlElement="h2"
+                                margin={false}
+                                color="var(--primary)">
+                                Error handling
+                            </Typography>
+                            <br />
+                            <Typography
+                                variant="body1"
+                                htmlElement="p"
+                                margin={false}
+                                color="var(--primary)">
+                                FormFusion takes the hassle out of error
+                                handling by providing built-in solutions
+                                tailored to your needs. Easily customize error
+                                messages and styles to match your
+                                application&apos;s design and branding. With our
+                                intuitive tools, you can efficiently manage
+                                errors, ensuring a seamless user experience
+                                while maintaining full control over how errors
+                                are presented and managed within your forms.
+                            </Typography>
+                        </div>
+                        <div className={classes.services__inner__cards__card}>
+                            <Typography
+                                variant="heading5"
+                                htmlElement="h2"
+                                margin={false}
+                                color="var(--primary)">
+                                500+ Validation patterns
+                            </Typography>
+                            <br />
+                            <Typography
+                                variant="body1"
+                                htmlElement="p"
+                                margin={false}>
+                                Benefit from FormFusion&apos;s extensive library
+                                of over 500 input types and validation patterns.
+                                Whether it&apos;s simple text inputs or complex
+                                custom fields, we&apos;ve got you covered. With
+                                a wide array of validation patterns, you can
+                                ensure data integrity and accuracy, tailored to
+                                your specific requirements.
+                            </Typography>
+                        </div>
+                        <div className={classes.services__inner__cards__card}>
+                            <Typography
+                                variant="heading5"
+                                htmlElement="h2"
+                                margin={false}
+                                color="var(--primary)">
+                                Input masking
+                            </Typography>
+                            <br />
+                            <Typography
+                                variant="body1"
+                                htmlElement="p"
+                                margin={false}>
+                                FormFusion library provides input masking,
+                                allowing you to define custom formats and
+                                restrictions for user input. With this feature,
+                                you can easily enforce specific formats such as
+                                phone numbers, dates, or credit card numbers,
+                                ensuring data consistency and accuracy
+                                throughout your forms.
+                            </Typography>
+                        </div>
+                        <div className={classes.services__inner__cards__card}>
+                            <Typography
+                                variant="heading5"
+                                htmlElement="h2"
+                                margin={false}
+                                color="var(--primary)">
+                                Integration with UI libraries
+                            </Typography>
+                            <br />
+                            <Typography
+                                variant="body1"
+                                htmlElement="p"
+                                margin={false}>
+                                Integrate FormFusion with your preferred UI
+                                libraries for a cohesive development experience.
+                                The library offers easy compatibility with
+                                popular libraries like Material-UI, Ant Design,
+                                Reactstrap and more, ensuring consistency and
+                                style across your entire application. With this
+                                integration, leverage the power of FormFusion
+                                while maintaining your preferred design
+                                components.
+                            </Typography>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className={classes.section} id="demo">
+                <div
+                    className={`${classes.section__inner} ${classes.section__example__title}`}>
+                    <Typography
+                        variant="heading6"
+                        htmlElement="h2"
+                        align="center"
+                        color="var(--accent)">
+                        Interactive Demo
+                    </Typography>
+                    <Typography
+                        variant="heading3"
+                        htmlElement="h2"
+                        align="center">
+                        See FormFusion in Action!
                     </Typography>
                     <Typography variant="body1" htmlElement="p" align="center">
-                        Our library comes with an extensive list of input types
-                        with thoroughly tested built-in validation patterns,
-                        error handling, optimized controlled and uncontrolled
-                        usage and fully customizable form components.
+                        This code snippet shows a simple payment form built with
+                        FormFusion.
+                        <br />
+                        It highlights the library&apos;s user-friendly approach
+                        with built-in validation and customizable fields.
                     </Typography>
                     <br /> <br />
                     <div className={classes.section__example__heading}>
@@ -247,7 +395,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                             <Image
                                 src="/assets/stackblitz_logo.png"
                                 width={100}
-                                height={28}
+                                height={25}
                                 alt="stackblitz logo"
                             />
                         </a>
@@ -258,104 +406,35 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                         </div>
                         <FormExample />
                     </div>
-                    <br />
-                    <br />
-                    <Typography
-                        variant="heading5"
-                        htmlElement="h4"
-                        align="center">
-                        What React Form Manager offers
-                    </Typography>
-                    <div className={classes.services}>
-                        <ul className={classes.services__list}>
-                            <li>
-                                <span
-                                    className={`${classes.services__list__icon} icon-check`}
-                                />
-                                <Typography
-                                    variant="body1"
-                                    htmlElement="span"
-                                    margin={false}>
-                                    Optimized Form components
-                                </Typography>
-                            </li>
-                            <li>
-                                <span
-                                    className={`${classes.services__list__icon} icon-check`}
-                                />
-                                <Typography
-                                    variant="body1"
-                                    htmlElement="span"
-                                    margin={false}>
-                                    Custom React hooks for greater form control
-                                </Typography>
-                            </li>
-                            <li>
-                                <span
-                                    className={`${classes.services__list__icon} icon-check`}
-                                />
-                                <Typography
-                                    variant="body1"
-                                    htmlElement="span"
-                                    margin={false}>
-                                    Error handling
-                                </Typography>
-                            </li>
-                        </ul>
-                        <ul className={classes.services__list}>
-                            <li>
-                                <span
-                                    className={`${classes.services__list__icon} icon-check`}
-                                />
-                                <Typography
-                                    variant="body1"
-                                    htmlElement="span"
-                                    margin={false}>
-                                    500+ Input types
-                                </Typography>
-                            </li>
-                            <li>
-                                <span
-                                    className={`${classes.services__list__icon} icon-check`}
-                                />
-                                <Typography
-                                    variant="body1"
-                                    htmlElement="span"
-                                    margin={false}>
-                                    500+ Validation patterns
-                                </Typography>
-                            </li>
-                            <li>
-                                <span
-                                    className={`${classes.services__list__icon} icon-check`}
-                                />
-                                <Typography
-                                    variant="body1"
-                                    htmlElement="span"
-                                    margin={false}>
-                                    Integration with UI libraries
-                                </Typography>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </section>
             <section className={`${classes.section} ${classes.cta}`}>
                 <div
                     className={`${classes.section__inner} ${classes.cta__inner}`}>
                     <Typography
-                        variant="heading4"
+                        variant="heading3"
                         htmlElement="h2"
                         align="center"
                         color="var(--light)">
                         Ready to take the next step?
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        htmlElement="p"
+                        align="center"
+                        color="var(--light)">
+                        Get started with FormFusion today and experience the
+                        difference!
+                        <br />
+                        Explore our detailed documentation and dive into the
+                        world of effortless form development.
                     </Typography>
                     <br />
                     <br />
                     <Button
                         size="large"
                         variant="secondary"
-                        onClick={() => goTo('/react-form-manager')}>
+                        onClick={() => goTo('/formfusion')}>
                         Get Started
                     </Button>
                 </div>
@@ -368,13 +447,11 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                             <Typography variant="heading6" htmlElement="h3">
                                 Resources
                             </Typography>
-                            <Link href="/react-form-manager#installation">
+                            <Link href="/formfusion#installation">
                                 Installation
                             </Link>
-                            <Link href="/react-form-manager#example">
-                                Example
-                            </Link>
-                            <Link href="/react-form-manager/api/form">
+                            <Link href="/formfusion#example">Example</Link>
+                            <Link href="/formfusion/api/form">
                                 API Reference
                             </Link>
                         </nav>
@@ -384,22 +461,22 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 Integration
                             </Typography>
                             <Link
-                                href="/react-form-manager/integrations/mui"
+                                href="/formfusion/integrations/mui"
                                 target="_blank">
                                 Material UI
                             </Link>
                             <Link
-                                href="/react-form-manager/integrations/antdesign"
+                                href="/formfusion/integrations/antdesign"
                                 target="_blank">
                                 Ant Design
                             </Link>
                             <Link
-                                href="/react-form-manager/integrations/chakraui"
+                                href="/formfusion/integrations/chakraui"
                                 target="_blank">
                                 Chakra UI
                             </Link>
                             <Link
-                                href="/react-form-manager/integrations/reactstrap"
+                                href="/formfusion/integrations/reactstrap"
                                 target="_blank">
                                 Reactstrap
                             </Link>

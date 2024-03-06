@@ -2,6 +2,6 @@
     "key": "mui",
     "title": "Material UI",
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-g5bbhe?file=src%2FApp.tsx",
-    "nextUrl": "/react-form-manager/integrations/antdesign",
+    "nextUrl": "/formfusion/integrations/antdesign",
     "nextUrlTitle": "Ant Design"
 }
