@@ -1,110 +1,79 @@
 import React, { Dispatch, SetStateAction, useRef, useState } from 'react';
 import Typography from 'corelabui/Typography';
-import Select from 'corelabui/Select';
-import Flex, { FlexItem } from 'corelabui/Flex';
-import Button from 'corelabui/Button';
 import Highlight from 'corelabui/Highlight';
+import Select from 'corelabui/Select';
+import Button from 'corelabui/Button';
+import Flex, { FlexItem } from 'corelabui/Flex';
 import Input from 'corelabui/Input';
-import { patterns as RFMPatterns, useForm, connect } from '@corelabui/rfm';
+import { useForm, connect } from 'formfusion';
 
-import Property from '@/components/Property';
 import MainLayout from '@/components/MainLayout';
 import Link from '@/components/Link';
+import FooterNavigation from '@/components/FooterNavigation';
 import Section from '@/components/Section';
 import Table from '@/components/Table';
 import Form from '@/components/Form';
 import HTMLText from '@/components/HTMLText';
-import FooterNavigation from '@/components/FooterNavigation';
 import Pagination from '@/components/Pagination';
 
-import patterns from '@/constants/patterns';
+import info from '@/constants/types';
 import META_DATA from '@/constants/metaData';
-import {
-    PATTERNS_TABLE_HEADERS,
-    patternsToTableData
-} from '@/constants/tables';
+import { TYPES_TABLE_HEADERS, typesToTableData } from '@/constants/tables';
 import ROUTES from '@/constants/routes';
+
 import THEMES from '@/core/theme';
+
 import { ISelectOption } from './interfaces';
 
 const LIMIT_PER_PAGE = 25;
 
-interface IPatternsProps {
+interface ITypesProps {
     theme: string;
     setTheme: Dispatch<SetStateAction<string>>;
     data: { [key: number]: object[] };
     pages: number[];
-    options: ISelectOption[];
-    patterns: any;
+    options: { label: string; value: string }[];
 }
 
-const Patterns = ({
-    theme,
-    setTheme,
-    data,
-    pages,
-    options
-}: IPatternsProps) => {
-    const [patternObject, setPattern] = useState(options[0]);
-    const config = useForm({ onSubmit: () => {}, validateOnChange: true });
-    const fieldRef = useRef(null);
+const Types = ({ theme, setTheme, data, pages, options }: ITypesProps) => {
+    const [type, setType] = useState<any>(options[0].value);
     const [page, setPage] = useState(1);
 
-    const tableData = data && data[`${page}`];
-    const pattern = patternObject.value;
+    const config = useForm({ onSubmit: () => {}, validateOnChange: true });
+    const fieldRef = useRef(null);
 
-    const inputType =
-        typeof RFMPatterns[pattern] === 'function'
-            ? pattern.includes('Range')
-                ? RFMPatterns[pattern](1, 5)
-                : RFMPatterns[pattern](5)
-            : patternObject.subtype
-            ? RFMPatterns[patternObject.type][patternObject.subtype]
-            : RFMPatterns[pattern];
+    const tableData = data && data[`${page}`];
 
     return (
         <MainLayout
             {...{
                 ...META_DATA,
-                title: `${META_DATA.title} | Patterns`,
-                canonical: `https://www.corelabui.com/${ROUTES.patterns}`
+                title: `${META_DATA.title} | Input types`,
+                canonical: `https://www.corelabui.com/${ROUTES.types}`
             }}
             theme={theme}
             setTheme={setTheme}>
-            <Section title="Validation patterns" margin={false}>
+            <Section title="Input types" margin={false}>
                 <Typography variant="body1">
-                    Similar to&nbsp;
-                    <Link href={`/${ROUTES.types}`}>Input types</Link>,&nbsp;
-                    <strong>React Form Manager</strong> provides a collection of
-                    thoroughly tested JavaScript regular expressions that can be
-                    directly applied to the pattern attribute of an input field.
-                    The main difference between&nbsp;
-                    <Link href={`/${ROUTES.types}`} target="_blank">
-                        Input types
+                    <strong>FormFusion</strong> extends the list of&nbsp;
+                    <Link
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
+                        target="_blank">
+                        native
                     </Link>
-                    &nbsp;and validation patterns is that the patterns
-                    collection includes dynamic validation such as:
-                    minimum/maximum required chars/letters/numbers, specific
-                    domain validation, minimum/maximum letters range i.e any
-                    validation that requires a specific parameter to construct a
-                    pattern.
+                    &nbsp;input types with a large and thoroughly tested
+                    collection of types that define and apply a corresponding
+                    validation pattern to the input field without the hassle of
+                    writing your own patterns, validation functions or testing
+                    for each input field in your form.
                     <br />
                     <br />
-                    The&nbsp;
-                    <Link href={`/${ROUTES.types}`}>
-                        Input types collection
-                    </Link>
-                    &nbsp;uses part of these validation patterns as a
-                    foundation, but they are also exposed for usage when you
-                    require more flexibility or when you don&apos;t intend to
-                    use the Input component provided by <strong>RFM</strong>. To
-                    put these patterns to use, simply pass your desired pattern
-                    as the&nbsp;
-                    <Property>pattern</Property> property to the input.
+                    Only pass the preffered type prop to the input and&nbsp;
+                    <strong>FormFusion</strong> takes care of everything.
                     <br />
                     <br />
-                    Here is a list of all validation patterns&nbsp;
-                    <strong>RFM</strong> currently contains:
+                    Here is a list of all types <strong>FormFusion</strong>{' '}
+                    currently contains:
                 </Typography>
                 <br />
                 <Flex
@@ -127,7 +96,7 @@ const Patterns = ({
                         />
                     </FlexItem>
                 </Flex>
-                <Table headers={PATTERNS_TABLE_HEADERS} data={tableData} />
+                <Table headers={TYPES_TABLE_HEADERS} data={tableData} />
                 <Flex
                     justifyContent="end"
                     alignItems="center"
@@ -162,36 +131,30 @@ const Patterns = ({
                 </Flex>
                 <br />
                 <Select
-                    placeholder="Select pattern"
+                    placeholder="Select input type"
                     options={options}
-                    onChange={(option: ISelectOption) => {
-                        console.log(option);
-                        setPattern(option);
-                    }}
-                    value={pattern}
-                    label="Select a validation pattern to test"
+                    onChange={(option: ISelectOption) => setType(option.value)}
+                    value={type}
+                    label="Select an input type to test"
                 />
                 <Form validateOnChange>
                     <Flex direction="column" gap="0.5em">
                         <Input
-                            {...connect(config, fieldRef, inputType)}
-                            id={pattern}
-                            name={pattern}
-                            label={`Pattern: ${pattern}`}
-                            error={Boolean(config.errors[pattern])}
-                            helperText={
-                                config.errors[pattern] ||
-                                patterns[pattern]?.info
-                            }
+                            {...connect(config, type)}
+                            id={type}
+                            name={type}
+                            label={`Input type: ${type}`}
+                            error={Boolean(config.errors[type])}
+                            helperText={config.errors[type] || info[type]?.info}
                         />
                         <br />
                         <Typography variant="body1">
                             <Highlight color={THEMES[theme].success}>
-                                <HTMLText text={patterns[pattern]?.correct} />
+                                <HTMLText text={info[type]?.correct} />
                             </Highlight>
                             <br />
                             <Highlight color={THEMES[theme].error}>
-                                <HTMLText text={patterns[pattern]?.incorrect} />
+                                <HTMLText text={info[type]?.incorrect} />
                             </Highlight>
                         </Typography>
                     </Flex>
@@ -200,19 +163,19 @@ const Patterns = ({
                 <br />
                 <br />
             </Section>
-            <FooterNavigation url={`/${ROUTES.mui}`} title="Material UI" />
+            <FooterNavigation
+                url={`/${ROUTES.patterns}`}
+                title="Validation patterns"
+            />
         </MainLayout>
     );
 };
 
 export async function getStaticProps() {
-    const { patterns } = await require('@corelabui/rfm');
-    const { patternsToOptions } = await require('@/utils/dataTransform');
-
-    const options = patternsToOptions(patterns);
-    const PATTERNS_TABLE_DATA = patternsToTableData(patterns).filter((d) =>
-        Boolean(d)
-    );
+    const types = await require('@/constants/rfm/types').default;
+    const { typesToOptions } = await require('@/utils/dataTransform');
+    const options = typesToOptions(types);
+    const TYPES_TABLE_DATA = typesToTableData(types).filter((d) => Boolean(d));
 
     const paginate = (arr: any[], chunk: number) => {
         const result: { [key: string]: object[] } = {};
@@ -226,10 +189,10 @@ export async function getStaticProps() {
         return result;
     };
 
-    const data = paginate(PATTERNS_TABLE_DATA, LIMIT_PER_PAGE);
+    const data = paginate(TYPES_TABLE_DATA, LIMIT_PER_PAGE);
     const pages = Array.apply(
         null,
-        Array(Math.ceil(PATTERNS_TABLE_DATA.length / LIMIT_PER_PAGE))
+        Array(Math.ceil(TYPES_TABLE_DATA.length / LIMIT_PER_PAGE))
     ).map((_y, i) => i + 1);
 
     return {
@@ -241,4 +204,4 @@ export async function getStaticProps() {
     };
 }
 
-export default Patterns;
+export default Types;

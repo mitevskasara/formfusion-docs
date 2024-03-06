@@ -81,8 +81,8 @@ const MainLayout = ({
                     setTheme={setTheme}
                 />
                 <main className={classes.main}>{children}</main>
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 };

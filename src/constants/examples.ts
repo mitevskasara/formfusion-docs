@@ -1,4 +1,4 @@
-export const CONNECT_USAGE = `import { Form, useForm, connect } from '@corelabui/rfm';
+export const CONNECT_USAGE = `import { Form, useForm, connect } from 'formfusion';
 import './App.css';
 
 const MyForm = () => {
@@ -26,7 +26,7 @@ const MyForm = () => {
 export default MyForm;
 `;
 
-export const USEFORM_USAGE = `import { Form, Input, useForm } from '@corelabui/rfm';
+export const USEFORM_USAGE = `import { Form, Input, useForm } from 'formfusion';
 import './App.css';
 
 const MyForm = () => {
@@ -63,7 +63,7 @@ const MyForm = () => {
 export default MyForm;
 `;
 
-export const FORM_USAGE = `import { Form, Input } from '@corelabui/rfm';
+export const FORM_USAGE = `import { Form, Input } from 'formfusion';
 import './App.css';
 
 const MyForm = () => {
@@ -120,7 +120,7 @@ const MyForm = () => {
 export default MyForm;
 `;
 
-const INPUT_USAGE = `import { Form, Input } from '@corelabui/rfm';
+const INPUT_USAGE = `import { Form, Input } from 'formfusion';
 import './App.css';
 
 const MyForm = () => {
@@ -154,7 +154,7 @@ const MyForm = () => {
 export default MyForm;
 `;
 
-const TEXTAREA_USAGE = `import { Form, Textarea } from "@corelabui/rfm";
+const TEXTAREA_USAGE = `import { Form, Textarea } from "formfusion";
 import "./App.css";
 
 const MyForm = () => {
@@ -190,7 +190,7 @@ export default MyForm;
 const MUI_USAGE = `import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import { Form, useForm, connect } from '@corelabui/rfm';
+import { Form, useForm, connect } from 'formfusion';
 
 const MyForm = () => {
   const config = useForm({
@@ -228,7 +228,7 @@ export default MyForm;
 `;
 
 const ANTDESIGN_USAGE = `import { Input, Space, Button, Typography } from 'antd';
-import { Form, useForm, connect } from '@corelabui/rfm';
+import { Form, useForm, connect } from 'formfusion';
 
 const { Text } = Typography;
 
@@ -267,7 +267,7 @@ export default MyForm;
 
 const CHAKRAUI_USAGE = `import React from "react";
 import { Button, Input, Stack, Text } from "@chakra-ui/react";
-import { Form, useForm, connect } from "@corelabui/rfm";
+import { Form, useForm, connect } from "formfusion";
 
 const MyForm = () => {
   const onSubmit = (e) => {
@@ -305,7 +305,7 @@ export default MyForm;
 `;
 
 const REACTSTRAP_USAGE = `import { Input, Button, FormText } from 'reactstrap';
-import { Form, useForm, connect } from '@corelabui/rfm';
+import { Form, useForm, connect } from 'formfusion';
 
 const MyForm = () => {
   const config = useForm({
@@ -328,6 +328,30 @@ const MyForm = () => {
       <Button color="primary" type="submit" className="mt-3">
         Submit
       </Button>
+    </Form>
+  );
+};
+
+export default MyForm;
+`;
+
+export const MASKING_USAGE = `import { Form, Input } from 'formfusion';
+
+const MyForm = () => {
+  const onSubmit = (data: object) => {
+    console.log('Form submitted successfully', data);
+  };
+
+  return (
+    <Form onSubmit={onSubmit} className="form">
+      <Input
+        id="credit-card-number-hyphen"
+        name="credit-card-number-hyphen"
+        type="credit-card-number-hyphen"
+        label="Credit card number"
+        mask="####-####-####-####"
+      />
+      <button type="submit">Submit</button>
     </Form>
   );
 };

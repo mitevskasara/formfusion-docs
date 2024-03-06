@@ -2,6 +2,6 @@
     "key": "antdesign",
     "title": "Ant Design",
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-bcsqdx?file=src%2FApp.tsx",
-    "nextUrl": "/react-form-manager/integrations/chakraui",
+    "nextUrl": "/formfusion/integrations/chakraui",
     "nextUrlTitle": "Chakra UI"
 }

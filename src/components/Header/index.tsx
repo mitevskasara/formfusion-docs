@@ -6,6 +6,7 @@ import HamburgerMenu from '@/components/HamburgerMenu';
 import ClientComponent from '@/components/ClientComponent';
 
 import classes from './header.module.scss';
+import Link from '../Link';
 
 interface CustomHeaderProps {
     open: boolean;
@@ -19,20 +20,30 @@ const CustomHeader = ({ open, toggle, theme, setTheme }: CustomHeaderProps) => {
         <header className={classes.header}>
             <div className={classes.header__inner}>
                 <div className={classes.header__inner__left}>
-                    <Image
-                        src={`/assets/logo/${theme}/logo.svg`}
-                        width={150}
-                        height={39}
-                        alt="CoreLab UI logo"
-                        className={classes.header__inner__left__logo}
-                    />
-                    {/* <Image
-                            src={`/assets/logo/${theme}/logo-icon.svg`}
-                            width={27}
-                            height={39}
+                    <a href="https://www.corelabui.com">
+                        <Image
+                            src={
+                                theme === 'dark'
+                                    ? `/assets/logo/logo-dark.png`
+                                    : `/assets/logo/logo-light.png`
+                            }
+                            width={150}
+                            height={18.36}
+                            alt="CoreLab UI logo"
+                            className={classes.header__inner__left__logo}
+                        />
+                        <Image
+                            src={
+                                theme === 'dark'
+                                    ? `/assets/logo/logo-dark-mobile.png`
+                                    : `/assets/logo/logo-light-mobile.png`
+                            }
+                            width={30}
+                            height={41.88}
                             alt="CoreLab UI logo"
                             className={classes.header__inner__left__logo_mobile}
-                        /> */}
+                        />
+                    </a>
                 </div>
                 <div className={classes.header__inner__right}>
                     <Button
@@ -44,9 +55,15 @@ const CustomHeader = ({ open, toggle, theme, setTheme }: CustomHeaderProps) => {
                         <span
                             className={`icon-${
                                 theme === 'standard' ? 'dark' : 'light'
-                            } ${classes.header__inner__right__themeButton}`}
+                            } ${classes.header__inner__right__link}`}
                         />
                     </Button>
+                    <Link
+                        href="https://github.com/corelabui"
+                        target="_blank"
+                        icon="github"
+                        className={classes.header__inner__right__link}
+                    />
                     <div className={classes.header__inner__right__menuIcon}>
                         <HamburgerMenu open={open} setIsOpen={toggle} />
                     </div>

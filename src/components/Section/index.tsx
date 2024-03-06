@@ -1,11 +1,12 @@
 import Typography from 'corelabui/Typography';
 
 import classes from './section.module.scss';
-import { HTMLAttributes, LegacyRef, forwardRef } from 'react';
+import React, { HTMLAttributes, LegacyRef, forwardRef } from 'react';
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
     margin?: boolean;
     subtitle?: string;
+    badge?: React.ReactNode;
 }
 
 const Section = forwardRef(
@@ -16,6 +17,7 @@ const Section = forwardRef(
             title,
             subtitle,
             margin = true,
+            badge = null,
             ...props
         }: SectionProps,
         ref: LegacyRef<HTMLElement>
@@ -28,9 +30,12 @@ const Section = forwardRef(
                 ref={ref}
                 {...props}>
                 {title && (
-                    <Typography variant="heading4" htmlElement="h2">
-                        {title}
-                    </Typography>
+                    <div className={classes.section__title}>
+                        <Typography variant="heading4" htmlElement="h2">
+                            {title}
+                        </Typography>
+                        {badge || ''}
+                    </div>
                 )}
                 {subtitle && (
                     <Typography variant="heading5" htmlElement="h3">
