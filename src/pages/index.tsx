@@ -236,14 +236,14 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 variant="body1"
                                 htmlElement="p"
                                 margin={false}>
-                                Utilize FormFusion's optimized form components
-                                to streamline your development process. The
-                                components are designed for efficiency, ensuring
-                                fast rendering and minimal resource usage. With
-                                these optimized components, you can build forms
-                                that deliver excellent performance, enhancing
-                                the overall user experience of your
-                                applications.
+                                Utilize FormFusion&apos;s optimized form
+                                components to streamline your development
+                                process. The components are designed for
+                                efficiency, ensuring fast rendering and minimal
+                                resource usage. With these optimized components,
+                                you can build forms that deliver excellent
+                                performance, enhancing the overall user
+                                experience of your applications.
                             </Typography>
                         </div>
                         <div className={classes.services__inner__cards__card}>
@@ -259,13 +259,13 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 variant="body1"
                                 htmlElement="p"
                                 margin={false}>
-                                Elevate your form control game with FormFusion's
-                                custom React hooks. These hooks make managing
-                                forms a breeze, giving you more control and
-                                flexibility. Easily integrate them into your
-                                projects for smoother form handling, validation,
-                                and state management, effortlessly improving the
-                                user experience.
+                                Elevate your form control game with
+                                FormFusion&apos;s custom React hooks. These
+                                hooks make managing forms a breeze, giving you
+                                more control and flexibility. Easily integrate
+                                them into your projects for smoother form
+                                handling, validation, and state management,
+                                effortlessly improving the user experience.
                             </Typography>
                         </div>
                         <div className={classes.services__inner__cards__card}>
@@ -285,12 +285,12 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 FormFusion takes the hassle out of error
                                 handling by providing built-in solutions
                                 tailored to your needs. Easily customize error
-                                messages and styles to match your application's
-                                design and branding. With our intuitive tools,
-                                you can efficiently manage errors, ensuring a
-                                seamless user experience while maintaining full
-                                control over how errors are presented and
-                                managed within your forms.
+                                messages and styles to match your
+                                application&apos;s design and branding. With our
+                                intuitive tools, you can efficiently manage
+                                errors, ensuring a seamless user experience
+                                while maintaining full control over how errors
+                                are presented and managed within your forms.
                             </Typography>
                         </div>
                         <div className={classes.services__inner__cards__card}>
@@ -306,11 +306,11 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 variant="body1"
                                 htmlElement="p"
                                 margin={false}>
-                                Benefit from FormFusion's extensive library of
-                                over 500 input types and validation patterns.
-                                Whether it's simple text inputs or complex
-                                custom fields, we've got you covered. With a
-                                wide array of validation patterns, you can
+                                Benefit from FormFusion&apos;s extensive library
+                                of over 500 input types and validation patterns.
+                                Whether it&apos;s simple text inputs or complex
+                                custom fields, we&apos;ve got you covered. With
+                                a wide array of validation patterns, you can
                                 ensure data integrity and accuracy, tailored to
                                 your specific requirements.
                             </Typography>
@@ -384,8 +384,8 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                         This code snippet shows a simple payment form built with
                         FormFusion.
                         <br />
-                        It highlights the library's user-friendly approach with
-                        built-in validation and customizable fields.
+                        It highlights the library&apos;s user-friendly approach
+                        with built-in validation and customizable fields.
                     </Typography>
                     <br /> <br />
                     <div className={classes.section__example__heading}>
