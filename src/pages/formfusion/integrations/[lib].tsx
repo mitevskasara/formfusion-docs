@@ -41,7 +41,7 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    Integrating <b>React Form Manager</b> with {data?.title}
+                    Integrating <b>FormFusion</b> with {data?.title}
                     &nbsp; is a straightforward process. To accomplish this, you
                     can use the{' '}
                     <Link href={`/${ROUTES.connect}`}>connect&nbsp;</Link>
@@ -65,7 +65,7 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                     Important Note: To leverage the potential of the connect
                     method, it&apos;s important to call it on the lower-level
                     input component rendered by {data?.title}. This ensures the
-                    synchronization of React Form Manager with the {data?.title}{' '}
+                    synchronization of FormFusion with the {data?.title}{' '}
                     framework.
                 </Typography>
             </Section>

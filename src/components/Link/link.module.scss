@@ -1,10 +1,10 @@
 .link {
-    color: var(--primary);
+    color: var(--link);
     display: inline-flex;
     align-items: center;
 
     &:hover {
-        color: var(--primary-hover);
+        color: var(--link-hover);
     }
 
     &_noColor {

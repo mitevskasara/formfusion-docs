@@ -4,9 +4,10 @@
     background-color: var(--background);
     height: $footer-height;
     grid-area: footer;
-    border-top: 1px dashed var(--border-color);
-    z-index: 1;
+    border-top: 1px solid var(--border-color);
+    z-index: 2;
     position: relative;
+    padding: 0 $side-padding;
 
     &__link {
         background-color: var(--primary);

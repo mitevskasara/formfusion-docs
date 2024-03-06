@@ -1,7 +1,7 @@
 {
     "key": "form",
     "title": "Form",
-    "url": "https: //developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes",
     "description": "The Form component acts as a compact wrapper for an HTML form element, effectively handling context management and propagation to its child components. It accepts all standard HTML form properties and additionally offers the following properties:",
     "props": [
         {
@@ -40,8 +40,8 @@
             "required": false
         }
     ],
-    "exampleUrl": "https://codesandbox.io/s/rfm-basic-form-example-nvg3rr",
-    "exampleTitle": "RFM Basic Form example",
-    "nextUrl": "/react-form-manager/api/input",
+    "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-ahj7lp?file=src%2FApp.tsx",
+    "exampleTitle": "FormFusion Basic Form example",
+    "nextUrl": "/formfusion/api/input",
     "nextUrlTitle": "Input"
 }

@@ -2,12 +2,16 @@ import { darkTheme, winterTheme } from 'corelabui/Theme';
 
 const customTheme = {
     ...winterTheme,
+    primary: '#2D3250',
+    primaryHover: '#7077A1',
+    primaryDisabled: '#979CBB',
     fontFamily: 'inherit',
     body1: '0.95em'
 };
 
 const dark = {
     ...darkTheme,
+    text: '#d5d5d5e0',
     fontFamily: 'inherit',
     body1: '0.95em'
 };

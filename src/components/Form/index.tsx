@@ -1,4 +1,4 @@
-import { Form as FRMForm } from '@corelabui/rfm';
+import { Form as FRMForm } from 'formfusion';
 
 import classes from './form.module.scss';
 

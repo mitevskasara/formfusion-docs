@@ -27,7 +27,7 @@
         }
     ],
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-ju6zau?file=src%2FApp.tsx",
-    "exampleTitle": "RFM Basic Textarea usage",
-    "nextUrl": "/react-form-manager/api/useform",
+    "exampleTitle": "FormFusion Basic Textarea usage",
+    "nextUrl": "/formfusion/api/useform",
     "nextUrlTitle": "UseForm"
 }

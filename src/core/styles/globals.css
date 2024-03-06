@@ -1,10 +1,14 @@
 :root {
     --max-width: 1100px;
+    --accent: #d19d42;
+    --error: #9a414e;
+    --link: #0b60b0;
+    --link-hover: #40a2d8;
 }
 
 a {
     text-decoration: none;
-    color: var(--primary);
+    color: var(--link);
 }
 
 code {
@@ -15,4 +19,12 @@ code {
     font-weight: 500;
     color: var(--text);
     border: 1px solid var(--border-color);
+}
+
+.CoreLabUI__field--error {
+    border: 1px solid var(--error);
+}
+
+.CoreLabUI__field-root--error > .CoreLabUI__field__helper-text {
+    color: var(--error);
 }

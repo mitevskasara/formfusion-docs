@@ -9,10 +9,7 @@ import classes from './footer.module.scss';
 const Footer = () => {
     return (
         <footer className={classes.footer}>
-            <Flex
-                justifyContent="space-between"
-                alignItems="center"
-                margin="1em 0">
+            <Flex justifyContent="center" alignItems="center" margin="1em 0">
                 <Typography variant="caption" align="center" margin={false}>
                     Copyright © 2023 CoreLab UI. All rights reserved.
                 </Typography>
