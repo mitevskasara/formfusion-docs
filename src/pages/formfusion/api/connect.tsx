@@ -33,9 +33,9 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
             <Section title="Connect" margin={false}>
                 <Typography variant="body1">
                     The connect method provides you with the flexibility to
-                    integrate <strong>React Form Manager </strong>
+                    integrate <strong>FormFusion </strong>
                     into your custom Field component, offering a alternative to
-                    RFM&apos;s default
+                    FormFusion&apos;s default
                     <Link href={`/${ROUTES.input}`}>&nbsp;Input</Link> or
                     <Link href={`/${ROUTES.textarea}`}>
                         &nbsp;Textarea
@@ -45,10 +45,10 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
                     <br />
                     Connect is not limited to just custom Field components; it
                     also plays a crutial role in integrating{' '}
-                    <strong>React Form Manager </strong> with various UI
-                    libraries, amplifying the potential of your web
-                    applications. For a step-by-step guide on these
-                    integrations, refer to the instructions provided in the{' '}
+                    <strong>FormFusion </strong> with various UI libraries,
+                    amplifying the potential of your web applications. For a
+                    step-by-step guide on these integrations, refer to the
+                    instructions provided in the{' '}
                     <Link href={`${ROUTES.integrations}`}>Integrations</Link>{' '}
                     section.
                     <br />

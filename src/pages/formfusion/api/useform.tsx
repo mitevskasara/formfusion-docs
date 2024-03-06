@@ -41,7 +41,7 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                     over your forms, offering access to essential objects such
                     as values and errors. It&apos;s particularly valuable when
                     you opt for alternative Field components that differ from
-                    <strong> React Form Manager&apos;s&nbsp;</strong>
+                    <strong> FormFusion&apos;s&nbsp;</strong>
                     default <Link href={`/${ROUTES.input}`}>Input</Link> and
                     <Link href={`/${ROUTES.textarea}`}>
                         &nbsp;Textarea&nbsp;

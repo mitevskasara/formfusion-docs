@@ -23,18 +23,23 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: '/react-form-manager',
+                destination: '/formfusion',
+                permanent: true
+            },
+            {
                 source: '/blog',
-                destination: '/react-form-manager',
+                destination: '/formfusion',
                 permanent: false
             },
             {
                 source: '/docs',
-                destination: '/react-form-manager',
+                destination: '/formfusion',
                 permanent: false
             },
             {
                 source: '/privacy',
-                destination: '/react-form-manager',
+                destination: '/formfusion',
                 permanent: false
             }
         ];

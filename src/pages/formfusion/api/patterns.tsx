@@ -5,7 +5,11 @@ import Flex, { FlexItem } from 'corelabui/Flex';
 import Button from 'corelabui/Button';
 import Highlight from 'corelabui/Highlight';
 import Input from 'corelabui/Input';
-import { patterns as RFMPatterns, useForm, connect } from '@corelabui/rfm';
+import {
+    patterns as RFMPatterns,
+    useForm,
+    connect
+} from 'formfusion';
 
 import Property from '@/components/Property';
 import MainLayout from '@/components/MainLayout';
@@ -45,22 +49,22 @@ const Patterns = ({
     pages,
     options
 }: IPatternsProps) => {
-    const [patternObject, setPattern] = useState(options[0]);
-    const config = useForm({ onSubmit: () => {}, validateOnChange: true });
-    const fieldRef = useRef(null);
+    const [patternObject, setPattern] = useState<ISelectOption>(options[0]);
+    const config = useForm({ onSubmit: () => { }, validateOnChange: true });
     const [page, setPage] = useState(1);
+    const formPatterns = RFMPatterns as any;
 
     const tableData = data && data[`${page}`];
-    const pattern = patternObject.value;
+    const pattern: any = patternObject.value;
 
     const inputType =
-        typeof RFMPatterns[pattern] === 'function'
+        typeof formPatterns[pattern] === 'function'
             ? pattern.includes('Range')
-                ? RFMPatterns[pattern](1, 5)
-                : RFMPatterns[pattern](5)
+                ? formPatterns[pattern](1, 5)
+                : formPatterns[pattern](5)
             : patternObject.subtype
-            ? RFMPatterns[patternObject.type][patternObject.subtype]
-            : RFMPatterns[pattern];
+                ? formPatterns[patternObject.type][patternObject.subtype]
+                : formPatterns[pattern];
 
     return (
         <MainLayout
@@ -75,7 +79,7 @@ const Patterns = ({
                 <Typography variant="body1">
                     Similar to&nbsp;
                     <Link href={`/${ROUTES.types}`}>Input types</Link>,&nbsp;
-                    <strong>React Form Manager</strong> provides a collection of
+                    <strong>FormFusion</strong> provides a collection of
                     thoroughly tested JavaScript regular expressions that can be
                     directly applied to the pattern attribute of an input field.
                     The main difference between&nbsp;
@@ -97,14 +101,14 @@ const Patterns = ({
                     &nbsp;uses part of these validation patterns as a
                     foundation, but they are also exposed for usage when you
                     require more flexibility or when you don&apos;t intend to
-                    use the Input component provided by <strong>RFM</strong>. To
-                    put these patterns to use, simply pass your desired pattern
-                    as the&nbsp;
+                    use the Input component provided by{' '}
+                    <strong>FormFusion</strong>. To put these patterns to use,
+                    simply pass your desired pattern as the&nbsp;
                     <Property>pattern</Property> property to the input.
                     <br />
                     <br />
                     Here is a list of all validation patterns&nbsp;
-                    <strong>RFM</strong> currently contains:
+                    <strong>FormFusion</strong> currently contains:
                 </Typography>
                 <br />
                 <Flex
@@ -165,7 +169,6 @@ const Patterns = ({
                     placeholder="Select pattern"
                     options={options}
                     onChange={(option: ISelectOption) => {
-                        console.log(option);
                         setPattern(option);
                     }}
                     value={pattern}
@@ -174,7 +177,7 @@ const Patterns = ({
                 <Form validateOnChange>
                     <Flex direction="column" gap="0.5em">
                         <Input
-                            {...connect(config, fieldRef, inputType)}
+                            {...connect(config, inputType)}
                             id={pattern}
                             name={pattern}
                             label={`Pattern: ${pattern}`}
@@ -200,13 +203,16 @@ const Patterns = ({
                 <br />
                 <br />
             </Section>
-            <FooterNavigation url={`/${ROUTES.mui}`} title="Material UI" />
+            <FooterNavigation
+                url={`/${ROUTES.masking}`}
+                title="Input masking"
+            />
         </MainLayout>
     );
 };
 
 export async function getStaticProps() {
-    const { patterns } = await require('@corelabui/rfm');
+    const { patterns } = await require('formfusion');
     const { patternsToOptions } = await require('@/utils/dataTransform');
 
     const options = patternsToOptions(patterns);

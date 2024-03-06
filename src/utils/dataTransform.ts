@@ -12,13 +12,12 @@ const toIgnore = [
     'ssn'
 ];
 
-export const patternsToList = (list: []) =>
+export const patternsToList = (list: any) =>
     list
         ? [
               ...Object.keys(list)
-                  .slice(0, 15)
-                  .filter((p) => !toIgnore.includes(p)),
-              'and many more...'
+                  .slice(0, 16)
+                  .filter((p) => !toIgnore.includes(p))
           ]
         : [];
 

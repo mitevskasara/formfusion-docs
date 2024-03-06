@@ -1,6 +1,6 @@
 import React from 'react';
 import Typography from 'corelabui/Typography';
-import { Form, Input } from '@corelabui/rfm';
+import { Form, Input } from 'formfusion';
 import classes from './formExample.module.scss';
 
 const FormExample = () => {

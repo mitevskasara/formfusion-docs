@@ -86,7 +86,7 @@ pre[class*='language-'] {
 }
 
 .token.property {
-    color: #d19d42;
+    color: var(--accent);
 }
 
 .token.tag {

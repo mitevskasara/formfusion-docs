@@ -1,0 +1,14 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.container {
+    border-radius: var(--border-radius);
+    width: fit-content;
+    max-width: fit-content;
+    display: inline;
+    font-size: var(--font-small);
+    background-color: #fdc9214f;
+    color: var(--warning);
+    border: 1px solid var(--warning);
+    padding: 3px 0.5em;
+}

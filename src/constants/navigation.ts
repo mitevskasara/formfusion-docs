@@ -47,6 +47,11 @@ export default [
                 key: 'patterns',
                 title: 'Validation patterns',
                 url: `/${ROUTES.patterns}`
+            },
+            {
+                key: 'masking',
+                title: 'Input masking',
+                url: `/${ROUTES.masking}`
             }
         ]
     },

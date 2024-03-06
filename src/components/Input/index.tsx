@@ -1,4 +1,4 @@
-import { Input as FRMInput } from '@corelabui/rfm';
+import { Input as FRMInput } from 'formfusion';
 
 import classes from './input.module.scss';
 

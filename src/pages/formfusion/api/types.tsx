@@ -5,7 +5,7 @@ import Select from 'corelabui/Select';
 import Button from 'corelabui/Button';
 import Flex, { FlexItem } from 'corelabui/Flex';
 import Input from 'corelabui/Input';
-import { useForm, connect } from '@corelabui/rfm';
+import { useForm, connect } from 'formfusion';
 
 import MainLayout from '@/components/MainLayout';
 import Link from '@/components/Link';
@@ -36,7 +36,7 @@ interface ITypesProps {
 }
 
 const Types = ({ theme, setTheme, data, pages, options }: ITypesProps) => {
-    const [type, setType] = useState(options[0].value);
+    const [type, setType] = useState<any>(options[0].value);
     const [page, setPage] = useState(1);
 
     const config = useForm({ onSubmit: () => {}, validateOnChange: true });
@@ -55,8 +55,7 @@ const Types = ({ theme, setTheme, data, pages, options }: ITypesProps) => {
             setTheme={setTheme}>
             <Section title="Input types" margin={false}>
                 <Typography variant="body1">
-                    <strong>React Form Manager</strong> extends the list
-                    of&nbsp;
+                    <strong>FormFusion</strong> extends the list of&nbsp;
                     <Link
                         href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
                         target="_blank">
@@ -70,11 +69,11 @@ const Types = ({ theme, setTheme, data, pages, options }: ITypesProps) => {
                     <br />
                     <br />
                     Only pass the preffered type prop to the input and&nbsp;
-                    <strong>RFM</strong> takes care of everything.
+                    <strong>FormFusion</strong> takes care of everything.
                     <br />
                     <br />
-                    Here is a list of all types <strong>RFM</strong> currently
-                    contains:
+                    Here is a list of all types <strong>FormFusion</strong>{' '}
+                    currently contains:
                 </Typography>
                 <br />
                 <Flex
@@ -141,7 +140,7 @@ const Types = ({ theme, setTheme, data, pages, options }: ITypesProps) => {
                 <Form validateOnChange>
                     <Flex direction="column" gap="0.5em">
                         <Input
-                            {...connect(config, fieldRef, type)}
+                            {...connect(config, type)}
                             id={type}
                             name={type}
                             label={`Input type: ${type}`}
