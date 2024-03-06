@@ -5,7 +5,11 @@ import Flex, { FlexItem } from 'corelabui/Flex';
 import Button from 'corelabui/Button';
 import Highlight from 'corelabui/Highlight';
 import Input from 'corelabui/Input';
-import { patterns as RFMPatterns, useForm, connect } from 'formfusion';
+import {
+    patterns as RFMPatterns,
+    useForm,
+    connect
+} from 'formfusion';
 
 import Property from '@/components/Property';
 import MainLayout from '@/components/MainLayout';
@@ -45,21 +49,22 @@ const Patterns = ({
     pages,
     options
 }: IPatternsProps) => {
-    const [patternObject, setPattern] = useState<any>(options[0]);
-    const config = useForm({ onSubmit: () => {}, validateOnChange: true });
+    const [patternObject, setPattern] = useState<ISelectOption>(options[0]);
+    const config = useForm({ onSubmit: () => { }, validateOnChange: true });
     const [page, setPage] = useState(1);
+    const formPatterns = RFMPatterns as any;
 
     const tableData = data && data[`${page}`];
     const pattern: any = patternObject.value;
 
     const inputType =
-        typeof RFMPatterns[pattern] === 'function'
+        typeof formPatterns[pattern] === 'function'
             ? pattern.includes('Range')
-                ? RFMPatterns[pattern](1, 5)
-                : RFMPatterns[pattern](5)
+                ? formPatterns[pattern](1, 5)
+                : formPatterns[pattern](5)
             : patternObject.subtype
-            ? RFMPatterns[patternObject.type][patternObject.subtype]
-            : RFMPatterns[pattern];
+                ? formPatterns[patternObject.type][patternObject.subtype]
+                : formPatterns[pattern];
 
     return (
         <MainLayout
