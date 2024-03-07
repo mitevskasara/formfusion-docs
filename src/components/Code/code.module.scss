@@ -8,7 +8,9 @@
 .pre {
     border-radius: var(--border-radius);
     width: -webkit-fill-available;
+    width: -moz-available;
     max-width: -webkit-fill-available;
+    max-width: -moz-available;
     display: flex;
     align-items: baseline;
     overflow-x: auto;
