@@ -49,6 +49,7 @@
 
         @include media(small) {
             width: -webkit-fill-available;
+            width: -moz-available;
             max-height: auto;
         }
 
@@ -75,6 +76,7 @@
 
         @include media(small) {
             width: -webkit-fill-available;
+            width: -moz-available;
             height: 600px;
         }
     }
