@@ -29,7 +29,7 @@ const Mask = ({ theme, setTheme }: IMaskProps) => {
             {...{
                 ...META_DATA,
                 title: `${META_DATA.title} | Input masking`,
-                canonical: `https://www.corelabui.com/${ROUTES.types}`
+                canonical: `https://www.corelabui.com/${ROUTES.validation}`
             }}
             theme={theme}
             setTheme={setTheme}>

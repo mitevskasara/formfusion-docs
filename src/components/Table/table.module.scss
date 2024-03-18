@@ -16,7 +16,7 @@
 
     & > tbody > tr > td {
         vertical-align: baseline;
-        padding: 1em;
+        padding: 1em 0px;
 
         @include media(xsmall) {
             display: block;

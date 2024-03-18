@@ -23,6 +23,16 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: '/formfusion/api/types',
+                destination: '/formfusion/api/validation',
+                permanent: true
+            },
+            {
+                source: '/formfusion/api/patterns',
+                destination: '/formfusion/api/validation',
+                permanent: true
+            },
+            {
                 source: '/react-form-manager',
                 destination: '/formfusion',
                 permanent: true

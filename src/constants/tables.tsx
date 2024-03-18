@@ -7,13 +7,13 @@ export const typesToTableData = (RFMtypes: any) =>
     RFMtypes
         ? [
               ...Object.keys(RFMtypes).map((type) => {
-                  return TYPES_INFO[type]
+                  return PATTERNS_INFO[type]
                       ? {
                             type: {
                                 text: `<code>${type}</code>`,
                                 node: true
                             },
-                            desc: TYPES_INFO[type]?.description || null
+                            desc: PATTERNS_INFO[type]?.description || null
                         }
                       : null;
               })
@@ -27,9 +27,9 @@ export const patternsToTableData = (RFMPatterns: any) => {
         ? [
               ...Object.keys(RFMPatterns).map((type) => {
                   return !type.startsWith('iban') &&
-                      !type.startsWith('licencePlate') &&
-                      !type.startsWith('postalCode') &&
-                      !type.startsWith('passportNumber') &&
+                      !type.startsWith('licencePlates') &&
+                      !type.startsWith('postcodes') &&
+                      !type.startsWith('passports') &&
                       !type.startsWith('tin') &&
                       !type.startsWith('vat') &&
                       PATTERNS_INFO[type]
@@ -42,15 +42,15 @@ export const patternsToTableData = (RFMPatterns: any) => {
                         }
                       : null;
               }),
-              ...Object.keys(RFMPatterns.postalCode).map((code) =>
-                  PATTERNS_INFO[`postalCode.${code}`]
+              ...Object.keys(RFMPatterns.postcodes).map((code) =>
+                  PATTERNS_INFO[`postcodes.${code}`]
                       ? {
                             type: {
-                                text: `<code>postalCode.${code}</code>`,
+                                text: `<code>postcodes.${code}</code>`,
                                 node: true
                             },
                             desc:
-                                PATTERNS_INFO[`postalCode.${code}`]
+                                PATTERNS_INFO[`postcodes.${code}`]
                                     ?.description || null
                         }
                       : null
@@ -68,28 +68,28 @@ export const patternsToTableData = (RFMPatterns: any) => {
                         }
                       : null
               ),
-              ...Object.keys(RFMPatterns.licencePlate).map((code) =>
-                  PATTERNS_INFO[`licencePlate.${code}`]
+              ...Object.keys(RFMPatterns.licencePlates).map((code) =>
+                  PATTERNS_INFO[`licencePlates.${code}`]
                       ? {
                             type: {
-                                text: `<code>licencePlate.${code}</code>`,
+                                text: `<code>licencePlates.${code}</code>`,
                                 node: true
                             },
                             desc:
-                                PATTERNS_INFO[`licencePlate.${code}`]
+                                PATTERNS_INFO[`licencePlates.${code}`]
                                     ?.description || null
                         }
                       : null
               ),
-              ...Object.keys(RFMPatterns.passportNumber).map((code) =>
-                  PATTERNS_INFO[`passportNumber.${code}`]
+              ...Object.keys(RFMPatterns.passports).map((code) =>
+                  PATTERNS_INFO[`passports.${code}`]
                       ? {
                             type: {
-                                text: `<code>passportNumber.${code}</code>`,
+                                text: `<code>passports.${code}</code>`,
                                 node: true
                             },
                             desc:
-                                PATTERNS_INFO[`passportNumber.${code}`]
+                                PATTERNS_INFO[`passports.${code}`]
                                     ?.description || null
                         }
                       : null

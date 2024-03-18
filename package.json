@@ -11,6 +11,13 @@
         "prettier": "npx prettier --write ."
     },
     "dependencies": {
+        "@formfusion/iban": "^1.0.2",
+        "@formfusion/licence-plates": "^1.0.2",
+        "@formfusion/passports": "^1.0.1",
+        "@formfusion/phones": "^1.0.1",
+        "@formfusion/postcodes": "^1.0.2",
+        "@formfusion/tin": "^1.0.1",
+        "@formfusion/vat": "^1.0.1",
         "@next/bundle-analyzer": "^13.4.2",
         "@types/node": "20.2.5",
         "@types/react": "18.2.7",
@@ -19,7 +26,7 @@
         "axios": "^1.6.2",
         "corelabui": "^0.0.10",
         "dotenv": "^16.0.3",
-        "formfusion": "^1.0.1",
+        "formfusion": "^1.0.5",
         "moment": "^2.29.4",
         "next": "^13.5.4",
         "path": "^0.12.7",

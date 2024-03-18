@@ -6,67 +6,62 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://www.corelabui.com</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>1</priority>
 </url>
 <url>
   <loc>https://www.corelabui.com/formfusion</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.corelabui.com/formfusion/api/form</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.corelabui.com/formfusion/api/input</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.corelabui.com/formfusion/api/textarea</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.corelabui.com/formfusion/api/useform</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.corelabui.com/formfusion/api/connect</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/api/types</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.corelabui.com/formfusion/api/patterns</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <loc>https://www.corelabui.com/formfusion/api/validation</loc>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.corelabui.com/formfusion/integrations/mui</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.corelabui.com/formfusion/integrations/antdesign</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.corelabui.com/formfusion/integrations/chakraui</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.corelabui.com/formfusion/integrations/reactstrap</loc>
-  <lastmod>2024-03-06T09:00:17+00:00</lastmod>
+  <lastmod>2024-03-18T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 </urlset>
