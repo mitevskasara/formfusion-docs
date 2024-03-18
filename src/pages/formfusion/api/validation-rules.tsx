@@ -133,7 +133,7 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
                     2. By importing the preferred validation rule and passing it
                     down as the <code>type</code> property. This should be the
                     default approach when using dynamic validation rules or when
-                    using some of the formfusion's validation sets.
+                    using some of the formfusion&apos;s validation sets.
                     <br />
                     <br />
                     <ClientComponent>
@@ -143,8 +143,8 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
                     <br />
                     Currently, <strong>FormFusion </strong> includes {total}{' '}
                     generic validation rules. To use some of the more specific
-                    validation rules, you'll need to install the corresponding
-                    package.
+                    validation rules, you&apos;ll need to install the
+                    corresponding package.
                     <br />
                     <br />
                     List of available sets of validation rules:
