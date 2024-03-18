@@ -39,18 +39,13 @@ export default [
                 url: `/${ROUTES.connect}`
             },
             {
-                key: 'types',
-                title: 'Input types',
+                key: 'validation-rules',
+                title: 'Validation',
                 url: `/${ROUTES.types}`
             },
             {
-                key: 'patterns',
-                title: 'Validation patterns',
-                url: `/${ROUTES.patterns}`
-            },
-            {
                 key: 'masking',
-                title: 'Input masking',
+                title: 'Masking',
                 url: `/${ROUTES.masking}`
             }
         ]

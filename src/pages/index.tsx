@@ -161,7 +161,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 align="center"
                                 color="var(--light)">
                                 Provides a large collection of thoroughly tested
-                                and ready to use validation patterns
+                                and ready to use validation rules
                             </Typography>
                         </div>
                     </div>
@@ -299,7 +299,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 htmlElement="h2"
                                 margin={false}
                                 color="var(--primary)">
-                                500+ Validation patterns
+                                500+ Validation rules
                             </Typography>
                             <br />
                             <Typography
@@ -307,12 +307,12 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 htmlElement="p"
                                 margin={false}>
                                 Benefit from FormFusion&apos;s extensive library
-                                of over 500 input types and validation patterns.
+                                of over 500 input types and validation rules.
                                 Whether it&apos;s simple text inputs or complex
                                 custom fields, we&apos;ve got you covered. With
-                                a wide array of validation patterns, you can
-                                ensure data integrity and accuracy, tailored to
-                                your specific requirements.
+                                a wide array of validation rules, you can ensure
+                                data integrity and accuracy, tailored to your
+                                specific requirements.
                             </Typography>
                         </div>
                         <div className={classes.services__inner__cards__card}>

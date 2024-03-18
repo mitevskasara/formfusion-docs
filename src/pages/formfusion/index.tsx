@@ -65,7 +65,7 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                     &nbsp;by extending the list of&nbsp;
                     <Link href={`/${ROUTES.types}`}>native input types</Link>
                     &nbsp;and provides a large collection of thoroughly tested
-                    and ready to use validation patterns such as:
+                    and ready to use validation rules such as:
                 </Typography>
                 <GridList items={patternsToList(patterns)} />
                 <Link href="/api/patterns" style={{ float: 'right' }}>
