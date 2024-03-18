@@ -3,72 +3,68 @@ const patterns = {
         info: 'Enter a text to test. For example:',
         correct: '<span>Hello</span> is valid (at least 5 characters)',
         incorrect: '<span>Hi</span> is not valid (less than 5 characters)',
-        description:
-            'Validation pattern for minimum character length (5 or more)'
+        description: 'Validation rule for minimum character length (5 or more)'
     },
     maxCharacters: {
         info: 'Enter a text to test. For example:',
         correct: '<span>Goodbye</span> is valid (at most 7 characters)',
         incorrect:
             '<span>Farewell</span> is not valid (more than 7 characters)',
-        description:
-            'Validation pattern for maximum character length (7 or fewer)'
+        description: 'Validation rule for maximum character length (7 or fewer)'
     },
     charactersRange: {
         info: 'Enter a text to test. For example:',
         correct: '<span>Medium</span> is valid (between 4 and 8 characters)',
         incorrect: '<span>Short</span> is not valid (less than 4 characters)',
         description:
-            'Validation pattern for character length within a range (4 to 8 characters)'
+            'Validation rule for character length within a range (4 to 8 characters)'
     },
     minLetters: {
         info: 'Enter a text to test. For example:',
         correct: '<span>Text123</span> is valid (at least 3 letters)',
         incorrect: '<span>12345</span> is not valid (no letters)',
-        description:
-            'Validation pattern for minimum number of letters (3 or more)'
+        description: 'Validation rule for minimum number of letters (3 or more)'
     },
     maxLetters: {
         info: 'Enter a text to test. For example:',
         correct: '<span>AlphaBeta</span> is valid (at most 5 letters)',
         incorrect: '<span>ABCD123</span> is not valid (more than 5 letters)',
         description:
-            'Validation pattern for maximum number of letters (5 or fewer)'
+            'Validation rule for maximum number of letters (5 or fewer)'
     },
     lettersRange: {
         info: 'Enter a text to test. For example:',
         correct: '<span>abc123</span> is valid (between 2 and 5 letters)',
         incorrect: '<span>abcdefg</span> is not valid (more than 5 letters)',
-        description:
-            'Validation pattern for a range of letters (2 to 5 letters)'
+        description: 'Validation rule for a range of letters (2 to 5 letters)'
     },
     contains: {
         info: "Enter a text to test. For example, if used for the string 'test'",
         correct: '<span>tes</span>',
         incorrect: '<span>abcd</span>',
         description:
-            'Validation pattern used to check if the input value is contained in a given string.'
+            'Validation rule used to check if the input value is contained in a given string.'
     },
     equals: {
         info: "Enter a text to test. For example, if used for the string 'test'",
         correct: '<span>test</span>',
         incorrect: '<span>abcd</span>',
         description:
-            'Validation pattern used when you need to validate if the input value matches a specific string.'
+            'Validation rule used when you need to validate if the input value matches a specific string.'
     },
     existIn: {
         info: "Enter a text to test. For example, if used for array of ['value1', 'value2', 'value3']",
         correct: ['<span>value2</span>'],
         incorrect: '<span>value5</span>',
         description:
-            'Validation pattern used to check if a the input value matches any of the specified items in an array.'
+            'Validation rule used to check if a the input value matches any of the specified items in an array.'
     },
     notExistIn: {
         info: "Enter a text to test. For example, if used for array of ['value1', 'value2', 'value3']",
         correct: '<span>value5</span>',
         incorrect: ['<span>value1</span>'],
         description:
-            'Validation pattern used to check if a the input value does not match any of the specified items in an array.'
+            'Validation rule used to check if a the input value does not match any of the specified items in an array.'
     },
     email: {
         info: 'Enter a valid/invalid email address to test. For example:',
@@ -263,14 +259,14 @@ const patterns = {
         info: 'Enter a valid/invalid IPV4 address to test. For example:',
         correct: '<span>192.168.0.1</span> is a valid IPV4',
         incorrect: '<span>192.168.0.1.</span> is not a valid IPV4',
-        description: 'Validation pattern for IPV4'
+        description: 'Validation rule for IPV4'
     },
     ipv6: {
         info: 'Enter a valid/invalid IPV6 address to test. For example:',
         correct:
             '<span>2001:0db8:85a3:0000:0000:8a2e:0370:7334</span> is a valid IPV6',
         incorrect: '<span>192.168.0.1</span> is not a valid IPV6',
-        description: 'Validation pattern for IPV6'
+        description: 'Validation rule for IPV6'
     },
     uuid: {
         info: 'Enter a valid/invalid UUID (Universally Unique IDentifier) to test. For example:',
@@ -278,8 +274,7 @@ const patterns = {
             '<span>f47ac10b-58cc-4372-a567-0e02b2c3d479</span> is a valid UUID',
         incorrect:
             '<span>123e4567-e89b-12d3-a456-42665544000</span> is not a valid UUID',
-        description:
-            'Validation pattern for UUID (Universally Unique IDentifier)'
+        description: 'Validation rule for UUID (Universally Unique IDentifier)'
     },
     guid: {
         info: 'Enter a valid/invalid GUID (Globally unique identifier) to test. For example:',
@@ -287,14 +282,14 @@ const patterns = {
             '<span>3f2504e0-4f89-11d3-9a0c-0305e82c3301</span> is a valid GUID',
         incorrect:
             '<span>f47ac10b58cc4372a5670e02b2c3d479</span> is not a valid GUID',
-        description: 'Validation pattern for GUID (Globally unique identifier)'
+        description: 'Validation rule for GUID (Globally unique identifier)'
     },
     ssn: {
         info: 'Enter a valid/invalid Social Security number to test. For example:',
         correct: '<span>123-45-6789</span> is a valid Social Security number',
         incorrect:
             '<span>123456789</span> is not a valid Social Security number',
-        description: 'Validation pattern for Social Security number'
+        description: 'Validation rule for Social Security number'
     },
     ein: {
         info: 'Enter a valid/invalid Employer Identification Number (EIN) to test. A valid EIN consists of 9 digits. For example:',
@@ -529,14 +524,14 @@ const patterns = {
         description:
             'Used for validating port numbers. A port number is considered valid if it falls within the range of 0 to 65535.'
     },
-    'postalCode.af': {
+    'postcodes.af': {
         info: 'Enter a valid/invalid Afghan postal code to test. A valid Afghan postal code consists of numeric characters within specified ranges. For example:',
         correct: '<span>1001-1016</span> is a valid Afghan postal code.',
         incorrect: '<span>5000</span> is not a valid Afghan postal code.',
         description:
             'Used for validating Afghan postal codes. An Afghan postal code is considered valid if it falls within the specified numeric ranges.'
     },
-    'postalCode.ax': {
+    'postcodes.ax': {
         info: "Enter a valid/invalid Åland Islands postal code to test. A valid Åland Islands postal code consists of numeric characters in the format '22xxx'. For example:",
         correct: '<span>22345</span> is a valid Åland Islands postal code.',
         incorrect:
@@ -544,21 +539,21 @@ const patterns = {
         description:
             'Used for validating Åland Islands postal codes. An Åland Islands postal code is considered valid if it follows the specified format.'
     },
-    'postalCode.al': {
+    'postcodes.al': {
         info: 'Enter a valid/invalid Albanian postal code to test. A valid Albanian postal code consists of 4 numeric digits. For example:',
         correct: '<span>1234</span> is a valid Albanian postal code.',
         incorrect: '<span>12-34</span> is not a valid Albanian postal code.',
         description:
             'Used for validating Albanian postal codes. An Albanian postal code is considered valid if it consists of 4 numeric digits.'
     },
-    'postalCode.dz': {
+    'postcodes.dz': {
         info: 'Enter a valid/invalid Algerian postal code to test. A valid Algerian postal code follows specific numeric patterns. For example:',
         correct: '<span>12000</span> is a valid Algerian postal code.',
         incorrect: '<span>AB123</span> is not a valid Algerian postal code.',
         description:
             'Used for validating Algerian postal codes. An Algerian postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.as': {
+    'postcodes.as': {
         info: 'Enter a valid/invalid American Samoa postal code to test. A valid American Samoa postal code consists of 5 digits, optionally followed by a hyphen and 4 more digits. For example:',
         correct: '<span>96799</span> is a valid American Samoa postal code.',
         incorrect:
@@ -566,35 +561,35 @@ const patterns = {
         description:
             'Used for validating American Samoa postal codes. An American Samoa postal code is considered valid if it follows the specified format.'
     },
-    'postalCode.ad': {
+    'postcodes.ad': {
         info: "Enter a valid/invalid Andorran postal code to test. A valid Andorran postal code consists of 'AD' followed by three digits. For example:",
         correct: '<span>AD123</span> is a valid Andorran postal code.',
         incorrect: '<span>12345</span> is not a valid Andorran postal code.',
         description:
             "Used for validating Andorran postal codes. An Andorran postal code is considered valid if it consists of 'AD' followed by three digits."
     },
-    'postalCode.ai': {
+    'postcodes.ai': {
         info: "Enter a valid/invalid Anguilla postal code to test. A valid Anguilla postal code consists of 'AI-' followed by 2640. For example:",
         correct: '<span>AI-2640</span> is a valid Anguilla postal code.',
         incorrect: '<span>AI-1234</span> is not a valid Anguilla postal code.',
         description:
             "Used for validating Anguilla postal codes. An Anguilla postal code is considered valid if it consists of 'AI-' followed by 2640."
     },
-    'postalCode.ar': {
+    'postcodes.ar': {
         info: 'Enter a valid/invalid Argentine postal code to test. A valid Argentine postal code consists of 4 digits. For example:',
         correct: '<span>1234</span> is a valid Argentine postal code.',
         incorrect: '<span>ABCD</span> is not a valid Argentine postal code.',
         description:
             'Used for validating Argentine postal codes. An Argentine postal code is considered valid if it consists of 4 digits.'
     },
-    'postalCode.am': {
+    'postcodes.am': {
         info: 'Enter a valid/invalid Armenian postal code to test. A valid Armenian postal code follows specific numeric patterns. For example:',
         correct: '<span>0412</span> is a valid Armenian postal code.',
         incorrect: '<span>12345</span> is not a valid Armenian postal code.',
         description:
             'Used for validating Armenian postal codes. An Armenian postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.ac': {
+    'postcodes.ac': {
         info: "Enter a valid/invalid Ascension Island postal code to test. A valid Ascension Island postal code consists of 'ASCN 1ZZ'. For example:",
         correct:
             '<span>ASCN 1ZZ</span> is a valid Ascension Island postal code.',
@@ -603,7 +598,7 @@ const patterns = {
         description:
             "Used for validating Ascension Island postal codes. An Ascension Island postal code is considered valid if it consists of 'ASCN 1ZZ'."
     },
-    'postalCode.au': {
+    'postcodes.au': {
         info: 'Enter a valid/invalid Australian postal code to test. A valid Australian postal code consists of 4 or more digits. For example:',
         correct: '<span>1234</span> is a valid Australian postal code.',
         incorrect:
@@ -611,14 +606,14 @@ const patterns = {
         description:
             'Used for validating Australian postal codes. An Australian postal code is considered valid if it consists of 4 or more digits.'
     },
-    'postalCode.at': {
+    'postcodes.at': {
         info: 'Enter a valid/invalid Austrian postal code to test. A valid Austrian postal code consists of 4 digits. For example:',
         correct: '<span>1234</span> is a valid Austrian postal code.',
         incorrect: '<span>AT1234</span> is not a valid Austrian postal code.',
         description:
             'Used for validating Austrian postal codes. An Austrian postal code is considered valid if it consists of 4 digits.'
     },
-    'postalCode.az': {
+    'postcodes.az': {
         info: 'Enter a valid/invalid Azerbaijani postal code to test. A valid Azerbaijani postal code consists of numeric characters in specific patterns. For example:',
         correct: '<span>AZ 1234</span> is a valid Azerbaijani postal code.',
         incorrect:
@@ -626,14 +621,14 @@ const patterns = {
         description:
             'Used for validating Azerbaijani postal codes. An Azerbaijani postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.bh': {
+    'postcodes.bh': {
         info: 'Enter a valid/invalid Bahraini postal code to test. A valid Bahraini postal code consists of 5 digits. For example:',
         correct: '<span>12345</span> is a valid Bahraini postal code.',
         incorrect: '<span>BH-1234</span> is not a valid Bahraini postal code.',
         description:
             'Used for validating Bahraini postal codes. A Bahraini postal code is considered valid if it consists of 5 digits.'
     },
-    'postalCode.bd': {
+    'postcodes.bd': {
         info: 'Enter a valid/invalid Bangladeshi postal code to test. A valid Bangladeshi postal code follows specific numeric patterns. For example:',
         correct: '<span>1234</span> is a valid Bangladeshi postal code.',
         incorrect:
@@ -641,14 +636,14 @@ const patterns = {
         description:
             'Used for validating Bangladeshi postal codes. A Bangladeshi postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.bb': {
+    'postcodes.bb': {
         info: "Enter a valid/invalid Barbadian postal code to test. A valid Barbadian postal code consists of 'BB' followed by 5 digits. For example:",
         correct: '<span>BB12345</span> is a valid Barbadian postal code.',
         incorrect: '<span>1234</span> is not a valid Barbadian postal code.',
         description:
             "Used for validating Barbadian postal codes. A Barbadian postal code is considered valid if it consists of 'BB' followed by 5 digits."
     },
-    'postalCode.by': {
+    'postcodes.by': {
         info: 'Enter a valid/invalid Belarusian postal code to test. A valid Belarusian postal code follows specific numeric patterns. For example:',
         correct: '<span>220000</span> is a valid Belarusian postal code.',
         incorrect:
@@ -656,28 +651,28 @@ const patterns = {
         description:
             'Used for validating Belarusian postal codes. A Belarusian postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.be': {
+    'postcodes.be': {
         info: 'Enter a valid/invalid Belgian postal code to test. A valid Belgian postal code consists of 4 digits. For example:',
         correct: '<span>1234</span> is a valid Belgian postal code.',
         incorrect: '<span>BE-1234</span> is not a valid Belgian postal code.',
         description:
             'Used for validating Belgian postal codes. A Belgian postal code is considered valid if it consists of 4 digits.'
     },
-    'postalCode.bj': {
+    'postcodes.bj': {
         info: 'Enter a valid/invalid Beninese postal code to test. A valid Beninese postal code consists of 6 digits. For example:',
         correct: '<span>123456</span> is a valid Beninese postal code.',
         incorrect: '<span>BJ-12345</span> is not a valid Beninese postal code.',
         description:
             'Used for validating Beninese postal codes. A Beninese postal code is considered valid if it consists of 6 digits.'
     },
-    'postalCode.bm': {
+    'postcodes.bm': {
         info: 'Enter a valid/invalid Bermudian postal code to test. A valid Bermudian postal code consists of 2 uppercase letters followed by 2 digits. For example:',
         correct: '<span>BM A1</span> is a valid Bermudian postal code.',
         incorrect: '<span>12345</span> is not a valid Bermudian postal code.',
         description:
             'Used for validating Bermudian postal codes. A Bermudian postal code is considered valid if it consists of 2 uppercase letters followed by 2 digits.'
     },
-    'postalCode.bt': {
+    'postcodes.bt': {
         info: 'Enter a valid/invalid Bhutanese postal code to test. A valid Bhutanese postal code follows specific numeric patterns. For example:',
         correct: '<span>12001</span> is a valid Bhutanese postal code.',
         incorrect:
@@ -685,21 +680,21 @@ const patterns = {
         description:
             'Used for validating Bhutanese postal codes. A Bhutanese postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.ba': {
+    'postcodes.ba': {
         info: 'Enter a valid/invalid Bosnian postal code to test. A valid Bosnian postal code consists of 5 digits. For example:',
         correct: '<span>70000</span> is a valid Bosnian postal code.',
         incorrect: '<span>BA-12345</span> is not a valid Bosnian postal code.',
         description:
             'Used for validating Bosnian postal codes. A Bosnian postal code is considered valid if it consists of 5 digits.'
     },
-    'postalCode.br': {
+    'postcodes.br': {
         info: 'Enter a valid/invalid Brazilian postal code to test. A valid Brazilian postal code consists of 5 digits, optionally followed by a hyphen and 3 more digits. For example:',
         correct: '<span>12345-678</span> is a valid Brazilian postal code.',
         incorrect: '<span>BR12345</span> is not a valid Brazilian postal code.',
         description:
             'Used for validating Brazilian postal codes. A Brazilian postal code is considered valid if it follows the specified format.'
     },
-    'postalCode.io': {
+    'postcodes.io': {
         info: "Enter a valid/invalid British Indian Ocean Territory postal code to test. A valid British Indian Ocean Territory postal code consists of 'BBND 1ZZ'. For example:",
         correct:
             '<span>BBND 1ZZ</span> is a valid British Indian Ocean Territory postal code.',
@@ -708,7 +703,7 @@ const patterns = {
         description:
             "Used for validating British Indian Ocean Territory postal codes. A British Indian Ocean Territory postal code is considered valid if it consists of 'BBND 1ZZ'."
     },
-    'postalCode.vg': {
+    'postcodes.vg': {
         info: 'Enter a valid/invalid British Virgin Islands postal code to test. A valid British Virgin Islands postal code follows specific patterns. For example:',
         correct:
             '<span>VG1110</span> is a valid British Virgin Islands postal code.',
@@ -717,14 +712,14 @@ const patterns = {
         description:
             'Used for validating British Virgin Islands postal codes. A British Virgin Islands postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.bn': {
+    'postcodes.bn': {
         info: 'Enter a valid/invalid Bruneian postal code to test. A valid Bruneian postal code follows specific alphanumeric patterns. For example:',
         correct: '<span>BW1234</span> is a valid Bruneian postal code.',
         incorrect: '<span>B-N1234</span> is not a valid Bruneian postal code.',
         description:
             'Used for validating Bruneian postal codes. A Bruneian postal code is considered valid if it follows the specified alphanumeric patterns.'
     },
-    'postalCode.bg': {
+    'postcodes.bg': {
         info: 'Enter a valid/invalid Bulgarian postal code to test. A valid Bulgarian postal code consists of 4 digits. For example:',
         correct: '<span>1234</span> is a valid Bulgarian postal code.',
         incorrect:
@@ -732,28 +727,28 @@ const patterns = {
         description:
             'Used for validating Bulgarian postal codes. A Bulgarian postal code is considered valid if it consists of 4 digits.'
     },
-    'postalCode.bf': {
+    'postcodes.bf': {
         info: 'Enter a valid/invalid Burkinabe postal code to test. A valid Burkinabe postal code consists of 5 digits. For example:',
         correct: '<span>12345</span> is a valid Burkinabe postal code.',
         incorrect: '<span>BF-1234</span> is not a valid Burkinabe postal code.',
         description:
             'Used for validating Burkinabe postal codes. A Burkinabe postal code is considered valid if it consists of 5 digits.'
     },
-    'postalCode.kh': {
+    'postcodes.kh': {
         info: 'Enter a valid/invalid Cambodian postal code to test. A valid Cambodian postal code follows specific numeric patterns. For example:',
         correct: '<span>12345</span> is a valid Cambodian postal code.',
         incorrect: '<span>1234567</span> is not a valid Cambodian postal code.',
         description:
             'Used for validating Cambodian postal codes. A Cambodian postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.ca': {
+    'postcodes.ca': {
         info: 'Enter a valid/invalid Canadian postal code to test. A valid Canadian postal code consists of specific alphanumeric patterns. For example:',
         correct: '<span>A1A 1A1</span> is a valid Canadian postal code.',
         incorrect: '<span>12345</span> is not a valid Canadian postal code.',
         description:
             'Used for validating Canadian postal codes. A Canadian postal code is considered valid if it follows the specified alphanumeric patterns.'
     },
-    'postalCode.cv': {
+    'postcodes.cv': {
         info: 'Enter a valid/invalid Cape Verdean postal code to test. A valid Cape Verdean postal code follows specific numeric patterns. For example:',
         correct: '<span>1111</span> is a valid Cape Verdean postal code.',
         incorrect:
@@ -761,14 +756,14 @@ const patterns = {
         description:
             'Used for validating Cape Verdean postal codes. A Cape Verdean postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.cy': {
+    'postcodes.cy': {
         info: 'Enter a valid/invalid Cypriot postal code to test. A valid Cypriot postal code consists of 4 digits. For example:',
         correct: '<span>1234</span> is a valid Cypriot postal code.',
         incorrect: '<span>CY-12345</span> is not a valid Cypriot postal code.',
         description:
             'Used for validating Cypriot postal codes. A Cypriot postal code is considered valid if it consists of 4 digits.'
     },
-    'postalCode.cr': {
+    'postcodes.cr': {
         info: 'Enter a valid/invalid Costa Rican postal code to test. A valid Costa Rican postal code consists of 5 digits, optionally followed by a hyphen and 4 more digits. For example:',
         correct: '<span>12345</span> is a valid Costa Rican postal code.',
         incorrect:
@@ -776,28 +771,28 @@ const patterns = {
         description:
             'Used for validating Costa Rican postal codes. A Costa Rican postal code is considered valid if it follows the specified format.'
     },
-    'postalCode.hr': {
+    'postcodes.hr': {
         info: 'Enter a valid/invalid Croatian postal code to test. A valid Croatian postal code consists of 5 digits. For example:',
         correct: '<span>12345</span> is a valid Croatian postal code.',
         incorrect: '<span>HR-1234</span> is not a valid Croatian postal code.',
         description:
             'Used for validating Croatian postal codes. A Croatian postal code is considered valid if it consists of 5 digits.'
     },
-    'postalCode.cu': {
+    'postcodes.cu': {
         info: 'Enter a valid/invalid Cuban postal code to test. A valid Cuban postal code follows specific numeric patterns. For example:',
         correct: '<span>12345</span> is a valid Cuban postal code.',
         incorrect: '<span>CU-1234</span> is not a valid Cuban postal code.',
         description:
             'Used for validating Cuban postal codes. A Cuban postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.cl': {
+    'postcodes.cl': {
         info: 'Enter a valid/invalid Chilean postal code to test. A valid Chilean postal code consists of numeric characters. For example:',
         correct: '<span>1230000</span> is a valid Chilean postal code.',
         incorrect: '<span>CL-12345</span> is not a valid Chilean postal code.',
         description:
             'Used for validating Chilean postal codes. A Chilean postal code is considered valid if it consists of numeric characters in a specific pattern.'
     },
-    'postalCode.co': {
+    'postcodes.co': {
         info: 'Enter a valid/invalid Colombian postal code to test. A valid Colombian postal code consists of 6 digits. For example:',
         correct: '<span>123456</span> is a valid Colombian postal code.',
         incorrect:
@@ -805,14 +800,14 @@ const patterns = {
         description:
             'Used for validating Colombian postal codes. A Colombian postal code is considered valid if it consists of 6 digits.'
     },
-    'postalCode.cn': {
+    'postcodes.cn': {
         info: "Enter a valid/invalid Chinese postal code to test. A valid Chinese postal code consists of 6 digits and cannot be '000000'. For example:",
         correct: '<span>123456</span> is a valid Chinese postal code.',
         incorrect: '<span>000000</span> is not a valid Chinese postal code.',
         description:
             "Used for validating Chinese postal codes. A Chinese postal code is considered valid if it consists of 6 digits and is not '000000'."
     },
-    'postalCode.cx': {
+    'postcodes.cx': {
         info: "Enter a valid/invalid Christmas Island postal code to test. A valid Christmas Island postal code consists of 5 digits starting with '5'. For example:",
         correct: '<span>51234</span> is a valid Christmas Island postal code.',
         incorrect:
@@ -820,28 +815,28 @@ const patterns = {
         description:
             "Used for validating Christmas Island postal codes. A Christmas Island postal code is considered valid if it starts with '5' and consists of 5 digits."
     },
-    'postalCode.cz': {
+    'postcodes.cz': {
         info: 'Enter a valid/invalid Czech postal code to test. A valid Czech postal code consists of 5 digits and follows specific patterns. For example:',
         correct: '<span>12345</span> is a valid Czech postal code.',
         incorrect: '<span>CZ-12345</span> is not a valid Czech postal code.',
         description:
             'Used for validating Czech postal codes. A Czech postal code is considered valid if it consists of 5 digits and follows the specified patterns.'
     },
-    'postalCode.dk': {
+    'postcodes.dk': {
         info: 'Enter a valid/invalid Danish postal code to test. A valid Danish postal code consists of 4 digits. For example:',
         correct: '<span>1234</span> is a valid Danish postal code.',
         incorrect: '<span>DK-12345</span> is not a valid Danish postal code.',
         description:
             'Used for validating Danish postal codes. A Danish postal code is considered valid if it consists of 4 digits.'
     },
-    'postalCode.do': {
+    'postcodes.do': {
         info: 'Enter a valid/invalid Dominican postal code to test. A valid Dominican postal code follows specific numeric patterns. For example:',
         correct: '<span>12345</span> is a valid Dominican postal code.',
         incorrect: '<span>DO-1234</span> is not a valid Dominican postal code.',
         description:
             'Used for validating Dominican postal codes. A Dominican postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.ec': {
+    'postcodes.ec': {
         info: 'Enter a valid/invalid Ecuadorian postal code to test. A valid Ecuadorian postal code follows specific numeric patterns. For example:',
         correct: '<span>12345</span> is a valid Ecuadorian postal code.',
         incorrect:
@@ -849,14 +844,14 @@ const patterns = {
         description:
             'Used for validating Ecuadorian postal codes. An Ecuadorian postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.eg': {
+    'postcodes.eg': {
         info: 'Enter a valid/invalid Egyptian postal code to test. A valid Egyptian postal code consists of 5 digits. For example:',
         correct: '<span>12345</span> is a valid Egyptian postal code.',
         incorrect: '<span>123456</span> is not a valid Egyptian postal code.',
         description:
             'Used for validating Egyptian postal codes. An Egyptian postal code is considered valid if it consists of 5 digits.'
     },
-    'postalCode.sv': {
+    'postcodes.sv': {
         info: 'Enter a valid/invalid Salvadoran postal code to test. A valid Salvadoran postal code follows specific numeric patterns. For example:',
         correct: '<span>1234</span> is a valid Salvadoran postal code.',
         incorrect:
@@ -864,14 +859,14 @@ const patterns = {
         description:
             'Used for validating Salvadoran postal codes. A Salvadoran postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.ee': {
+    'postcodes.ee': {
         info: 'Enter a valid/invalid Estonian postal code to test. A valid Estonian postal code consists of 5 digits. For example:',
         correct: '<span>12345</span> is a valid Estonian postal code.',
         incorrect: '<span>EE-1234</span> is not a valid Estonian postal code.',
         description:
             'Used for validating Estonian postal codes. An Estonian postal code is considered valid if it consists of 5 digits.'
     },
-    'postalCode.et': {
+    'postcodes.et': {
         info: 'Enter a valid/invalid Ethiopian postal code to test. A valid Ethiopian postal code consists of 4 digits. For example:',
         correct: '<span>1234</span> is a valid Ethiopian postal code.',
         incorrect:
@@ -879,14 +874,14 @@ const patterns = {
         description:
             'Used for validating Ethiopian postal codes. An Ethiopian postal code is considered valid if it consists of 4 digits.'
     },
-    'postalCode.fo': {
+    'postcodes.fo': {
         info: 'Enter a valid/invalid Faroese postal code to test. A valid Faroese postal code consists of 3 digits. For example:',
         correct: '<span>123</span> is a valid Faroese postal code.',
         incorrect: '<span>FO-1234</span> is not a valid Faroese postal code.',
         description:
             'Used for validating Faroese postal codes. A Faroese postal code is considered valid if it consists of 3 digits.'
     },
-    'postalCode.fk': {
+    'postcodes.fk': {
         info: "Enter a valid/invalid Falkland Islands postal code to test. A valid Falkland Islands postal code follows specific patterns, such as 'FIQQ 1ZZ' or 'SIQQ 1ZZ'. For example:",
         correct:
             '<span>FIQQ 1ZZ</span> is a valid Falkland Islands postal code.',
@@ -895,21 +890,21 @@ const patterns = {
         description:
             'Used for validating Falkland Islands postal codes. A Falkland Islands postal code is considered valid if it follows the specified patterns.'
     },
-    'postalCode.fi': {
+    'postcodes.fi': {
         info: 'Enter a valid/invalid Finnish postal code to test. A valid Finnish postal code consists of 5 digits. For example:',
         correct: '<span>12345</span> is a valid Finnish postal code.',
         incorrect: '<span>FI-1234</span> is not a valid Finnish postal code.',
         description:
             'Used for validating Finnish postal codes. A Finnish postal code is considered valid if it consists of 5 digits.'
     },
-    'postalCode.fr': {
+    'postcodes.fr': {
         info: "Enter a valid/invalid French postal code to test. A valid French postal code follows specific numeric patterns and may include 'CEDEX'. For example:",
         correct: '<span>12345</span> is a valid French postal code.',
         incorrect: '<span>FR-1234</span> is not a valid French postal code.',
         description:
             "Used for validating French postal codes. A French postal code is considered valid if it follows the specified numeric patterns and may include 'CEDEX' followed by digits."
     },
-    'postalCode.gf': {
+    'postcodes.gf': {
         info: "Enter a valid/invalid French Guiana postal code to test. A valid French Guiana postal code consists of 5 digits, and 'CEDEX' may be followed by '1' or '2'. For example:",
         correct: '<span>97300</span> is a valid French Guiana postal code.',
         incorrect:
@@ -917,7 +912,7 @@ const patterns = {
         description:
             "Used for validating French Guiana postal codes. A French Guiana postal code is considered valid if it consists of 5 digits, and 'CEDEX' may be followed by '1' or '2'."
     },
-    'postalCode.pf': {
+    'postcodes.pf': {
         info: "Enter a valid/invalid French Polynesia postal code to test. A valid French Polynesia postal code consists of 5 digits and starts with '987'. For example:",
         correct: '<span>98799</span> is a valid French Polynesia postal code.',
         incorrect:
@@ -925,21 +920,21 @@ const patterns = {
         description:
             "Used for validating French Polynesia postal codes. A French Polynesia postal code is considered valid if it consists of 5 digits and starts with '987'."
     },
-    'postalCode.ge': {
+    'postcodes.ge': {
         info: 'Enter a valid/invalid Georgian postal code to test. A valid Georgian postal code consists of 4 digits. For example:',
         correct: '<span>1234</span> is a valid Georgian postal code.',
         incorrect: '<span>GE-12345</span> is not a valid Georgian postal code.',
         description:
             'Used for validating Georgian postal codes. A Georgian postal code is considered valid if it consists of 4 digits.'
     },
-    'postalCode.de': {
+    'postcodes.de': {
         info: 'Enter a valid/invalid German postal code to test. A valid German postal code follows specific numeric patterns. For example:',
         correct: '<span>12345</span> is a valid German postal code.',
         incorrect: '<span>DE-1234</span> is not a valid German postal code.',
         description:
             'Used for validating German postal codes. A German postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.gi': {
+    'postcodes.gi': {
         info: "Enter a valid/invalid Gibraltar postal code to test. A valid Gibraltar postal code follows the pattern 'GX11 1AA'. For example:",
         correct: '<span>GX11 1AA</span> is a valid Gibraltar postal code.',
         incorrect:
@@ -947,21 +942,21 @@ const patterns = {
         description:
             "Used for validating Gibraltar postal codes. A Gibraltar postal code is considered valid if it follows the pattern 'GX11 1AA'."
     },
-    'postalCode.gr': {
+    'postcodes.gr': {
         info: 'Enter a valid/invalid Greek postal code to test. A valid Greek postal code follows specific numeric patterns. For example:',
         correct: '<span>12345</span> is a valid Greek postal code.',
         incorrect: '<span>GR-1234</span> is not a valid Greek postal code.',
         description:
             'Used for validating Greek postal codes. A Greek postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.gl': {
+    'postcodes.gl': {
         info: "Enter a valid/invalid Greenland postal code to test. A valid Greenland postal code consists of 3 digits and starts with '39'. For example:",
         correct: '<span>390</span> is a valid Greenland postal code.',
         incorrect: '<span>GL-1234</span> is not a valid Greenland postal code.',
         description:
             "Used for validating Greenland postal codes. A Greenland postal code is considered valid if it consists of 3 digits and starts with '39'."
     },
-    'postalCode.gp': {
+    'postcodes.gp': {
         info: "Enter a valid/invalid Guadeloupe postal code to test. A valid Guadeloupe postal code consists of 5 digits, and 'CEDEX' may be followed by a space and a 1- or 2-digit number. For example:",
         correct: '<span>97199</span> is a valid Guadeloupe postal code.',
         incorrect:
@@ -969,14 +964,14 @@ const patterns = {
         description:
             "Used for validating Guadeloupe postal codes. A Guadeloupe postal code is considered valid if it consists of 5 digits, and 'CEDEX' may be followed by a space and a 1- or 2-digit number."
     },
-    'postalCode.gu': {
+    'postcodes.gu': {
         info: 'Enter a valid/invalid Guam postal code to test. A valid Guam postal code consists of 5 digits, and it may include a hyphen followed by 4 digits. For example:',
         correct: '<span>96999</span> is a valid Guam postal code.',
         incorrect: '<span>96999-1234</span> is not a valid Guam postal code.',
         description:
             'Used for validating Guam postal codes. A Guam postal code is considered valid if it consists of 5 digits, and it may include a hyphen followed by 4 digits.'
     },
-    'postalCode.gt': {
+    'postcodes.gt': {
         info: 'Enter a valid/invalid Guatemalan postal code to test. A valid Guatemalan postal code follows specific numeric patterns. For example:',
         correct: '<span>01001</span> is a valid Guatemalan postal code.',
         incorrect:
@@ -984,21 +979,21 @@ const patterns = {
         description:
             'Used for validating Guatemalan postal codes. A Guatemalan postal code is considered valid if it follows the specified numeric patterns.'
     },
-    'postalCode.gg': {
+    'postcodes.gg': {
         info: "Enter a valid/invalid Guernsey postal code to test. A valid Guernsey postal code consists of 'GY' followed by up to 2 digits. For example:",
         correct: '<span>GY99</span> is a valid Guernsey postal code.',
         incorrect: '<span>GG-123</span> is not a valid Guernsey postal code.',
         description:
             "Used for validating Guernsey postal codes. A Guernsey postal code is considered valid if it consists of 'GY' followed by up to 2 digits."
     },
-    'postalCode.gn': {
+    'postcodes.gn': {
         info: 'Enter a valid/invalid Guinean postal code to test. A valid Guinean postal code consists of 4 digits. For example:',
         correct: '<span>1234</span> is a valid Guinean postal code.',
         incorrect: '<span>GN-12345</span> is not a valid Guinean postal code.',
         description:
             'Used for validating Guinean postal codes. A Guinean postal code is considered valid if it consists of 4 digits.'
     },
-    'postalCode.gw': {
+    'postcodes.gw': {
         info: 'Enter a valid/invalid Guinean-Bissau postal code to test. A valid Guinean-Bissau postal code consists of 4 digits. For example:',
         correct: '<span>1234</span> is a valid Guinean-Bissau postal code.',
         incorrect:
@@ -1006,14 +1001,14 @@ const patterns = {
         description:
             'Used for validating Guinean-Bissau postal codes. A Guinean-Bissau postal code is considered valid if it consists of 4 digits.'
     },
-    'postalCode.ht': {
+    'postcodes.ht': {
         info: "Enter a valid/invalid Haitian postal code to test. A valid Haitian postal code starts with 'HT' followed by 4 digits, e.g., 'HT1234'.",
         correct: '<span>HT1234</span> is a valid Haitian postal code.',
         incorrect: '<span>HT-12345</span> is not a valid Haitian postal code.',
         description:
             "Used for validating Haitian postal codes. A valid Haitian postal code starts with 'HT' followed by 4 digits."
     },
-    'postalCode.hm': {
+    'postcodes.hm': {
         info: "Enter a valid/invalid Heard and McDonald Islands postal code to test. A valid code is '7151'.",
         correct:
             '<span>7151</span> is a valid postal code for Heard and McDonald Islands.',
@@ -1022,7 +1017,7 @@ const patterns = {
         description:
             "Used for validating Heard and McDonald Islands postal codes. The valid code is '7151'."
     },
-    'postalCode.va': {
+    'postcodes.va': {
         info: "Enter a valid/invalid Vatican City postal code to test. A valid code is '00120'.",
         correct: '<span>00120</span> is a valid postal code for Vatican City.',
         incorrect:
@@ -1030,14 +1025,14 @@ const patterns = {
         description:
             "Used for validating Vatican City postal codes. The valid code is '00120'."
     },
-    'postalCode.hn': {
+    'postcodes.hn': {
         info: "Enter a valid/invalid Honduran postal code to test. Valid codes include '10101', '12101', '12111', '13101', '13201', '14101', '14201', '15101', '15201', '16101', '16201', and others.",
         correct: '<span>10101</span> is a valid Honduran postal code.',
         incorrect: '<span>HN-12345</span> is not a valid Honduran postal code.',
         description:
             "Used for validating Honduran postal codes. Valid codes include '10101', '12101', '12111', '13101', '13201', '14101', '14201', '15101', '15201', '16101', '16201', and others."
     },
-    'postalCode.hu': {
+    'postcodes.hu': {
         info: 'Enter a valid/invalid Hungarian postal code to test. A valid Hungarian postal code consists of 4 digits.',
         correct: '<span>1234</span> is a valid Hungarian postal code.',
         incorrect:
@@ -1045,7 +1040,7 @@ const patterns = {
         description:
             'Used for validating Hungarian postal codes. A valid Hungarian postal code consists of 4 digits.'
     },
-    'postalCode.is': {
+    'postcodes.is': {
         info: 'Enter a valid/invalid Icelandic postal code to test. A valid Icelandic postal code consists of 3 digits.',
         correct: '<span>123</span> is a valid Icelandic postal code.',
         incorrect:
@@ -1053,14 +1048,14 @@ const patterns = {
         description:
             'Used for validating Icelandic postal codes. A valid Icelandic postal code consists of 3 digits.'
     },
-    'postalCode.in': {
+    'postcodes.in': {
         info: 'Enter a valid/invalid Indian postal code to test. A valid Indian postal code consists of 6 digits.',
         correct: '<span>123456</span> is a valid Indian postal code.',
         incorrect: '<span>IN-12345</span> is not a valid Indian postal code.',
         description:
             'Used for validating Indian postal codes. A valid Indian postal code consists of 6 digits.'
     },
-    'postalCode.id': {
+    'postcodes.id': {
         info: 'Enter a valid/invalid Indonesian postal code to test. A valid Indonesian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Indonesian postal code.',
         incorrect:
@@ -1068,7 +1063,7 @@ const patterns = {
         description:
             'Used for validating Indonesian postal codes. A valid Indonesian postal code consists of 5 digits.'
     },
-    'postalCode.ir': {
+    'postcodes.ir': {
         info: 'Enter a valid/invalid Iranian postal code to test. A valid Iranian postal code consists of 10 digits or 5 digits followed by a hyphen and 1 to 3 more digits.',
         correct:
             '<span>1234567890</span> or <span>12345-678</span> are valid Iranian postal codes.',
@@ -1076,14 +1071,14 @@ const patterns = {
         description:
             'Used for validating Iranian postal codes. A valid Iranian postal code consists of 10 digits or 5 digits followed by a hyphen and 1 to 3 more digits.'
     },
-    'postalCode.iq': {
+    'postcodes.iq': {
         info: 'Enter a valid/invalid Iraqi postal code to test. A valid Iraqi postal code consists of 6 digits.',
         correct: '<span>123456</span> is a valid Iraqi postal code.',
         incorrect: '<span>IQ-12345</span> is not a valid Iraqi postal code.',
         description:
             'Used for validating Iraqi postal codes. A valid Iraqi postal code consists of 6 digits.'
     },
-    'postalCode.ie': {
+    'postcodes.ie': {
         info: 'Enter a valid/invalid Irish postal code to test. A valid Irish postal code consists of 2 to 3 alphanumeric characters (letters and numbers) and may have an optional space followed by 1 or 2 alphanumeric characters.',
         correct:
             '<span>D12</span> or <span>D12 ABC</span> are valid Irish postal codes.',
@@ -1091,7 +1086,7 @@ const patterns = {
         description:
             'Used for validating Irish postal codes. A valid Irish postal code consists of 2 to 3 alphanumeric characters and may have an optional space followed by 1 or 2 alphanumeric characters.'
     },
-    'postalCode.im': {
+    'postcodes.im': {
         info: "Enter a valid/invalid Isle of Man postal code to test. A valid code is 'IM' followed by 1 or 2 digits and an optional space followed by 1 or 2 alphanumeric characters.",
         correct:
             '<span>IM1</span> or <span>IM2 AA</span> are valid Isle of Man postal codes.',
@@ -1100,14 +1095,14 @@ const patterns = {
         description:
             "Used for validating Isle of Man postal codes. A valid code is 'IM' followed by 1 or 2 digits and an optional space followed by 1 or 2 alphanumeric characters."
     },
-    'postalCode.il': {
+    'postcodes.il': {
         info: 'Enter a valid/invalid Israeli postal code to test. A valid Israeli postal code consists of 7 digits.',
         correct: '<span>1234567</span> is a valid Israeli postal code.',
         incorrect: '<span>IL-12345</span> is not a valid Israeli postal code.',
         description:
             'Used for validating Israeli postal codes. A valid Israeli postal code consists of 7 digits.'
     },
-    'postalCode.it': {
+    'postcodes.it': {
         info: 'Enter a valid/invalid Italian postal code to test. A valid Italian postal code consists of 5 digits, with specific format patterns for different regions.',
         correct:
             '<span>00123</span> or <span>48123</span> are valid Italian postal codes.',
@@ -1115,14 +1110,14 @@ const patterns = {
         description:
             'Used for validating Italian postal codes. A valid Italian postal code consists of 5 digits, with specific format patterns for different regions.'
     },
-    'postalCode.jm': {
+    'postcodes.jm': {
         info: "Enter a valid/invalid Jamaican postal code to test. A valid Jamaican postal code starts with 'JM' followed by 3 uppercase letters and 2 digits, e.g., 'JMABC12'.",
         correct: '<span>JMABC12</span> is a valid Jamaican postal code.',
         incorrect: '<span>JM12345</span> is not a valid Jamaican postal code.',
         description:
             "Used for validating Jamaican postal codes. A valid Jamaican postal code starts with 'JM' followed by 3 uppercase letters and 2 digits."
     },
-    'postalCode.jp': {
+    'postcodes.jp': {
         info: "Enter a valid/invalid Japanese postal code to test. A valid Japanese postal code consists of 7 digits in the format '123-4567'.",
         correct: '<span>123-4567</span> is a valid Japanese postal code.',
         incorrect:
@@ -1130,7 +1125,7 @@ const patterns = {
         description:
             "Used for validating Japanese postal codes. A valid Japanese postal code consists of 7 digits in the format '123-4567'."
     },
-    'postalCode.je': {
+    'postcodes.je': {
         info: "Enter a valid/invalid Jersey postal code to test. A valid Jersey postal code starts with 'JE' followed by 1 or 2 digits, e.g., 'JE1' or 'JE12'.",
         correct:
             '<span>JE1</span> or <span>JE12</span> are valid Jersey postal codes.',
@@ -1138,7 +1133,7 @@ const patterns = {
         description:
             "Used for validating Jersey postal codes. A valid Jersey postal code starts with 'JE' followed by 1 or 2 digits."
     },
-    'postalCode.jo': {
+    'postcodes.jo': {
         info: 'Enter a valid/invalid Jordanian postal code to test. A valid Jordanian postal code consists of 5 digits, with certain patterns for different regions.',
         correct:
             "Valid Jordanian postal codes include '12345' for certain regions.",
@@ -1147,7 +1142,7 @@ const patterns = {
         description:
             'Used for validating Jordanian postal codes. A valid Jordanian postal code consists of 5 digits, with specific patterns for different regions.'
     },
-    'postalCode.kz': {
+    'postcodes.kz': {
         info: 'Enter a valid/invalid Kazakhstani postal code to test. A valid Kazakhstani postal code consists of 6 characters, including letters and digits.',
         correct: '<span>K1A2B3</span> is a valid Kazakhstani postal code.',
         incorrect:
@@ -1155,21 +1150,21 @@ const patterns = {
         description:
             'Used for validating Kazakhstani postal codes. A valid Kazakhstani postal code consists of 6 characters, including letters and digits.'
     },
-    'postalCode.ke': {
+    'postcodes.ke': {
         info: 'Enter a valid/invalid Kenyan postal code to test. A valid Kenyan postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Kenyan postal code.',
         incorrect: '<span>KE-12345</span> is not a valid Kenyan postal code.',
         description:
             'Used for validating Kenyan postal codes. A valid Kenyan postal code consists of 5 digits.'
     },
-    'postalCode.ki': {
+    'postcodes.ki': {
         info: "Enter a valid/invalid Kiribati postal code to test. A valid Kiribati postal code starts with 'KI0' followed by 3 digits, e.g., 'KI0123'.",
         correct: '<span>KI0123</span> is a valid Kiribati postal code.',
         incorrect: '<span>KI-12345</span> is not a valid Kiribati postal code.',
         description:
             "Used for validating Kiribati postal codes. A valid Kiribati postal code starts with 'KI0' followed by 3 digits."
     },
-    'postalCode.xk': {
+    'postcodes.xk': {
         info: 'Enter a valid/invalid postal code for Kosovo. Valid codes consist of a number from 10 to 73 followed by a space and a 3-digit number.',
         correct:
             '<span>15 123</span> or <span>73 999</span> are valid postal codes for Kosovo.',
@@ -1178,14 +1173,14 @@ const patterns = {
         description:
             'Used for validating postal codes in Kosovo. Valid codes consist of a number from 10 to 73 followed by a space and a 3-digit number.'
     },
-    'postalCode.kw': {
+    'postcodes.kw': {
         info: 'Enter a valid/invalid Kuwaiti postal code to test. A valid Kuwaiti postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Kuwaiti postal code.',
         incorrect: '<span>KW-12345</span> is not a valid Kuwaiti postal code.',
         description:
             'Used for validating Kuwaiti postal codes. A valid Kuwaiti postal code consists of 5 digits.'
     },
-    'postalCode.ky': {
+    'postcodes.ky': {
         info: "Enter a valid/invalid postal code for the Cayman Islands. Valid codes start with 'KY' followed by the number 1, 2, or 3.",
         correct:
             '<span>KY1</span>, <span>KY2</span>, or <span>KY3</span> are valid postal codes for the Cayman Islands.',
@@ -1194,7 +1189,7 @@ const patterns = {
         description:
             "Used for validating postal codes in the Cayman Islands. Valid codes start with 'KY' followed by the number 1, 2, or 3."
     },
-    'postalCode.kg': {
+    'postcodes.kg': {
         info: "Enter a valid/invalid Kyrgyzstani postal code to test. A valid Kyrgyzstani postal code starts with the number 7, followed by 1 or 2 digits, and 4 additional digits, e.g., '7101234'.",
         correct: '<span>7101234</span> is a valid Kyrgyzstani postal code.',
         incorrect:
@@ -1202,14 +1197,14 @@ const patterns = {
         description:
             'Used for validating Kyrgyzstani postal codes. A valid Kyrgyzstani postal code starts with the number 7, followed by 1 or 2 digits, and 4 additional digits.'
     },
-    'postalCode.la': {
+    'postcodes.la': {
         info: 'Enter a valid/invalid Lao postal code to test. A valid Lao postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Lao postal code.',
         incorrect: '<span>LA123456</span> is not a valid Lao postal code.',
         description:
             'Used for validating Lao postal codes. A valid Lao postal code consists of 5 digits.'
     },
-    'postalCode.lv': {
+    'postcodes.lv': {
         info: 'Enter a valid/invalid Latvian postal code to test. Valid Latvian postal codes include various formats.',
         correct: 'Valid Latvian postal codes have different formats.',
         incorrect:
@@ -1217,7 +1212,7 @@ const patterns = {
         description:
             'Used for validating Latvian postal codes. Valid Latvian postal codes include various formats.'
     },
-    'postalCode.lb': {
+    'postcodes.lb': {
         info: 'Enter a valid/invalid Lebanese postal code to test. A valid Lebanese postal code consists of 4 digits, with an optional space followed by 4 more digits.',
         correct:
             '<span>1234</span> or <span>1234 5678</span> are valid Lebanese postal codes.',
@@ -1225,28 +1220,28 @@ const patterns = {
         description:
             'Used for validating Lebanese postal codes. A valid Lebanese postal code consists of 4 digits, with an optional space followed by 4 more digits.'
     },
-    'postalCode.ls': {
+    'postcodes.ls': {
         info: 'Enter a valid/invalid Lesotho postal code to test. A valid Lesotho postal code consists of 3 digits.',
         correct: '<span>123</span> is a valid Lesotho postal code.',
         incorrect: '<span>LS12345</span> is not a valid Lesotho postal code.',
         description:
             'Used for validating Lesotho postal codes. A valid Lesotho postal code consists of 3 digits.'
     },
-    'postalCode.lr': {
+    'postcodes.lr': {
         info: 'Enter a valid/invalid Liberian postal code to test. A valid Liberian postal code consists of 4 digits.',
         correct: '<span>1234</span> is a valid Liberian postal code.',
         incorrect: '<span>LR-12345</span> is not a valid Liberian postal code.',
         description:
             'Used for validating Liberian postal codes. A valid Liberian postal code consists of 4 digits.'
     },
-    'postalCode.ly': {
+    'postcodes.ly': {
         info: "Enter a valid/invalid Libyan postal code to test. A valid Libyan postal code consists of 3 groups of 2 digits separated by dots, e.g., '12.34.56'.",
         correct: '<span>12.34.56</span> is a valid Libyan postal code.',
         incorrect: '<span>LY-12345</span> is not a valid Libyan postal code.',
         description:
             "Used for validating Libyan postal codes. A valid Libyan postal code consists of 3 groups of 2 digits separated by dots, e.g., '12.34.56'."
     },
-    'postalCode.li': {
+    'postcodes.li': {
         info: 'Enter a valid/invalid Liechtenstein postal code to test. A valid Liechtenstein postal code consists of 4 digits in the range of 9485-9498.',
         correct:
             'Valid Liechtenstein postal codes include the range 9485-9498.',
@@ -1255,7 +1250,7 @@ const patterns = {
         description:
             'Used for validating Liechtenstein postal codes. A valid Liechtenstein postal code consists of 4 digits in the range of 9485-9498.'
     },
-    'postalCode.lt': {
+    'postcodes.lt': {
         info: 'Enter a valid/invalid Lithuanian postal code to test. A valid Lithuanian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Lithuanian postal code.',
         incorrect:
@@ -1263,7 +1258,7 @@ const patterns = {
         description:
             'Used for validating Lithuanian postal codes. A valid Lithuanian postal code consists of 5 digits.'
     },
-    'postalCode.lu': {
+    'postcodes.lu': {
         info: 'Enter a valid/invalid Luxembourgian postal code to test. Valid Luxembourgian postal codes include various formats.',
         correct: 'Valid Luxembourgian postal codes have different formats.',
         incorrect:
@@ -1271,7 +1266,7 @@ const patterns = {
         description:
             'Used for validating Luxembourgian postal codes. Valid Luxembourgian postal codes include various formats.'
     },
-    'postalCode.mg': {
+    'postcodes.mg': {
         info: "Enter a valid/invalid Malagasy postal code to test. A valid Malagasy postal code consists of 3 groups of digits separated by spaces, e.g., '101 234 567'.",
         correct: '<span>101 234 567</span> is a valid Malagasy postal code.',
         incorrect:
@@ -1279,14 +1274,14 @@ const patterns = {
         description:
             'Used for validating Malagasy postal codes. A valid Malagasy postal code consists of 3 groups of digits separated by spaces.'
     },
-    'postalCode.mw': {
+    'postcodes.mw': {
         info: 'Enter a valid/invalid Malawian postal code to test. A valid Malawian postal code consists of 6 digits.',
         correct: '<span>123456</span> is a valid Malawian postal code.',
         incorrect: '<span>MW-12345</span> is not a valid Malawian postal code.',
         description:
             'Used for validating Malawian postal codes. A valid Malawian postal code consists of 6 digits.'
     },
-    'postalCode.my': {
+    'postcodes.my': {
         info: 'Enter a valid/invalid Malaysian postal code to test. A valid Malaysian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Malaysian postal code.',
         incorrect:
@@ -1294,7 +1289,7 @@ const patterns = {
         description:
             'Used for validating Malaysian postal codes. A valid Malaysian postal code consists of 5 digits.'
     },
-    'postalCode.mv': {
+    'postcodes.mv': {
         info: 'Enter a valid/invalid postal code for the Maldives. Valid Maldivian postal codes have different formats based on the atoll or island.',
         correct:
             'Valid Maldivian postal codes have various formats based on location.',
@@ -1303,14 +1298,14 @@ const patterns = {
         description:
             'Used for validating Maldivian postal codes. Valid Maldivian postal codes have different formats based on the atoll or island.'
     },
-    'postalCode.mt': {
+    'postcodes.mt': {
         info: 'Enter a valid/invalid Maltese postal code to test. A valid Maltese postal code consists of 3 uppercase letters.',
         correct: '<span>ABC</span> is a valid Maltese postal code.',
         incorrect: '<span>MT-123</span> is not a valid Maltese postal code.',
         description:
             'Used for validating Maltese postal codes. A valid Maltese postal code consists of 3 uppercase letters.'
     },
-    'postalCode.mh': {
+    'postcodes.mh': {
         info: "Enter a valid/invalid Marshallese postal code to test. Valid codes include '969' followed by 2 digits, or '969' followed by 2 digits, a hyphen, and 4 more digits.",
         correct:
             '<span>96912</span> or <span>96912-3456</span> are valid Marshallese postal codes.',
@@ -1319,7 +1314,7 @@ const patterns = {
         description:
             "Used for validating Marshallese postal codes. A valid Marshallese postal code includes '969' followed by 2 digits, or '969' followed by 2 digits, a hyphen, and 4 more digits."
     },
-    'postalCode.mq': {
+    'postcodes.mq': {
         info: "Enter a valid/invalid postal code for Martinique. Valid codes include '972' followed by 2 digits and optionally 'CEDEX' followed by '1' or '2'.",
         correct:
             '<span>97234</span> or <span>97234 CEDEX 1</span> are valid postal codes for Martinique.',
@@ -1328,7 +1323,7 @@ const patterns = {
         description:
             "Used for validating postal codes in Martinique. Valid codes include '972' followed by 2 digits and optionally 'CEDEX' followed by '1' or '2'."
     },
-    'postalCode.mu': {
+    'postcodes.mu': {
         info: 'Enter a valid/invalid Mauritian postal code to test. A valid Mauritian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Mauritian postal code.',
         incorrect:
@@ -1336,7 +1331,7 @@ const patterns = {
         description:
             'Used for validating Mauritian postal codes. A valid Mauritian postal code consists of 5 digits.'
     },
-    'postalCode.yt': {
+    'postcodes.yt': {
         info: "Enter a valid/invalid postal code for Mayotte. Valid Mayotte postal codes include '976' followed by 2 digits, or '985' followed by 2 digits.",
         correct:
             '<span>97612</span> or <span>98534</span> are valid postal codes for Mayotte.',
@@ -1345,14 +1340,14 @@ const patterns = {
         description:
             "Used for validating postal codes in Mayotte. Valid Mayotte postal codes include '976' followed by 2 digits, or '985' followed by 2 digits."
     },
-    'postalCode.mx': {
+    'postcodes.mx': {
         info: 'Enter a valid/invalid Mexican postal code to test. A valid Mexican postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Mexican postal code.',
         incorrect: '<span>MX-123456</span> is not a valid Mexican postal code.',
         description:
             'Used for validating Mexican postal codes. A valid Mexican postal code consists of 5 digits.'
     },
-    'postalCode.fm': {
+    'postcodes.fm': {
         info: "Enter a valid/invalid Micronesian postal code to test. Valid Micronesian postal codes include '9694' followed by a digit, or '9694' followed by a digit, a hyphen, and 4 more digits.",
         correct:
             '<span>969412</span> or <span>9694-1234</span> are valid Micronesian postal codes.',
@@ -1361,14 +1356,14 @@ const patterns = {
         description:
             "Used for validating Micronesian postal codes. Valid Micronesian postal codes include '9694' followed by a digit, or '9694' followed by a digit, a hyphen, and 4 more digits."
     },
-    'postalCode.md': {
+    'postcodes.md': {
         info: 'Enter a valid/invalid Moldovan postal code to test. Valid Moldovan postal codes include various formats.',
         correct: 'Valid Moldovan postal codes have different formats.',
         incorrect: '<span>MD-12345</span> is not a valid Moldovan postal code.',
         description:
             'Used for validating Moldovan postal codes. Valid Moldovan postal codes include various formats.'
     },
-    'postalCode.mc': {
+    'postcodes.mc': {
         info: "Enter a valid/invalid Monegasque postal code to test. A valid Monegasque postal code consists of '980' followed by 2 digits.",
         correct: '<span>98012</span> is a valid Monegasque postal code.',
         incorrect:
@@ -1376,7 +1371,7 @@ const patterns = {
         description:
             "Used for validating Monegasque postal codes. A valid Monegasque postal code consists of '980' followed by 2 digits."
     },
-    'postalCode.mn': {
+    'postcodes.mn': {
         info: 'Enter a valid/invalid Mongolian postal code to test. Valid Mongolian postal codes include various formats.',
         correct: 'Valid Mongolian postal codes have different formats.',
         incorrect:
@@ -1384,7 +1379,7 @@ const patterns = {
         description:
             'Used for validating Mongolian postal codes. Valid Mongolian postal codes include various formats.'
     },
-    'postalCode.me': {
+    'postcodes.me': {
         info: "Enter a valid/invalid Montenegrin postal code to test. A valid Montenegrin postal code consists of '8' followed by '1', '4', or '5', followed by 3 more digits.",
         correct: '<span>81456</span> is a valid Montenegrin postal code.',
         incorrect:
@@ -1392,7 +1387,7 @@ const patterns = {
         description:
             "Used for validating Montenegrin postal codes. A valid Montenegrin postal code consists of '8' followed by '1', '4', or '5', followed by 3 more digits."
     },
-    'postalCode.ms': {
+    'postcodes.ms': {
         info: "Enter a valid/invalid postal code for Montserrat. Valid Montserrat postal codes include 'MSR' followed by specific digits.",
         correct: '<span>MSR1130</span> is a valid postal code for Montserrat.',
         incorrect:
@@ -1400,7 +1395,7 @@ const patterns = {
         description:
             "Used for validating postal codes in Montserrat. Valid Montserrat postal codes include 'MSR' followed by specific digits."
     },
-    'postalCode.ma': {
+    'postcodes.ma': {
         info: 'Enter a valid/invalid Moroccan postal code to test. A valid Moroccan postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Moroccan postal code.',
         incorrect:
@@ -1408,7 +1403,7 @@ const patterns = {
         description:
             'Used for validating Moroccan postal codes. A valid Moroccan postal code consists of 5 digits.'
     },
-    'postalCode.mz': {
+    'postcodes.mz': {
         info: 'Enter a valid/invalid Mozambican postal code to test. Valid Mozambican postal codes include specific digits and ranges.',
         correct:
             'Valid Mozambican postal codes have specific formats and ranges.',
@@ -1417,42 +1412,42 @@ const patterns = {
         description:
             'Used for validating Mozambican postal codes. Valid Mozambican postal codes include specific digits and ranges.'
     },
-    'postalCode.mm': {
+    'postcodes.mm': {
         info: 'Enter a valid/invalid Burmese (Myanmar) postal code to test. Valid Burmese postal codes include specific codes and ranges.',
         correct: 'Valid Burmese postal codes have specific codes and ranges.',
         incorrect: '<span>MM-12345</span> is not a valid Burmese postal code.',
         description:
             'Used for validating Burmese (Myanmar) postal codes. Valid Burmese postal codes include specific codes and ranges.'
     },
-    'postalCode.na': {
+    'postcodes.na': {
         info: 'Enter a valid/invalid Namibian postal code to test. A valid Namibian postal code consists of 4 digits.',
         correct: '<span>1234</span> is a valid Namibian postal code.',
         incorrect: '<span>NA-12345</span> is not a valid Namibian postal code.',
         description:
             'Used for validating Namibian postal codes. A valid Namibian postal code consists of 4 digits.'
     },
-    'postalCode.nr': {
+    'postcodes.nr': {
         info: "Enter a valid/invalid Nauruan postal code to test. A valid Nauruan postal code is 'NRU68'.",
         correct: '<span>NRU68</span> is a valid Nauruan postal code.',
         incorrect: '<span>NR-12345</span> is not a valid Nauruan postal code.',
         description:
             "Used for validating Nauruan postal codes. A valid Nauruan postal code is 'NRU68'."
     },
-    'postalCode.np': {
+    'postcodes.np': {
         info: 'Enter a valid/invalid Nepalese postal code to test. Valid Nepalese postal codes have specific patterns.',
         correct: 'Valid Nepalese postal codes have specific patterns.',
         incorrect: '<span>NP-12345</span> is not a valid Nepalese postal code.',
         description:
             'Used for validating Nepalese postal codes. Valid Nepalese postal codes have specific patterns.'
     },
-    'postalCode.nl': {
+    'postcodes.nl': {
         info: 'Enter a valid/invalid Dutch postal code to test. A valid Dutch postal code consists of 4 digits.',
         correct: '<span>1234</span> is a valid Dutch postal code.',
         incorrect: '<span>NL-12345</span> is not a valid Dutch postal code.',
         description:
             'Used for validating Dutch postal codes. A valid Dutch postal code consists of 4 digits.'
     },
-    'postalCode.nc': {
+    'postcodes.nc': {
         info: "Enter a valid/invalid postal code for New Caledonia. A valid New Caledonian postal code is '988' followed by 2 digits.",
         correct: '<span>98812</span> is a valid postal code for New Caledonia.',
         incorrect:
@@ -1460,7 +1455,7 @@ const patterns = {
         description:
             "Used for validating postal codes in New Caledonia. A valid New Caledonian postal code is '988' followed by 2 digits."
     },
-    'postalCode.nz': {
+    'postcodes.nz': {
         info: 'Enter a valid/invalid New Zealand postal code to test. A valid New Zealand postal code consists of 4 digits.',
         correct: '<span>1234</span> is a valid New Zealand postal code.',
         incorrect:
@@ -1468,7 +1463,7 @@ const patterns = {
         description:
             'Used for validating New Zealand postal codes. A valid New Zealand postal code consists of 4 digits.'
     },
-    'postalCode.ni': {
+    'postcodes.ni': {
         info: 'Enter a valid/invalid Nicaraguan postal code to test. Valid Nicaraguan postal codes have specific patterns.',
         correct: 'Valid Nicaraguan postal codes have specific patterns.',
         incorrect:
@@ -1476,14 +1471,14 @@ const patterns = {
         description:
             'Used for validating Nicaraguan postal codes. Valid Nicaraguan postal codes have specific patterns.'
     },
-    'postalCode.ne': {
+    'postcodes.ne': {
         info: 'Enter a valid/invalid Nigerien postal code to test. A valid Nigerien postal code consists of 3 digits, with specific prefixes.',
         correct: '<span>100</span> is a valid Nigerien postal code.',
         incorrect: '<span>NE-12345</span> is not a valid Nigerien postal code.',
         description:
             'Used for validating Nigerien postal codes. A valid Nigerien postal code consists of 3 digits, with specific prefixes.'
     },
-    'postalCode.ng': {
+    'postcodes.ng': {
         info: 'Enter a valid/invalid Nigerian postal code to test. A valid Nigerian postal code consists of 6 digits.',
         correct: '<span>123456</span> is a valid Nigerian postal code.',
         incorrect:
@@ -1491,14 +1486,14 @@ const patterns = {
         description:
             'Used for validating Nigerian postal codes. A valid Nigerian postal code consists of 6 digits.'
     },
-    'postalCode.nu': {
+    'postcodes.nu': {
         info: "Enter a valid/invalid Niuean postal code to test. A valid Niuean postal code is '9974'.",
         correct: '<span>9974</span> is a valid Niuean postal code.',
         incorrect: '<span>NU-12345</span> is not a valid Niuean postal code.',
         description:
             "Used for validating Niuean postal codes. A valid Niuean postal code is '9974'."
     },
-    'postalCode.nf': {
+    'postcodes.nf': {
         info: "Enter a valid/invalid postal code for Norfolk Island. A valid Norfolk Island postal code is '2899'.",
         correct: '<span>2899</span> is a valid postal code for Norfolk Island.',
         incorrect:
@@ -1506,7 +1501,7 @@ const patterns = {
         description:
             "Used for validating postal codes in Norfolk Island. A valid Norfolk Island postal code is '2899'."
     },
-    'postalCode.mk': {
+    'postcodes.mk': {
         info: 'Enter a valid/invalid Macedonian postal code to test. A valid Macedonian postal code consists of 4 digits.',
         correct: '<span>1234</span> is a valid Macedonian postal code.',
         incorrect:
@@ -1514,7 +1509,7 @@ const patterns = {
         description:
             'Used for validating Macedonian postal codes. A valid Macedonian postal code consists of 4 digits.'
     },
-    'postalCode.mp': {
+    'postcodes.mp': {
         info: "Enter a valid/invalid postal code for the Northern Mariana Islands. Valid codes include '9695' followed by a digit, or '9695' followed by a digit, a hyphen, and 4 more digits.",
         correct:
             '<span>969512</span> or <span>9695-1234</span> are valid postal codes for the Northern Mariana Islands.',
@@ -1523,7 +1518,7 @@ const patterns = {
         description:
             "Used for validating postal codes in the Northern Mariana Islands. Valid codes include '9695' followed by a digit, or '9695' followed by a digit, a hyphen, and 4 more digits."
     },
-    'postalCode.no': {
+    'postcodes.no': {
         info: 'Enter a valid/invalid Norwegian postal code to test. A valid Norwegian postal code consists of 4 digits.',
         correct: '<span>1234</span> is a valid Norwegian postal code.',
         incorrect:
@@ -1531,14 +1526,14 @@ const patterns = {
         description:
             'Used for validating Norwegian postal codes. A valid Norwegian postal code consists of 4 digits.'
     },
-    'postalCode.om': {
+    'postcodes.om': {
         info: 'Enter a valid/invalid Omani postal code to test. A valid Omani postal code consists of 3 digits, with specific ranges.',
         correct: '<span>123</span> is a valid Omani postal code.',
         incorrect: '<span>OM-1234</span> is not a valid Omani postal code.',
         description:
             'Used for validating Omani postal codes. A valid Omani postal code consists of 3 digits, with specific ranges.'
     },
-    'postalCode.pk': {
+    'postcodes.pk': {
         info: 'Enter a valid/invalid Pakistani postal code to test. A valid Pakistani postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Pakistani postal code.',
         incorrect:
@@ -1546,7 +1541,7 @@ const patterns = {
         description:
             'Used for validating Pakistani postal codes. A valid Pakistani postal code consists of 5 digits.'
     },
-    'postalCode.pw': {
+    'postcodes.pw': {
         info: "Enter a valid/invalid postal code for Palau. Valid Palauan postal codes include '96939' followed by 2 digits, or '96939' followed by a hyphen and 4 more digits.",
         correct:
             '<span>9693912</span> or <span>96939-1234</span> are valid postal codes for Palau.',
@@ -1555,7 +1550,7 @@ const patterns = {
         description:
             "Used for validating postal codes in Palau. Valid Palauan postal codes include '96939' followed by 2 digits, or '96939' followed by a hyphen and 4 more digits."
     },
-    'postalCode.ps': {
+    'postcodes.ps': {
         info: "Enter a valid/invalid Palestinian postal code to test. A valid Palestinian postal code consists of 'P' followed by 6 digits.",
         correct: '<span>P123456</span> is a valid Palestinian postal code.',
         incorrect:
@@ -1563,7 +1558,7 @@ const patterns = {
         description:
             "Used for validating Palestinian postal codes. A valid Palestinian postal code consists of 'P' followed by 6 digits."
     },
-    'postalCode.pa': {
+    'postcodes.pa': {
         info: 'Enter a valid/invalid Panamanian postal code to test. A valid Panamanian postal code consists of 4 digits.',
         correct: '<span>1234</span> is a valid Panamanian postal code.',
         incorrect:
@@ -1571,7 +1566,7 @@ const patterns = {
         description:
             'Used for validating Panamanian postal codes. A valid Panamanian postal code consists of 4 digits.'
     },
-    'postalCode.pg': {
+    'postcodes.pg': {
         info: "Enter a valid/invalid postal code for Papua New Guinea. Valid codes include '11' followed by a digit from 1 to 9, or '2' followed by a digit from 0 to 9, or '3' followed by a digit from 0 to 3.",
         correct:
             '<span>1101</span> or <span>2302</span> are valid postal codes for Papua New Guinea.',
@@ -1580,7 +1575,7 @@ const patterns = {
         description:
             "Used for validating postal codes in Papua New Guinea. Valid codes include '11' followed by a digit from 1 to 9, or '2' followed by a digit from 0 to 9, or '3' followed by a digit from 0 to 3."
     },
-    'postalCode.py': {
+    'postcodes.py': {
         info: 'Enter a valid/invalid Paraguayan postal code to test. A valid Paraguayan postal code consists of 6 digits.',
         correct: '<span>012345</span> is a valid Paraguayan postal code.',
         incorrect:
@@ -1588,7 +1583,7 @@ const patterns = {
         description:
             'Used for validating Paraguayan postal codes. A valid Paraguayan postal code consists of 6 digits.'
     },
-    'postalCode.pe': {
+    'postcodes.pe': {
         info: 'Enter a valid/invalid Peruvian postal code to test. A valid Peruvian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Peruvian postal code.',
         incorrect:
@@ -1596,7 +1591,7 @@ const patterns = {
         description:
             'Used for validating Peruvian postal codes. A valid Peruvian postal code consists of 5 digits.'
     },
-    'postalCode.ph': {
+    'postcodes.ph': {
         info: 'Enter a valid/invalid postal code for the Philippines. A valid Philippine postal code consists of 4 digits.',
         correct:
             '<span>1234</span> is a valid postal code for the Philippines.',
@@ -1605,7 +1600,7 @@ const patterns = {
         description:
             'Used for validating postal codes in the Philippines. A valid Philippine postal code consists of 4 digits.'
     },
-    'postalCode.pn': {
+    'postcodes.pn': {
         info: "Enter a valid/invalid postal code for Pitcairn. A valid Pitcairn postal code is 'PCRN 1ZZ'.",
         correct: '<span>PCRN 1ZZ</span> is a valid postal code for Pitcairn.',
         incorrect:
@@ -1613,7 +1608,7 @@ const patterns = {
         description:
             "Used for validating postal codes in Pitcairn. A valid Pitcairn postal code is 'PCRN 1ZZ'."
     },
-    'postalCode.pl': {
+    'postcodes.pl': {
         info: 'Enter a valid/invalid Polish postal code to test. A valid Polish postal code consists of 5 digits or 2 digits followed by a hyphen and 3 more digits.',
         correct:
             '<span>12-345</span> or <span>12345</span> are valid Polish postal codes.',
@@ -1621,7 +1616,7 @@ const patterns = {
         description:
             'Used for validating Polish postal codes. A valid Polish postal code consists of 5 digits or 2 digits followed by a hyphen and 3 more digits.'
     },
-    'postalCode.pt': {
+    'postcodes.pt': {
         info: 'Enter a valid/invalid Portuguese postal code to test. A valid Portuguese postal code consists of 4 digits followed by a hyphen and 3 more digits.',
         correct: '<span>1234-567</span> is a valid Portuguese postal code.',
         incorrect:
@@ -1629,7 +1624,7 @@ const patterns = {
         description:
             'Used for validating Portuguese postal codes. A valid Portuguese postal code consists of 4 digits followed by a hyphen and 3 more digits.'
     },
-    'postalCode.pr': {
+    'postcodes.pr': {
         info: 'Enter a valid/invalid Puerto Rican postal code to test. A valid Puerto Rican postal code consists of 5 digits.',
         correct: '<span>00678</span> is a valid Puerto Rican postal code.',
         incorrect:
@@ -1637,7 +1632,7 @@ const patterns = {
         description:
             'Used for validating Puerto Rican postal codes. A valid Puerto Rican postal code consists of 5 digits.'
     },
-    'postalCode.re': {
+    'postcodes.re': {
         info: "Enter a valid/invalid postal code for Réunion. Valid Réunion postal codes include '97478' followed by 2 digits, optionally followed by 'CEDEX'.",
         correct:
             '<span>9747801</span> or <span>97478 CEDEX</span> are valid postal codes for Réunion.',
@@ -1646,7 +1641,7 @@ const patterns = {
         description:
             "Used for validating postal codes in Réunion. Valid Réunion postal codes include '97478' followed by 2 digits, optionally followed by 'CEDEX'."
     },
-    'postalCode.ro': {
+    'postcodes.ro': {
         info: 'Enter a valid/invalid Romanian postal code to test. A valid Romanian postal code consists of 6 digits.',
         correct: '<span>123456</span> is a valid Romanian postal code.',
         incorrect:
@@ -1654,7 +1649,7 @@ const patterns = {
         description:
             'Used for validating Romanian postal codes. A valid Romanian postal code consists of 6 digits.'
     },
-    'postalCode.ru': {
+    'postcodes.ru': {
         info: 'Enter a valid/invalid Russian postal code to test. A valid Russian postal code consists of 6 digits.',
         correct: '<span>123456</span> is a valid Russian postal code.',
         incorrect:
@@ -1662,7 +1657,7 @@ const patterns = {
         description:
             'Used for validating Russian postal codes. A valid Russian postal code consists of 6 digits.'
     },
-    'postalCode.bl': {
+    'postcodes.bl': {
         info: "Enter a valid/invalid postal code for Saint Barthélemy. Valid Saint Barthélemy postal codes include '97133' followed by 2 digits or '97090' followed by 1 digit.",
         correct:
             '<span>971335</span> or <span>970901</span> are valid postal codes for Saint Barthélemy.',
@@ -1671,7 +1666,7 @@ const patterns = {
         description:
             "Used for validating postal codes in Saint Barthélemy. Valid Saint Barthélemy postal codes include '97133' followed by 2 digits or '97090' followed by 1 digit."
     },
-    'postalCode.sh': {
+    'postcodes.sh': {
         info: "Enter a valid/invalid postal code for Saint Helena. Valid Saint Helena postal codes include 'STHL 1ZZ', 'ASCN 1ZZ', or 'TSCU 1ZZ'.",
         correct:
             '<span>STHL 1ZZ</span> is a valid postal code for Saint Helena.',
@@ -1680,7 +1675,7 @@ const patterns = {
         description:
             "Used for validating postal codes in Saint Helena. Valid Saint Helena postal codes include 'STHL 1ZZ', 'ASCN 1ZZ', or 'TSCU 1ZZ'."
     },
-    'postalCode.kn': {
+    'postcodes.kn': {
         info: 'Enter a valid/invalid postal code for Saint Kitts and Nevis. Valid Saint Kitts and Nevis postal codes include specific ranges.',
         correct:
             'Valid postal codes for Saint Kitts and Nevis are in the format <span>KN01xx</span> to <span>KN12xx</span>.',
@@ -1689,7 +1684,7 @@ const patterns = {
         description:
             'Used for validating postal codes in Saint Kitts and Nevis. Valid postal codes include specific ranges.'
     },
-    'postalCode.lc': {
+    'postcodes.lc': {
         info: 'Enter a valid/invalid postal code for Saint Lucia. Valid Saint Lucia postal codes include 2 digits followed by 3 digits.',
         correct:
             '<span>LC01 123</span> is a valid postal code for Saint Lucia.',
@@ -1698,7 +1693,7 @@ const patterns = {
         description:
             'Used for validating postal codes in Saint Lucia. Valid Saint Lucia postal codes include 2 digits followed by 3 digits.'
     },
-    'postalCode.mf': {
+    'postcodes.mf': {
         info: 'Enter a valid/invalid postal code for Saint Martin. Valid Saint Martin postal codes include specific ranges.',
         correct:
             'Valid postal codes for Saint Martin are in the format <span>9705x</span>.',
@@ -1707,7 +1702,7 @@ const patterns = {
         description:
             'Used for validating postal codes in Saint Martin. Valid postal codes include specific ranges.'
     },
-    'postalCode.pm': {
+    'postcodes.pm': {
         info: 'Enter a valid/invalid postal code for Saint Pierre and Miquelon. Valid Saint Pierre and Miquelon postal codes are in the format <span>975xx</span>.',
         correct:
             '<span>97512</span> is a valid postal code for Saint Pierre and Miquelon.',
@@ -1716,7 +1711,7 @@ const patterns = {
         description:
             'Used for validating postal codes in Saint Pierre and Miquelon. Valid postal codes are in the format <span>975xx</span>.'
     },
-    'postalCode.vc': {
+    'postcodes.vc': {
         info: 'Enter a valid/invalid postal code for Saint Vincent and the Grenadines. Valid Saint Vincent and the Grenadines postal codes include specific ranges.',
         correct:
             'Valid postal codes for Saint Vincent and the Grenadines are in the format <span>VC01x</span> to <span>VC04x</span>.',
@@ -1725,7 +1720,7 @@ const patterns = {
         description:
             'Used for validating postal codes in Saint Vincent and the Grenadines. Valid postal codes include specific ranges.'
     },
-    'postalCode.ws': {
+    'postcodes.ws': {
         info: 'Enter a valid/invalid postal code for Samoa. Valid Samoan postal codes are in the format <span>WS1xxx</span> to <span>WS2xxx</span>.',
         correct:
             'Valid postal codes for Samoa are in the format <span>WS1901</span> to <span>WS2999</span>.',
@@ -1734,7 +1729,7 @@ const patterns = {
         description:
             'Used for validating postal codes in Samoa. Valid postal codes include specific ranges.'
     },
-    'postalCode.sm': {
+    'postcodes.sm': {
         info: "Enter a valid/invalid postal code for San Marino. Valid San Marino postal codes start with '4789' followed by one digit.",
         correct: '<span>47891</span> is a valid postal code for San Marino.',
         incorrect:
@@ -1742,7 +1737,7 @@ const patterns = {
         description:
             "Used for validating postal codes in San Marino. Valid San Marino postal codes start with '4789' followed by one digit."
     },
-    'postalCode.sa': {
+    'postcodes.sa': {
         info: 'Enter a valid/invalid Saudi Arabian postal code to test. A valid Saudi Arabian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Saudi Arabian postal code.',
         incorrect:
@@ -1750,7 +1745,7 @@ const patterns = {
         description:
             'Used for validating Saudi Arabian postal codes. A valid Saudi Arabian postal code consists of 5 digits.'
     },
-    'postalCode.sn': {
+    'postcodes.sn': {
         info: 'Enter a valid/invalid Senegalese postal code to test. A valid Senegalese postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Senegalese postal code.',
         incorrect:
@@ -1758,14 +1753,14 @@ const patterns = {
         description:
             'Used for validating Senegalese postal codes. A valid Senegalese postal code consists of 5 digits.'
     },
-    'postalCode.rs': {
+    'postcodes.rs': {
         info: 'Enter a valid/invalid Serbian postal code to test. A valid Serbian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Serbian postal code.',
         incorrect: '<span>RS-1234</span> is not a valid Serbian postal code.',
         description:
             'Used for validating Serbian postal codes. A valid Serbian postal code consists of 5 digits.'
     },
-    'postalCode.sg': {
+    'postcodes.sg': {
         info: 'Enter a valid/invalid Singaporean postal code to test. A valid Singaporean postal code consists of 6 digits.',
         correct: '<span>123456</span> is a valid Singaporean postal code.',
         incorrect:
@@ -1773,14 +1768,14 @@ const patterns = {
         description:
             'Used for validating Singaporean postal codes. A valid Singaporean postal code consists of 6 digits.'
     },
-    'postalCode.sk': {
+    'postcodes.sk': {
         info: 'Enter a valid/invalid Slovakian postal code to test. A valid Slovakian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Slovakian postal code.',
         incorrect: '<span>SK-1234</span> is not a valid Slovakian postal code.',
         description:
             'Used for validating Slovakian postal codes. A valid Slovakian postal code consists of 5 digits.'
     },
-    'postalCode.si': {
+    'postcodes.si': {
         info: 'Enter a valid/invalid Slovenian postal code to test. A valid Slovenian postal code consists of 4 or 5 digits.',
         correct:
             '<span>1234</span> or <span>12345</span> are valid Slovenian postal codes.',
@@ -1788,14 +1783,14 @@ const patterns = {
         description:
             'Used for validating Slovenian postal codes. A valid Slovenian postal code consists of 4 or 5 digits.'
     },
-    'postalCode.so': {
+    'postcodes.so': {
         info: 'Enter a valid/invalid Somali postal code to test. A valid Somali postal code consists of a letter code (e.g., AD) followed by 5 digits.',
         correct: '<span>AD 12345</span> is a valid Somali postal code.',
         incorrect: '<span>SO-12345</span> is not a valid Somali postal code.',
         description:
             'Used for validating Somali postal codes. A valid Somali postal code consists of a letter code followed by 5 digits.'
     },
-    'postalCode.za': {
+    'postcodes.za': {
         info: 'Enter a valid/invalid South African postal code to test. A valid South African postal code consists of 4 or 6 digits.',
         correct:
             '<span>1234</span> or <span>123456</span> are valid South African postal codes.',
@@ -1804,7 +1799,7 @@ const patterns = {
         description:
             'Used for validating South African postal codes. A valid South African postal code consists of 4 or 6 digits.'
     },
-    'postalCode.gs': {
+    'postcodes.gs': {
         info: "Enter a valid/invalid postal code for South Georgia and the South Sandwich Islands. A valid South Georgia and the South Sandwich Islands postal code is 'SIQQ 1ZZ'.",
         correct:
             '<span>SIQQ 1ZZ</span> is a valid postal code for South Georgia and the South Sandwich Islands.',
@@ -1813,7 +1808,7 @@ const patterns = {
         description:
             "Used for validating postal codes in South Georgia and the South Sandwich Islands. A valid postal code is 'SIQQ 1ZZ'."
     },
-    'postalCode.kr': {
+    'postcodes.kr': {
         info: 'Enter a valid/invalid South Korean postal code to test. A valid South Korean postal code consists of 5 or 6 digits.',
         correct:
             '<span>12345</span> or <span>123456</span> are valid South Korean postal codes.',
@@ -1822,7 +1817,7 @@ const patterns = {
         description:
             'Used for validating South Korean postal codes. A valid South Korean postal code consists of 5 or 6 digits.'
     },
-    'postalCode.ss': {
+    'postcodes.ss': {
         info: 'Enter a valid/invalid South Sudanese postal code to test. A valid South Sudanese postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid South Sudanese postal code.',
         incorrect:
@@ -1830,14 +1825,14 @@ const patterns = {
         description:
             'Used for validating South Sudanese postal codes. A valid South Sudanese postal code consists of 5 digits.'
     },
-    'postalCode.es': {
+    'postcodes.es': {
         info: 'Enter a valid/invalid Spanish postal code to test. A valid Spanish postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Spanish postal code.',
         incorrect: '<span>ES-1234</span> is not a valid Spanish postal code.',
         description:
             'Used for validating Spanish postal codes. A valid Spanish postal code consists of 5 digits.'
     },
-    'postalCode.lk': {
+    'postcodes.lk': {
         info: 'Enter a valid/invalid Sri Lankan postal code to test. A valid Sri Lankan postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Sri Lankan postal code.',
         incorrect:
@@ -1845,14 +1840,14 @@ const patterns = {
         description:
             'Used for validating Sri Lankan postal codes. A valid Sri Lankan postal code consists of 5 digits.'
     },
-    'postalCode.sd': {
+    'postcodes.sd': {
         info: 'Enter a valid/invalid Sudanese postal code to test. A valid Sudanese postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Sudanese postal code.',
         incorrect: '<span>SD-1234</span> is not a valid Sudanese postal code.',
         description:
             'Used for validating Sudanese postal codes. A valid Sudanese postal code consists of 5 digits.'
     },
-    'postalCode.sj': {
+    'postcodes.sj': {
         info: 'Enter a valid/invalid Svalbard and Jan Mayen postal code to test. A valid Svalbard and Jan Mayen postal code consists of 4 digits.',
         correct:
             '<span>1234</span> is a valid Svalbard and Jan Mayen postal code.',
@@ -1861,28 +1856,28 @@ const patterns = {
         description:
             'Used for validating Svalbard and Jan Mayen postal codes. A valid postal code consists of 4 digits.'
     },
-    'postalCode.sz': {
+    'postcodes.sz': {
         info: 'Enter a valid/invalid Swazi postal code to test. A valid Swazi postal code consists of a letter (H, L, M, S) followed by 3 digits.',
         correct: '<span>H123</span> is a valid Swazi postal code.',
         incorrect: '<span>SZ-12345</span> is not a valid Swazi postal code.',
         description:
             'Used for validating Swazi postal codes. A valid Swazi postal code consists of a letter followed by 3 digits.'
     },
-    'postalCode.se': {
+    'postcodes.se': {
         info: 'Enter a valid/invalid Swedish postal code to test. A valid Swedish postal code consists of 5 digits with optional spaces.',
         correct: '<span>12345</span> is a valid Swedish postal code.',
         incorrect: '<span>SE-1234</span> is not a valid Swedish postal code.',
         description:
             'Used for validating Swedish postal codes. A valid Swedish postal code consists of 5 digits with optional spaces.'
     },
-    'postalCode.ch': {
+    'postcodes.ch': {
         info: 'Enter a valid/invalid Swiss postal code to test. A valid Swiss postal code consists of 4 digits.',
         correct: '<span>1234</span> is a valid Swiss postal code.',
         incorrect: '<span>CH-12345</span> is not a valid Swiss postal code.',
         description:
             'Used for validating Swiss postal codes. A valid Swiss postal code consists of 4 digits.'
     },
-    'postalCode.tw': {
+    'postcodes.tw': {
         info: 'Enter a valid/invalid Taiwanese postal code to test. A valid Taiwanese postal code consists of 3 or 6 digits.',
         correct:
             '<span>123</span> or <span>123456</span> are valid Taiwanese postal codes.',
@@ -1891,7 +1886,7 @@ const patterns = {
         description:
             'Used for validating Taiwanese postal codes. A valid Taiwanese postal code consists of 3 or 6 digits.'
     },
-    'postalCode.tj': {
+    'postcodes.tj': {
         info: "Enter a valid/invalid Tajikistani postal code to test. A valid Tajikistani postal code consists of 6 digits starting with '7'.",
         correct: '<span>701234</span> is a valid Tajikistani postal code.',
         incorrect:
@@ -1899,21 +1894,21 @@ const patterns = {
         description:
             "Used for validating Tajikistani postal codes. A valid Tajikistani postal code consists of 6 digits starting with '7'."
     },
-    'postalCode.tz': {
+    'postcodes.tz': {
         info: 'Enter a valid/invalid Tanzanian postal code to test. A valid Tanzanian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Tanzanian postal code.',
         incorrect: '<span>TZ-1234</span> is not a valid Tanzanian postal code.',
         description:
             'Used for validating Tanzanian postal codes. A valid Tanzanian postal code consists of 5 digits.'
     },
-    'postalCode.th': {
+    'postcodes.th': {
         info: 'Enter a valid/invalid Thai postal code to test. A valid Thai postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Thai postal code.',
         incorrect: '<span>TH-1234</span> is not a valid Thai postal code.',
         description:
             'Used for validating Thai postal codes. A valid Thai postal code consists of 5 digits.'
     },
-    'postalCode.tt': {
+    'postcodes.tt': {
         info: 'Enter a valid/invalid Trinidad and Tobago postal code to test. A valid Trinidad and Tobago postal code consists of 6 digits.',
         correct:
             '<span>123456</span> is a valid Trinidad and Tobago postal code.',
@@ -1922,21 +1917,21 @@ const patterns = {
         description:
             'Used for validating Trinidad and Tobago postal codes. A valid postal code consists of 6 digits.'
     },
-    'postalCode.tn': {
+    'postcodes.tn': {
         info: 'Enter a valid/invalid Tunisian postal code to test. A valid Tunisian postal code consists of 4 digits.',
         correct: '<span>1234</span> is a valid Tunisian postal code.',
         incorrect: '<span>TN-12345</span> is not a valid Tunisian postal code.',
         description:
             'Used for validating Tunisian postal codes. A valid Tunisian postal code consists of 4 digits.'
     },
-    'postalCode.tr': {
+    'postcodes.tr': {
         info: 'Enter a valid/invalid Turkish postal code to test. A valid Turkish postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Turkish postal code.',
         incorrect: '<span>TR-1234</span> is not a valid Turkish postal code.',
         description:
             'Used for validating Turkish postal codes. A valid Turkish postal code consists of 5 digits.'
     },
-    'postalCode.tm': {
+    'postcodes.tm': {
         info: "Enter a valid/invalid Turkmenistani postal code to test. A valid Turkmenistani postal code consists of 6 digits starting with '7'.",
         correct: '<span>701234</span> is a valid Turkmenistani postal code.',
         incorrect:
@@ -1944,7 +1939,7 @@ const patterns = {
         description:
             "Used for validating Turkmenistani postal codes. A valid Turkmenistani postal code consists of 6 digits starting with '7'."
     },
-    'postalCode.tc': {
+    'postcodes.tc': {
         info: "Enter a valid/invalid postal code for the Turks and Caicos Islands. A valid postal code for the Turks and Caicos Islands is 'TKCA 1ZZ'.",
         correct:
             '<span>TKCA 1ZZ</span> is a valid postal code for the Turks and Caicos Islands.',
@@ -1953,7 +1948,7 @@ const patterns = {
         description:
             "Used for validating postal codes in the Turks and Caicos Islands. A valid postal code is 'TKCA 1ZZ'."
     },
-    'postalCode.ua': {
+    'postcodes.ua': {
         info: 'Enter a valid/invalid Ukrainian postal code to test. A valid Ukrainian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Ukrainian postal code.',
         incorrect:
@@ -1961,7 +1956,7 @@ const patterns = {
         description:
             'Used for validating Ukrainian postal codes. A valid Ukrainian postal code consists of 5 digits.'
     },
-    'postalCode.gb': {
+    'postcodes.gb': {
         info: "Enter a valid/invalid UK postal code to test. UK postal codes follow various formats, including 'AA1 1AA', 'A1 1AA', or 'A1A 1AA'.",
         correct:
             '<span>AA1 1AA</span>, <span>A1 1AA</span>, or <span>A1A 1AA</span> are valid UK postal codes.',
@@ -1969,7 +1964,7 @@ const patterns = {
         description:
             "Used for validating UK postal codes. UK postal codes follow various formats, including 'AA1 1AA', 'A1 1AA', or 'A1A 1AA'."
     },
-    'postalCode.us': {
+    'postcodes.us': {
         info: 'Enter a valid/invalid US ZIP code to test. A valid US ZIP code consists of 5 digits or 5+4 digits with a hyphen.',
         correct:
             '<span>12345</span> or <span>12345-6789</span> are valid US ZIP codes.',
@@ -1977,7 +1972,7 @@ const patterns = {
         description:
             'Used for validating US ZIP codes. A valid US ZIP code consists of 5 digits or 5+4 digits with a hyphen.'
     },
-    'postalCode.vi': {
+    'postcodes.vi': {
         info: 'Enter a valid/invalid US Virgin Islands postal code to test. A valid US Virgin Islands postal code consists of 3 digits.',
         correct: '<span>008</span> is a valid US Virgin Islands postal code.',
         incorrect:
@@ -1985,14 +1980,14 @@ const patterns = {
         description:
             'Used for validating US Virgin Islands postal codes. A valid US Virgin Islands postal code consists of 3 digits.'
     },
-    'postalCode.uy': {
+    'postcodes.uy': {
         info: 'Enter a valid/invalid Uruguayan postal code to test. A valid Uruguayan postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Uruguayan postal code.',
         incorrect: '<span>UY-1234</span> is not a valid Uruguayan postal code.',
         description:
             'Used for validating Uruguayan postal codes. A valid Uruguayan postal code consists of 5 digits.'
     },
-    'postalCode.uz': {
+    'postcodes.uz': {
         info: 'Enter a valid/invalid Uzbekistani postal code to test. A valid Uzbekistani postal code consists of 6 digits.',
         correct: '<span>100201</span> is a valid Uzbekistani postal code.',
         incorrect:
@@ -2000,7 +1995,7 @@ const patterns = {
         description:
             'Used for validating Uzbekistani postal codes. A valid Uzbekistani postal code consists of 6 digits.'
     },
-    'postalCode.ve': {
+    'postcodes.ve': {
         info: 'Enter a valid/invalid Venezuelan postal code to test. A valid Venezuelan postal code consists of 4 digits, optionally followed by a letter.',
         correct:
             '<span>1234</span> or <span>1234A</span> are valid Venezuelan postal codes.',
@@ -2009,7 +2004,7 @@ const patterns = {
         description:
             'Used for validating Venezuelan postal codes. A valid Venezuelan postal code consists of 4 digits, optionally followed by a letter.'
     },
-    'postalCode.vn': {
+    'postcodes.vn': {
         info: 'Enter a valid/invalid Vietnamese postal code to test. A valid Vietnamese postal code follows various formats, including 6 digits or 6+4 digits with a hyphen.',
         correct:
             '<span>123456</span> or <span>123456-7890</span> are valid Vietnamese postal codes.',
@@ -2018,7 +2013,7 @@ const patterns = {
         description:
             'Used for validating Vietnamese postal codes. A valid Vietnamese postal code follows various formats, including 6 digits or 6+4 digits with a hyphen.'
     },
-    'postalCode.wf': {
+    'postcodes.wf': {
         info: 'Enter a valid/invalid Wallis and Futuna postal code to test. A valid Wallis and Futuna postal code consists of 3 digits.',
         correct: '<span>986</span> is a valid Wallis and Futuna postal code.',
         incorrect:
@@ -2026,7 +2021,7 @@ const patterns = {
         description:
             'Used for validating Wallis and Futuna postal codes. A valid Wallis and Futuna postal code consists of 3 digits.'
     },
-    'postalCode.eh': {
+    'postcodes.eh': {
         info: "Enter a valid/invalid Western Sahara postal code to test. A valid Western Sahara postal code consists of 5 digits starting with '7'.",
         correct: '<span>70123</span> is a valid Western Sahara postal code.',
         incorrect:
@@ -2034,14 +2029,14 @@ const patterns = {
         description:
             "Used for validating Western Sahara postal codes. A valid Western Sahara postal code consists of 5 digits starting with '7'."
     },
-    'postalCode.zm': {
+    'postcodes.zm': {
         info: 'Enter a valid/invalid Zambian postal code to test. A valid Zambian postal code consists of 5 digits.',
         correct: '<span>12345</span> is a valid Zambian postal code.',
         incorrect: '<span>ZM-1234</span> is not a valid Zambian postal code.',
         description:
             'Used for validating Zambian postal codes. A valid Zambian postal code consists of 5 digits.'
     },
-    'passportNumber.am': {
+    'passports.am': {
         info: 'Enter a valid/invalid Armenian passport number to test. A valid passport number consists of two letters followed by seven numbers. For example:',
         correct: '<span>AB1234567</span> is a valid Armenian passport number',
         incorrect:
@@ -2049,7 +2044,7 @@ const patterns = {
         description:
             'Used for Armenian passport number fields. A valid passport number consists of two letters followed by seven numbers.'
     },
-    'passportNumber.ar': {
+    'passports.ar': {
         info: 'Enter a valid/invalid Argentine passport number to test. A valid passport number consists of three letters followed by six numbers. For example:',
         correct: '<span>ABC123456</span> is a valid Argentine passport number',
         incorrect:
@@ -2057,7 +2052,7 @@ const patterns = {
         description:
             'Used for Argentine passport number fields. A valid passport number consists of three letters followed by six numbers.'
     },
-    'passportNumber.at': {
+    'passports.at': {
         info: 'Enter a valid/invalid Austrian passport number to test. A valid passport number consists of one letter followed by seven numbers. For example:',
         correct: '<span>A12345678</span> is a valid Austrian passport number',
         incorrect:
@@ -2065,7 +2060,7 @@ const patterns = {
         description:
             'Used for Austrian passport number fields. A valid passport number consists of one letter followed by seven numbers.'
     },
-    'passportNumber.au': {
+    'passports.au': {
         info: 'Enter a valid/invalid Australian passport number to test. A valid passport number consists of one letter followed by seven numbers. For example:',
         correct: '<span>A1234567</span> is a valid Australian passport number',
         incorrect:
@@ -2073,7 +2068,7 @@ const patterns = {
         description:
             'Used for Australian passport number fields. A valid passport number consists of one letter followed by seven numbers.'
     },
-    'passportNumber.az': {
+    'passports.az': {
         info: 'Enter a valid/invalid Azerbaijani passport number to test. A valid passport number consists of two or three letters followed by seven or eight numbers. For example:',
         correct:
             '<span>ABC1234567</span> is a valid Azerbaijani passport number',
@@ -2082,7 +2077,7 @@ const patterns = {
         description:
             'Used for Azerbaijani passport number fields. A valid passport number consists of two or three letters followed by seven or eight numbers.'
     },
-    'passportNumber.be': {
+    'passports.be': {
         info: 'Enter a valid/invalid Belgian passport number to test. A valid passport number consists of two letters followed by six numbers. For example:',
         correct: '<span>AB123456</span> is a valid Belgian passport number',
         incorrect:
@@ -2090,7 +2085,7 @@ const patterns = {
         description:
             'Used for Belgian passport number fields. A valid passport number consists of two letters followed by six numbers.'
     },
-    'passportNumber.bg': {
+    'passports.bg': {
         info: 'Enter a valid/invalid Bulgarian passport number to test. A valid passport number consists of nine numbers. For example:',
         correct: '<span>123456789</span> is a valid Bulgarian passport number',
         incorrect:
@@ -2098,7 +2093,7 @@ const patterns = {
         description:
             'Used for Bulgarian passport number fields. A valid passport number consists of nine numbers.'
     },
-    'passportNumber.br2': {
+    'passports.br2': {
         info: 'Enter a valid/invalid Brazilian passport number to test. A valid passport number consists of two letters followed by six numbers. For example:',
         correct: '<span>AB123456</span> is a valid Brazilian passport number',
         incorrect:
@@ -2106,7 +2101,7 @@ const patterns = {
         description:
             'Used for Brazilian passport number fields. A valid passport number consists of two letters followed by six numbers.'
     },
-    'passportNumber.by': {
+    'passports.by': {
         info: 'Enter a valid/invalid Belarusian passport number to test. A valid passport number consists of two letters followed by seven numbers. For example:',
         correct: '<span>AB1234567</span> is a valid Belarusian passport number',
         incorrect:
@@ -2114,7 +2109,7 @@ const patterns = {
         description:
             'Used for Belarusian passport number fields. A valid passport number consists of two letters followed by seven numbers.'
     },
-    'passportNumber.ca': {
+    'passports.ca': {
         info: 'Enter a valid/invalid Canadian passport number to test. A valid passport number consists of two letters followed by six numbers. For example:',
         correct: '<span>AB123456</span> is a valid Canadian passport number',
         incorrect:
@@ -2122,14 +2117,14 @@ const patterns = {
         description:
             'Used for Canadian passport number fields. A valid passport number consists of two letters followed by six numbers.'
     },
-    'passportNumber.ch': {
+    'passports.ch': {
         info: 'Enter a valid/invalid Swiss passport number to test. A valid passport number consists of a letter followed by seven numbers. For example:',
         correct: '<span>A1234567</span> is a valid Swiss passport number',
         incorrect: '<span>AB123456</span> is not a valid Swiss passport number',
         description:
             'Used for Swiss passport number fields. A valid passport number consists of a letter followed by seven numbers.'
     },
-    'passportNumber.cn': {
+    'passports.cn': {
         info: 'Enter a valid/invalid Chinese passport number to test. A valid passport number either starts with G followed by eight digits or starts with E followed by any UPPERCASE letter (except I and O) followed by seven digits. For example:',
         correct: '<span>G12345678</span> is a valid Chinese passport number',
         incorrect:
@@ -2137,7 +2132,7 @@ const patterns = {
         description:
             'Used for Chinese passport number fields. A valid passport number either starts with G followed by eight digits or starts with E followed by any UPPERCASE letter (except I and O) followed by seven digits.'
     },
-    'passportNumber.cy': {
+    'passports.cy': {
         info: 'Enter a valid/invalid Cypriot passport number to test. A valid passport number starts with a letter followed by either six or eight digits. For example:',
         correct: '<span>A1234567</span> is a valid Cypriot passport number',
         incorrect:
@@ -2145,14 +2140,14 @@ const patterns = {
         description:
             'Used for Cypriot passport number fields. A valid passport number starts with a letter followed by either six or eight digits.'
     },
-    'passportNumber.cz': {
+    'passports.cz': {
         info: 'Enter a valid/invalid Czech passport number to test. A valid passport number consists of eight digits. For example:',
         correct: '<span>12345678</span> is a valid Czech passport number',
         incorrect: '<span>AB123456</span> is not a valid Czech passport number',
         description:
             'Used for Czech passport number fields. A valid passport number consists of eight digits.'
     },
-    'passportNumber.de': {
+    'passports.de': {
         info: 'Enter a valid/invalid German passport number to test. A valid passport number consists of nine characters (letters and/or numbers). For example:',
         correct: '<span>ABC123456</span> is a valid German passport number',
         incorrect:
@@ -2160,7 +2155,7 @@ const patterns = {
         description:
             'Used for German passport number fields. A valid passport number consists of nine characters (letters and/or numbers).'
     },
-    'passportNumber.dk': {
+    'passports.dk': {
         info: 'Enter a valid/invalid Danish passport number to test. A valid passport number consists of nine digits. For example:',
         correct: '<span>123456789</span> is a valid Danish passport number',
         incorrect:
@@ -2168,7 +2163,7 @@ const patterns = {
         description:
             'Used for Danish passport number fields. A valid passport number consists of nine digits.'
     },
-    'passportNumber.dz': {
+    'passports.dz': {
         info: 'Enter a valid/invalid Algerian passport number to test. A valid passport number consists of nine digits. For example:',
         correct: '<span>123456789</span> is a valid Algerian passport number',
         incorrect:
@@ -2176,7 +2171,7 @@ const patterns = {
         description:
             'Used for Algerian passport number fields. A valid passport number consists of nine digits.'
     },
-    'passportNumber.ee': {
+    'passports.ee': {
         info: 'Enter a valid/invalid Estonian passport number to test. A valid passport number either starts with a letter followed by seven digits or starts with two letters followed by seven digits. For example:',
         correct: '<span>A1234567</span> is a valid Estonian passport number',
         incorrect:
@@ -2184,7 +2179,7 @@ const patterns = {
         description:
             'Used for Estonian passport number fields. A valid passport number either starts with a letter followed by seven digits or starts with two letters followed by seven digits.'
     },
-    'passportNumber.es': {
+    'passports.es': {
         info: 'Enter a valid/invalid Spanish passport number to test. A valid passport number consists of two characters (letters and/or numbers) followed by six digits. For example:',
         correct: '<span>AB123456</span> is a valid Spanish passport number',
         incorrect:
@@ -2192,7 +2187,7 @@ const patterns = {
         description:
             'Used for Spanish passport number fields. A valid passport number consists of two characters (letters and/or numbers) followed by six digits.'
     },
-    'passportNumber.fi': {
+    'passports.fi': {
         info: 'Enter a valid/invalid Finnish passport number to test. A valid passport number consists of two letters followed by seven digits. For example:',
         correct: '<span>AB1234567</span> is a valid Finnish passport number',
         incorrect:
@@ -2200,7 +2195,7 @@ const patterns = {
         description:
             'Used for Finnish passport number fields. A valid passport number consists of two letters followed by seven digits.'
     },
-    'passportNumber.fr': {
+    'passports.fr': {
         info: 'Enter a valid/invalid French passport number to test. A valid passport number consists of two digits followed by two characters (letters and/or numbers) followed by five digits. For example:',
         correct: '<span>123AB45678</span> is a valid French passport number',
         incorrect:
@@ -2208,7 +2203,7 @@ const patterns = {
         description:
             'Used for French passport number fields. A valid passport number consists of two digits followed by two characters (letters and/or numbers) followed by five digits.'
     },
-    'passportNumber.gb': {
+    'passports.gb': {
         info: 'Enter a valid/invalid British passport number to test. A valid passport number consists of nine digits. For example:',
         correct: '<span>123456789</span> is a valid British passport number',
         incorrect:
@@ -2216,7 +2211,7 @@ const patterns = {
         description:
             'Used for British passport number fields. A valid passport number consists of nine digits.'
     },
-    'passportNumber.gr': {
+    'passports.gr': {
         info: 'Enter a valid/invalid Greek passport number to test. A valid passport number consists of two letters followed by seven digits. For example:',
         correct: '<span>AB1234567</span> is a valid Greek passport number',
         incorrect:
@@ -2224,7 +2219,7 @@ const patterns = {
         description:
             'Used for Greek passport number fields. A valid passport number consists of two letters followed by seven digits.'
     },
-    'passportNumber.hr': {
+    'passports.hr': {
         info: 'Enter a valid/invalid Croatian passport number to test. A valid passport number consists of nine digits. For example:',
         correct: '<span>123456789</span> is a valid Croatian passport number',
         incorrect:
@@ -2232,7 +2227,7 @@ const patterns = {
         description:
             'Used for Croatian passport number fields. A valid passport number consists of nine digits.'
     },
-    'passportNumber.hu': {
+    'passports.hu': {
         info: 'Enter a valid/invalid Hungarian passport number to test. A valid passport number consists of two letters followed by six or seven digits. For example:',
         correct: '<span>AB123456</span> is a valid Hungarian passport number',
         incorrect:
@@ -2240,7 +2235,7 @@ const patterns = {
         description:
             'Used for Hungarian passport number fields. A valid passport number consists of two letters followed by six or seven digits.'
     },
-    'passportNumber.ie': {
+    'passports.ie': {
         info: 'Enter a valid/invalid Irish passport number to test. A valid passport number consists of two characters (letters and/or numbers) followed by seven digits. For example:',
         correct: '<span>AB1234567</span> is a valid Irish passport number',
         incorrect:
@@ -2248,7 +2243,7 @@ const patterns = {
         description:
             'Used for Irish passport number fields. A valid passport number consists of two characters (letters and/or numbers) followed by seven digits.'
     },
-    'passportNumber.in': {
+    'passports.in': {
         info: 'Enter a valid/invalid Indian passport number to test. A valid passport number consists of one character (letter) followed by an optional hyphen and seven digits. For example:',
         correct: '<span>A1234567</span> is a valid Indian passport number',
         incorrect:
@@ -2256,7 +2251,7 @@ const patterns = {
         description:
             'Used for Indian passport number fields. A valid passport number consists of one character (letter) followed by an optional hyphen and seven digits.'
     },
-    'passportNumber.id': {
+    'passports.id': {
         info: 'Enter a valid/invalid Indonesian passport number to test. A valid passport number consists of one character (A, B, or C) followed by seven digits. For example:',
         correct: '<span>A1234567</span> is a valid Indonesian passport number',
         incorrect:
@@ -2264,7 +2259,7 @@ const patterns = {
         description:
             'Used for Indonesian passport number fields. A valid passport number consists of one character (A, B, or C) followed by seven digits.'
     },
-    'passportNumber.ir': {
+    'passports.ir': {
         info: 'Enter a valid/invalid Iranian passport number to test. A valid passport number consists of one uppercase letter followed by eight numbers. For example:',
         correct: '<span>A12345678</span> is a valid Iranian passport number',
         incorrect:
@@ -2272,7 +2267,7 @@ const patterns = {
         description:
             'Used for Iranian passport number fields. A valid passport number consists of one uppercase letter followed by eight numbers.'
     },
-    'passportNumber.is': {
+    'passports.is': {
         info: 'Enter a valid/invalid Icelandic passport number to test. A valid passport number consists of the letter "A" followed by seven numbers. For example:',
         correct: '<span>A1234567</span> is a valid Icelandic passport number',
         incorrect:
@@ -2280,7 +2275,7 @@ const patterns = {
         description:
             'Used for Icelandic passport number fields. A valid passport number consists of the letter "A" followed by seven numbers.'
     },
-    'passportNumber.it': {
+    'passports.it': {
         info: 'Enter a valid/invalid Italian passport number to test. A valid passport number consists of two alphanumeric characters followed by seven numbers. For example:',
         correct: '<span>AB1234567</span> is a valid Italian passport number',
         incorrect:
@@ -2288,7 +2283,7 @@ const patterns = {
         description:
             'Used for Italian passport number fields. A valid passport number consists of two alphanumeric characters followed by seven numbers.'
     },
-    'passportNumber.jm': {
+    'passports.jm': {
         info: 'Enter a valid/invalid Jamaican passport number to test. A valid passport number consists of the letter "A" or "a" followed by seven numbers. For example:',
         correct: '<span>A1234567</span> is a valid Jamaican passport number',
         incorrect:
@@ -2296,7 +2291,7 @@ const patterns = {
         description:
             'Used for Jamaican passport number fields. A valid passport number consists of the letter "A" or "a" followed by seven numbers.'
     },
-    'passportNumber.jp': {
+    'passports.jp': {
         info: 'Enter a valid/invalid Japanese passport number to test. A valid passport number consists of two uppercase letters followed by seven numbers. For example:',
         correct: '<span>AB1234567</span> is a valid Japanese passport number',
         incorrect:
@@ -2304,7 +2299,7 @@ const patterns = {
         description:
             'Used for Japanese passport number fields. A valid passport number consists of two uppercase letters followed by seven numbers.'
     },
-    'passportNumber.kr': {
+    'passports.kr': {
         info: 'Enter a valid/invalid South Korean passport number to test. A valid passport number consists of the letter "M" or "S" followed by eight numbers. For example:',
         correct:
             '<span>M12345678</span> is a valid South Korean passport number',
@@ -2313,7 +2308,7 @@ const patterns = {
         description:
             'Used for South Korean passport number fields. A valid passport number consists of the letter "M" or "S" followed by eight numbers.'
     },
-    'passportNumber.kz': {
+    'passports.kz': {
         info: 'Enter a valid/invalid Kazakhstani passport number to test. A valid passport number consists of one or more alphanumeric characters followed by seven numbers. For example:',
         correct:
             '<span>AB1234567</span> is a valid Kazakhstani passport number',
@@ -2322,7 +2317,7 @@ const patterns = {
         description:
             'Used for Kazakhstani passport number fields. A valid passport number consists of one or more alphanumeric characters followed by seven numbers.'
     },
-    'passportNumber.li': {
+    'passports.li': {
         info: 'Enter a valid/invalid Liechtenstein passport number to test. A valid passport number consists of one or more alphanumeric characters followed by five numbers. For example:',
         correct:
             '<span>AB12345</span> is a valid Liechtenstein passport number',
@@ -2331,7 +2326,7 @@ const patterns = {
         description:
             'Used for Liechtenstein passport number fields. A valid passport number consists of one or more alphanumeric characters followed by five numbers.'
     },
-    'passportNumber.lt': {
+    'passports.lt': {
         info: 'Enter a valid/invalid Lithuanian passport number to test. A valid passport number consists of eight alphanumeric characters. For example:',
         correct: '<span>ABCD1234</span> is a valid Lithuanian passport number',
         incorrect:
@@ -2339,7 +2334,7 @@ const patterns = {
         description:
             'Used for Lithuanian passport number fields. A valid passport number consists of eight alphanumeric characters.'
     },
-    'passportNumber.lu': {
+    'passports.lu': {
         info: 'Enter a valid/invalid Luxembourgian passport number to test. A valid passport number consists of eight alphanumeric characters. For example:',
         correct:
             '<span>ABCD1234</span> is a valid Luxembourgian passport number',
@@ -2348,7 +2343,7 @@ const patterns = {
         description:
             'Used for Luxembourgian passport number fields. A valid passport number consists of eight alphanumeric characters.'
     },
-    'passportNumber.lv': {
+    'passports.lv': {
         info: 'Enter a valid/invalid Latvian passport number to test. A valid passport number consists of two alphanumeric characters followed by seven numbers. For example:',
         correct: '<span>AB1234567</span> is a valid Latvian passport number',
         incorrect:
@@ -2356,7 +2351,7 @@ const patterns = {
         description:
             'Used for Latvian passport number fields. A valid passport number consists of two alphanumeric characters followed by seven numbers.'
     },
-    'passportNumber.ly': {
+    'passports.ly': {
         info: 'Enter a valid/invalid Libyan passport number to test. A valid passport number consists of eight alphanumeric characters. For example:',
         correct: '<span>ABCD1234</span> is a valid Libyan passport number',
         incorrect:
@@ -2364,7 +2359,7 @@ const patterns = {
         description:
             'Used for Libyan passport number fields. A valid passport number consists of eight alphanumeric characters.'
     },
-    'passportNumber.mt': {
+    'passports.mt': {
         info: 'Enter a valid/invalid Maltese passport number to test. A valid passport number consists of seven numbers. For example:',
         correct: '<span>1234567</span> is a valid Maltese passport number',
         incorrect:
@@ -2372,7 +2367,7 @@ const patterns = {
         description:
             'Used for Maltese passport number fields. A valid passport number consists of seven numbers.'
     },
-    'passportNumber.mz': {
+    'passports.mz': {
         info: 'Enter a valid/invalid Mozambican passport number to test. A valid passport number consists of two alphanumeric characters followed by seven numbers, or two numbers followed by two alphanumeric characters and five numbers. For example:',
         correct:
             '<span>AB1234567</span> or <span>12AB34567</span> is a valid Mozambican passport number',
@@ -2381,7 +2376,7 @@ const patterns = {
         description:
             'Used for Mozambican passport number fields. A valid passport number consists of two alphanumeric characters followed by seven numbers, or two numbers followed by two alphanumeric characters and five numbers.'
     },
-    'passportNumber.my': {
+    'passports.my': {
         info: 'Enter a valid/invalid Malaysian passport number to test. A valid passport number consists of one of the letters "A", "H", or "K" followed by eight numbers. For example:',
         correct: '<span>A12345678</span> is a valid Malaysian passport number',
         incorrect:
@@ -2389,7 +2384,7 @@ const patterns = {
         description:
             'Used for Malaysian passport number fields. A valid passport number consists of one of the letters "A", "H", or "K" followed by eight numbers.'
     },
-    'passportNumber.mx': {
+    'passports.mx': {
         info: 'Enter a valid/invalid Mexican passport number to test. A valid passport number consists of 10 or 11 numbers. For example:',
         correct:
             '<span>1234567890</span> or <span>12345678901</span> is a valid Mexican passport number',
@@ -2398,7 +2393,7 @@ const patterns = {
         description:
             'Used for Mexican passport number fields. A valid passport number consists of 10 or 11 numbers.'
     },
-    'passportNumber.nl': {
+    'passports.nl': {
         info: 'Enter a valid/invalid Dutch passport number to test. A valid passport number consists of two alphanumeric characters followed by six alphanumeric characters and one number. For example:',
         correct: '<span>AB1234567</span> is a valid Dutch passport number',
         incorrect:
@@ -2406,7 +2401,7 @@ const patterns = {
         description:
             'Used for Dutch passport number fields. A valid passport number consists of two alphanumeric characters followed by six alphanumeric characters and one number.'
     },
-    'passportNumber.nz': {
+    'passports.nz': {
         info: 'Enter a valid/invalid New Zealand passport number to test. A valid passport number consists of one of the letter combinations "L", "D", "F", "H", "E", "A", "P", or "N" followed by six numbers. For example:',
         correct:
             '<span>L123456</span> or <span>D123456</span> is a valid New Zealand passport number',
@@ -2415,7 +2410,7 @@ const patterns = {
         description:
             'Used for New Zealand passport number fields. A valid passport number consists of one of the letter combinations "L", "D", "F", "H", "E", "A", "P", or "N" followed by six numbers.'
     },
-    'passportNumber.ph': {
+    'passports.ph': {
         info: 'Enter a valid/invalid Philippine passport number to test. A valid passport number consists of one uppercase letter followed by six numbers, or two uppercase letters followed by seven numbers. For example:',
         correct:
             '<span>A123456</span> or <span>AB1234567</span> is a valid Philippine passport number',
@@ -2424,7 +2419,7 @@ const patterns = {
         description:
             'Used for Philippine passport number fields. A valid passport number consists of one uppercase letter followed by six numbers, or two uppercase letters followed by seven numbers.'
     },
-    'passportNumber.pk': {
+    'passports.pk': {
         info: 'Enter a valid/invalid Pakistani passport number to test. A valid passport number consists of two uppercase letters followed by seven numbers. For example:',
         correct: '<span>AB1234567</span> is a valid Pakistani passport number',
         incorrect:
@@ -2432,7 +2427,7 @@ const patterns = {
         description:
             'Used for Pakistani passport number fields. A valid passport number consists of two uppercase letters followed by seven numbers.'
     },
-    'passportNumber.pl': {
+    'passports.pl': {
         info: 'Enter a valid/invalid Polish passport number to test. A valid passport number consists of two uppercase letters followed by seven numbers. For example:',
         correct: '<span>AB1234567</span> is a valid Polish passport number',
         incorrect:
@@ -2440,7 +2435,7 @@ const patterns = {
         description:
             'Used for Polish passport number fields. A valid passport number consists of two uppercase letters followed by seven numbers.'
     },
-    'passportNumber.pt': {
+    'passports.pt': {
         info: 'Enter a valid/invalid Portuguese passport number to test. A valid passport number consists of one uppercase letter followed by six numbers. For example:',
         correct: '<span>A123456</span> is a valid Portuguese passport number',
         incorrect:
@@ -2448,7 +2443,7 @@ const patterns = {
         description:
             'Used for Portuguese passport number fields. A valid passport number consists of one uppercase letter followed by six numbers.'
     },
-    'passportNumber.ro': {
+    'passports.ro': {
         info: 'Enter a valid/invalid Romanian passport number to test. A valid passport number consists of eight or nine numbers. For example:',
         correct:
             '<span>12345678</span> or <span>123456789</span> is a valid Romanian passport number',
@@ -2457,7 +2452,7 @@ const patterns = {
         description:
             'Used for Romanian passport number fields. A valid passport number consists of eight or nine numbers.'
     },
-    'passportNumber.ru': {
+    'passports.ru': {
         info: 'Enter a valid/invalid Russian passport number to test. A valid passport number consists of nine numbers. For example:',
         correct: '<span>123456789</span> is a valid Russian passport number',
         incorrect:
@@ -2465,7 +2460,7 @@ const patterns = {
         description:
             'Used for Russian passport number fields. A valid passport number consists of nine numbers.'
     },
-    'passportNumber.se': {
+    'passports.se': {
         info: 'Enter a valid/invalid Swedish passport number to test. A valid passport number consists of eight numbers. For example:',
         correct: '<span>12345678</span> is a valid Swedish passport number',
         incorrect:
@@ -2473,7 +2468,7 @@ const patterns = {
         description:
             'Used for Swedish passport number fields. A valid passport number consists of eight numbers.'
     },
-    'passportNumber.sl': {
+    'passports.sl': {
         info: 'Enter a valid/invalid Slovenian passport number to test. A valid passport number consists of the letter "P" followed by one uppercase letter and seven numbers. For example:',
         correct: '<span>PB1234567</span> is a valid Slovenian passport number',
         incorrect:
@@ -2481,7 +2476,7 @@ const patterns = {
         description:
             'Used for Slovenian passport number fields. A valid passport number consists of the letter "P" followed by one uppercase letter and seven numbers.'
     },
-    'passportNumber.sk': {
+    'passports.sk': {
         info: 'Enter a valid/invalid Slovakian passport number to test. A valid passport number consists of one alphanumeric character followed by seven numbers. For example:',
         correct: '<span>A1234567</span> is a valid Slovakian passport number',
         incorrect:
@@ -2489,7 +2484,7 @@ const patterns = {
         description:
             'Used for Slovakian passport number fields. A valid passport number consists of one alphanumeric character followed by seven numbers.'
     },
-    'passportNumber.th': {
+    'passports.th': {
         info: 'Enter a valid/invalid Thai passport number to test. A valid passport number consists of one or two uppercase letters followed by six or seven numbers. For example:',
         correct:
             '<span>A123456</span> or <span>AB1234567</span> is a valid Thai passport number',
@@ -2498,7 +2493,7 @@ const patterns = {
         description:
             'Used for Thai passport number fields. A valid passport number consists of one or two uppercase letters followed by six or seven numbers.'
     },
-    'passportNumber.tr': {
+    'passports.tr': {
         info: 'Enter a valid/invalid Turkish passport number to test. A valid passport number consists of one uppercase letter followed by eight numbers. For example:',
         correct: '<span>A12345678</span> is a valid Turkish passport number',
         incorrect:
@@ -2506,7 +2501,7 @@ const patterns = {
         description:
             'Used for Turkish passport number fields. A valid passport number consists of one uppercase letter followed by eight numbers.'
     },
-    'passportNumber.ua': {
+    'passports.ua': {
         info: 'Enter a valid/invalid Ukrainian passport number to test. A valid passport number consists of two uppercase letters followed by six numbers. For example:',
         correct: '<span>AB123456</span> is a valid Ukrainian passport number',
         incorrect:
@@ -2514,7 +2509,7 @@ const patterns = {
         description:
             'Used for Ukrainian passport number fields. A valid passport number consists of two uppercase letters followed by six numbers.'
     },
-    'passportNumber.us': {
+    'passports.us': {
         info: 'Enter a valid/invalid United States passport number to test. A valid passport number consists of nine numbers. For example:',
         correct:
             '<span>123456789</span> is a valid United States passport number',
@@ -2523,7 +2518,7 @@ const patterns = {
         description:
             'Used for United States passport number fields. A valid passport number consists of nine numbers.'
     },
-    'passportNumber.za': {
+    'passports.za': {
         info: 'Enter a valid/invalid South African passport number to test. A valid passport number consists of one of the letters "T", "A", "M", or "D" followed by eight numbers. For example:',
         correct:
             '<span>T12345678</span> is a valid South African passport number',
@@ -3157,7 +3152,7 @@ const patterns = {
         description:
             'Used for validating IBAN (International Bank Account Number) codes specific to Kosovo'
     },
-    'licencePlate.cz': {
+    'licencePlates.cz': {
         info: 'Enter a valid/invalid Czech registration plate number to test. A valid plate number consists of 5 to 8 \
     characters, which can be either letters A to Z or numbers 0 to 9, with optional hyphens. For example:',
         correct:
@@ -3168,7 +3163,7 @@ const patterns = {
             'Used for Czech registration plate fields. A valid plate number consists of 5 to 8 characters, which can be either \
         letters A to Z or numbers 0 to 9, with optional hyphens.'
     },
-    'licencePlate.de': {
+    'licencePlates.de': {
         info: 'Enter a valid/invalid German vehicle registration plate number to test. A valid plate number consists of one or two \
     letters followed by 1 to 4 numbers, with optional hyphens. For example:',
         correct:
@@ -3179,7 +3174,7 @@ const patterns = {
             'Used for German vehicle registration plate fields. A valid plate number consists of one or two letters followed by 1 to 4 \
         numbers, with optional hyphens.'
     },
-    'licencePlate.li': {
+    'licencePlates.li': {
         info: 'Enter a valid/invalid Liechtenstein registration plate number to test. A valid plate number starts with FL followed by \
     1 to 5 numbers and optional U or Z. For example:',
         correct:
@@ -3190,7 +3185,7 @@ const patterns = {
             'Used for Liechtenstein registration plate fields. A valid plate number starts with FL followed by 1 to 5 numbers and \
         optional U or Z.'
     },
-    'licencePlate.in': {
+    'licencePlates.in': {
         info: 'Enter a valid/invalid Indian vehicle registration number to test. A valid registration number consists of two letters \
     followed by 1 to 2 numbers, optional letters, and 4 numbers. For example:',
         correct:
@@ -3201,7 +3196,7 @@ const patterns = {
             'Used for Indian vehicle registration number fields. A valid registration number consists of two letters followed by 1 to \
         2 numbers, optional letters, and 4 numbers.'
     },
-    'licencePlate.ar': {
+    'licencePlates.ar': {
         info: 'Enter a valid/invalid Argentine vehicle registration plate number to test. A valid plate number consists of either two \
     letters, a space, three numbers, and two letters OR three letters followed by three numbers. For example:',
         correct:
@@ -3212,7 +3207,7 @@ const patterns = {
             'Used for Argentine vehicle registration plate fields. A valid plate number consists of either two letters, a space, three \
         numbers, and two letters OR three letters followed by three numbers.'
     },
-    'licencePlate.fi': {
+    'licencePlates.fi': {
         info: 'Enter a valid/invalid Finnish vehicle registration number to test. A valid registration number consists of 1 to 3 letters \
     or numbers, optional hyphen, and 1 to 5 letters or numbers. For example:',
         correct: '<span>ABC-123</span> is a valid Finnish registration number',
@@ -3222,7 +3217,7 @@ const patterns = {
             'Used for Finnish vehicle registration number fields. A valid registration number consists of 1 to 3 letters or numbers, \
         optional hyphen, and 1 to 5 letters or numbers.'
     },
-    'licencePlate.hu': {
+    'licencePlates.hu': {
         info: 'Enter a valid/invalid Hungarian vehicle registration number to test. A valid registration number follows specific \
     patterns for county codes, city codes, and alphanumeric characters. For example:',
         correct:
@@ -3233,7 +3228,7 @@ const patterns = {
             'Used for Hungarian vehicle registration number fields. A valid registration number follows specific patterns for county \
         codes, city codes, and alphanumeric characters.'
     },
-    'licencePlate.br': {
+    'licencePlates.br': {
         info: 'Enter a valid/invalid Brazilian vehicle registration plate number to test. A valid plate number consists of three letters \
     followed by one number, one letter, and two numbers OR three letters followed by four numbers. For example:',
         correct:
@@ -3244,7 +3239,7 @@ const patterns = {
             'Used for Brazilian vehicle registration plate fields. A valid plate number consists of three letters followed by one number, \
         one letter, and two numbers OR three letters followed by four numbers.'
     },
-    'licencePlate.pt': {
+    'licencePlates.pt': {
         info: 'Enter a valid/invalid Portuguese vehicle registration number to test. A valid registration number consists of either two \
     letters or two numbers, separated by space, dash, or dot, repeated three times. For example:',
         correct:
@@ -3255,7 +3250,7 @@ const patterns = {
             'Used for Portuguese vehicle registration number fields. A valid registration number consists of either two letters or two \
         numbers, separated by space, dash, or dot, repeated three times.'
     },
-    'licencePlate.al': {
+    'licencePlates.al': {
         info: 'Enter a valid/invalid Albanian vehicle registration plate number to test. A valid plate number consists of two letters \
     followed by three numbers, optional space or hyphen, and two letters OR the letter R, optional space or hyphen, and three numbers. For example:',
         correct:
@@ -3266,7 +3261,7 @@ const patterns = {
             'Used for Albanian vehicle registration plate fields. A valid plate number consists of two letters followed by three numbers, \
         optional space or hyphen, and two letters OR the letter R, optional space or hyphen, and three numbers.'
     },
-    'licencePlate.se': {
+    'licencePlates.se': {
         info: 'Enter a valid/invalid Swedish vehicle registration number to test. A valid registration number consists of three letters \
     followed by two numbers and one alphanumeric character OR two to seven letters. For example:',
         correct: '<span>ABC12D</span> is a valid Swedish registration number',

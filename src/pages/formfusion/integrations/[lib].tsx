@@ -54,8 +54,11 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                     For a successful implementation of the connect method,
                     you&apos;ll need access to the form configuration object and
                     to select the
-                    <Link href={`/${ROUTES.types}`}>&nbsp;input type</Link> or
-                    <Link href={`/${ROUTES.patterns}`}>
+                    <Link href={`/${ROUTES.validation}`}>
+                        &nbsp;input type
+                    </Link>{' '}
+                    or
+                    <Link href={`/${ROUTES.validation}`}>
                         &nbsp;validation pattern&nbsp;
                     </Link>
                     that aligns with your requirements.

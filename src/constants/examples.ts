@@ -371,3 +371,10 @@ export const INTEGRATIONS = {
     chakraui: CHAKRAUI_USAGE,
     reactstrap: REACTSTRAP_USAGE
 } as any;
+
+export const RULES = {
+    type: `<Input name="name" type="alphabetic" />`,
+    patterns: `import { rules } from 'formfusion';
+
+<Input name="name" type={rules.alphabetic} />`
+};
