@@ -24,12 +24,12 @@ const nextConfig = {
         return [
             {
                 source: '/formfusion/api/types',
-                destination: '/formfusion/api/validation-rules',
+                destination: '/formfusion/api/validation',
                 permanent: true
             },
             {
                 source: '/formfusion/api/patterns',
-                destination: '/formfusion/api/validation-rules',
+                destination: '/formfusion/api/validation',
                 permanent: true
             },
             {

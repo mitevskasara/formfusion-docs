@@ -39,9 +39,9 @@ export default [
                 url: `/${ROUTES.connect}`
             },
             {
-                key: 'validation-rules',
+                key: 'validation',
                 title: 'Validation',
-                url: `/${ROUTES.types}`
+                url: `/${ROUTES.validation}`
             },
             {
                 key: 'masking',

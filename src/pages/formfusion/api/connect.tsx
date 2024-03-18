@@ -89,7 +89,10 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
                     {CONNECT_USAGE}
                 </Code>
             </Section>
-            <FooterNavigation url={`/${ROUTES.types}`} title="Input types" />
+            <FooterNavigation
+                url={`/${ROUTES.validation}`}
+                title="Validation"
+            />
         </MainLayout>
     );
 };

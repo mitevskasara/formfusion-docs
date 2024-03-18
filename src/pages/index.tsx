@@ -307,12 +307,12 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 htmlElement="p"
                                 margin={false}>
                                 Benefit from FormFusion&apos;s extensive library
-                                of over 500 input types and validation rules.
-                                Whether it&apos;s simple text inputs or complex
-                                custom fields, we&apos;ve got you covered. With
-                                a wide array of validation rules, you can ensure
-                                data integrity and accuracy, tailored to your
-                                specific requirements.
+                                of over 500 validation rules. Whether it&apos;s
+                                simple text inputs or complex custom fields,
+                                we&apos;ve got you covered. With a wide array of
+                                validation rules, you can ensure data integrity
+                                and accuracy, tailored to your specific
+                                requirements.
                             </Typography>
                         </div>
                         <div className={classes.services__inner__cards__card}>
