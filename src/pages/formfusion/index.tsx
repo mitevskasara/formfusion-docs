@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useRef } from 'react';
 import Typography from 'corelabui/Typography';
-import { patterns } from 'formfusion';
+import { rules } from 'formfusion';
 import Flex from 'corelabui/Flex';
 import Button from 'corelabui/Button';
 
@@ -63,12 +63,14 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                         form validation
                     </Link>
                     &nbsp;by extending the list of&nbsp;
-                    <Link href={`/${ROUTES.types}`}>native input types</Link>
+                    <Link href={`/${ROUTES.validation}`}>
+                        native input types
+                    </Link>
                     &nbsp;and provides a large collection of thoroughly tested
                     and ready to use validation rules such as:
                 </Typography>
-                <GridList items={patternsToList(patterns)} />
-                <Link href="/api/patterns" style={{ float: 'right' }}>
+                <GridList items={patternsToList(rules)} />
+                <Link href={ROUTES.validation} style={{ float: 'right' }}>
                     See full list here
                 </Link>
                 <br />

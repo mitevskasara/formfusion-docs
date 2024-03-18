@@ -100,7 +100,7 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
             {...{
                 ...META_DATA,
                 title: `${META_DATA.title} | Validation rules`,
-                canonical: `https://www.corelabui.com/${ROUTES.types}`
+                canonical: `https://www.corelabui.com/${ROUTES.validation}`
             }}
             theme={theme}
             setTheme={setTheme}>
