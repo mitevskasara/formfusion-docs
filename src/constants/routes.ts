@@ -5,7 +5,7 @@ const ROUTES = {
     textarea: 'formfusion/api/textarea',
     useform: 'formfusion/api/useform',
     connect: 'formfusion/api/connect',
-    types: 'formfusion/api/types',
+    types: 'formfusion/api/validation-rules',
     patterns: 'formfusion/api/patterns',
     masking: 'formfusion/api/masking',
     integrations: 'formfusion/integrations',

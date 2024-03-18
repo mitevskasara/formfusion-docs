@@ -34,7 +34,7 @@ const paginateArray = (
 const Pagination = ({
     pages,
     activePage = 1,
-    boundary = 5,
+    boundary = 6,
     onChange
 }: PaginationProps) => {
     const allowNext = activePage < pages.length - 1 - Math.floor(boundary / 2);

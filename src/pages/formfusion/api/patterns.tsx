@@ -5,7 +5,7 @@ import Flex, { FlexItem } from 'corelabui/Flex';
 import Button from 'corelabui/Button';
 import Highlight from 'corelabui/Highlight';
 import Input from 'corelabui/Input';
-import { patterns as RFMPatterns, useForm, connect } from 'formfusion';
+import { rules as RFMPatterns, useForm, connect } from 'formfusion';
 
 import Property from '@/components/Property';
 import MainLayout from '@/components/MainLayout';
@@ -71,7 +71,7 @@ const Patterns = ({
             }}
             theme={theme}
             setTheme={setTheme}>
-            <Section title="Validation patterns" margin={false}>
+            <Section title="Validation rules" margin={false}>
                 <Typography variant="body1">
                     Similar to&nbsp;
                     <Link href={`/${ROUTES.types}`}>Input types</Link>,&nbsp;
@@ -82,28 +82,27 @@ const Patterns = ({
                     <Link href={`/${ROUTES.types}`} target="_blank">
                         Input types
                     </Link>
-                    &nbsp;and validation patterns is that the patterns
-                    collection includes dynamic validation such as:
-                    minimum/maximum required chars/letters/numbers, specific
-                    domain validation, minimum/maximum letters range i.e any
-                    validation that requires a specific parameter to construct a
-                    pattern.
+                    &nbsp;and validation rules is that the patterns collection
+                    includes dynamic validation such as: minimum/maximum
+                    required chars/letters/numbers, specific domain validation,
+                    minimum/maximum letters range i.e any validation that
+                    requires a specific parameter to construct a pattern.
                     <br />
                     <br />
                     The&nbsp;
                     <Link href={`/${ROUTES.types}`}>
                         Input types collection
                     </Link>
-                    &nbsp;uses part of these validation patterns as a
-                    foundation, but they are also exposed for usage when you
-                    require more flexibility or when you don&apos;t intend to
-                    use the Input component provided by{' '}
-                    <strong>FormFusion</strong>. To put these patterns to use,
-                    simply pass your desired pattern as the&nbsp;
+                    &nbsp;uses part of these validation rules as a foundation,
+                    but they are also exposed for usage when you require more
+                    flexibility or when you don&apos;t intend to use the Input
+                    component provided by <strong>FormFusion</strong>. To put
+                    these patterns to use, simply pass your desired pattern as
+                    the&nbsp;
                     <Property>pattern</Property> property to the input.
                     <br />
                     <br />
-                    Here is a list of all validation patterns&nbsp;
+                    Here is a list of all validation rules&nbsp;
                     <strong>FormFusion</strong> currently contains:
                 </Typography>
                 <br />
