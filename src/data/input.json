@@ -34,9 +34,9 @@
         },
         {
             "name": "classes",
-            "type": "{ field: string; label: string; error: string; }",
+            "type": "{ root: string; field: string; label: string; error: string; }",
             "default": "",
-            "description": "Classes applied to the input, label and error elements.",
+            "description": "Classes applied to the root, input, label and error elements.",
             "required": false
         }
     ],
