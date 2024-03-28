@@ -22,14 +22,10 @@ import classes from './main.module.scss';
 import META_DATA from '@/constants/metaData';
 import LPHeader from '@/components/LPHeader';
 
-interface IMainPageProps {
-    theme: string;
-    setTheme: Dispatch<SetStateAction<string>>;
-}
-
-const MainPage = ({ theme, setTheme }: IMainPageProps) => {
+const MainPage = () => {
     let timer: any = null;
     let successTimer: any = null;
+    const year = new Date().getFullYear();
     const [title, setTitle] = useState('Copy');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
@@ -236,14 +232,12 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 variant="body1"
                                 htmlElement="p"
                                 margin={false}>
-                                Utilize FormFusion&apos;s optimized form
-                                components to streamline your development
-                                process. The components are designed for
-                                efficiency, ensuring fast rendering and minimal
-                                resource usage. With these optimized components,
-                                you can build forms that deliver excellent
-                                performance, enhancing the overall user
-                                experience of your applications.
+                                FormFusion offers optimized form components such
+                                as Form, Input and Textarea to streamline your
+                                development process. The components are designed
+                                for efficiency, fast rendering and minimal
+                                resource usage. They are completely customizable
+                                and very easy to use.
                             </Typography>
                         </div>
                         <div className={classes.services__inner__cards__card}>
@@ -259,13 +253,12 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 variant="body1"
                                 htmlElement="p"
                                 margin={false}>
-                                Elevate your form control game with
-                                FormFusion&apos;s custom React hooks. These
-                                hooks make managing forms a breeze, giving you
-                                more control and flexibility. Easily integrate
-                                them into your projects for smoother form
-                                handling, validation, and state management,
-                                effortlessly improving the user experience.
+                                By default all Form elements in FormFusion are
+                                uncontrolled to ensure the best performance and
+                                minimal re-rendering. To gain more control over
+                                the form fields, FormFusion offers custom react
+                                hooks that can be used to access field values,
+                                errors etc.
                             </Typography>
                         </div>
                         <div className={classes.services__inner__cards__card}>
@@ -282,15 +275,11 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 htmlElement="p"
                                 margin={false}
                                 color="var(--primary)">
-                                FormFusion takes the hassle out of error
-                                handling by providing built-in solutions
-                                tailored to your needs. Easily customize error
-                                messages and styles to match your
-                                application&apos;s design and branding. With our
-                                intuitive tools, you can efficiently manage
-                                errors, ensuring a seamless user experience
-                                while maintaining full control over how errors
-                                are presented and managed within your forms.
+                                FormFusion takes care of error handling by
+                                providing automated error messages depending on
+                                the field type while also offering full field
+                                accessibility. The error messages are very easy
+                                to customize.
                             </Typography>
                         </div>
                         <div className={classes.services__inner__cards__card}>
@@ -306,12 +295,12 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                                 variant="body1"
                                 htmlElement="p"
                                 margin={false}>
-                                Benefit from FormFusion&apos;s extensive library
-                                of over 500 validation rules. Whether it&apos;s
-                                simple text inputs or complex custom fields,
-                                we&apos;ve got you covered. With a wide array of
-                                validation rules, you can ensure data integrity
-                                and accuracy, tailored to your specific
+                                The validation library consists of over 500
+                                validation rules. Whether it&apos;s simple text
+                                inputs or complex custom fields, we&apos;ve got
+                                you covered. With a wide array of validation
+                                rules, you can ensure data integrity and
+                                accuracy, tailored to your specific
                                 requirements.
                             </Typography>
                         </div>
@@ -541,7 +530,7 @@ const MainPage = ({ theme, setTheme }: IMainPageProps) => {
                     <Divider />
                     <br />
                     <Typography variant="caption" margin={false}>
-                        Copyright © 2023 CoreLab UI. All rights reserved.
+                        Copyright © {year} CoreLab UI. All rights reserved.
                     </Typography>
                 </div>
             </footer>
