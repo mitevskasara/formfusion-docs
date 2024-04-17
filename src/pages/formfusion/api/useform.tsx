@@ -27,6 +27,8 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
         <MainLayout
             {...{
                 ...META_DATA,
+                description:
+                    "FormFusion's useform hook: Custom react hook designed for advanced form management. Offers access to the essential features of the Form component including: values, errors, touched fields, form utils & more.",
                 title: `${META_DATA.title} | UseForm`,
                 canonical: `https://www.corelabui.com/${ROUTES.useform}`
             }}

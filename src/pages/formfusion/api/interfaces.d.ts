@@ -16,6 +16,7 @@ export interface Component {
     exampleTitle: string;
     nextUrl: string;
     nextUrlTitle: string;
+    metaDesc: string;
 }
 
 export interface ISelectOption {

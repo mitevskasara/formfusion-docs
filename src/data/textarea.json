@@ -29,5 +29,6 @@
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-ju6zau?file=src%2FApp.tsx",
     "exampleTitle": "FormFusion Basic Textarea usage",
     "nextUrl": "/formfusion/api/useform",
-    "nextUrlTitle": "UseForm"
+    "nextUrlTitle": "UseForm",
+    "metaDesc": "FormFusion's Textarea component: Powerful and customizable extention of the standard HTML textarea element built to be easily used with other FormFusion components. Easy to integrate with custom react hook allowing greater form control."
 }

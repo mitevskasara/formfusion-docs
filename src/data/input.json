@@ -43,5 +43,6 @@
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-agfycc?file=src%2FApp.tsx",
     "exampleTitle": "FormFusion Basic Input usage",
     "nextUrl": "/formfusion/api/textarea",
-    "nextUrlTitle": "Textarea"
+    "nextUrlTitle": "Textarea",
+    "metaDesc": "FormFusion's Input component: Powerful and customizable extention of the standard HTML input element that integrates a large library of ready to use validation rules and provides easy input masking. Easy to integrate with custom react hook allowing greater form control."
 }
