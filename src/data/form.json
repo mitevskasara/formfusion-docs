@@ -43,5 +43,6 @@
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-ahj7lp?file=src%2FApp.tsx",
     "exampleTitle": "FormFusion Basic Form example",
     "nextUrl": "/formfusion/api/input",
-    "nextUrlTitle": "Input"
+    "nextUrlTitle": "Input",
+    "metaDesc": "FormFusion's Form component: Performant and customizable extention of the standard HTML form element, enriched with essentials features for smooth form management. Easy to integrate with custom react hook allowing greater form control."
 }
