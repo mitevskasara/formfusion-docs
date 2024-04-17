@@ -25,6 +25,8 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
         <MainLayout
             {...{
                 ...META_DATA,
+                description:
+                    "FormFusion's connect utility: Handy method that provides flexibility when using FormFusion. Allows integrating Form component and all of its features with any UI library.",
                 title: `${META_DATA.title} | Connect`,
                 canonical: `https://www.corelabui.com/${ROUTES.connect}`
             }}
@@ -49,13 +51,12 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
                     amplifying the potential of your web applications. For a
                     step-by-step guide on these integrations, refer to the
                     instructions provided in the{' '}
-                    <Link href={`${ROUTES.integrations}`}>Integrations</Link>{' '}
-                    section.
+                    <Link href={`/${ROUTES.mui}`}>Integrations</Link> section.
                     <br />
                     <br />
                     It&apos;s worth highlighting that the connect method works
                     in synergy with the
-                    <Link href={`${ROUTES.useform}`}>&nbsp;UseForm</Link> hook,
+                    <Link href={`/${ROUTES.useform}`}>&nbsp;UseForm</Link> hook,
                     ensuring a harmonious and efficient form management process.
                 </Typography>
                 <br />

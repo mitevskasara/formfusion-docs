@@ -62,19 +62,25 @@ const MainPage = () => {
     return (
         <>
             <Head>
-                <title>{META_DATA.title}</title>
+                <title>FormFusion: Easy form handling, validation & more</title>
                 <meta charSet="utf-8" />
                 <meta
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
                 />
-                <meta property="title" content={META_DATA.title} />
+                <meta
+                    property="title"
+                    content="FormFusion: Easy form handling, validation & more"
+                />
                 <meta name="description" content={META_DATA.description} />
                 <meta property="image" content={META_DATA.image} />
 
                 <meta property="og:url" content="https://www.corelabui.com" />
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content={title} />
+                <meta
+                    property="og:title"
+                    content="FormFusion: Easy form handling, validation & more"
+                />
                 <meta
                     property="og:description"
                     content={META_DATA.description}
