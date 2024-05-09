@@ -1,4 +1,5 @@
 const ROUTES = {
+    blog: 'blog',
     home: 'formfusion',
     form: 'formfusion/api/form',
     input: 'formfusion/api/input',

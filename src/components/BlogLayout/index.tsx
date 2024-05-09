@@ -8,10 +8,9 @@ import React, {
 import Head from 'next/head';
 
 import Header from '@/components/Header';
-import LeftSidebar from '@/components/LeftSidebar';
 import Footer from '@/components/Footer';
 
-import classes from './main.module.scss';
+import classes from './blogLayout.module.scss';
 
 type Props = {
     children?: ReactNode;
@@ -74,16 +73,9 @@ const MainLayout = ({
                 toggle={setIsOpen}
                 theme={theme}
                 setTheme={setTheme}
+                showMenu={false}
             />
             <div className={classes.container}>
-                {sidebar && (
-                    <LeftSidebar
-                        open={isOpen}
-                        toggle={setIsOpen}
-                        theme={theme}
-                        setTheme={setTheme}
-                    />
-                )}
                 <main className={classes.main}>{children}</main>
             </div>
             <Footer />
