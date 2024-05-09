@@ -38,11 +38,6 @@ const nextConfig = {
                 permanent: true
             },
             {
-                source: '/blog',
-                destination: '/formfusion',
-                permanent: false
-            },
-            {
                 source: '/docs',
                 destination: '/formfusion',
                 permanent: false

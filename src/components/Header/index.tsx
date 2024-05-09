@@ -13,9 +13,16 @@ interface CustomHeaderProps {
     toggle: Dispatch<SetStateAction<boolean>>;
     theme: string;
     setTheme: Dispatch<SetStateAction<string>>;
+    showMenu?: boolean;
 }
 
-const CustomHeader = ({ open, toggle, theme, setTheme }: CustomHeaderProps) => {
+const CustomHeader = ({
+    open,
+    toggle,
+    theme,
+    setTheme,
+    showMenu = true
+}: CustomHeaderProps) => {
     return (
         <header className={classes.header}>
             <div className={classes.header__inner}>
@@ -46,27 +53,43 @@ const CustomHeader = ({ open, toggle, theme, setTheme }: CustomHeaderProps) => {
                     </a>
                 </div>
                 <div className={classes.header__inner__right}>
-                    <Button
-                        variant="text"
+                    <Link
+                        href="/formfusion"
+                        className={classes.header__inner__right__link_text}
+                        title="Documentation">
+                        Docs
+                    </Link>
+                    <Link
+                        href="/blog"
+                        className={classes.header__inner__right__link_text}
+                        title="Blog">
+                        Blog
+                    </Link>
+                    <button
                         onClick={() =>
                             setTheme(theme === 'standard' ? 'dark' : 'standard')
                         }
-                        aria-label="Theme icon">
+                        aria-label="Theme icon"
+                        className={classes.header__inner__right__btn_link}>
                         <span
                             className={`icon-${
                                 theme === 'standard' ? 'dark' : 'light'
                             } ${classes.header__inner__right__link}`}
+                            title="Change theme"
                         />
-                    </Button>
+                    </button>
                     <Link
                         href="https://github.com/corelabui"
                         target="_blank"
                         icon="github"
                         className={classes.header__inner__right__link}
+                        title="Github"
                     />
-                    <div className={classes.header__inner__right__menuIcon}>
-                        <HamburgerMenu open={open} setIsOpen={toggle} />
-                    </div>
+                    {showMenu && (
+                        <div className={classes.header__inner__right__menuIcon}>
+                            <HamburgerMenu open={open} setIsOpen={toggle} />
+                        </div>
+                    )}
                 </div>
             </div>
         </header>
