@@ -1,0 +1,32 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.container {
+    display: grid;
+    grid-template-areas: 'header' 'main' 'footer';
+    gap: 3em;
+    grid-column-gap: 6em;
+    padding: 0 $side-padding;
+    max-width: $container-width;
+    margin: 0 auto 0;
+
+    @include media(xlarge) {
+        max-width: $container-width-xl;
+    }
+
+    @include media(medium) {
+        grid-column-gap: 2em;
+    }
+}
+
+.main {
+    margin: 1em auto;
+    grid-area: main;
+    padding-top: 3em;
+    width: 100%;
+
+    @include media(small) {
+        margin: 1em 0;
+        width: 100%;
+    }
+}
