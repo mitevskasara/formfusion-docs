@@ -36,12 +36,12 @@
                 &_mobile {
                     display: none;
 
-                    @include media(small) {
+                    @include media(xsmall) {
                         display: block;
                     }
                 }
 
-                @include media(small) {
+                @include media(xsmall) {
                     display: none;
                 }
             }
@@ -54,24 +54,46 @@
         &__right {
             display: flex;
             align-items: center;
-            gap: 1em;
+            gap: 0.7em;
 
             &__menuIcon {
                 display: none;
 
                 @include media(small) {
                     display: block;
-                    margin-top: 0.2em;
                 }
             }
 
+            &__btn_link {
+                border: 0;
+                background: none;
+                cursor: pointer;
+                padding: 0;
+            }
+
             &__link {
-                font-size: 25px;
+                font-size: 1.2em;
                 display: flex !important;
                 color: var(--primary) !important;
+                border: 1px solid var(--primary);
+                border-radius: var(--border-radius);
+                width: 25px;
+                height: 25px;
+                align-items: center;
+                justify-content: center;
 
                 &:hover {
-                    color: var(--primary-hover) !important;
+                    background-color: var(--border-color);
+                }
+
+                &_text {
+                    color: var(--text) !important;
+                    font-weight: 600;
+                    font-size: 0.9em;
+
+                    &:hover {
+                        color: var(--primary-hover) !important;
+                    }
                 }
             }
         }

@@ -1,0 +1,36 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.tags {
+    display: flex;
+    gap: 1em;
+    padding-bottom: 1em;
+
+    &__tag {
+        color: var(--success);
+        font-weight: 600;
+    }
+}
+
+.date {
+    color: var(--title) !important;
+}
+
+.details {
+    & table {
+        width: 100%;
+    }
+
+    & img {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        height: auto;
+        display: block;
+    }
+
+    & * {
+        background-color: inherit !important;
+        color: inherit !important;
+    }
+}

@@ -36,6 +36,11 @@ const LPHeader = () => {
                             className={classes.header__inner__right__nav__link}>
                             Demo
                         </Link>
+                        <Link
+                            href="/blog"
+                            className={classes.header__inner__right__nav__link}>
+                            Blog
+                        </Link>
                     </div>
                 </div>
             </div>

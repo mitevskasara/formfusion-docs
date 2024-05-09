@@ -4,6 +4,10 @@
     --error: #9a414e;
     --link: #0b60b0;
     --link-hover: #40a2d8;
+    --success: #75a47f;
+
+    --success-light: #75a47f47;
+    --accent-light: #d19d4230;
 }
 
 a {
