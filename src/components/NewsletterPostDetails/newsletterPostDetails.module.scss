@@ -29,8 +29,28 @@
         display: block;
     }
 
-    & * {
+    & :not(pre):not(code):not(pre *):not(code *) {
         background-color: inherit !important;
         color: inherit !important;
+    }
+
+    & a {
+        color: var(--info) !important;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    & pre {
+        margin: 1em 0 !important;
+        padding: 1.5em 0em !important;
+        border-radius: 3px;
+    }
+
+    & code {
+        padding: 0;
+        font-size: 0.7em;
+        border: none;
     }
 }
