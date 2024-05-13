@@ -1,12 +1,17 @@
 import Typography from 'corelabui/Typography';
 import { formatDate } from '@/utils/dateFormat';
 import classes from './newsletterPostDetails.module.scss';
-
+import Prism from 'prismjs';
+import { useEffect } from 'react';
 interface INewsletterPostDetailsProps {
     data: any;
 }
 
 const NewsletterPostDetails = ({ data }: INewsletterPostDetailsProps) => {
+    useEffect(() => {
+        Prism.highlightAll();
+    }, [data]);
+
     return (
         <div>
             <div className={classes.tags}>
