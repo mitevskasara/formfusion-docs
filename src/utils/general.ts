@@ -32,3 +32,14 @@ export const typeToLabel = (string: string) => {
     const result = string.replace(/-/g, ' ').trim();
     return result.charAt(0).toUpperCase() + result.slice(1);
 };
+
+export const extractFirstImage = (htmlText: string) => {
+    const regex = /<img\b[^>]*\bsrc="([^"]*)"/;
+    const match = htmlText.match(regex);
+
+    if (match) {
+        return match[1];
+    } else {
+        return null;
+    }
+};

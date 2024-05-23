@@ -1,23 +1,9 @@
 @import '@/core/styles/variables';
 @import '@/core/styles/media-queries';
 
-.grid_featured {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3em;
-
-    @include media(small) {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @include media(xsmall) {
-        grid-template-columns: 1fr;
-    }
-}
-
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
     gap: 3em;
 
     @include media(small) {
@@ -44,7 +30,7 @@
     display: flex;
     align-items: center;
     color: var(--title);
-    margin: 1.5em 0px;
+    margin: 2em 0px 1.2em;
 
     & > span {
         background-color: var(--background);
@@ -53,8 +39,7 @@
 
     &__divider {
         position: absolute;
-        background-color: var(--success);
-        height: 3px;
+        border-top: 2px solid var(--border-color);
         width: 100%;
         z-index: -1;
     }
