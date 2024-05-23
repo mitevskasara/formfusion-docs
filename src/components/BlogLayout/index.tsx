@@ -8,9 +8,9 @@ import React, {
 import Head from 'next/head';
 
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 import classes from './blogLayout.module.scss';
+import LPFooter from '../LPFooter';
 
 type Props = {
     children?: ReactNode;
@@ -78,7 +78,7 @@ const MainLayout = ({
             <div className={classes.container}>
                 <main className={classes.main}>{children}</main>
             </div>
-            <Footer />
+            <LPFooter />
         </div>
     );
 };

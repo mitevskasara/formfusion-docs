@@ -9,19 +9,11 @@ const LPHeader = () => {
         <header className={classes.header}>
             <div className={classes.header__inner}>
                 <div className={classes.header__inner__left}>
-                    <Image
-                        src={`/assets/logo/logo-dark.png`}
-                        width={150}
-                        height={18.36}
-                        alt="CoreLab UI logo"
-                        className={classes.header__inner__left__logo}
+                    <span
+                        className={`${classes.header__inner__left__logo} icon-formfusion-full`}
                     />
-                    <Image
-                        src={`/assets/logo/logo-dark-mobile.png`}
-                        width={35}
-                        height={49.58}
-                        alt="CoreLab UI logo"
-                        className={classes.header__inner__left__logo_mobile}
+                    <span
+                        className={`${classes.header__inner__left__logo_mobile} icon-formfusion`}
                     />
                 </div>
                 <div className={classes.header__inner__right}>

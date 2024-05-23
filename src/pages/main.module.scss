@@ -1,8 +1,7 @@
 @import '@/core/styles/variables';
 @import '@/core/styles/media-queries';
 
-.section,
-.footer {
+.section {
     padding-left: $side-padding;
     padding-right: $side-padding;
 
@@ -12,14 +11,12 @@
     }
 }
 
-.section,
-.footer {
+.section {
     padding-top: 4.5em;
     padding-bottom: 4.5em;
 }
 
-.section__inner,
-.footer__inner {
+.section__inner {
     max-width: $container-width;
     margin: auto;
 
@@ -414,66 +411,6 @@
 
             @include media(xsmall) {
                 font-size: var(--heading4);
-            }
-        }
-    }
-}
-
-.footer {
-    background-color: var(--surface-dark);
-
-    &__inner {
-        &__navigation {
-            display: flex;
-            gap: 4em;
-            margin-bottom: 3em;
-            justify-content: space-between;
-
-            @include media(medium) {
-                flex-wrap: wrap-reverse;
-                justify-content: space-evenly;
-                text-align: center;
-            }
-
-            &__item {
-                display: flex;
-                flex-direction: column;
-                gap: 0.5em;
-
-                & > a {
-                    color: var(--text);
-                    text-decoration: none;
-                    cursor: pointer;
-
-                    &:hover {
-                        color: var(--primary);
-                    }
-                }
-            }
-        }
-
-        &__subscribe__form {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            gap: 0.5em;
-
-            & > div {
-                @include media(xsmall) {
-                    width: 100%;
-                }
-
-                & > button {
-                    height: 37px;
-
-                    @include media(xsmall) {
-                        width: 100%;
-                    }
-                }
-            }
-
-            @include media(xsmall) {
-                flex-direction: column;
             }
         }
     }
