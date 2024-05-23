@@ -252,7 +252,7 @@ const NewsletterPostDetails = ({
                                 <span className="icon-twitter" />
                             </Link>
                             <Link
-                                href={`https://www.facebook.com/sharer.php?u=${url}&p[title]=${data.title}`}
+                                href={`https://www.facebook.com/sharer.php?u=${url}`}
                                 target="_blank"
                                 title="Share on Facebook">
                                 <span
