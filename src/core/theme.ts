@@ -6,14 +6,18 @@ const customTheme = {
     primaryHover: '#7077A1',
     primaryDisabled: '#979CBB',
     fontFamily: 'inherit',
-    body1: '0.95em'
+    body1: '0.9em',
+    background: '#f5f4f0'
 };
 
 const dark = {
     ...darkTheme,
     text: '#d5d5d5e0',
+    textSecondary: '#bfbebed9',
+    title: '#ffffff',
     fontFamily: 'inherit',
-    body1: '0.95em'
+    body1: '0.9em',
+    surfaceDark: '#2a2f46'
 };
 
 export const scrollBarStyle =

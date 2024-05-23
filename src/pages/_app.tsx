@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DM_Sans } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 import ThemeProvider from 'corelabui/ThemeProvider';
 
@@ -10,7 +10,10 @@ import '../../public/assets/fonts/style.css';
 import '../core/styles/globals.css';
 import '../core/styles/prism.css';
 
-const font = DM_Sans({ subsets: ['latin'] });
+const font = Poppins({
+    weight: ['400', '500', '600', '700'],
+    subsets: ['latin']
+});
 
 const defaultTheme = Storage.get('CUI_theme') || 'standard';
 

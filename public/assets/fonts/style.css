@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?k0va0g');
-  src:  url('fonts/icomoon.eot?k0va0g#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?k0va0g') format('truetype'),
-    url('fonts/icomoon.woff?k0va0g') format('woff'),
-    url('fonts/icomoon.svg?k0va0g#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?cj9eaj');
+  src:  url('fonts/icomoon.eot?cj9eaj#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?cj9eaj') format('truetype'),
+    url('fonts/icomoon.woff?cj9eaj') format('woff'),
+    url('fonts/icomoon.svg?cj9eaj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-formfusion-full:before {
+  content: "\e919";
+}
+.icon-formfusion-circle:before {
+  content: "\e918";
+}
+.icon-formfusion:before {
+  content: "\e91a";
+}
+.icon-twitter:before {
+  content: "\e90d";
+}
 .icon-stackblitz:before {
   content: "\e90c";
 }
@@ -57,6 +69,36 @@
 .icon-gmail:before {
   content: "\e907";
 }
+.icon-book:before {
+  content: "\e917";
+}
+.icon-screen:before {
+  content: "\e916";
+}
+.icon-pinterest:before {
+  content: "\e902";
+}
+.icon-arrow-down-right:before {
+  content: "\e900";
+}
+.icon-comments:before {
+  content: "\e915";
+}
+.icon-light:before {
+  content: "\e914";
+}
+.icon-github:before {
+  content: "\e906";
+}
+.icon-whatsapp:before {
+  content: "\e91b";
+}
+.icon-arrow-left:before {
+  content: "\e91e";
+}
+.icon-arrow-down-right1:before {
+  content: "\e905";
+}
 .icon-chevron-right:before {
   content: "\e90a";
 }
@@ -69,30 +111,30 @@
 .icon-arrow-right:before {
   content: "\e901";
 }
-.icon-light:before {
-  content: "\e914";
+.icon-link:before {
+  content: "\e91c";
 }
-.icon-dark:before {
-  content: "\e911";
-}
-.icon-github:before {
-  content: "\e906";
-}
-.icon-linkedin:before {
-  content: "\e900";
-}
-.icon-twitter:before {
-  content: "\e902";
-}
-.icon-instagram:before {
+.icon-timer:before {
   content: "\e903";
 }
-.icon-whatsapp:before {
+.icon-spark:before {
   content: "\e904";
 }
-.icon-facebook:before {
-  content: "\e905";
+.icon-bar-graph:before {
+  content: "\e913";
+}
+.icon-instagram:before {
+  content: "\e911";
+}
+.icon-facebook-circle:before {
+  content: "\e90e";
+}
+.icon-linkedin-circle:before {
+  content: "\e90f";
 }
 .icon-hour-glass:before {
   content: "\e909";
+}
+.icon-dark:before {
+  content: "\e912";
 }

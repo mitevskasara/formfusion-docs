@@ -1,15 +1,9 @@
-import { Dispatch, SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import Button from 'corelabui/Button';
 import Typography from 'corelabui/Typography';
 import Highlight from 'corelabui/Highlight';
-import Divider from 'corelabui/Divider';
-import Input from 'corelabui/Input';
-import { Form } from 'formfusion';
-
-import axios from 'axios';
 
 import { copy } from '@/utils/general';
 import Code from '@/components/Code';
@@ -21,14 +15,11 @@ import { COMPONENTS } from '@/constants/examples';
 import classes from './main.module.scss';
 import META_DATA from '@/constants/metaData';
 import LPHeader from '@/components/LPHeader';
+import LPFooter from '@/components/LPFooter';
 
 const MainPage = () => {
     let timer: any = null;
-    let successTimer: any = null;
-    const year = new Date().getFullYear();
     const [title, setTitle] = useState('Copy');
-    const [error, setError] = useState('');
-    const [success, setSuccess] = useState('');
 
     const onClick = () => {
         copy('npm i formfusion');
@@ -37,27 +28,6 @@ const MainPage = () => {
     };
 
     const goTo = (link: string) => window?.open(link, '_self');
-
-    const handleSubscribe = async (data: any) => {
-        try {
-            await axios.post(
-                'https://connect.mailerlite.com/api/subscribers',
-                {
-                    email: data.email
-                },
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Authorization: `Bearer ${MAILERLITE_API_KEY}`
-                    }
-                }
-            );
-            setSuccess('Thank you for subscripting!');
-            successTimer = setTimeout(() => setSuccess(''), 5000);
-        } catch (error) {
-            setError('Subscription failed. Please try again.');
-        }
-    };
 
     return (
         <>
@@ -434,112 +404,7 @@ const MainPage = () => {
                     </Button>
                 </div>
             </section>
-            <footer className={classes.footer}>
-                <div className={classes.footer__inner}>
-                    <div className={classes.footer__inner__navigation}>
-                        <nav
-                            className={classes.footer__inner__navigation__item}>
-                            <Typography variant="heading6" htmlElement="h3">
-                                Resources
-                            </Typography>
-                            <Link href="/formfusion#installation">
-                                Installation
-                            </Link>
-                            <Link href="/formfusion#example">Example</Link>
-                            <Link href="/formfusion/api/form">
-                                API Reference
-                            </Link>
-                        </nav>
-                        <nav
-                            className={classes.footer__inner__navigation__item}>
-                            <Typography variant="heading6" htmlElement="h3">
-                                Integration
-                            </Typography>
-                            <Link
-                                href="/formfusion/integrations/mui"
-                                target="_blank">
-                                Material UI
-                            </Link>
-                            <Link
-                                href="/formfusion/integrations/antdesign"
-                                target="_blank">
-                                Ant Design
-                            </Link>
-                            <Link
-                                href="/formfusion/integrations/chakraui"
-                                target="_blank">
-                                Chakra UI
-                            </Link>
-                            <Link
-                                href="/formfusion/integrations/reactstrap"
-                                target="_blank">
-                                Reactstrap
-                            </Link>
-                        </nav>
-                        <nav
-                            className={classes.footer__inner__navigation__item}>
-                            <Typography variant="heading6" htmlElement="h3">
-                                About
-                            </Typography>
-                            <Link
-                                href="https://github.com/corelabui"
-                                target="_blank">
-                                Github
-                            </Link>
-                            <Link
-                                href="https://github.com/corelabui"
-                                target="_blank">
-                                Twitter
-                            </Link>
-                            <Link
-                                href="https://github.com/corelabui"
-                                target="_blank">
-                                Threads
-                            </Link>
-                        </nav>
-                        <nav
-                            className={classes.footer__inner__navigation__item}>
-                            <Typography variant="heading6" htmlElement="h3">
-                                Subscribe to our newsletter
-                            </Typography>
-                            <Form
-                                className={
-                                    classes.footer__inner__subscribe__form
-                                }
-                                onSubmit={handleSubscribe}>
-                                <Input
-                                    id="email"
-                                    name="email"
-                                    placeholder="Enter your email"
-                                    type="email"
-                                />
-                                <Button type="submit">Subscribe</Button>
-                            </Form>
-                            {error && (
-                                <Typography
-                                    variant="body1"
-                                    htmlElement="span"
-                                    color="red">
-                                    {error}
-                                </Typography>
-                            )}
-                            {success && (
-                                <Typography
-                                    variant="body1"
-                                    htmlElement="span"
-                                    margin={false}>
-                                    {success}
-                                </Typography>
-                            )}
-                        </nav>
-                    </div>
-                    <Divider />
-                    <br />
-                    <Typography variant="caption" margin={false}>
-                        Copyright © {year} CoreLab UI. All rights reserved.
-                    </Typography>
-                </div>
-            </footer>
+            <LPFooter />
         </>
     );
 };
