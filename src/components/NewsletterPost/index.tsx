@@ -28,7 +28,7 @@ const NewsletterPost = ({
                     src={post.images[0]?.url}
                     alt={post.images[0]?.url}
                     fill
-                    objectFit="cover"
+                    sizes="100%"
                 />
             </div>
             <div className={classes.post__right}>
