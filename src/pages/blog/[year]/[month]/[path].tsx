@@ -32,7 +32,7 @@ const DetailsPage = ({ data, other, theme, setTheme }: Props) => {
             theme={theme}
             setTheme={setTheme}
             sidebar={false}>
-            <NewsletterPostDetails data={data} />
+            <NewsletterPostDetails data={data} other={other} />
         </BlogLayout>
     );
 };
@@ -48,7 +48,7 @@ export const getServerSideProps: GetServerSideProps = async ({
     const details = await detailsResponse.json();
 
     const allPostsResponse = await fetch(
-        `${API_URL}?key=${API_KEY}&fetchImages=true&maxResults=2`
+        `${API_URL}?key=${API_KEY}&fetchImages=true&maxResults=5`
     );
     const allPosts = await allPostsResponse.json();
 

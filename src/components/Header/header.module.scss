@@ -33,8 +33,15 @@
             gap: 1em;
 
             &__logo {
+                color: var(--text);
+                font-weight: bold;
+                font-size: 1.4em;
+
                 &_mobile {
                     display: none;
+                    color: var(--text);
+                    font-weight: bold;
+                    font-size: 1.4em;
 
                     @include media(xsmall) {
                         display: block;
@@ -69,27 +76,38 @@
                 background: none;
                 cursor: pointer;
                 padding: 0;
+                margin-left: 1em;
             }
 
             &__link {
                 font-size: 1.2em;
                 display: flex !important;
-                color: var(--primary) !important;
-                border: 1px solid var(--primary);
-                border-radius: var(--border-radius);
+                color: var(--surface) !important;
+                background: var(--text);
+                border-radius: 50%;
                 width: 25px;
                 height: 25px;
                 align-items: center;
                 justify-content: center;
 
                 &:hover {
-                    background-color: var(--border-color);
+                    background-color: var(--primary-hover);
                 }
 
                 &_text {
                     color: var(--text) !important;
-                    font-weight: 600;
                     font-size: 0.9em;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: var(--primary-hover) !important;
+                    }
+                }
+
+                &_github {
+                    font-size: 1.5em !important;
+                    color: var(--text) !important;
+                    display: flex !important;
 
                     &:hover {
                         color: var(--primary-hover) !important;

@@ -28,27 +28,11 @@ const CustomHeader = ({
             <div className={classes.header__inner}>
                 <div className={classes.header__inner__left}>
                     <a href="https://www.corelabui.com">
-                        <Image
-                            src={
-                                theme === 'dark'
-                                    ? `/assets/logo/logo-dark.png`
-                                    : `/assets/logo/logo-light.png`
-                            }
-                            width={150}
-                            height={18.36}
-                            alt="CoreLab UI logo"
-                            className={classes.header__inner__left__logo}
+                        <span
+                            className={`${classes.header__inner__left__logo} icon-formfusion-full`}
                         />
-                        <Image
-                            src={
-                                theme === 'dark'
-                                    ? `/assets/logo/logo-dark-mobile.png`
-                                    : `/assets/logo/logo-light-mobile.png`
-                            }
-                            width={30}
-                            height={41.88}
-                            alt="CoreLab UI logo"
-                            className={classes.header__inner__left__logo_mobile}
+                        <span
+                            className={`${classes.header__inner__left__logo_mobile} icon-formfusion`}
                         />
                     </a>
                 </div>
@@ -62,7 +46,8 @@ const CustomHeader = ({
                     <Link
                         href="/blog"
                         className={classes.header__inner__right__link_text}
-                        title="Blog">
+                        title="Blog"
+                        style={{ marginRight: '1em' }}>
                         Blog
                     </Link>
                     <button
@@ -82,7 +67,7 @@ const CustomHeader = ({
                         href="https://github.com/corelabui"
                         target="_blank"
                         icon="github"
-                        className={classes.header__inner__right__link}
+                        className={classes.header__inner__right__link_github}
                         title="Github"
                     />
                     {showMenu && (
