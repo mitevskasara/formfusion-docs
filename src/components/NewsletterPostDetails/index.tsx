@@ -308,7 +308,8 @@ const NewsletterPostDetails = ({
                             .map((post: any) => (
                                 <Link
                                     href={`/${ROUTES.blog}/[year]/[month]/[path]`}
-                                    as={`/${ROUTES.blog}${postUrl(post.url)}`}>
+                                    as={`/${ROUTES.blog}${postUrl(post.url)}`}
+                                    key={post.id}>
                                     <div
                                         className={
                                             classes.details__outter__right__similar__post
