@@ -31,14 +31,14 @@ const Section = forwardRef(
                 {...props}>
                 {title && (
                     <div className={classes.section__title}>
-                        <Typography variant="heading4" htmlElement="h2">
+                        <Typography variant="heading4" htmlElement="h1">
                             {title}
                         </Typography>
                         {badge || ''}
                     </div>
                 )}
                 {subtitle && (
-                    <Typography variant="heading5" htmlElement="h3">
+                    <Typography variant="heading5" htmlElement="h2">
                         {subtitle}
                     </Typography>
                 )}
