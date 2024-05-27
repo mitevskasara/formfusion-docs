@@ -33,6 +33,7 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 ...META_DATA,
                 title: `${META_DATA.title} | ${capitalize(data?.key)}`,
                 description: data?.metaDesc,
+                url: `https://www.corelabui.com/${ROUTES.home}/api/${data?.key}`,
                 canonical: `https://www.corelabui.com/${ROUTES.home}/api/${data?.key}`
             }}
             theme={theme}
