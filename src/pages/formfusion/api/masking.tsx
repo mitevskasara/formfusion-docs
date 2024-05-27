@@ -29,7 +29,10 @@ const Mask = ({ theme, setTheme }: IMaskProps) => {
             {...{
                 ...META_DATA,
                 title: `${META_DATA.title} | Input masking`,
-                canonical: `https://www.corelabui.com/${ROUTES.validation}`
+                canonical: `https://www.corelabui.com/${ROUTES.validation}`,
+                url: `https://www.corelabui.com/${ROUTES.validation}`,
+                description:
+                    'Integrate precision with Input Masking by FormFusion. A simple solution for refining data entry. Customize formats to ensure accuracy and enhance user experience. Experience the difference today.'
             }}
             theme={theme}
             setTheme={setTheme}>

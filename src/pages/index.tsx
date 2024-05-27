@@ -32,7 +32,10 @@ const MainPage = () => {
     return (
         <>
             <Head>
-                <title>FormFusion: Easy form handling, validation & more</title>
+                <title>
+                    CoreLab UI: Toolkit to speed up your front-end development
+                    workflow
+                </title>
                 <meta charSet="utf-8" />
                 <meta
                     name="viewport"

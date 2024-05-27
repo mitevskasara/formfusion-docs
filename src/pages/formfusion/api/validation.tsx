@@ -100,7 +100,10 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
             {...{
                 ...META_DATA,
                 title: `${META_DATA.title} | Validation rules`,
-                canonical: `https://www.corelabui.com/${ROUTES.validation}`
+                url: `https://www.corelabui.com/${ROUTES.validation}`,
+                canonical: `https://www.corelabui.com/${ROUTES.validation}`,
+                description:
+                    "Explore FormFusion's toolkit for effortless form validation. Discover intuitive solutions and advanced validation rules to speed up your delivery time. Improve your workflow with ease. Try FormFusion today."
             }}
             theme={theme}
             setTheme={setTheme}>
