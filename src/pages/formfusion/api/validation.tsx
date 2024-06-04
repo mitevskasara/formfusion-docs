@@ -4,8 +4,7 @@ import Highlight from 'corelabui/Highlight';
 import Select from 'corelabui/Select';
 import Button from 'corelabui/Button';
 import Flex, { FlexItem } from 'corelabui/Flex';
-import Input from 'corelabui/Input';
-import { useForm, connect, rules, Rules } from 'formfusion';
+import { Input, useForm, connect, rules, Rules } from 'formfusion';
 import postcodes from '@formfusion/postcodes';
 import iban from '@formfusion/iban';
 import licencePlates from '@formfusion/licence-plates';
@@ -201,7 +200,9 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
                         />
                     </FlexItem>
                 </Flex>
-                <Table headers={TYPES_TABLE_HEADERS} data={tableData} />
+                <ClientComponent>
+                    <Table headers={TYPES_TABLE_HEADERS} data={tableData} />
+                </ClientComponent>
                 <Flex
                     justifyContent="end"
                     alignItems="center"
@@ -249,12 +250,10 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
                         <Form validateOnChange>
                             <Flex direction="column" gap="0.5em">
                                 <Input
-                                    // @ts-ignore
-                                    {...connect(config, rules[type])}
                                     id={type}
                                     name={type}
+                                    type={type}
                                     label={`Rule: ${type}`}
-                                    error={Boolean(config.errors[type])}
                                     helperText={
                                         config.errors[type] || info[type]?.info
                                     }

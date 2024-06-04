@@ -19,6 +19,13 @@
             "required": false
         },
         {
+            "name": "helperText",
+            "type": "string",
+            "default": "",
+            "description": "A small helper text shown bellow of the input field. Recommended for additional information about the field helpful for the user.",
+            "required": false
+        },
+        {
             "name": "classes",
             "type": "{ root: string; field: string; label: string; error: string; }",
             "default": "",

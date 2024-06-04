@@ -9,6 +9,7 @@ import Storage from '@/utils/storage';
 import '../../public/assets/fonts/style.css';
 import '../core/styles/globals.css';
 import '../core/styles/prism.css';
+import 'formfusion/style.css';
 
 const font = Poppins({
     weight: ['400', '500', '600', '700'],

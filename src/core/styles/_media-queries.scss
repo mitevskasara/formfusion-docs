@@ -11,6 +11,10 @@
         @media (max-width: 900px) {
             @content;
         }
+    } @else if $size ==ssmall {
+        @media (max-width: 959px) {
+            @content;
+        }
     } @else if $size ==smedium {
         @media (max-width: 995px) {
             @content;
