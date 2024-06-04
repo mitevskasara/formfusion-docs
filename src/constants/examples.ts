@@ -34,7 +34,7 @@ const MyForm = () => {
     console.log('Success ' + JSON.stringify(data));
   };
 
-  const config = useForm({ onSubmit });
+  const config = useForm({ initialValues: { username: '' }, onSubmit });
 
   return (
     <Form config={config} className="form">
@@ -44,18 +44,9 @@ const MyForm = () => {
         type="username"
         label="Username"
         required
-        classes={{
-          field: 'input-field',
-          label: 'input-field__label',
-          error: 'input-field__error-message',
-        }}
-        validation={{
-          patternMismatch: 'Please match the requested format.',
-          valueMissing: 'This field is required.',
-        }}
       />
-      Your username is {config.values.username}
       <button type="submit">Submit</button>
+      Your username is {config.values.username}
     </Form>
   );
 };
@@ -77,15 +68,10 @@ const MyForm = () => {
       <Input
         id="credit-card-number"
         name="credit-card-number"
-        type="credit-card-number-basic"
+        type="credit-card-number-space"
         label="Credit card number"
-        placeholder="Enter your credit card number"
+        placeholder="1234 XXXX XXXX XXXX"
         required
-        classes={{
-          field: 'form__input-field',
-          error: 'form__input-field__error',
-          label: 'form__input-field__label',
-        }}
       />
       <Input
         id="ccv"
@@ -94,11 +80,6 @@ const MyForm = () => {
         label="CCV"
         placeholder="Enter your ccv number"
         required
-        classes={{
-          field: 'form__input-field',
-          error: 'form__input-field__error',
-          label: 'form__input-field__label',
-        }}
       />
       <Input
         id="expiry-date"
@@ -106,11 +87,6 @@ const MyForm = () => {
         type="date"
         label="Expiry date"
         required
-        classes={{
-          field: 'form__input-field',
-          error: 'form__input-field__error',
-          label: 'form__input-field__label',
-        }}
       />
       <button type="submit">Submit</button>
     </Form>
@@ -378,3 +354,48 @@ export const RULES = {
 
 <Input name="name" type={rules.alphabetic} />`
 };
+
+export const LP_EXAMPLE = `import React from 'react';
+import { Form, Input } from 'formfusion';
+
+const MyForm = () => {
+    const onSubmit = (data) => {
+        alert('Form submitted successfully' + JSON.stringify(data));
+    };
+
+    return (
+        <Form onSubmit={onSubmit} className={classes.form}>
+            <Input
+                id="firstName"
+                name="firstName"
+                type="alphabetic"
+                label="First name"
+                placeholder="What's your first name"
+                required
+            />
+            <div className={classes.form__inline}>
+                <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    label="Email"
+                    placeholder="Enter your email"
+                    required
+                />
+                <Input
+                    id="phone"
+                    name="phone"
+                    type="text"
+                    label="Phone number"
+                    mask="(+#) ### ### ####"
+                    placeholder="(+X) XXX XXX XXXX"
+                    required
+                />
+            </div>
+            <button type="submit">Test me</button>
+        </Form>
+    );
+};
+
+export default MyForm;
+`;

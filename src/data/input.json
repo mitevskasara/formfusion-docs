@@ -33,10 +33,24 @@
             "required": false
         },
         {
+            "name": "helperText",
+            "type": "string",
+            "default": "",
+            "description": "A small helper text shown bellow of the input field. Recommended for additional information about the field helpful for the user.",
+            "required": false
+        },
+        {
             "name": "classes",
             "type": "{ root: string; field: string; label: string; error: string; }",
             "default": "",
             "description": "Classes applied to the root, input, label and error elements.",
+            "required": false
+        },
+        {
+            "name": "hideArrows",
+            "type": "boolean",
+            "default": "",
+            "description": "show/hide the default arrows in an input type 'number'",
             "required": false
         }
     ],

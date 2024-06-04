@@ -4,6 +4,7 @@ const toIgnore = [
     'search',
     'url',
     'tel',
+    'creditCardNumberBasic',
     'creditCardNumberHyphen',
     'creditCardNumberSpace',
     'ipv4',

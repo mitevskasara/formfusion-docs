@@ -68,17 +68,22 @@ const MainLayout = ({
                 <meta name="keywords" content={keywords}></meta>
                 <link rel="canonical" href={canonical} />
             </Head>
-            <Header
-                open={isOpen}
-                toggle={setIsOpen}
-                theme={theme}
-                setTheme={setTheme}
-                showMenu={false}
-            />
+            <div className={classes.header}>
+                <Header
+                    open={isOpen}
+                    toggle={setIsOpen}
+                    theme={theme}
+                    setTheme={setTheme}
+                    showMenu={false}
+                />
+            </div>
+
             <div className={classes.container}>
                 <main className={classes.main}>{children}</main>
             </div>
-            <LPFooter />
+            <div className={classes.footer}>
+                <LPFooter />
+            </div>
         </div>
     );
 };

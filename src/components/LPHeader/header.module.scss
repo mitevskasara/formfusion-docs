@@ -9,27 +9,36 @@
     top: 0;
     width: -webkit-fill-available;
     width: -moz-available;
-    z-index: 2;
+    z-index: 3;
     padding-top: 0.8em;
     padding-bottom: 0.5em;
     grid-area: header;
-    background-color: var(--primary);
+    background-color: var(--background);
 
-    @include media(small) {
-        padding-left: $side-padding-sm;
-        padding-right: $side-padding-sm;
+    @include media(medium) {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: $container-width;
+        max-width: $lp-container-width;
         margin: auto;
         height: inherit;
 
         @include media(xlarge) {
-            max-width: $container-width-xl;
+            max-width: $lp-container-width;
+        }
+
+        @include media(large) {
+            max-width: $lp-container-width-medium;
+        }
+
+        @include media(medium) {
+            max-width: unset;
+            width: 90%;
         }
 
         &__left {
@@ -38,15 +47,15 @@
             gap: 1em;
 
             &__logo {
-                color: var(--surface);
+                color: var(--text);
                 font-weight: bold;
-                font-size: 1.4em;
+                font-size: 1.2em;
 
                 &_mobile {
                     display: none;
-                    color: var(--surface);
+                    color: var(--text);
                     font-weight: bold;
-                    font-size: 1.4em;
+                    font-size: 1.2em;
 
                     @include media(small) {
                         display: block;
@@ -81,12 +90,19 @@
             &__nav {
                 margin-left: 3em;
                 display: flex;
+                align-items: center;
                 gap: 1.5em;
 
                 &__link {
-                    color: var(--light);
+                    color: var(--text);
                     font-weight: 500;
-                    font-size: 0.9em;
+                    font-size: 0.85em;
+                }
+
+                & > div:last-child {
+                    @include media(xsmall) {
+                        display: none;
+                    }
                 }
             }
         }

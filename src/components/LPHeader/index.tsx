@@ -1,10 +1,10 @@
-import { Dispatch, SetStateAction } from 'react';
-import Image from 'next/image';
+import Button from 'corelabui/Button';
 import Link from 'next/link';
 
 import classes from './header.module.scss';
 
 const LPHeader = () => {
+    const goTo = (link: string) => window?.open(link, '_self');
     return (
         <header className={classes.header}>
             <div className={classes.header__inner}>
@@ -17,23 +17,23 @@ const LPHeader = () => {
                     />
                 </div>
                 <div className={classes.header__inner__right}>
-                    <div className={classes.header__inner__right__nav}>
+                    <nav className={classes.header__inner__right__nav}>
                         <Link
                             href="/formfusion"
                             className={classes.header__inner__right__nav__link}>
                             Documentation
                         </Link>
                         <Link
-                            href="#demo"
-                            className={classes.header__inner__right__nav__link}>
-                            Demo
-                        </Link>
-                        <Link
                             href="/blog"
                             className={classes.header__inner__right__nav__link}>
                             Blog
                         </Link>
-                    </div>
+                        <Button
+                            size="small"
+                            onClick={() => goTo('/formfusion')}>
+                            Try it out
+                        </Button>
+                    </nav>
                 </div>
             </div>
         </header>

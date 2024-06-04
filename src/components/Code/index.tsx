@@ -7,11 +7,13 @@ import styles from './code.module.scss';
 const Code = ({
     children,
     language = 'javascript',
-    canCopy = true
+    canCopy = true,
+    className
 }: {
     children: string;
     language?: string;
     canCopy?: boolean;
+    className?: string;
 }) => {
     const codeRef = useRef(null);
     let timer: any = null;
@@ -28,7 +30,7 @@ const Code = ({
     }, [children]);
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${className}`}>
             <pre className={styles.pre}>
                 <code ref={codeRef} className={`language-${language}`}>
                     {children}
