@@ -1,0 +1,60 @@
+@import '@/core/styles/media-queries';
+@import '@/core/styles/variables';
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    flex: 2;
+    padding: 1.5em;
+    font-family: inherit;
+    width: -webkit-fill-available;
+
+    &__inline {
+        display: flex;
+        gap: 20px;
+
+        & > div:first-child {
+            width: calc(50% - 0.5em);
+
+            @media only screen and (max-width: 400px) {
+                width: calc(100% - 0.5em);
+            }
+        }
+
+        & > div:nth-child(2) {
+            width: calc(50% - 0.5em);
+
+            @media only screen and (max-width: 400px) {
+                width: calc(100% - 0.5em);
+            }
+        }
+
+        &__row {
+            display: flex;
+            gap: 10px;
+        }
+
+        @media only screen and (max-width: 400px) {
+            flex-direction: column;
+            gap: 0.5em;
+        }
+    }
+
+    & > button {
+        color: var(--light);
+        border: 1px solid transparent;
+        background-color: #c5933a;
+        padding: 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 15px;
+        position: fixed;
+        bottom: 1.5em;
+        width: calc(100% - 3em);
+    }
+
+    & > h5 {
+        margin-top: 0;
+    }
+}

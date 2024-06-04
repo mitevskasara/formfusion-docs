@@ -10,10 +10,7 @@ const Newsletter = ({ posts = [] }: INewsletterProps) => (
         <div className={classes.grid__item_featured}>
             <NewsletterPost post={posts[0]} mode="featured" />
         </div>
-        <h1 className={classes.title}>
-            <span>Latest posts</span>
-            <hr className={classes.title__divider} />
-        </h1>
+        <h1 className={classes.title}>Latest posts</h1>
         <div className={classes.grid}>
             {posts.slice(1, posts.length).map((post: any, key: number) => (
                 <div key={key} className={classes.grid__item}>

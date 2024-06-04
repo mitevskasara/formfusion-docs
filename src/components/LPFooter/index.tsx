@@ -133,7 +133,6 @@ const Footer = () => {
                         )}
                     </nav>
                 </div>
-                <Divider />
                 <br />
                 <Typography
                     variant="caption"

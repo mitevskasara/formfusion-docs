@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction, useRef } from 'react';
 import Typography from 'corelabui/Typography';
-import { rules } from 'formfusion';
 import Flex from 'corelabui/Flex';
 import Button from 'corelabui/Button';
 
@@ -19,13 +18,14 @@ import ROUTES from '@/constants/routes';
 import { COMPONENTS } from '@/constants/examples';
 import FormExample from '@/components/FormExample';
 import GridList from '@/components/GridList';
+import { rules } from 'formfusion';
 
-interface IReactFormManagerProps {
+interface IFormFusionProps {
     theme: string;
     setTheme: Dispatch<SetStateAction<string>>;
 }
 
-const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
+const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
     const exampleRef = useRef<HTMLElement | null>(null);
 
     return (
@@ -72,7 +72,9 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                     &nbsp;and provides a large collection of thoroughly tested
                     and ready to use validation rules such as:
                 </Typography>
-                <GridList items={patternsToList(rules)} />
+                <ClientComponent>
+                    <GridList items={patternsToList(rules)} />
+                </ClientComponent>
                 <Link href={ROUTES.validation} style={{ float: 'right' }}>
                     See full list here
                 </Link>
@@ -92,6 +94,18 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                 <ClientComponent>
                     <Code language="bash">npm i formfusion</Code>
                 </ClientComponent>
+                <br />
+                <Typography variant="body1">
+                    To use the styled version, import the styles file in your
+                    main file:
+                </Typography>
+                <br />
+                <ClientComponent>
+                    <Code language="javascript">
+                        import &apos;formfusion/style.css&apos;;
+                    </Code>
+                </ClientComponent>
+                <br />
             </Section>
             <Section id="example" ref={exampleRef}>
                 <Flex
@@ -121,7 +135,9 @@ const ReactFormManager = ({ theme, setTheme }: IReactFormManagerProps) => {
                     a card number and ccv validation:
                 </Typography>
                 <br />
-                <Code language="javascript">{COMPONENTS.form}</Code>
+                <ClientComponent>
+                    <Code language="javascript">{COMPONENTS.form}</Code>
+                </ClientComponent>
                 <br />
                 <br />
                 <Typography variant="heading5" htmlElement="h3">
@@ -140,4 +156,4 @@ export async function getStaticProps() {
     };
 }
 
-export default ReactFormManager;
+export default FormFusion;

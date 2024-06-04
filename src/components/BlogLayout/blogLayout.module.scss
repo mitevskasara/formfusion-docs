@@ -1,18 +1,38 @@
 @import '@/core/styles/variables';
 @import '@/core/styles/media-queries';
 
+.header {
+    & > header {
+        padding-top: 0.8em;
+        padding-bottom: 0.5em;
+
+        & > div {
+            max-width: $lp-container-width;
+            margin: auto;
+
+            @include media(xlarge) {
+                max-width: $lp-container-width;
+            }
+
+            @include media(large) {
+                max-width: $lp-container-width-medium;
+            }
+
+            @include media(small) {
+                width: calc(100vw - 4em);
+                max-width: calc(100vw - 4em);
+            }
+        }
+    }
+}
+
 .container {
     display: grid;
     grid-template-areas: 'header' 'main' 'footer';
     gap: 3em;
     grid-column-gap: 6em;
     padding: 0 $side-padding;
-    max-width: $container-width;
     margin: 0 auto 0;
-
-    @include media(xlarge) {
-        max-width: $container-width-xl;
-    }
 
     @include media(medium) {
         grid-column-gap: 2em;
@@ -23,15 +43,31 @@
     margin: 1em auto;
     grid-area: main;
     padding-top: 3em;
-    width: 100%;
-    max-width: $container-width;
+    max-width: $lp-container-width;
+    margin: auto;
 
     @include media(xlarge) {
-        max-width: $container-width-xl;
+        max-width: $lp-container-width;
+    }
+
+    @include media(large) {
+        max-width: $lp-container-width-medium;
     }
 
     @include media(small) {
-        margin: 1em 0;
-        width: 100%;
+        width: calc(100vw - 4em);
+        max-width: calc(100vw - 4em);
+    }
+
+    @include media(small) {
+        margin: 1em auto;
+    }
+}
+
+.footer {
+    margin-top: 5em;
+
+    & > footer {
+        background-color: var(--surface);
     }
 }

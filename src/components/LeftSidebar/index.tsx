@@ -29,7 +29,7 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
     let classses = classes.leftSidebar;
     if (open) classses += ` ${classes.leftSidebar_open}`;
 
-    const sidebarRef = useClickAwayListener(() => console.log(''));
+    const sidebarRef = useClickAwayListener(() => {});
 
     return (
         <aside className={classses} ref={sidebarRef}>
@@ -42,7 +42,9 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                             margin={false}
                             color={
                                 isActive(`/${ROUTES.home}#introduction`) &&
-                                THEMES[theme].primary
+                                THEMES[theme]
+                                    ? THEMES[theme].primary
+                                    : '#2D3250'
                             }>
                             Introduction
                         </Typography>
