@@ -16,7 +16,7 @@ const Blog = ({ posts, theme, setTheme }: IBlogProps) => {
         <BlogLayout
             {...{
                 url: `https://www.corelabui.com/${ROUTES.blog}`,
-                title: 'FormFusion: Easy form handling, validation & more',
+                title: 'Tutorials, Tech Blogs & Articles | CorelabUI',
                 image: '/assets/meta-image.png',
                 description:
                     "Explore CorelabUI's tech blog with tons of articles and resources about technology development. Get tips and insights about React, JavaScritp, Web forms, and more!",
