@@ -7,19 +7,23 @@ import Highlight from 'corelabui/Highlight';
 
 import { copy } from '@/utils/general';
 import Code from '@/components/Code';
-import FormExample from '@/components/FormExample';
 
-import MAILERLITE_API_KEY from '@/constants/api-key';
-import { COMPONENTS } from '@/constants/examples';
+import { LP_EXAMPLE } from '@/constants/examples';
 
 import classes from './main.module.scss';
 import META_DATA from '@/constants/metaData';
 import LPHeader from '@/components/LPHeader';
 import LPFooter from '@/components/LPFooter';
+import LPFormExample from '@/components/LPFormExample';
+import ROUTES from '@/constants/routes';
+import Link from 'next/link';
+import posts from '@/constants/posts';
+import Footer from '@/components/Footer';
 
 const MainPage = () => {
     let timer: any = null;
     const [title, setTitle] = useState('Copy');
+    const [view, setView] = useState('demo');
 
     const onClick = () => {
         copy('npm i formfusion');
@@ -63,119 +67,160 @@ const MainPage = () => {
                 <link rel="canonical" href="https://www.corelabui.com" />
             </Head>
             <LPHeader />
-            <section className={`${classes.section} ${classes.hero}`}>
+            <section className={classes.hero}>
                 <div
                     className={`${classes.section__inner} ${classes.hero__inner}`}>
-                    <Typography
-                        variant="heading1"
-                        htmlElement="h1"
-                        align="center"
-                        color="var(--light)">
-                        The&nbsp;
-                        <Highlight
-                            textGradient={{
-                                direction: 'left',
-                                colors: '#FFFFFF,var(--accent),#9f7121'
-                            }}>
-                            ultimate way&nbsp;
-                        </Highlight>
-                        to build forms&nbsp;in React
-                    </Typography>
-                    <Typography
-                        variant="heading6"
-                        htmlElement="h2"
-                        align="center"
-                        color="var(--light)">
-                        FormFusion is a lightweight library for buidling forms
-                        in React that offers built-in validation, input masking,
-                        error handling & more.
-                    </Typography>
-                    <div className={classes.hero__inner__action}>
-                        <div
-                            className={classes.hero__inner__action__code}
-                            title="Copy"
-                            onClick={onClick}
-                            role="button">
-                            <span
-                                className={
-                                    classes.hero__inner__action__code__tooltip
-                                }>
-                                {title}
-                            </span>
-                            <code
-                                className={
-                                    classes.hero__inner__action__code__inner
-                                }>
-                                <span>npm i&nbsp;</span>formfusion
-                            </code>
+                    <div className={classes.hero__inner__left}>
+                        <Typography variant="heading1" htmlElement="h1">
+                            Build forms
+                            <br />
+                            the&nbsp;
+                            <Highlight
+                                textGradient={{
+                                    direction: 'left',
+                                    colors: '#FFFFFF,var(--accent),#9f7121'
+                                }}>
+                                right way.&nbsp;
+                            </Highlight>
+                        </Typography>
+                        <Typography variant="subtitle2" htmlElement="h2">
+                            Lightweight library for building forms in React that
+                            offers built-in validation, input masking, error
+                            handling & more.
+                        </Typography>
+                        <div className={classes.hero__inner__action}>
+                            <div
+                                className={classes.hero__inner__action__code}
+                                title="Copy"
+                                onClick={onClick}
+                                role="button">
+                                <span
+                                    className={
+                                        classes.hero__inner__action__code__tooltip
+                                    }>
+                                    {title}
+                                </span>
+                                <code
+                                    className={
+                                        classes.hero__inner__action__code__inner
+                                    }>
+                                    <span>npm i&nbsp;</span>formfusion
+                                </code>
+                            </div>
+                            <Button
+                                size="large"
+                                onClick={() => goTo('/formfusion')}>
+                                Get started
+                            </Button>
                         </div>
-                        <Button
-                            size="large"
-                            variant="secondary"
-                            onClick={() => goTo('/formfusion')}>
-                            Get started
-                        </Button>
+                    </div>
+                    <div className={classes.hero__inner__right}>
+                        <div
+                            className={`${classes.hero__inner__right__editor} ${
+                                view === 'code'
+                                    ? classes.hero__inner__right__editor_front
+                                    : ''
+                            }`}
+                            onClick={() => setView('code')}>
+                            <div
+                                className={
+                                    classes.hero__inner__right__editor__toolbar
+                                }>
+                                <div
+                                    className={
+                                        classes.hero__inner__right__editor__toolbar__actions
+                                    }>
+                                    <span />
+                                    <span />
+                                    <span />
+                                </div>
+                                <div
+                                    className={
+                                        classes.hero__inner__right__editor__toolbar__middle
+                                    }>
+                                    <span>Demo - FormFusion</span>
+                                </div>
+                                <div />
+                            </div>
+                            <Code
+                                language="javascript"
+                                canCopy={false}
+                                className={
+                                    classes.hero__inner__right__editor__code
+                                }>
+                                {LP_EXAMPLE}
+                            </Code>
+                        </div>
+                        <div
+                            className={`
+                                    ${classes.hero__inner__right__editor__demo}
+                                    ${
+                                        view === 'demo'
+                                            ? classes.hero__inner__right__editor__demo_front
+                                            : ''
+                                    }
+                                `}
+                            onClick={() => setView('demo')}>
+                            <LPFormExample />
+                        </div>
                     </div>
                 </div>
             </section>
             <section className={`${classes.section} ${classes.features}`}>
+                <Typography variant="heading4" htmlElement="h2" align="center">
+                    How FormFusion stands out
+                </Typography>
+                <br />
+                <br />
                 <div
                     className={`${classes.section__inner} ${classes.features__inner}`}>
                     <div className={classes.features__card}>
                         <div className={classes.features__card__inner}>
-                            <Typography
-                                variant="heading5"
-                                htmlElement="h2"
-                                align="center"
-                                color="var(--accent)">
+                            <span className="icon-check-square" />
+                            <Typography variant="heading5" htmlElement="h2">
                                 Built-in validation
                             </Typography>
-                            <Typography
-                                variant="body1"
-                                htmlElement="p"
-                                align="center"
-                                color="var(--light)">
+                            <Typography variant="body1" htmlElement="p">
                                 Provides a large collection of thoroughly tested
-                                and ready to use validation rules
+                                and ready to use validation rules.
                             </Typography>
                         </div>
                     </div>
                     <div className={classes.features__card}>
                         <div className={classes.features__card__inner}>
-                            <Typography
-                                variant="heading5"
-                                htmlElement="h2"
-                                align="center"
-                                color="var(--accent)">
+                            <span className="icon-package" />
+                            <Typography variant="heading5" htmlElement="h2">
                                 Intuitive
                             </Typography>
-                            <Typography
-                                variant="body1"
-                                htmlElement="p"
-                                align="center"
-                                color="var(--light)">
+                            <Typography variant="body1" htmlElement="p">
                                 Practical solution based on native HTML form
                                 features neatly packaged into familiar React
-                                components and hooks. No learning required
+                                components and hooks. No learning required.
                             </Typography>
                         </div>
                     </div>
                     <div className={classes.features__card}>
                         <div className={classes.features__card__inner}>
-                            <Typography
-                                variant="heading5"
-                                htmlElement="h2"
-                                align="center"
-                                color="var(--accent)">
+                            <span className="icon-feather" />
+                            <Typography variant="heading5" htmlElement="h2">
                                 Lightweight
                             </Typography>
-                            <Typography
-                                variant="body1"
-                                htmlElement="p"
-                                align="center"
-                                color="var(--light)">
+                            <Typography variant="body1" htmlElement="p">
                                 Minimal yet efficient library that does not rely
-                                on any external dependencies
+                                on any external dependencies.
+                            </Typography>
+                        </div>
+                    </div>
+                    <div className={classes.features__card}>
+                        <div className={classes.features__card__inner}>
+                            <span className="icon-layers" />
+                            <Typography variant="heading5" htmlElement="h2">
+                                Compatible
+                            </Typography>
+                            <Typography variant="body1" htmlElement="p">
+                                Perfectly integrates with any UI library such as
+                                Material UI, Ant Design, Chakra UI, Reactstrap
+                                and many more.
                             </Typography>
                         </div>
                     </div>
@@ -183,197 +228,273 @@ const MainPage = () => {
                 <br /> <br />
             </section>
             <section className={`${classes.section} ${classes.services}`}>
-                <div className={classes.services__inner}>
+                <div className={classes.section__inner}>
                     <Typography
-                        variant="heading6"
-                        htmlElement="h2"
-                        align="center"
-                        color="var(--accent)">
-                        Features
-                    </Typography>
-                    <Typography
-                        variant="heading3"
+                        variant="heading4"
                         htmlElement="h2"
                         align="center">
-                        Why FormFusion?
+                        What FormFusion includes
                     </Typography>
-                    <div className={classes.services__inner__cards}>
-                        <div className={classes.services__inner__cards__card}>
-                            <Typography
-                                variant="heading5"
-                                htmlElement="h2"
-                                margin={false}
-                                color="var(--primary)">
-                                Optimized Form components
-                            </Typography>
-                            <br />
-                            <Typography
-                                variant="body1"
-                                htmlElement="p"
-                                margin={false}>
-                                FormFusion offers optimized form components such
-                                as Form, Input and Textarea to streamline your
-                                development process. The components are designed
-                                for efficiency, fast rendering and minimal
-                                resource usage. They are completely customizable
-                                and very easy to use.
-                            </Typography>
+                    <br />
+                    <br />
+                    <div className={classes.services__cards}>
+                        <div className={classes.services__cards__card}>
+                            <div>
+                                <Typography
+                                    variant="heading5"
+                                    htmlElement="h2"
+                                    margin={false}
+                                    color="var(--primary)">
+                                    Optimized Form components
+                                </Typography>
+                                <br />
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="p"
+                                    margin={false}>
+                                    FormFusion offers optimized form components
+                                    such as Form, Input and Textarea to
+                                    streamline your development process. The
+                                    components are designed for efficiency, fast
+                                    rendering and minimal resource usage. They
+                                    are completely customizable and very easy to
+                                    use.
+                                </Typography>
+                            </div>
+                            <Link
+                                href={`/${ROUTES.form}`}
+                                target="_blank"
+                                className={classes.services__cards__card__link}>
+                                Learn more
+                                <span className="icon-arrow-right" />
+                            </Link>
                         </div>
-                        <div className={classes.services__inner__cards__card}>
-                            <Typography
-                                variant="heading5"
-                                htmlElement="h2"
-                                margin={false}
-                                color="var(--primary)">
-                                Custom React hooks for greater form control
-                            </Typography>
-                            <br />
-                            <Typography
-                                variant="body1"
-                                htmlElement="p"
-                                margin={false}>
-                                By default all Form elements in FormFusion are
-                                uncontrolled to ensure the best performance and
-                                minimal re-rendering. To gain more control over
-                                the form fields, FormFusion offers custom react
-                                hooks that can be used to access field values,
-                                errors etc.
-                            </Typography>
+                        <div className={classes.services__cards__card}>
+                            <div>
+                                <Typography
+                                    variant="heading5"
+                                    htmlElement="h2"
+                                    margin={false}
+                                    color="var(--primary)">
+                                    Custom React hooks for greater form control
+                                </Typography>
+                                <br />
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="p"
+                                    margin={false}>
+                                    By default all Form elements in FormFusion
+                                    are uncontrolled to ensure the best
+                                    performance and minimal re-rendering. To
+                                    gain more control over the form fields,
+                                    FormFusion offers custom react hooks that
+                                    can be used to access field values, errors
+                                    etc.
+                                </Typography>
+                            </div>
+                            <Link
+                                href={`/${ROUTES.useform}`}
+                                target="_blank"
+                                className={classes.services__cards__card__link}>
+                                Learn more
+                                <span className="icon-arrow-right" />
+                            </Link>
                         </div>
-                        <div className={classes.services__inner__cards__card}>
-                            <Typography
-                                variant="heading5"
-                                htmlElement="h2"
-                                margin={false}
-                                color="var(--primary)">
-                                Error handling
-                            </Typography>
-                            <br />
-                            <Typography
-                                variant="body1"
-                                htmlElement="p"
-                                margin={false}
-                                color="var(--primary)">
-                                FormFusion takes care of error handling by
-                                providing automated error messages depending on
-                                the field type while also offering full field
-                                accessibility. The error messages are very easy
-                                to customize.
-                            </Typography>
+                        <div className={classes.services__cards__card}>
+                            <div>
+                                <Typography
+                                    variant="heading5"
+                                    htmlElement="h2"
+                                    margin={false}
+                                    color="var(--primary)">
+                                    Error handling
+                                </Typography>
+                                <br />
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="p"
+                                    margin={false}
+                                    color="var(--primary)">
+                                    FormFusion takes care of error handling by
+                                    providing automated error messages depending
+                                    on the field type while also offering full
+                                    field accessibility. The error messages are
+                                    very easy to customize.
+                                </Typography>
+                            </div>
+                            <Link
+                                href={`/${ROUTES.form}`}
+                                target="_blank"
+                                className={classes.services__cards__card__link}>
+                                Learn more
+                                <span className="icon-arrow-right" />
+                            </Link>
                         </div>
-                        <div className={classes.services__inner__cards__card}>
-                            <Typography
-                                variant="heading5"
-                                htmlElement="h2"
-                                margin={false}
-                                color="var(--primary)">
-                                500+ Validation rules
-                            </Typography>
-                            <br />
-                            <Typography
-                                variant="body1"
-                                htmlElement="p"
-                                margin={false}>
-                                The validation library consists of over 500
-                                validation rules. Whether it&apos;s simple text
-                                inputs or complex custom fields, we&apos;ve got
-                                you covered. With a wide array of validation
-                                rules, you can ensure data integrity and
-                                accuracy, tailored to your specific
-                                requirements.
-                            </Typography>
+                        <div className={classes.services__cards__card}>
+                            <div>
+                                <Typography
+                                    variant="heading5"
+                                    htmlElement="h2"
+                                    margin={false}
+                                    color="var(--primary)">
+                                    500+ Validation rules
+                                </Typography>
+                                <br />
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="p"
+                                    margin={false}>
+                                    The validation library consists of over 500
+                                    validation rules. Whether it&apos;s simple
+                                    text inputs or complex custom fields,
+                                    we&apos;ve got you covered. With a wide
+                                    array of validation rules, you can ensure
+                                    data integrity and accuracy, tailored to
+                                    your specific requirements.
+                                </Typography>
+                            </div>
+                            <Link
+                                href={`/${ROUTES.validation}`}
+                                target="_blank"
+                                className={classes.services__cards__card__link}>
+                                Learn more
+                                <span className="icon-arrow-right" />
+                            </Link>
                         </div>
-                        <div className={classes.services__inner__cards__card}>
-                            <Typography
-                                variant="heading5"
-                                htmlElement="h2"
-                                margin={false}
-                                color="var(--primary)">
-                                Input masking
-                            </Typography>
-                            <br />
-                            <Typography
-                                variant="body1"
-                                htmlElement="p"
-                                margin={false}>
-                                FormFusion library provides input masking,
-                                allowing you to define custom formats and
-                                restrictions for user input. With this feature,
-                                you can easily enforce specific formats such as
-                                phone numbers, dates, or credit card numbers,
-                                ensuring data consistency and accuracy
-                                throughout your forms.
-                            </Typography>
+                        <div className={classes.services__cards__card}>
+                            <div>
+                                <Typography
+                                    variant="heading5"
+                                    htmlElement="h2"
+                                    margin={false}
+                                    color="var(--primary)">
+                                    Input masking
+                                </Typography>
+                                <br />
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="p"
+                                    margin={false}>
+                                    FormFusion library provides input masking,
+                                    allowing you to define custom formats and
+                                    restrictions for user input. With this
+                                    feature, you can easily enforce specific
+                                    formats such as phone numbers, dates, or
+                                    credit card numbers, ensuring data
+                                    consistency and accuracy throughout your
+                                    forms.
+                                </Typography>
+                            </div>
+                            <Link
+                                href={`/${ROUTES.masking}`}
+                                target="_blank"
+                                className={classes.services__cards__card__link}>
+                                Learn more
+                                <span className="icon-arrow-right" />
+                            </Link>
                         </div>
-                        <div className={classes.services__inner__cards__card}>
-                            <Typography
-                                variant="heading5"
-                                htmlElement="h2"
-                                margin={false}
-                                color="var(--primary)">
-                                Integration with UI libraries
-                            </Typography>
-                            <br />
-                            <Typography
-                                variant="body1"
-                                htmlElement="p"
-                                margin={false}>
-                                Integrate FormFusion with your preferred UI
-                                libraries for a cohesive development experience.
-                                The library offers easy compatibility with
-                                popular libraries like Material-UI, Ant Design,
-                                Reactstrap and more, ensuring consistency and
-                                style across your entire application. With this
-                                integration, leverage the power of FormFusion
-                                while maintaining your preferred design
-                                components.
-                            </Typography>
+                        <div className={classes.services__cards__card}>
+                            <div>
+                                <Typography
+                                    variant="heading5"
+                                    htmlElement="h2"
+                                    margin={false}
+                                    color="var(--primary)">
+                                    Integration with UI libraries
+                                </Typography>
+                                <br />
+                                <Typography
+                                    variant="body1"
+                                    htmlElement="p"
+                                    margin={false}>
+                                    Integrate FormFusion with your preferred UI
+                                    libraries for a cohesive development
+                                    experience. The library offers easy
+                                    compatibility with popular libraries like
+                                    Material-UI, Ant Design, Reactstrap and
+                                    more, ensuring consistency and style across
+                                    your entire application. With this
+                                    integration, leverage the power of
+                                    FormFusion while maintaining your preferred
+                                    design components.
+                                </Typography>
+                            </div>
+                            <Link
+                                href={`/${ROUTES.integrations}`}
+                                target="_blank"
+                                className={classes.services__cards__card__link}>
+                                Learn more
+                                <span className="icon-arrow-right" />
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className={classes.section} id="demo">
-                <div
-                    className={`${classes.section__inner} ${classes.section__example__title}`}>
+            <section className={`${classes.section} ${classes.blog}`}>
+                <div className={`${classes.section__inner}`}>
                     <Typography
-                        variant="heading6"
-                        htmlElement="h2"
-                        align="center"
-                        color="var(--accent)">
-                        Interactive Demo
-                    </Typography>
-                    <Typography
-                        variant="heading3"
+                        variant="heading4"
                         htmlElement="h2"
                         align="center">
-                        See FormFusion in Action!
+                        View our blog
                     </Typography>
-                    <Typography variant="body1" htmlElement="p" align="center">
-                        This code snippet shows a simple payment form built with
-                        FormFusion.
-                        <br />
-                        It highlights the library&apos;s user-friendly approach
-                        with built-in validation and customizable fields.
-                    </Typography>
-                    <br /> <br />
-                    <div className={classes.section__example__heading}>
-                        <a
-                            href="https://stackblitz.com/edit/vitejs-vite-ahj7lp?file=src%2FApp.tsx"
-                            target="_blank">
-                            <Image
-                                src="/assets/stackblitz_logo.png"
-                                width={100}
-                                height={25}
-                                alt="stackblitz logo"
-                            />
-                        </a>
+                    <br />
+                    <br />
+                    <div className={classes.blog__outter}>
+                        {posts.map((post, idx) => (
+                            <>
+                                <Link
+                                    key={post.url}
+                                    href={post.url}
+                                    target="_blank"
+                                    className={classes.blog__post}>
+                                    <div className={classes.blog__post__image}>
+                                        <Image
+                                            src={post.image}
+                                            alt={post.image}
+                                            fill
+                                            sizes="100%"
+                                        />
+                                    </div>
+                                    <Typography
+                                        variant="subtitle1"
+                                        htmlElement="h3"
+                                        className={classes.blog__post__title}
+                                        lines={2}
+                                        overflow="ellipsis">
+                                        {post.title}
+                                    </Typography>
+                                    <Typography
+                                        variant="body1"
+                                        htmlElement="p"
+                                        className={classes.blog__post__title}
+                                        lines={2}
+                                        overflow="ellipsis">
+                                        {post.description}
+                                    </Typography>
+                                    <br />
+                                    <Typography
+                                        variant="caption"
+                                        htmlElement="span"
+                                        color="var(--text-secondary)"
+                                        className={classes.blog__post__tag}>
+                                        {post.tag}
+                                    </Typography>
+                                </Link>
+                                {idx <= 1 && (
+                                    <div
+                                        className={classes.blog__post__divider}
+                                    />
+                                )}
+                            </>
+                        ))}
                     </div>
-                    <div className={classes.section__example}>
-                        <div className={classes.section__example__code}>
-                            <Code language="javascript">{COMPONENTS.form}</Code>
-                        </div>
-                        <FormExample />
-                    </div>
+                    <Link
+                        href={`/${ROUTES.blog}`}
+                        target="_blank"
+                        className={classes.blog__outter__action}>
+                        Read all blog posts
+                    </Link>
                 </div>
             </section>
             <section className={`${classes.section} ${classes.cta}`}>
@@ -382,15 +503,17 @@ const MainPage = () => {
                     <Typography
                         variant="heading3"
                         htmlElement="h2"
-                        align="center"
-                        color="var(--light)">
-                        Ready to take the next step?
+                        align="center">
+                        Be part of
+                        <Highlight
+                            textGradient={{
+                                direction: 'left',
+                                colors: '#FFFFFF,var(--accent),#9f7121'
+                            }}>
+                            &nbsp;the change.
+                        </Highlight>
                     </Typography>
-                    <Typography
-                        variant="body1"
-                        htmlElement="p"
-                        align="center"
-                        color="var(--light)">
+                    <Typography variant="body1" htmlElement="p" align="center">
                         Get started with FormFusion today and experience the
                         difference!
                         <br />

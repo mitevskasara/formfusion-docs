@@ -69,31 +69,31 @@ const NewsletterPost = ({
                     overflow="ellipsis">
                     {description}
                 </Typography>
-                {mode !== 'featured' && showStats && (
+                {mode !== 'featured' && (
                     <div className={classes.post__analytics}>
-                        <ClientComponent>
-                            <span className={classes.post__analytics__item}>
-                                <span className="icon-spark" />
-                                {Math.floor(Math.random() * 376)}
-                            </span>
-                        </ClientComponent>
-                        <ClientComponent>
-                            <span className={classes.post__analytics__item}>
-                                <span className="icon-comments" />
-                                {post.replies.totalItems}
-                            </span>
-                        </ClientComponent>
-                        <ClientComponent>
-                            <span className={classes.post__analytics__item}>
-                                <span className="icon-bar-graph" />
-                                {Math.floor(Math.random() * 376)}
-                            </span>
-                        </ClientComponent>
+                        <Link
+                            href={`https://www.linkedin.com/shareArticle?url=${path}`}
+                            target="_blank"
+                            title="Share on LinkedIn">
+                            <span className="icon-social-linkedin" />
+                        </Link>
+                        <Link
+                            href={`https://www.facebook.com/sharer.php?u=${path}&p[title]=${post.title}`}
+                            target="_blank"
+                            title="Share on Facebook">
+                            <span className="icon-social-facebook" />
+                        </Link>
+                        <Link
+                            href={`https://twitter.com/intent/tweet?url=${path}`}
+                            target="_blank"
+                            title="Share on Twitter">
+                            <span className="icon-twitter" />
+                        </Link>
                         <Link
                             href={`/${ROUTES.blog}/[year]/[month]/[path]`}
                             as={`/${ROUTES.blog}${path}`}
-                            className={classes.post__analytics__linkButton}>
-                            <span className="icon-arrow-down-right" />
+                            className={classes.post__analytics__readmore}>
+                            Read more
                         </Link>
                     </div>
                 )}

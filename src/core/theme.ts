@@ -7,7 +7,11 @@ const customTheme = {
     primaryDisabled: '#979CBB',
     fontFamily: 'inherit',
     body1: '0.9em',
-    background: '#f5f4f0'
+    background: '#ffffff',
+    text: '#1e1e1e',
+    surface: '#fafafa',
+    surfaceDark: '#f5f6f8',
+    borderColor: '#eeeeee'
 };
 
 const dark = {
@@ -17,7 +21,9 @@ const dark = {
     title: '#ffffff',
     fontFamily: 'inherit',
     body1: '0.9em',
-    surfaceDark: '#2a2f46'
+    surface: '#343a46',
+    surfaceDark: '#080809',
+    fieldsBackground: '#2a3139'
 };
 
 export const scrollBarStyle =

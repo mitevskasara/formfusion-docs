@@ -11,35 +11,6 @@
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
 
-    &__input_field,
-    &__input_field:invalid:placeholder-shown {
-        padding: 1em;
-        border: 1px solid var(--border-color);
-        border-radius: var(--border-radius);
-        background-color: var(--surface-light);
-        outline: none;
-        color: var(--text);
-    }
-
-    &__input_field:focus,
-    &__input_field:active {
-        background-color: var(--surface-light);
-    }
-
-    &__input_field[aria-invalid='true']:not(:focus) {
-        border: 1px solid var(--error);
-    }
-
-    &__input_field__label {
-        font-size: 16px;
-        color: var(--text);
-
-        &__error_message {
-            font-size: 14px;
-            color: var(--error);
-        }
-    }
-
     & > button {
         color: white;
         background-color: var(--primary);
@@ -48,6 +19,7 @@
         border-radius: 3px;
         cursor: pointer;
         font-size: 16px;
+        height: 45px;
     }
 
     & > h5 {

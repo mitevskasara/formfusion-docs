@@ -2,7 +2,6 @@
 @import '@/core/styles/media-queries';
 
 .footer {
-    background-color: var(--surface-dark);
     padding-top: 4.5em;
     padding-bottom: 4.5em;
     padding-left: $side-padding;
@@ -18,7 +17,16 @@
         margin: auto;
 
         @include media(xlarge) {
-            max-width: $container-width-xl;
+            max-width: $lp-container-width;
+        }
+
+        @include media(large) {
+            max-width: $lp-container-width-medium;
+        }
+
+        @include media(medium) {
+            max-width: unset;
+            width: 90%;
         }
 
         &__navigation {
@@ -30,6 +38,9 @@
             @include media(medium) {
                 flex-wrap: wrap-reverse;
                 justify-content: space-evenly;
+            }
+
+            @include media(small) {
                 text-align: center;
             }
 
@@ -46,6 +57,12 @@
 
                     &:hover {
                         color: var(--primary);
+                    }
+                }
+
+                & > h3 {
+                    @include media(xsmall) {
+                        text-align: center;
                     }
                 }
             }

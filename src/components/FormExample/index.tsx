@@ -16,15 +16,10 @@ const FormExample = () => {
             <Input
                 id="credit-card-number"
                 name="credit-card-number"
-                type="credit-card-number-basic"
+                type="credit-card-number-space"
                 label="Credit card number"
-                placeholder="Enter your credit card number"
+                placeholder="1234 XXXX XXXX XXXX"
                 required
-                classes={{
-                    field: classes.form__input_field,
-                    error: classes.form__input_field__label__error_message,
-                    label: classes.form__input_field__label
-                }}
             />
             <Input
                 id="ccv"
@@ -33,11 +28,6 @@ const FormExample = () => {
                 label="CCV"
                 placeholder="Enter your ccv number"
                 required
-                classes={{
-                    field: classes.form__input_field,
-                    error: classes.form__input_field__label__error_message,
-                    label: classes.form__input_field__label
-                }}
             />
             <Input
                 id="expiry-date"
@@ -45,12 +35,8 @@ const FormExample = () => {
                 type="date"
                 label="Expiry date"
                 required
-                classes={{
-                    field: classes.form__input_field,
-                    error: classes.form__input_field__label__error_message,
-                    label: classes.form__input_field__label
-                }}
             />
+            <br />
             <button type="submit">Submit</button>
         </Form>
     );
