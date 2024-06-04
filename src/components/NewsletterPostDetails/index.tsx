@@ -99,7 +99,7 @@ const NewsletterPostDetails = ({
                 <div className={classes.details__outter__social}>
                     <div className={classes.details__outter__social__icons}>
                         <Link
-                            href={`https://www.linkedin.com/shareArticle?url=${url}`}
+                            href={`https://www.linkedin.com/sharing/share-offsite/?${url}`}
                             target="_blank"
                             title="Share on LinkedIn">
                             <span className="icon-social-linkedin" />

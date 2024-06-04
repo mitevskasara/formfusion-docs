@@ -19,10 +19,10 @@ const Blog = ({ posts, theme, setTheme }: IBlogProps) => {
                 title: 'FormFusion: Easy form handling, validation & more',
                 image: '/assets/meta-image.png',
                 description:
-                    'Easily manage and validate forms in your React applications with the FormFusion library. This library provides an efficient solution for handling forms with built-in validation, input masking, full accessibility and completely customizable look simplifying the development process and improving user experience.',
+                    "Explore CorelabUI's tech blog with tons of articles and resources about technology development. Get tips and insights about React, JavaScritp, Web forms, and more!",
                 keywords:
                     'blog, react blog, javascript blog, react,react form,forms, validation,react hook, form validation, javascript, javascript form',
-                canonical: 'https://www.corelabui.com/formfusion'
+                canonical: 'https://www.corelabui.com/blog'
             }}
             theme={theme}
             setTheme={setTheme}
