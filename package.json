@@ -26,7 +26,7 @@
         "axios": "^1.6.2",
         "corelabui": "^0.0.10",
         "dotenv": "^16.0.3",
-        "formfusion": "^1.1.8",
+        "formfusion": "^1.1.11",
         "moment": "^2.29.4",
         "next": "^13.5.4",
         "path": "^0.12.7",
