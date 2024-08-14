@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 Disallow: /App
+Disallow: /react-form-manager
 Disallow: /blog/2023/05/reducer
 Disallow: /reducer
 Disallow: /MyForm.jsx
