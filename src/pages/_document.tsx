@@ -67,9 +67,10 @@ export default class MyDocument extends Document {
                             }}
                         />
                     )}
-                    <script type="application/ld+json">
-                        {`
-        {
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: `{
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
@@ -98,9 +99,9 @@ export default class MyDocument extends Document {
               "item": "https://www.corelabui.com/formfusion/integrations/mui"
             }
           ]
-        }
-      `}
-                    </script>
+        }`
+                        }}
+                    />
                     <style id="CoreLabUI">
                         {generateStyle(THEMES.standard)}
                     </style>
