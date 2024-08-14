@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+Disallow: /App
+Disallow: /blog/2023/05/reducer
+Disallow: /reducer
+Disallow: /MyForm.jsx
+Disallow: /formfusion/api/[component]
+Disallow: /[year]/[month]/[path]
+Disallow: /formfusion?src=devto
+
+
 Sitemap: https://www.corelabui.com/sitemap.xml
