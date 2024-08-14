@@ -69,32 +69,37 @@ export default class MyDocument extends Document {
                     )}
                     <script type="application/ld+json">
                         {`
-                            {
-                            "@context": "https://schema.org/", 
-                            "@type": "BreadcrumbList", 
-                            "itemListElement": [{
-                                "@type": "ListItem", 
-                                "position": 1, 
-                                "name": "FormFusion",
-                                "item": "https://www.corelabui.com/formfusion"  
-                            },{
-                                "@type": "ListItem", 
-                                "position": 2, 
-                                "name": "Getting started",
-                                "item": "https://www.corelabui.com/formfusion"  
-                            },{
-                                "@type": "ListItem", 
-                                "position": 3, 
-                                "name": "API",
-                                "item": "https://www.corelabui.com/formfusion/api/form"  
-                            },{
-                                "@type": "ListItem", 
-                                "position": 4, 
-                                "name": "Integrations",
-                                "item": "https://www.corelabui.com/formfusion/integrations/mui"  
-                            }]
-                            }
-                        `}
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "FormFusion",
+              "item": "https://www.corelabui.com/formfusion"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Getting started",
+              "item": "https://www.corelabui.com/formfusion"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "API",
+              "item": "https://www.corelabui.com/formfusion/api/form"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Integrations",
+              "item": "https://www.corelabui.com/formfusion/integrations/mui"
+            }
+          ]
+        }
+      `}
                     </script>
                     <style id="CoreLabUI">
                         {generateStyle(THEMES.standard)}
