@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next';
 import BlogLayout from '@/components/BlogLayout';
 import NewsletterPostDetails from '@/components/NewsletterPostDetails';
 import { API_KEY, API_URL } from '@/constants/api';
-import { decode, encode } from '@/utils/general';
+import { decode, encode, extractFirstImage } from '@/utils/general';
 
 type Props = {
     data?: any;
@@ -14,7 +14,7 @@ type Props = {
 };
 
 const DetailsPage = ({ data, other, theme, setTheme }: Props) => {
-    const image = data?.images ? data?.images[0]?.url : '';
+    const image = data ? extractFirstImage(data.content) : '';
     let plainText = data ? data.content?.replace(/<[^>]+>/g, '').trim() : '';
     const path = data ? encode(new URL(data.url).pathname) : '';
 
@@ -23,7 +23,7 @@ const DetailsPage = ({ data, other, theme, setTheme }: Props) => {
             {...{
                 url: `https://www.corelabui.com${path}`,
                 title: data?.title,
-                image: image,
+                image: image || '',
                 description: plainText.slice(0, 300),
                 keywords:
                     'blog, react blog, javascript blog, react,react form,forms, validation,react hook, form validation, javascript, javascript form',
@@ -64,6 +64,7 @@ export async function getStaticProps({ params }: any) {
         const detailsResponse = await fetch(
             `${API_URL}/bypath?path=/${params.year}/${params.month}/${path}&key=${API_KEY}&fetchImages=true`
         );
+
         const details = await detailsResponse.json();
 
         const allPostsResponse = await fetch(
