@@ -1,6 +1,7 @@
 {
     "key": "input",
     "title": "Input",
+    "subtitle": "Input Component: Advanced Input Field with Validation and Masking Features in React",
     "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes",
     "description": "The Input component builds upon the native HTML input element and enhances it with an expanded range of field types, each associated with a specific validation pattern. You can specify the field type by utilizing the 'type' property. The Input component has access to the Form handler functions and utilities and should be used as a child in the Form component.",
     "props": [
@@ -58,5 +59,5 @@
     "exampleTitle": "FormFusion Basic Input usage",
     "nextUrl": "/formfusion/api/textarea",
     "nextUrlTitle": "Textarea",
-    "metaDesc": "FormFusion's Input component: Powerful and customizable extention of the standard HTML input element that integrates a large library of ready to use validation rules and provides easy input masking. Easy to integrate with custom react hook allowing greater form control."
+    "metaDesc": "Input component: Optimised and fully customisable extension of the standard HTML input element with built-in validation rules and input masking."
 }

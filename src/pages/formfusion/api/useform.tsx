@@ -28,23 +28,33 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
             {...{
                 ...META_DATA,
                 description:
-                    "FormFusion's useform hook: Custom react hook designed for advanced form management. Offers access to the essential features of the Form component including: values, errors, touched fields, form utils & more.",
-                title: `${META_DATA.title} | UseForm`,
+                    'Offers access to the essential features of the Form component including: values, errors, touched fields, form utils & more.',
+                title: `Useform hook: Custom react hook for form management`,
                 canonical: `https://www.corelabui.com/${ROUTES.useform}`
             }}
             theme={theme}
             setTheme={setTheme}>
-            <Section title="UseForm hook" margin={false}>
+            <Section title="UseForm hook" margin={false} titleVariant="p">
+                <h1 className="hidden">
+                    Useform hook: Custom react hook designed for advanced form
+                    management.
+                </h1>
+                <h2 className="hidden">
+                    Offers access to the essential features of the Form
+                    component including: values, errors, touched fields, form
+                    utils & more.
+                </h2>
                 <Typography variant="body1">
-                    UseForm is a specialized custom hook designed for advanced
-                    form management, serving as the foundational core for the
+                    UseForm is a specialized custom <b>React hook</b> designed
+                    for advanced form management, serving as the foundational
+                    core for the
                     <Link href={`/${ROUTES.form}`}>&nbsp;Form component</Link>.
                     This hook comes in handy when you require greater control
                     over your forms, offering access to essential objects such
                     as values and errors. It&apos;s particularly valuable when
                     you opt for alternative Field components that differ from
-                    <strong> FormFusion&apos;s&nbsp;</strong>
-                    default <Link href={`/${ROUTES.input}`}>Input</Link> and
+                    FormFusion&apos;s&nbsp; default{' '}
+                    <Link href={`/${ROUTES.input}`}>Input</Link> and
                     <Link href={`/${ROUTES.textarea}`}>
                         &nbsp;Textarea&nbsp;
                     </Link>
@@ -63,9 +73,10 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    The UseForm hook yields the entire form configuration, which
-                    you can utilize to tailor your form management precisely as
-                    desired. Here&apos;s an example of how to implement it:
+                    The <b>UseForm hook</b> yields the entire form
+                    configuration, which you can use to tailor your form
+                    management precisely as desired. Here&apos;s an example of
+                    how to implement it:
                 </Typography>
                 <br />
                 <Code language="javascript" canCopy={false}>

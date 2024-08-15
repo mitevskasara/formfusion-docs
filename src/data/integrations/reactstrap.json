@@ -1,6 +1,7 @@
 {
     "key": "reactstrap",
     "title": "Reactstrap",
-    "description": "Discover the integration possibilities with FormFusion and Reactstrap UI components. Improve your form management experience with full compatibility and minimum effort.",
+    "subtitle": "How to Integrate FormFusion with Reactstrap components",
+    "description": "Learn how to integrate FormFusion with Reactstrap components to improve your form management process.",
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-pbvjsj?file=src%2FApp.tsx"
 }

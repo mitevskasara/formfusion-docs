@@ -39,27 +39,35 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
             }}
             theme={theme}
             setTheme={setTheme}>
-            <Section id="introduction" title="Introduction" margin={false}>
+            <Section
+                id="introduction"
+                title="Introduction"
+                margin={false}
+                titleVariant="p">
+                <h1 className="hidden">
+                    Meet FormFusion: The New Way to Manage Forms in React
+                </h1>
                 <Typography variant="body1">
-                    Revolutionize your React applications with the{' '}
-                    <strong>FormFusion,&nbsp;</strong>
-                    thoughtfully designed by CoreLab UI. This broad library
-                    offers an efficient solution for managing forms, complete
-                    with built-in validation, exceptional accessibility, and
-                    unparalleled customization capabilities. Optimize your
-                    development process and elevate the user experience with
-                    ease, as you harness the full potential of JavaScript forms
+                    Meet <strong>FormFusion</strong>,&nbsp;a toolkit what helps
+                    you build your web forms in <b>React</b> the right way. This
+                    broad library offers an efficient solution for{' '}
+                    <b>managing forms</b>, complete with{' '}
+                    <b>built-in validation</b>, integrated accessibility, and
+                    infinite customization capabilities. Optimize your
+                    development process and improve the user experience with
+                    ease, as you utilizing the full potential of{' '}
+                    <b>JavaScript forms&nbsp;</b>
                     in your React applications.
                     <br />
                     <br />
-                    Our library seamlessly integrates with popular design
-                    frameworks including Material UI, Ant Design, Chakra UI, and
-                    Reactstrap, making it the perfect choice for your
-                    React-based projects.
+                    Our library seamlessly integrates with{' '}
+                    <b>popular design frameworks</b> including Material UI, Ant
+                    Design, Chakra UI, and &nbsp;Reactstrap, making it the
+                    perfect choice for your React-based projects.
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    <strong>FormFusion</strong> leverages the native HTML&nbsp;
+                    FormFusion leverages the native HTML&nbsp;
                     <Link
                         href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation"
                         target="_blank">
@@ -85,7 +93,7 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
                 </Typography>
                 <List items={FEATURES} />
             </Section>
-            <Section id="installation" title="Installation">
+            <Section id="installation" title="Installation" titleVariant="h2">
                 <Typography variant="body1">
                     To get started with our library, simply install it using npm
                     or yarn with the following command:
@@ -130,9 +138,9 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
                     </Button>
                 </Flex>
                 <Typography variant="body1">
-                    Below is an example of how <strong>FormFusion</strong>{' '}
-                    simplifies the creation of an uncontrolled payment form with
-                    a card number and ccv validation:
+                    Below is an example of how FormFusion simplifies the
+                    creation of an uncontrolled payment form with a card number
+                    and ccv validation:
                 </Typography>
                 <br />
                 <ClientComponent>
