@@ -20,6 +20,7 @@ const NewsletterPost = ({
 }: INewsletterPostProps) => {
     const description = post?.content?.replace(/<[^>]+>|\n/g, '');
     const path = encode(new URL(post.url).pathname);
+    const url = `https://www.corelabui.com/${ROUTES.blog}${path}`;
 
     return (
         <div className={`${classes.post} ${classes['post_' + mode]}`}>
@@ -72,19 +73,19 @@ const NewsletterPost = ({
                 {mode !== 'featured' && (
                     <div className={classes.post__analytics}>
                         <Link
-                            href={`https://www.linkedin.com/shareArticle?url=${path}`}
+                            href={`https://www.linkedin.com/shareArticle?url=${url}`}
                             target="_blank"
                             title="Share on LinkedIn">
                             <span className="icon-social-linkedin" />
                         </Link>
                         <Link
-                            href={`https://www.facebook.com/sharer.php?u=${path}&p[title]=${post.title}`}
+                            href={`https://www.facebook.com/sharer.php?u=${url}&p[title]=${post.title}`}
                             target="_blank"
                             title="Share on Facebook">
                             <span className="icon-social-facebook" />
                         </Link>
                         <Link
-                            href={`https://twitter.com/intent/tweet?url=${path}`}
+                            href={`https://twitter.com/intent/tweet?url=${url}`}
                             target="_blank"
                             title="Share on Twitter">
                             <span className="icon-twitter" />
