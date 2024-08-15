@@ -12,5 +12,9 @@
         &::marker {
             color: var(--text);
         }
+
+        & > p > span > span {
+            font-weight: bold;
+        }
     }
 }

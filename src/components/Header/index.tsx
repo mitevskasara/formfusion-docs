@@ -27,7 +27,9 @@ const CustomHeader = ({
         <header className={classes.header}>
             <div className={classes.header__inner}>
                 <div className={classes.header__inner__left}>
-                    <a href="https://www.corelabui.com">
+                    <a
+                        href="https://www.corelabui.com"
+                        title="Go to Landing page">
                         <span
                             className={`${classes.header__inner__left__logo} icon-formfusion-full`}
                         />

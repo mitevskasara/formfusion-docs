@@ -7,14 +7,12 @@ import MainLayout from '@/components/MainLayout';
 import Link from '@/components/Link';
 import FooterNavigation from '@/components/FooterNavigation';
 import Section from '@/components/Section';
-import HTMLText from '@/components/HTMLText';
 
 import META_DATA from '@/constants/metaData';
-import { capitalize } from '@/utils/general';
 
 import { Component } from './interfaces';
 import Code from '@/components/Code';
-import { COMPONENTS, INTEGRATIONS } from '@/constants/examples';
+import { INTEGRATIONS } from '@/constants/examples';
 import ROUTES from '@/constants/routes';
 
 interface IApiProps {
@@ -30,7 +28,7 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
         <MainLayout
             {...{
                 ...META_DATA,
-                title: `${META_DATA.title} | ${capitalize(data?.key)}`,
+                title: `FormFusion + ${data?.title} = Easy and Better Form Management`,
                 url: `https://www.corelabui.com/${ROUTES.integrations}/${data?.key}`,
                 canonical: `https://www.corelabui.com/${ROUTES.integrations}/${data?.key}`,
                 description: data?.description ?? META_DATA.description
@@ -38,13 +36,10 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
             theme={theme}
             setTheme={setTheme}>
             <Section title={`Integration with ${data?.title}`} margin={false}>
+                <h2 className="hidden">{data?.subtitle}</h2>
                 <Typography variant="body1">
-                    <HTMLText text={data?.description} />
-                </Typography>
-                <br />
-                <Typography variant="body1">
-                    Integrating <b>FormFusion</b> with {data?.title}
-                    &nbsp; is a straightforward process. To accomplish this, you
+                    Integrating <b>FormFusion</b> with <b>{data?.title}</b>
+                    &nbsp;is a straightforward process. To accomplish this, you
                     can use the{' '}
                     <Link href={`/${ROUTES.connect}`}>connect&nbsp;</Link>
                     method along with the{' '}
@@ -53,9 +48,9 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    For a successful implementation of the connect method,
-                    you&apos;ll need access to the form configuration object and
-                    to select the
+                    For a successful implementation of the <b>connect method</b>
+                    , you&apos;ll need access to the form configuration object
+                    and to select the
                     <Link href={`/${ROUTES.validation}`}>
                         &nbsp;input type
                     </Link>{' '}

@@ -4,7 +4,7 @@ import Highlight from 'corelabui/Highlight';
 import Select from 'corelabui/Select';
 import Button from 'corelabui/Button';
 import Flex, { FlexItem } from 'corelabui/Flex';
-import { Input, useForm, connect, rules, Rules } from 'formfusion';
+import { Input, useForm, rules } from 'formfusion';
 import postcodes from '@formfusion/postcodes';
 import iban from '@formfusion/iban';
 import licencePlates from '@formfusion/licence-plates';
@@ -98,44 +98,55 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
         <MainLayout
             {...{
                 ...META_DATA,
-                title: `${META_DATA.title} | Validation rules`,
+                title: `Built-in Form validation in React`,
                 url: `https://www.corelabui.com/${ROUTES.validation}`,
                 canonical: `https://www.corelabui.com/${ROUTES.validation}`,
                 description:
-                    "Explore FormFusion's toolkit for effortless form validation. Discover intuitive solutions and advanced validation rules to speed up your delivery time. Improve your workflow with ease. Try FormFusion today."
+                    "FormFusion extends the native input types with 500+ validation patterns that can be easily applied to form fields in React by using the 'type' property."
             }}
             theme={theme}
             setTheme={setTheme}>
             <Section title="Validation rules" margin={false}>
+                <h2 className="hidden">
+                    Form Validation Rules: Easily Apply and Customize Input
+                    Validation Patterns
+                </h2>
                 <Typography variant="body1" htmlElement="div">
-                    <strong>FormFusion</strong> extends the list of&nbsp;
+                    <strong>FormFusion</strong> extends the standard list
+                    of&nbsp;
                     <Link
                         href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
                         target="_blank">
-                        native
+                        native input types
                     </Link>
-                    &nbsp;input types with a large collection of rules that
-                    define and apply a corresponding validation pattern to the
-                    input field. You only need to pass the preffered type prop
-                    to the input and&nbsp;
-                    <strong>FormFusion</strong> takes care of everything.
-                    <br />
-                    <br />
-                    There are two ways to apply a validation rule to a field:
-                    <br />
-                    <br />
-                    1. By passing down the name of the validation rule as the{' '}
-                    <code>type</code> property:
+                    <p style={{ display: 'inline' }}>
+                        &nbsp;with a large collection of rules that define and
+                        apply a corresponding <b>validation pattern</b> to the
+                        input field. You only need to pass the preffered type
+                        prop to the input and&nbsp; FormFusion takes care of
+                        everything.
+                        <br />
+                        <br />
+                        There are two ways to apply a validation rule to a
+                        field:
+                        <br />
+                        <br />
+                        1. By passing down the name of the validation rule as
+                        the <code>type</code> property:
+                    </p>
                     <br />
                     <br />
                     <ClientComponent>
                         <Code language="javascript">{RULES.type}</Code>
                     </ClientComponent>
                     <br />
-                    2. By importing the preferred validation rule and passing it
-                    down as the <code>type</code> property. This should be the
-                    default approach when using dynamic validation rules or when
-                    using some of the formfusion&apos;s validation sets.
+                    <p style={{ display: 'inline' }}>
+                        2. By importing the preferred validation rule and
+                        passing it down as the <code>type</code> property. This
+                        should be the default approach when using dynamic
+                        validation rules or when using some of the
+                        formfusion&apos;s validation sets.
+                    </p>
                     <br />
                     <br />
                     <ClientComponent>
@@ -143,10 +154,12 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
                     </ClientComponent>
                     <br />
                     <br />
-                    Currently, <strong>FormFusion </strong> includes {total}{' '}
-                    generic validation rules. To use some of the more specific
-                    validation rules, you&apos;ll need to install the
-                    corresponding package.
+                    <p style={{ display: 'inline' }}>
+                        Currently, FormFusion includes {total} generic
+                        validation rules. To use some of the more specific
+                        validation rules, you&apos;ll need to install the
+                        corresponding package.
+                    </p>
                     <br />
                     <br />
                     List of available sets of validation rules:
@@ -231,7 +244,7 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
                             icon="stackblitz"
                             internal={false}
                             color={'var(--light)'}>
-                            Try on<b>&nbsp;Stackblitz&nbsp;</b>
+                            Try on Stackblitz&nbsp;
                         </Link>
                     </Button>
                 </Flex>

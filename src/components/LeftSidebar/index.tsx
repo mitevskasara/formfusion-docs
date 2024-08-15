@@ -35,20 +35,22 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
         <aside className={classses} ref={sidebarRef}>
             <Scrollable>
                 <nav className={classes.leftSidebar__navigation}>
-                    <Link href={`/${ROUTES.home}#introduction`}>
-                        <Typography
-                            variant="body1"
-                            htmlElement="span"
-                            margin={false}
-                            color={
-                                isActive(`/${ROUTES.home}#introduction`) &&
-                                THEMES[theme]
-                                    ? THEMES[theme].primary
-                                    : '#2D3250'
-                            }>
+                    <Typography
+                        variant="body1"
+                        htmlElement="span"
+                        margin={false}
+                        color={
+                            isActive(`/${ROUTES.home}#introduction`) &&
+                            THEMES[theme]
+                                ? THEMES[theme].primary
+                                : '#2D3250'
+                        }>
+                        <Link
+                            href={`/${ROUTES.home}#introduction`}
+                            color="initial">
                             Introduction
-                        </Typography>
-                    </Link>
+                        </Link>
+                    </Typography>
                     <Typography
                         variant="body1"
                         margin={false}
@@ -62,38 +64,40 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                                     className={
                                         classes.leftSidebar__navigation__sublist__item
                                     }>
-                                    <Link
-                                        href={`/${ROUTES.home}#installation`}
-                                        onClick={() => toggle(false)}>
-                                        <Typography
-                                            variant="body1"
-                                            margin={false}
-                                            htmlElement="span"
-                                            color={
-                                                isActive(
-                                                    `/${ROUTES.home}#installation`
-                                                ) && THEMES[theme].primary
-                                            }>
+                                    <Typography
+                                        variant="body1"
+                                        margin={false}
+                                        htmlElement="span"
+                                        color={
+                                            isActive(
+                                                `/${ROUTES.home}#installation`
+                                            ) && THEMES[theme].primary
+                                        }>
+                                        <Link
+                                            href={`/${ROUTES.home}#installation`}
+                                            onClick={() => toggle(false)}
+                                            color="initial">
                                             Installation
-                                        </Typography>
-                                    </Link>
+                                        </Link>
+                                    </Typography>
                                 </li>
                                 <li>
-                                    <Link
-                                        href={`/${ROUTES.home}#example`}
-                                        onClick={() => toggle(false)}>
-                                        <Typography
-                                            variant="body1"
-                                            margin={false}
-                                            htmlElement="span"
-                                            color={
-                                                isActive(
-                                                    `/${ROUTES.home}#example`
-                                                ) && THEMES[theme].primary
-                                            }>
+                                    <Typography
+                                        variant="body1"
+                                        margin={false}
+                                        htmlElement="span"
+                                        color={
+                                            isActive(
+                                                `/${ROUTES.home}#example`
+                                            ) && THEMES[theme].primary
+                                        }>
+                                        <Link
+                                            href={`/${ROUTES.home}#example`}
+                                            onClick={() => toggle(false)}
+                                            color="initial">
                                             Example
-                                        </Typography>
-                                    </Link>
+                                        </Link>
+                                    </Typography>
                                 </li>
                             </ul>
                         </Accordion>
@@ -116,39 +120,43 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                                                 className={
                                                     classes.leftSidebar__navigation__sublist__item
                                                 }>
-                                                <Link href={sublistItem.url}>
-                                                    <Typography
-                                                        variant="body1"
-                                                        margin={false}
-                                                        htmlElement="span"
-                                                        color={
-                                                            isActive(
-                                                                sublistItem.url
-                                                            ) &&
-                                                            THEMES[theme]
-                                                                .primary
-                                                        }>
+                                                <Typography
+                                                    variant="body1"
+                                                    margin={false}
+                                                    htmlElement="span"
+                                                    color={
+                                                        isActive(
+                                                            sublistItem.url
+                                                        ) &&
+                                                        THEMES[theme].primary
+                                                    }>
+                                                    <Link
+                                                        href={sublistItem.url}
+                                                        title={
+                                                            sublistItem.title
+                                                        }
+                                                        color="initial">
                                                         {sublistItem.title}
-                                                    </Typography>
-                                                </Link>
+                                                    </Link>
+                                                </Typography>
                                             </li>
                                         ))}
                                     </ul>
                                 </Accordion>
                             </Typography>
                         ) : (
-                            <Link href={item.url} key={item.key}>
-                                <Typography
-                                    variant="body1"
-                                    htmlElement="span"
-                                    margin={false}
-                                    color={
-                                        isActive(item.url) &&
-                                        THEMES[theme].primary
-                                    }>
+                            <Typography
+                                variant="body1"
+                                htmlElement="span"
+                                margin={false}
+                                color={
+                                    isActive(item.url) && THEMES[theme].primary
+                                }
+                                key={item.key}>
+                                <Link href={item.url} color="initial">
                                     {item.title}
-                                </Typography>
-                            </Link>
+                                </Link>
+                            </Typography>
                         )
                     )}
                 </nav>

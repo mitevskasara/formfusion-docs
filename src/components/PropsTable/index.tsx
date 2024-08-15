@@ -33,7 +33,7 @@ const PropsTable = ({ data }: PropsTableProps) => {
                                         )}
                                     </Typography>
                                 </li>
-                                <li className={classes.properties__list__form}>
+                                <li>
                                     <Typography variant="body1">
                                         <HTMLText text={prop.description} />
                                     </Typography>
@@ -45,20 +45,20 @@ const PropsTable = ({ data }: PropsTableProps) => {
                                         }>
                                         <Typography variant="body1">
                                             Default:
-                                            <strong>
+                                            <span>
                                                 &nbsp;
                                                 {prop.default}
-                                            </strong>
+                                            </span>
                                         </Typography>
                                     </li>
                                 )}
                                 <li className={classes.properties__list__form}>
                                     <Typography variant="body1">
                                         Type:
-                                        <strong>
+                                        <span>
                                             &nbsp;
                                             {prop.type}
-                                        </strong>
+                                        </span>
                                     </Typography>
                                 </li>
                             </ul>

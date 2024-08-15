@@ -1,7 +1,8 @@
 {
     "key": "mui",
     "title": "Material UI",
-    "description": "Discover the integration possibilities with FormFusion and Material UI components. Improve your form management experience with full compatibility and minimum effort.",
+    "subtitle": "How to Integrate FormFusion with Material UI components",
+    "description": "Learn how to integrate FormFusion with Material UI components to improve your form management process.",
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-g5bbhe?file=src%2FApp.tsx",
     "nextUrl": "/formfusion/integrations/antdesign",
     "nextUrlTitle": "Ant Design"
