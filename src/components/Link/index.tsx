@@ -18,15 +18,15 @@ const Link = ({
 }: LinkProps) => {
     const Component = internal ? NextLink : 'a';
     return (
-        <Component href={href} {...props}>
-            <span
-                className={`${className} ${
-                    !color ? classes.link : classes.link_noColor
-                }`}
-                style={{ color }}>
-                {children}
-                {icon && <span className={`icon-${icon}`} />}
-            </span>
+        <Component
+            href={href}
+            {...props}
+            className={`${className} ${
+                !color ? classes.link : classes.link_noColor
+            }`}
+            style={{ color }}>
+            {children}
+            {icon && <span className={`icon-${icon}`} />}
         </Component>
     );
 };

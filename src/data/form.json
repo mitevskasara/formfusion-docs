@@ -1,8 +1,9 @@
 {
     "key": "form",
     "title": "Form",
+    "subtitle": "Form Component: Features and Properties for Effective Form Management in React",
     "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes",
-    "description": "The Form component acts as a compact wrapper for an HTML form element, effectively handling context management and propagation to its child components. It accepts all standard HTML form properties and additionally offers the following properties:",
+    "description": "The <b>Form component</b> acts as a compact wrapper for an HTML form element, effectively handling context management and propagation to its child components. It accepts all standard HTML form properties and additionally offers the following properties:",
     "props": [
         {
             "name": "children",
@@ -44,5 +45,5 @@
     "exampleTitle": "FormFusion Basic Form example",
     "nextUrl": "/formfusion/api/input",
     "nextUrlTitle": "Input",
-    "metaDesc": "FormFusion's Form component: Performant and customizable extention of the standard HTML form element, enriched with essentials features for smooth form management. Easy to integrate with custom react hook allowing greater form control."
+    "metaDesc": "Form component: Optimised extension of the standard HTML form element with additional features for easier form management."
 }

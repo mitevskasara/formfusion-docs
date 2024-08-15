@@ -38,7 +38,12 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
             }}
             theme={theme}
             setTheme={setTheme}>
-            <Section title={data?.title} margin={false}>
+            <Section title={data?.title} margin={false} titleVariant="p">
+                <h1 className="hidden">
+                    {data?.title} - Optimised and fully customisable React
+                    component
+                </h1>
+                <h2 className="hidden">{data?.subtitle}</h2>
                 <Typography variant="body1">
                     <HTMLText text={data?.description} />
                 </Typography>

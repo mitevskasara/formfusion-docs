@@ -9,6 +9,7 @@ export interface Props {
 export interface Component {
     key: string;
     title: string;
+    subtitle?: string;
     url: string;
     description: string;
     props: Props[];
