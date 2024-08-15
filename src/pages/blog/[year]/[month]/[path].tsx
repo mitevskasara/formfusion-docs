@@ -4,6 +4,7 @@ import BlogLayout from '@/components/BlogLayout';
 import NewsletterPostDetails from '@/components/NewsletterPostDetails';
 import { API_KEY, API_URL } from '@/constants/api';
 import { decode, encode, extractFirstImage } from '@/utils/general';
+import ROUTES from '@/constants/routes';
 
 type Props = {
     data?: any;
@@ -21,13 +22,13 @@ const DetailsPage = ({ data, other, theme, setTheme }: Props) => {
     return data ? (
         <BlogLayout
             {...{
-                url: `https://www.corelabui.com${path}`,
+                url: `https://www.corelabui.com/${ROUTES.blog}${path}`,
                 title: data?.title,
                 image: image || '',
                 description: plainText.slice(0, 300),
                 keywords:
                     'blog, react blog, javascript blog, react,react form,forms, validation,react hook, form validation, javascript, javascript form',
-                canonical: `https://www.corelabui.com${path}`
+                canonical: `https://www.corelabui.com/${ROUTES.blog}${path}`
             }}
             theme={theme}
             setTheme={setTheme}
