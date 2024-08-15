@@ -1,7 +1,8 @@
 {
     "key": "antdesign",
     "title": "Ant Design",
-    "description": "Discover the integration possibilities with FormFusion and Ant Design UI components. Improve your form management experience with full compatibility and minimum effort.",
+    "subtitle": "How to Integrate FormFusion with Ant Design components",
+    "description": "Learn how to integrate FormFusion with Antdesign UI components to improve your form management process.",
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-bcsqdx?file=src%2FApp.tsx",
     "nextUrl": "/formfusion/integrations/chakraui",
     "nextUrlTitle": "Chakra UI"

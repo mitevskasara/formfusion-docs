@@ -1,6 +1,7 @@
 {
     "key": "useform",
     "title": "UseForm",
+    "subtitle": "UseForm Hook: Advanced Form Management with Custom Validation and Configuration in React",
     "props": [
         {
             "name": "onSubmit",

@@ -48,3 +48,8 @@ strong {
     --text: inherit !important;
     --text-secondary: inherit !important;
 }
+
+.hidden {
+    visibility: hidden;
+    font-size: 0px;
+}

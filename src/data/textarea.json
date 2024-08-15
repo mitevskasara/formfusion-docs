@@ -1,6 +1,7 @@
 {
     "key": "textarea",
     "title": "Textarea",
+    "subtitle": "Textarea Component: Advanced Textarea with Custom Validation and Accessibility Features",
     "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attributes",
     "description": "The Textarea component is built upon the native HTML textarea element and it should be used as a child within the Form component to provide access to the Form handler functions and utilities.",
     "props": [
@@ -37,5 +38,5 @@
     "exampleTitle": "FormFusion Basic Textarea usage",
     "nextUrl": "/formfusion/api/useform",
     "nextUrlTitle": "UseForm",
-    "metaDesc": "FormFusion's Textarea component: Powerful and customizable extention of the standard HTML textarea element built to be easily used with other FormFusion components. Easy to integrate with custom react hook allowing greater form control."
+    "metaDesc": "Textarea component: Optimised and customisable extension of the standard HTML textarea element built to be easily used with other FormFusion components."
 }

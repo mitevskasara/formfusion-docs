@@ -7,6 +7,7 @@ interface SectionProps extends HTMLAttributes<HTMLElement> {
     margin?: boolean;
     subtitle?: string;
     badge?: React.ReactNode;
+    titleVariant?: string;
 }
 
 const Section = forwardRef(
@@ -18,6 +19,7 @@ const Section = forwardRef(
             subtitle,
             margin = true,
             badge = null,
+            titleVariant,
             ...props
         }: SectionProps,
         ref: LegacyRef<HTMLElement>
@@ -31,7 +33,9 @@ const Section = forwardRef(
                 {...props}>
                 {title && (
                     <div className={classes.section__title}>
-                        <Typography variant="heading4" htmlElement="h1">
+                        <Typography
+                            variant="heading4"
+                            htmlElement={titleVariant || 'h1'}>
                             {title}
                         </Typography>
                         {badge || ''}

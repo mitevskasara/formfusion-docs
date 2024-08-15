@@ -1,4 +1,4 @@
-export default [
+const posts = [
     {
         url: 'https://www.corelabui.com/blog/2024/05/different-ways-to-handle-form',
         title: 'Different ways to handle form submission in React',
@@ -24,3 +24,5 @@ export default [
         tag: 'LEARN & DO'
     }
 ];
+
+export default posts;

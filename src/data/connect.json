@@ -1,6 +1,7 @@
 {
     "key": "connect",
     "title": "connect",
+    "subtitle": "Connect Method: Integrate Custom Field Components and UI Libraries with FormFusion",
     "props": [
         {
             "name": "config",
