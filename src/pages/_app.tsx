@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Poppins } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
+import { Albert_Sans } from 'next/font/google';
 import ThemeProvider from 'corelabui/ThemeProvider';
 
 import THEMES from '@/core/theme';
@@ -11,8 +10,8 @@ import '../core/styles/globals.css';
 import '../core/styles/prism.css';
 import 'formfusion/style.css';
 
-const font = Poppins({
-    weight: ['400', '500', '600', '700'],
+const font = Albert_Sans({
+    weight: ['300', '400', '500', '700'],
     subsets: ['latin']
 });
 
@@ -36,7 +35,6 @@ export default function MyApp({ Component, pageProps }: any) {
                     theme={custom}
                     setTheme={applyTheme}
                 />
-                {process.env.MODE === 'PROD' && <Analytics />}
             </main>
         </ThemeProvider>
     );

@@ -98,7 +98,7 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
         <MainLayout
             {...{
                 ...META_DATA,
-                title: `Built-in Form validation in React`,
+                title: 'Rich collection of validation patterns for form validation in React',
                 url: `https://www.corelabui.com/${ROUTES.validation}`,
                 canonical: `https://www.corelabui.com/${ROUTES.validation}`,
                 description:

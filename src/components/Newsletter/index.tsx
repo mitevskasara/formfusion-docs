@@ -6,7 +6,7 @@ interface INewsletterProps {
 }
 
 const Newsletter = ({ posts = [] }: INewsletterProps) => (
-    <>
+    <div className={classes.container}>
         <div className={classes.grid__item_featured}>
             <NewsletterPost post={posts[0]} mode="featured" />
         </div>
@@ -18,7 +18,7 @@ const Newsletter = ({ posts = [] }: INewsletterProps) => (
                 </div>
             ))}
         </div>
-    </>
+    </div>
 );
 
 export default Newsletter;

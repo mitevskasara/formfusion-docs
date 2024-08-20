@@ -1,10 +1,11 @@
 @import '@/core/styles/variables';
 
 .footer {
-    background-color: var(--background);
     height: $footer-height;
     grid-area: footer;
-    border-top: 1px solid var(--border-color);
+    background-color: var(--lp-layout-background);
+    border: 1px solid var(--lp-layout-border);
+    border-top: 0;
     z-index: 2;
     position: relative;
     padding: 0 $side-padding;

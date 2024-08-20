@@ -47,7 +47,7 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                         }>
                         <Link
                             href={`/${ROUTES.home}#introduction`}
-                            color="initial">
+                            color="inherit">
                             Introduction
                         </Link>
                     </Typography>
@@ -76,12 +76,15 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                                         <Link
                                             href={`/${ROUTES.home}#installation`}
                                             onClick={() => toggle(false)}
-                                            color="initial">
+                                            color="inherit">
                                             Installation
                                         </Link>
                                     </Typography>
                                 </li>
-                                <li>
+                                <li
+                                    className={
+                                        classes.leftSidebar__navigation__sublist__item
+                                    }>
                                     <Typography
                                         variant="body1"
                                         margin={false}
@@ -94,7 +97,7 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                                         <Link
                                             href={`/${ROUTES.home}#example`}
                                             onClick={() => toggle(false)}
-                                            color="initial">
+                                            color="inherit">
                                             Example
                                         </Link>
                                     </Typography>
@@ -135,7 +138,7 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                                                         title={
                                                             sublistItem.title
                                                         }
-                                                        color="initial">
+                                                        color="inherit">
                                                         {sublistItem.title}
                                                     </Link>
                                                 </Typography>
@@ -153,7 +156,7 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                                     isActive(item.url) && THEMES[theme].primary
                                 }
                                 key={item.key}>
-                                <Link href={item.url} color="initial">
+                                <Link href={item.url} color="inherit">
                                     {item.title}
                                 </Link>
                             </Typography>

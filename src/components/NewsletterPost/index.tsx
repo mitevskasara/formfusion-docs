@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { encode } from '@/utils/general';
 import ROUTES from '@/constants/routes';
 import { formatDate } from '@/utils/dateFormat';
-import ClientComponent from '../ClientComponent';
 
 interface INewsletterPostProps {
     post: any;
@@ -24,7 +23,9 @@ const NewsletterPost = ({
 
     return (
         <div className={`${classes.post} ${classes['post_' + mode]}`}>
-            <div className={classes.post__image}>
+            <div
+                className={classes.post__image}
+                style={{ backgroundColor: post.background }}>
                 <Image
                     src={post.images[0]?.url}
                     alt={post.images[0]?.url}
