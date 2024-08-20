@@ -1,9 +1,33 @@
 @import '@/core/styles/variables';
 @import '@/core/styles/media-queries';
 
+.container {
+    padding: 0em $side-padding;
+    padding-top: 3em;
+    max-width: $lp-container-width;
+    margin: auto;
+
+    @include media(xlarge) {
+        max-width: $lp-container-width;
+    }
+
+    @include media(large) {
+        max-width: $lp-container-width-medium;
+    }
+
+    @include media(small) {
+        width: calc(100vw - 4em);
+        max-width: calc(100vw - 4em);
+    }
+
+    @include media(xsmall) {
+        padding-top: 1em;
+    }
+}
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 3em;
 
     @include media(small) {

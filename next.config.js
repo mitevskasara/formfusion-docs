@@ -36,6 +36,21 @@ const nextConfig = {
                 source: '/privacy',
                 destination: '/formfusion',
                 permanent: false
+            },
+            {
+                source: '/formfusion/api',
+                destination: '/formfusion/api/form',
+                permanent: true
+            },
+            {
+                source: '/formfusion/integrations',
+                destination: '/formfusion/integrations/mui',
+                permanent: true
+            },
+            {
+                source: '/formfusion/api/types',
+                destination: '/formfusion/api/validation',
+                permanent: true
             }
         ];
     }

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import axios from 'axios';
 import { Form } from 'formfusion';
 import Input from 'corelabui/Input';
-import Divider from 'corelabui/Divider';
 import Typography from 'corelabui/Typography';
 import Button from 'corelabui/Button';
 
@@ -82,7 +81,7 @@ const Footer = () => {
                             Get in touch
                         </Typography>
                         <Link
-                            href="https://www.linkedin.com/in/mitevska"
+                            href="https://www.linkedin.com/in/sara-mitevska-75a4a6152"
                             target="_blank"
                             title="LinkedIn">
                             LinkedIn
@@ -113,7 +112,9 @@ const Footer = () => {
                                 placeholder="Enter your email"
                                 type="email"
                             />
-                            <Button type="submit">Subscribe</Button>
+                            <Button type="submit" variant="secondary">
+                                Subscribe
+                            </Button>
                         </Form>
                         {error && (
                             <Typography
@@ -138,7 +139,7 @@ const Footer = () => {
                     variant="caption"
                     margin={false}
                     className={classes.footer__copyright}>
-                    Copyright © {year} CoreLab UI. All rights reserved.
+                    Copyright © {year} FormFusion. All rights reserved.
                 </Typography>
             </div>
         </footer>

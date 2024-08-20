@@ -45,5 +45,6 @@
     "exampleTitle": "FormFusion Basic Form example",
     "nextUrl": "/formfusion/api/input",
     "nextUrlTitle": "Input",
+    "metaTitle": "Advanced React Form with validation, error handling and more",
     "metaDesc": "Form component: Optimised extension of the standard HTML form element with additional features for easier form management."
 }

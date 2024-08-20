@@ -17,6 +17,7 @@ export interface Component {
     exampleTitle: string;
     nextUrl: string;
     nextUrlTitle: string;
+    metaTitle: string;
     metaDesc: string;
 }
 
