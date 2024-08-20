@@ -1,6 +1,7 @@
 :root {
     --max-width: 1100px;
-    --accent: #d19d42;
+    --accent: #6c757d;
+    --accent-hover: #5a6268;
     --error: #c22513;
     --link: #0b60b0;
     --link-hover: #40a2d8;
@@ -8,6 +9,9 @@
 
     --success-light: #75a47f47;
     --accent-light: #d19d4230;
+
+    --lp-layout-background: #fafafb;
+    --lp-layout-border: #e8e9e9;
 }
 
 a {
@@ -16,12 +20,12 @@ a {
 }
 
 code {
-    background-color: #00000014;
+    background-color: #f5f5f7;
     padding: 3px 3px;
     border-radius: 4px;
     font-size: 0.9em;
     font-weight: 500;
-    color: var(--text);
+    color: #404756;
     border: 1px solid var(--border-color);
 }
 
@@ -36,6 +40,10 @@ code {
 .CoreLabUI__body1,
 .CoreLabUI__btn {
     font-weight: 400;
+}
+
+.CoreLabUI__btn--large {
+    padding: 0 2em;
 }
 
 b,

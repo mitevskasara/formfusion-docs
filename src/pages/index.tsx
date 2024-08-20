@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Button from 'corelabui/Button';
@@ -18,7 +18,6 @@ import LPFormExample from '@/components/LPFormExample';
 import ROUTES from '@/constants/routes';
 import Link from 'next/link';
 import posts from '@/constants/posts';
-import Footer from '@/components/Footer';
 
 const MainPage = () => {
     let timer: any = null;
@@ -36,10 +35,7 @@ const MainPage = () => {
     return (
         <>
             <Head>
-                <title>
-                    CoreLab UI: Toolkit to speed up your front-end development
-                    workflow
-                </title>
+                <title>FormFusion: The right way to build forms in React</title>
                 <meta charSet="utf-8" />
                 <meta
                     name="viewport"
@@ -47,7 +43,7 @@ const MainPage = () => {
                 />
                 <meta
                     property="title"
-                    content="FormFusion: Easy form handling, validation & more"
+                    content="FormFusion: The right way to build forms in React"
                 />
                 <meta name="description" content={META_DATA.description} />
                 <meta property="image" content={META_DATA.image} />
@@ -56,7 +52,7 @@ const MainPage = () => {
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
-                    content="FormFusion: Easy form handling, validation & more"
+                    content="FormFusion: The right way to build forms in React"
                 />
                 <meta
                     property="og:description"
@@ -78,12 +74,12 @@ const MainPage = () => {
                             <Highlight
                                 textGradient={{
                                     direction: 'left',
-                                    colors: '#FFFFFF,var(--accent),#9f7121'
+                                    colors: '#FFFFFF,#4B7C9B,#294456'
                                 }}>
                                 right way.&nbsp;
                             </Highlight>
                         </Typography>
-                        <Typography variant="subtitle2" htmlElement="h2">
+                        <Typography variant="subtitle1" htmlElement="h2">
                             Lightweight library for building forms in React that
                             offers built-in validation, input masking, error
                             handling & more.
@@ -104,6 +100,11 @@ const MainPage = () => {
                                     className={
                                         classes.hero__inner__action__code__inner
                                     }>
+                                    <span
+                                        className="icon-copy"
+                                        style={{ cursor: 'pointer' }}
+                                    />
+                                    &nbsp;&nbsp;
                                     <span>npm i&nbsp;</span>formfusion
                                 </code>
                             </div>
@@ -138,7 +139,7 @@ const MainPage = () => {
                                     className={
                                         classes.hero__inner__right__editor__toolbar__middle
                                     }>
-                                    <span>Demo - FormFusion</span>
+                                    <span>Test Form</span>
                                 </div>
                                 <div />
                             </div>
@@ -244,7 +245,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--primary)">
+                                    color="var(--title)">
                                     Optimized Form components
                                 </Typography>
                                 <br />
@@ -275,7 +276,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--primary)">
+                                    color="var(--title">
                                     Custom React hooks for greater form control
                                 </Typography>
                                 <br />
@@ -306,7 +307,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--primary)">
+                                    color="var(--title">
                                     Error handling
                                 </Typography>
                                 <br />
@@ -314,7 +315,7 @@ const MainPage = () => {
                                     variant="body1"
                                     htmlElement="p"
                                     margin={false}
-                                    color="var(--primary)">
+                                    color="var(--title">
                                     FormFusion takes care of error handling by
                                     providing automated error messages depending
                                     on the field type while also offering full
@@ -336,7 +337,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--primary)">
+                                    color="var(--title">
                                     500+ Validation rules
                                 </Typography>
                                 <br />
@@ -367,7 +368,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--primary)">
+                                    color="var(--title">
                                     Input masking
                                 </Typography>
                                 <br />
@@ -399,7 +400,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--primary)">
+                                    color="var(--title">
                                     Integration with UI libraries
                                 </Typography>
                                 <br />
@@ -508,7 +509,7 @@ const MainPage = () => {
                         <Highlight
                             textGradient={{
                                 direction: 'left',
-                                colors: '#FFFFFF,var(--accent),#9f7121'
+                                colors: '#FFFFFF,#4B7C9B,#294456'
                             }}>
                             &nbsp;the change.
                         </Highlight>
@@ -524,13 +525,15 @@ const MainPage = () => {
                     <br />
                     <Button
                         size="large"
-                        variant="secondary"
+                        variant="primary"
                         onClick={() => goTo('/formfusion')}>
                         Get Started
                     </Button>
                 </div>
             </section>
-            <LPFooter />
+            <div className={classes.section__footer}>
+                <LPFooter />
+            </div>
         </>
     );
 };

@@ -7,6 +7,7 @@ import ClientComponent from '@/components/ClientComponent';
 
 import classes from './header.module.scss';
 import Link from '../Link';
+import { useRouter } from 'next/router';
 
 interface CustomHeaderProps {
     open: boolean;
@@ -23,6 +24,11 @@ const CustomHeader = ({
     setTheme,
     showMenu = true
 }: CustomHeaderProps) => {
+    const { asPath } = useRouter();
+    const isActive = (url: string) => {
+        return asPath.startsWith(url);
+    };
+
     return (
         <header className={classes.header}>
             <div className={classes.header__inner}>
@@ -31,23 +37,40 @@ const CustomHeader = ({
                         href="https://www.corelabui.com"
                         title="Go to Landing page">
                         <span
-                            className={`${classes.header__inner__left__logo} icon-formfusion-full`}
+                            className={`${classes.header__inner__left__logo_mobile} icon-formfusion-circle`}
                         />
                         <span
-                            className={`${classes.header__inner__left__logo_mobile} icon-formfusion`}
-                        />
+                            className={`${classes.header__inner__left__logo}`}>
+                            FormFusion&nbsp;
+                            <span
+                                className={`${classes.header__inner__left__logo__version}`}>
+                                v1.1.12
+                            </span>
+                        </span>
                     </a>
                 </div>
                 <div className={classes.header__inner__right}>
                     <Link
                         href="/formfusion"
-                        className={classes.header__inner__right__link_text}
+                        className={`${
+                            classes.header__inner__right__link_text
+                        } ${
+                            isActive('/formfusion')
+                                ? classes.header__inner__right__link_text_active
+                                : ''
+                        }`}
                         title="Documentation">
-                        Docs
+                        Learn
                     </Link>
                     <Link
                         href="/blog"
-                        className={classes.header__inner__right__link_text}
+                        className={`${
+                            classes.header__inner__right__link_text
+                        } ${
+                            isActive('/blog')
+                                ? classes.header__inner__right__link_text_active
+                                : ''
+                        }`}
                         title="Blog"
                         style={{ marginRight: '1em' }}>
                         Blog

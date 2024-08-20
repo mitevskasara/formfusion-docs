@@ -28,18 +28,26 @@ const Mask = ({ theme, setTheme }: IMaskProps) => {
         <MainLayout
             {...{
                 ...META_DATA,
-                title: `${META_DATA.title} | Input masking`,
+                title: `Easy input masking in React forms for consistent data entry`,
                 canonical: `https://www.corelabui.com/${ROUTES.masking}`,
                 url: `https://www.corelabui.com/${ROUTES.masking}`,
                 description:
-                    'Integrate precision with Input Masking by FormFusion. A simple solution for refining data entry. Customize formats to ensure accuracy and enhance user experience. Experience the difference today.'
+                    'Easily define formats for form fields like phones, dates, and credit card numbers with a simple syntax. Enhance the user experience with just one line of code.'
             }}
             theme={theme}
             setTheme={setTheme}>
             <Section
                 title="Input masking"
                 margin={false}
-                badge={<Tag text="BETA" />}>
+                badge={<Tag text="BETA" />}
+                titleVariant="p">
+                <h1 className="hidden">
+                    Easy input masking in React forms for consistent data entry
+                </h1>
+                <h2 className="hidden">
+                    Easily define formats for form fields like phones, dates,
+                    and credit card numbers
+                </h2>
                 <Typography variant="body1">
                     Input masking ensures that user input follows a specified
                     format, such as phone numbers, dates, credit card numbers,

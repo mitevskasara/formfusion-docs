@@ -28,7 +28,7 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
         <MainLayout
             {...{
                 ...META_DATA,
-                title: `FormFusion + ${data?.title} = Easy and Better Form Management`,
+                title: data?.subtitle,
                 url: `https://www.corelabui.com/${ROUTES.integrations}/${data?.key}`,
                 canonical: `https://www.corelabui.com/${ROUTES.integrations}/${data?.key}`,
                 description: data?.description ?? META_DATA.description

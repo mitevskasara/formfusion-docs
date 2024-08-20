@@ -27,8 +27,8 @@ pre[class*='language-'] {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    background: var(--surface-dark);
-    color: var(--text);
+    background: #1f1f1f;
+    color: #d5d5d5e0;
 }
 
 pre > code[class*='language-'] {
@@ -72,7 +72,7 @@ pre[class*='language-'] {
 }
 
 .token.punctuation {
-    color: var(--text);
+    color: #d5d5d5e0;
 }
 
 .token.namespace {

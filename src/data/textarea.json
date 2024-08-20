@@ -38,5 +38,6 @@
     "exampleTitle": "FormFusion Basic Textarea usage",
     "nextUrl": "/formfusion/api/useform",
     "nextUrlTitle": "UseForm",
+    "metaTitle": "Advanced Textarea with built-in validation and accessibility",
     "metaDesc": "Textarea component: Optimised and customisable extension of the standard HTML textarea element built to be easily used with other FormFusion components."
 }

@@ -2,13 +2,14 @@ import { darkTheme, winterTheme } from 'corelabui/Theme';
 
 const customTheme = {
     ...winterTheme,
-    primary: '#2D3250',
-    primaryHover: '#7077A1',
-    primaryDisabled: '#979CBB',
+    primary: '#066D8E',
+    primaryHover: '#044F64',
+    primaryDisabled: '#7D9AA6',
     fontFamily: 'inherit',
-    body1: '0.9em',
+    body1: '1em',
     background: '#ffffff',
-    text: '#1e1e1e',
+    text: '#23272f',
+    title: '#23272f',
     surface: '#fafafa',
     surfaceDark: '#f5f6f8',
     borderColor: '#eeeeee'
@@ -23,7 +24,8 @@ const dark = {
     body1: '0.9em',
     surface: '#343a46',
     surfaceDark: '#080809',
-    fieldsBackground: '#2a3139'
+    fieldsBackground: '#2a3139',
+    borderRadius: '9999px'
 };
 
 export const scrollBarStyle =

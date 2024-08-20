@@ -59,5 +59,6 @@
     "exampleTitle": "FormFusion Basic Input usage",
     "nextUrl": "/formfusion/api/textarea",
     "nextUrlTitle": "Textarea",
+    "metaTitle": "Advanced Input with built-in validation, accessibility and masking",
     "metaDesc": "Input component: Optimised and fully customisable extension of the standard HTML input element with built-in validation rules and input masking."
 }

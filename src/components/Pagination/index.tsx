@@ -19,7 +19,6 @@ const paginateArray = (
 
     if (startIndex === pages.length - boundary) {
         startIndex = pages.length - boundary;
-        console.log(startIndex, pages.length - boundary);
     }
 
     const endIndex = Math.min(pages.length, startIndex + boundary);

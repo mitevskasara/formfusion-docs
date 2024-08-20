@@ -1,20 +1,22 @@
-import Button from 'corelabui/Button';
 import Link from 'next/link';
 
 import classes from './header.module.scss';
 
 const LPHeader = () => {
-    const goTo = (link: string) => window?.open(link, '_self');
     return (
         <header className={classes.header}>
             <div className={classes.header__inner}>
                 <div className={classes.header__inner__left}>
                     <span
-                        className={`${classes.header__inner__left__logo} icon-formfusion-full`}
+                        className={`${classes.header__inner__left__logo_mobile} icon-formfusion-circle`}
                     />
-                    <span
-                        className={`${classes.header__inner__left__logo_mobile} icon-formfusion`}
-                    />
+                    <span className={`${classes.header__inner__left__logo}`}>
+                        FormFusion&nbsp;
+                        <span
+                            className={`${classes.header__inner__left__logo__version}`}>
+                            v1.1.12
+                        </span>
+                    </span>
                 </div>
                 <div className={classes.header__inner__right}>
                     <nav className={classes.header__inner__right__nav}>
@@ -28,11 +30,11 @@ const LPHeader = () => {
                             className={classes.header__inner__right__nav__link}>
                             Blog
                         </Link>
-                        <Button
-                            size="small"
-                            onClick={() => goTo('/formfusion')}>
-                            Try it out
-                        </Button>
+                        <Link
+                            href="/formfusion"
+                            className={classes.header__inner__right__nav__link}>
+                            Playground
+                        </Link>
                     </nav>
                 </div>
             </div>
