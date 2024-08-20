@@ -109,7 +109,7 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
                 </Typography>
                 <br />
                 <ClientComponent>
-                    <Code language="javascript">
+                    <Code language="jsx">
                         import &apos;formfusion/style.css&apos;;
                     </Code>
                 </ClientComponent>

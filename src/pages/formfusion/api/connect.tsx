@@ -26,8 +26,8 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
             {...{
                 ...META_DATA,
                 description:
-                    "FormFusion's connect utility: Handy method that provides flexibility when using FormFusion. Allows integrating Form component and all of its features with any UI library.",
-                title: `${META_DATA.title} | Connect`,
+                    'Connect is a custom hook that allows integrating Form component and all of its features with any UI library such as Material UI, AntDesign, Reactstrap and more',
+                title: 'Custom Hook for integrating Form component with any UI library.',
                 url: `https://www.corelabui.com/${ROUTES.connect}`,
                 canonical: `https://www.corelabui.com/${ROUTES.connect}`
             }}

@@ -1,5 +1,4 @@
 import { Dispatch, SetStateAction } from 'react';
-import { GetServerSideProps } from 'next';
 import BlogLayout from '@/components/BlogLayout';
 import NewsletterPostDetails from '@/components/NewsletterPostDetails';
 import { API_KEY, API_URL } from '@/constants/api';
@@ -25,7 +24,7 @@ const DetailsPage = ({ data, other, theme, setTheme }: Props) => {
                 url: `https://www.corelabui.com/${ROUTES.blog}${path}`,
                 title: data?.title,
                 image: image || '',
-                description: plainText.slice(0, 300),
+                description: plainText.slice(0, 160),
                 keywords:
                     'blog, react blog, javascript blog, react,react form,forms, validation,react hook, form validation, javascript, javascript form',
                 canonical: `https://www.corelabui.com/${ROUTES.blog}${path}`
@@ -33,7 +32,7 @@ const DetailsPage = ({ data, other, theme, setTheme }: Props) => {
             theme={theme}
             setTheme={setTheme}
             sidebar={false}>
-            <NewsletterPostDetails data={data} other={other} />
+            <NewsletterPostDetails data={{ ...data, image }} other={other} />
         </BlogLayout>
     ) : null;
 };

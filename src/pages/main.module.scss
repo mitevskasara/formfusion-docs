@@ -49,7 +49,6 @@
     }
 
     &__code {
-        overflow-y: auto;
         max-height: 600px;
         width: 50%;
 
@@ -119,13 +118,8 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    background: url('/assets/background.jpg');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    background-origin: padding-box;
-    background-attachment: fixed;
     padding: 5em 0 4em;
+    overflow-x: hidden;
 
     @include media(xlarge) {
         height: auto;
@@ -250,7 +244,7 @@
                 border: 1px solid var(--surface);
                 box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
                 border-radius: 10px;
-                width: 80%;
+                width: 96%;
                 height: 500px;
                 overflow-y: hidden;
                 margin-left: auto;
@@ -270,15 +264,11 @@
 
                 &_front {
                     z-index: 2;
-
-                    &:hover {
-                        overflow: auto;
-                    }
                 }
 
                 &__toolbar {
-                    background-color: #f2f2f2;
-                    height: 30px;
+                    background-color: #000000;
+                    height: 46px;
                     border-radius: 10px;
                     border-bottom-left-radius: 0px;
                     border-bottom-right-radius: 0px;
@@ -312,21 +302,23 @@
                     }
 
                     &__middle {
-                        height: 20px;
-                        background-color: #e2e2e2;
+                        height: 25px;
+                        border: 1px solid #726f6f;
+                        background-color: #1f1f1f;
                         width: 40%;
-                        border-radius: 10px;
+                        border-radius: 5px;
                         flex: 1;
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        color: #afafaf;
 
                         @include media(xsmall) {
                             flex: 2;
                         }
 
                         & > span {
-                            font-size: 11px;
+                            font-size: 12px;
                             font-weight: 100;
 
                             @include media(ssmall) {
@@ -342,10 +334,14 @@
 
                 &__code {
                     max-height: 100%;
+                    color: white;
+                    width: 100%;
+                    overflow-x: hidden;
 
                     & > pre {
-                        font-size: 10px;
+                        font-size: 12px;
                         max-height: 100%;
+                        border-radius: 0;
                     }
                 }
 
@@ -357,7 +353,7 @@
                     min-height: 313px;
                     position: absolute;
                     top: 50%;
-                    transform: translate(-25%, -50%);
+                    transform: translate(-31%, -31%);
                     border-radius: 10px;
 
                     @include media(smedium) {
@@ -392,6 +388,10 @@
             margin: auto;
             margin-top: 3em;
 
+            @media screen and (min-width: 960px) and (max-width: 1132px) {
+                flex-direction: column;
+            }
+
             @include media(smedium) {
                 margin-top: 1em;
             }
@@ -401,7 +401,7 @@
                 margin-top: 2em;
             }
 
-            @media only screen and (max-width: 430px) {
+            @media only screen and (max-width: 460px) {
                 flex-direction: column;
             }
 
@@ -414,6 +414,10 @@
                 min-width: 35%;
                 width: fit-content;
                 cursor: pointer;
+
+                @media screen and (min-width: 960px) and (max-width: 1132px) {
+                    width: 100%;
+                }
 
                 @include media(small) {
                     min-width: 50%;
@@ -431,7 +435,7 @@
                     background-color: var(--primary);
                     color: var(--light);
                     padding: 0.5em 1em;
-                    border-radius: 50px;
+                    border-radius: var(--border-radius);
                     position: absolute;
                     height: auto;
                     top: -33px;
@@ -448,10 +452,7 @@
                     border: none;
                     height: 24px;
                     background-color: #f5f6f8;
-
-                    & > span {
-                        color: var(--accent);
-                    }
+                    border: 1px solid var(--border-color);
                 }
 
                 &:hover {
@@ -462,11 +463,15 @@
             }
 
             & > div {
+                @media screen and (min-width: 960px) and (max-width: 1132px) {
+                    width: 100%;
+                }
+
                 @include media(xsmall) {
                     width: auto;
                 }
 
-                @media only screen and (max-width: 430px) {
+                @media only screen and (max-width: 460px) {
                     width: 100%;
                 }
 
@@ -478,7 +483,11 @@
                     height: 53px;
                     width: fit-content;
 
-                    @media only screen and (max-width: 430px) {
+                    @media screen and (min-width: 960px) and (max-width: 1132px) {
+                        width: 100%;
+                    }
+
+                    @media only screen and (max-width: 460px) {
                         width: 100%;
                         height: 43px;
                     }
@@ -577,6 +586,10 @@
 
 .services {
     margin-bottom: 3em;
+    background-color: var(--lp-layout-background);
+    border: 1px solid var(--lp-layout-border);
+    border-left: 0;
+    border-right: 0;
 
     @include media(small) {
         flex-direction: column;
@@ -626,9 +639,8 @@
                 margin-top: 1em;
                 font-weight: 500;
                 text-align: center;
-                color: var(--title);
                 font-size: var(--body1);
-                border-bottom: 2px solid var(--title);
+                border-bottom: 2px solid transparent;
 
                 & > span {
                     vertical-align: middle;
@@ -656,8 +668,6 @@
 }
 
 .blog {
-    background-color: var(--surface);
-
     &__outter {
         display: flex;
         background-color: var(--background);
@@ -732,35 +742,9 @@
 }
 
 .cta {
-    background: url('/assets/footer-background.jpg');
-    background-size: 100%;
-    background-position: 0px 100px;
-    background-repeat: no-repeat;
-    background-origin: padding-box;
-
-    @include media(xlarge) {
-        background-position: 0px 47px;
-    }
-
-    @include media(large) {
-        background-position: 0px 34px;
-    }
-
-    @include media(medium) {
-        background-position: 0px 106px;
-    }
-
-    @include media(smedium) {
-        background-position: 0px 107px;
-    }
-
-    @include media(small) {
-        background-position: 0px 180px;
-    }
-
-    @include media(xsmall) {
-        background-position: bottom;
-    }
+    background-color: var(--lp-layout-background);
+    border: 1px solid var(--lp-layout-border);
+    border-bottom: 0;
 
     &__inner {
         text-align: center;
@@ -768,15 +752,6 @@
 
         @include media(xsmall) {
             margin: 0 auto 4em;
-        }
-
-        & > div > button {
-            background-color: var(--accent);
-            border-color: var(--accent);
-
-            &:hover {
-                color: var(--text);
-            }
         }
 
         & > h2 {
@@ -789,5 +764,11 @@
                 margin-bottom: 2em;
             }
         }
+    }
+}
+
+.section__footer {
+    & > footer {
+        border-top: 0;
     }
 }

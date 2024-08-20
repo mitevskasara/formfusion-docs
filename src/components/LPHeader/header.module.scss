@@ -44,26 +44,26 @@
         &__left {
             display: flex;
             align-items: center;
-            gap: 1em;
+            gap: 0.5em;
 
             &__logo {
-                color: var(--text);
-                font-weight: bold;
+                color: var(--primary);
+                font-weight: 500;
                 font-size: 1.2em;
 
                 &_mobile {
-                    display: none;
-                    color: var(--text);
-                    font-weight: bold;
-                    font-size: 1.2em;
-
-                    @include media(small) {
-                        display: block;
-                    }
+                    color: var(--primary);
+                    font-size: 3em;
                 }
 
                 @include media(small) {
                     display: none;
+                }
+
+                &__version {
+                    font-size: 0.7em;
+                    color: var(--text-secondary);
+                    font-weight: 500;
                 }
             }
         }
@@ -96,7 +96,7 @@
                 &__link {
                     color: var(--text);
                     font-weight: 500;
-                    font-size: 0.85em;
+                    font-size: 1em;
                 }
 
                 & > div:last-child {

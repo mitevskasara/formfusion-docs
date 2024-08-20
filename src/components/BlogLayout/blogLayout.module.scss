@@ -5,24 +5,6 @@
     & > header {
         padding-top: 0.8em;
         padding-bottom: 0.5em;
-
-        & > div {
-            max-width: $lp-container-width;
-            margin: auto;
-
-            @include media(xlarge) {
-                max-width: $lp-container-width;
-            }
-
-            @include media(large) {
-                max-width: $lp-container-width-medium;
-            }
-
-            @include media(small) {
-                width: calc(100vw - 4em);
-                max-width: calc(100vw - 4em);
-            }
-        }
     }
 }
 
@@ -30,38 +12,12 @@
     display: grid;
     grid-template-areas: 'header' 'main' 'footer';
     gap: 3em;
-    grid-column-gap: 6em;
-    padding: 0 $side-padding;
     margin: 0 auto 0;
-
-    @include media(medium) {
-        grid-column-gap: 2em;
-    }
 }
 
 .main {
     margin: 1em auto;
     grid-area: main;
-    padding-top: 3em;
-    max-width: $lp-container-width;
-    margin: auto;
-
-    @include media(xlarge) {
-        max-width: $lp-container-width;
-    }
-
-    @include media(large) {
-        max-width: $lp-container-width-medium;
-    }
-
-    @include media(small) {
-        width: calc(100vw - 4em);
-        max-width: calc(100vw - 4em);
-    }
-
-    @include media(small) {
-        margin: 1em auto;
-    }
 }
 
 .footer {

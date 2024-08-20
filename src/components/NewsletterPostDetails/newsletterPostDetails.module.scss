@@ -1,9 +1,64 @@
 @import '@/core/styles/variables';
 @import '@/core/styles/media-queries';
 
+.header {
+    background-color: var(--post-background-color);
+    max-width: 100vw;
+    width: calc(100vw - 10px);
+
+    &__inner {
+        display: flex;
+        gap: 2em;
+        padding: 4em $side-padding;
+        margin: auto;
+        justify-content: space-between;
+
+        @include media(xlarge) {
+            max-width: 1600px;
+            margin: auto;
+        }
+
+        @include media(small) {
+            padding: 3em $side-padding;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+
+        & > h1,
+        p,
+        span,
+        a {
+            color: var(--post-content-color) !important;
+        }
+    }
+
+    &__right {
+        & > img {
+            position: unset !important;
+            width: 250px !important;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @include media(small) {
+            display: none;
+        }
+    }
+}
+
 .details__outter {
     display: block;
     margin-top: 2em;
+    padding: 0em $side-padding;
+    max-width: calc(100vw - $side-padding - $side-padding - 8px);
+
+    & > h4 {
+        max-width: 1600px;
+        margin: auto;
+    }
 
     &__social {
         position: fixed;
@@ -73,6 +128,11 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 3em;
 
+        @include media(xlarge) {
+            max-width: 1600px;
+            margin: auto;
+        }
+
         @include media(small) {
             grid-template-columns: 1fr 1fr;
         }
@@ -124,23 +184,13 @@
         width: 100%;
     }
 
-    & img[data-full='true'] {
-        width: 100% !important;
-        min-width: 100% !important;
-        max-width: 100% !important;
-        height: 500px;
-        display: inline-block;
-        border-radius: 10px;
-        object-fit: cover;
-
-        @include media(xsmall) {
-            height: 400px;
-        }
-    }
-
-    & img {
+    & img:not(:first-child) {
         height: auto;
         object-fit: contain;
+    }
+
+    & img:first-child {
+        display: none !important;
     }
 
     & > div:first-child {
@@ -280,6 +330,7 @@
     display: flex;
     gap: 0.6em;
     align-items: center;
+    margin-top: auto;
 
     @include media(xsmall) {
         align-items: flex-end;
@@ -355,4 +406,9 @@
     &__divider {
         color: var(--text);
     }
+}
+
+.image {
+    width: 300px;
+    height: auto;
 }

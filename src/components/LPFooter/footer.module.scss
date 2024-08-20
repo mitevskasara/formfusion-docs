@@ -6,6 +6,8 @@
     padding-bottom: 4.5em;
     padding-left: $side-padding;
     padding-right: $side-padding;
+    background-color: var(--lp-layout-background);
+    border: 1px solid var(--lp-layout-border);
 
     @include media(small) {
         padding-left: $side-padding-sm;
@@ -53,7 +55,7 @@
                     color: var(--text);
                     text-decoration: none;
                     cursor: pointer;
-                    font-size: 0.8em;
+                    font-size: 0.9em;
 
                     &:hover {
                         color: var(--primary);
@@ -81,6 +83,7 @@
 
                 & > button {
                     height: 37px;
+                    padding: 0 2em;
 
                     @include media(xsmall) {
                         width: 100%;

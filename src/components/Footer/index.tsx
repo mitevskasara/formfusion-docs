@@ -11,7 +11,7 @@ const Footer = () => {
         <footer className={classes.footer}>
             <Flex justifyContent="center" alignItems="center" margin="1em 0">
                 <Typography variant="caption" align="center" margin={false}>
-                    Copyright © 2023 CoreLab UI. All rights reserved.
+                    Copyright © 2023 FormFusion. All rights reserved.
                 </Typography>
                 {/* <Flex justifyContent="center" alignItems="center" margin="1em">
                     <Link
