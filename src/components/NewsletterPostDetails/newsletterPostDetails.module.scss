@@ -13,12 +13,12 @@
         margin: auto;
         justify-content: space-between;
 
-        @include media(xlarge) {
-            max-width: 1600px;
-            margin: auto;
-        }
+        max-width: 800px;
+        margin-left: auto !important;
+        margin-right: auto !important;
 
         @include media(small) {
+            max-width: calc(100vw - 2em);
             padding: 3em $side-padding;
         }
     }
