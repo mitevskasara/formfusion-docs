@@ -78,25 +78,25 @@ export default class MyDocument extends Document {
               "@type": "ListItem",
               "position": 1,
               "name": "FormFusion",
-              "item": "https://www.formfusion.dev/formfusion"
+              "item": "https://www.formfusion.dev/docs"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Getting started",
-              "item": "https://www.formfusion.dev/formfusion"
+              "item": "https://www.formfusion.dev/docs"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "API",
-              "item": "https://www.formfusion.dev/formfusion/api/form"
+              "item": "https://www.formfusion.dev/docs/api/form"
             },
             {
               "@type": "ListItem",
               "position": 4,
               "name": "Integrations",
-              "item": "https://www.formfusion.dev/formfusion/integrations/mui"
+              "item": "https://www.formfusion.dev/docs/integrations/mui"
             }
           ]
         }`

@@ -4,6 +4,6 @@
     "subtitle": "How to Integrate FormFusion with Material UI components",
     "description": "Learn how to integrate FormFusion with Material UI components to improve your form management process.",
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-g5bbhe?file=src%2FApp.tsx",
-    "nextUrl": "/formfusion/integrations/antdesign",
+    "nextUrl": "/docs/integrations/antdesign",
     "nextUrlTitle": "Ant Design"
 }
