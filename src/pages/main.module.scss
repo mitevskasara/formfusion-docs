@@ -698,12 +698,17 @@
             display: block;
             margin: auto;
             text-align: center;
-            color: var(--title);
+            color: var(--link);
             font-size: var(--body1);
             font-weight: 500;
             margin-top: 3em;
-            border-bottom: 2px solid var(--title);
             width: fit-content;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                color: var(--title);
+                border-bottom: 2px solid var(--title);
+            }
         }
     }
 

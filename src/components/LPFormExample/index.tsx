@@ -26,8 +26,8 @@ const FormExample = () => {
                 </div>
                 <div className={classes.form__inline}>
                     <Input
-                        id="email"
-                        name="email"
+                        id="test-email"
+                        name="test-email"
                         type="email"
                         label="Test Email"
                         placeholder="Enter your email"

@@ -9,6 +9,7 @@ const customTheme = {
     body1: '1em',
     background: '#ffffff',
     text: '#23272f',
+    textSecondary: '#000000a6',
     title: '#23272f',
     surface: '#fafafa',
     surfaceDark: '#f5f6f8',
@@ -24,8 +25,7 @@ const dark = {
     body1: '0.9em',
     surface: '#343a46',
     surfaceDark: '#080809',
-    fieldsBackground: '#2a3139',
-    borderRadius: '9999px'
+    fieldsBackground: '#2a3139'
 };
 
 export const scrollBarStyle =

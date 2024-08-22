@@ -264,7 +264,7 @@ const MainPage = () => {
                                 href={`/${ROUTES.form}`}
                                 target="_blank"
                                 className={classes.services__cards__card__link}>
-                                Learn more
+                                Learn more about components
                                 <span className="icon-arrow-right" />
                             </Link>
                         </div>
@@ -295,7 +295,7 @@ const MainPage = () => {
                                 href={`/${ROUTES.useform}`}
                                 target="_blank"
                                 className={classes.services__cards__card__link}>
-                                Learn more
+                                See all hooks
                                 <span className="icon-arrow-right" />
                             </Link>
                         </div>
@@ -325,7 +325,7 @@ const MainPage = () => {
                                 href={`/${ROUTES.form}`}
                                 target="_blank"
                                 className={classes.services__cards__card__link}>
-                                Learn more
+                                Find out how errors are handled
                                 <span className="icon-arrow-right" />
                             </Link>
                         </div>
@@ -356,7 +356,7 @@ const MainPage = () => {
                                 href={`/${ROUTES.validation}`}
                                 target="_blank"
                                 className={classes.services__cards__card__link}>
-                                Learn more
+                                See all validation rules
                                 <span className="icon-arrow-right" />
                             </Link>
                         </div>
@@ -388,7 +388,7 @@ const MainPage = () => {
                                 href={`/${ROUTES.masking}`}
                                 target="_blank"
                                 className={classes.services__cards__card__link}>
-                                Learn more
+                                Use masking in your forms
                                 <span className="icon-arrow-right" />
                             </Link>
                         </div>
@@ -422,7 +422,7 @@ const MainPage = () => {
                                 href={`/${ROUTES.integrations}`}
                                 target="_blank"
                                 className={classes.services__cards__card__link}>
-                                Learn more
+                                Integrate with your UI library
                                 <span className="icon-arrow-right" />
                             </Link>
                         </div>
@@ -456,7 +456,7 @@ const MainPage = () => {
                                         />
                                     </div>
                                     <Typography
-                                        variant="subtitle1"
+                                        variant="heading6"
                                         htmlElement="h3"
                                         className={classes.blog__post__title}
                                         lines={2}
@@ -492,7 +492,7 @@ const MainPage = () => {
                         href={`/${ROUTES.blog}`}
                         target="_blank"
                         className={classes.blog__outter__action}>
-                        Read all blog posts
+                        Read more blog posts
                     </Link>
                 </div>
             </section>

@@ -10,10 +10,6 @@
     font-family: inherit;
     width: -webkit-fill-available;
 
-    & > * > label {
-        font-size: smaller;
-    }
-
     &__inline {
         display: flex;
         gap: 20px;
@@ -50,9 +46,9 @@
     }
 
     & > button {
-        color: var(--primary);
+        color: #064d65;
         font-weight: 400;
-        background-color: #066d8e3b;
+        background-color: #e3e3e3;
         border: none;
         padding: 10px 1.5em;
         border-radius: 3px;
@@ -66,7 +62,7 @@
         align-self: flex-end;
 
         &:hover {
-            color: var(--primary);
+            color: #064d65;
             background-color: #066d8e66;
         }
     }
