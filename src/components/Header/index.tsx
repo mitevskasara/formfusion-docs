@@ -76,7 +76,7 @@ const CustomHeader = ({
                         Blog
                     </Link>
                     <Link
-                        href="/blog"
+                        href="/playground"
                         className={`${
                             classes.header__inner__right__link_text
                         } ${
