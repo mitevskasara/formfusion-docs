@@ -21,7 +21,7 @@ const LPHeader = () => {
                 <div className={classes.header__inner__right}>
                     <nav className={classes.header__inner__right__nav}>
                         <Link
-                            href="/formfusion"
+                            href="/docs"
                             className={classes.header__inner__right__nav__link}>
                             Documentation
                         </Link>
@@ -31,7 +31,7 @@ const LPHeader = () => {
                             Blog
                         </Link>
                         <Link
-                            href="/formfusion"
+                            href="/playground"
                             className={classes.header__inner__right__nav__link}>
                             Playground
                         </Link>

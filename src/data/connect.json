@@ -14,7 +14,7 @@
             "name": "type",
             "type": "string",
             "default": "",
-            "description": "The FormFusion <a href='/formfusion/api/types'>input type</a> or <a href='/formfusion/api/types'>validation pattern</a> you intend to apply to the field.",
+            "description": "The FormFusion <a href='/docs/api/types'>input type</a> or <a href='/docs/api/types'>validation pattern</a> you intend to apply to the field.",
             "required": false
         }
     ]

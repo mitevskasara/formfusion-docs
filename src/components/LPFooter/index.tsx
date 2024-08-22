@@ -45,33 +45,29 @@ const Footer = () => {
                         <Typography variant="subtitle2" htmlElement="h3">
                             Resources
                         </Typography>
-                        <Link href="/formfusion#installation">
-                            Installation
-                        </Link>
-                        <Link href="/formfusion#example">Example</Link>
-                        <Link href="/formfusion/api/form">API Reference</Link>
+                        <Link href="/docs#installation">Installation</Link>
+                        <Link href="/docs#example">Example</Link>
+                        <Link href="/docs/api/form">API Reference</Link>
                     </nav>
                     <nav className={classes.footer__inner__navigation__item}>
                         <Typography variant="subtitle2" htmlElement="h3">
                             Integration
                         </Typography>
-                        <Link
-                            href="/formfusion/integrations/mui"
-                            target="_blank">
+                        <Link href="/docs/integrations/mui" target="_blank">
                             Material UI
                         </Link>
                         <Link
-                            href="/formfusion/integrations/antdesign"
+                            href="/docs/integrations/antdesign"
                             target="_blank">
                             Ant Design
                         </Link>
                         <Link
-                            href="/formfusion/integrations/chakraui"
+                            href="/docs/integrations/chakraui"
                             target="_blank">
                             Chakra UI
                         </Link>
                         <Link
-                            href="/formfusion/integrations/reactstrap"
+                            href="/docs/integrations/reactstrap"
                             target="_blank">
                             Reactstrap
                         </Link>
