@@ -32,8 +32,8 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
         <MainLayout
             {...{
                 ...META_DATA,
-                url: 'https://www.corelabui.com/formfusion',
-                canonical: 'https://www.corelabui.com/formfusion',
+                url: 'https://www.formfusion.dev/formfusion',
+                canonical: 'https://www.formfusion.dev/formfusion',
                 description:
                     'Discover FormFusion for effortless form management, validation, and beyond. Speed up your development with intuitive solutions. Try it now!'
             }}

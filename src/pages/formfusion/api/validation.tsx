@@ -99,8 +99,8 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
             {...{
                 ...META_DATA,
                 title: 'Rich collection of validation patterns for form validation in React',
-                url: `https://www.corelabui.com/${ROUTES.validation}`,
-                canonical: `https://www.corelabui.com/${ROUTES.validation}`,
+                url: `https://www.formfusion.dev/${ROUTES.validation}`,
+                canonical: `https://www.formfusion.dev/${ROUTES.validation}`,
                 description:
                     "FormFusion extends the native input types with 500+ validation patterns that can be easily applied to form fields in React by using the 'type' property."
             }}

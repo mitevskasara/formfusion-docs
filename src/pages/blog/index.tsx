@@ -15,14 +15,14 @@ const Blog = ({ posts, theme, setTheme }: IBlogProps) => {
     return (
         <BlogLayout
             {...{
-                url: `https://www.corelabui.com/${ROUTES.blog}`,
+                url: `https://www.formfusion.dev/${ROUTES.blog}`,
                 title: 'Tutorials, Tech Blogs & Articles | CorelabUI',
                 image: '/assets/meta-image.png',
                 description:
                     "Explore CorelabUI's tech blog with tons of articles and resources about technology development. Get tips and insights about React, JavaScritp, Web forms, and more!",
                 keywords:
                     'blog, react blog, javascript blog, react,react form,forms, validation,react hook, form validation, javascript, javascript form',
-                canonical: 'https://www.corelabui.com/blog'
+                canonical: 'https://www.formfusion.dev/blog'
             }}
             theme={theme}
             setTheme={setTheme}

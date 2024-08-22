@@ -29,8 +29,8 @@ const Mask = ({ theme, setTheme }: IMaskProps) => {
             {...{
                 ...META_DATA,
                 title: `Easy input masking in React forms for consistent data entry`,
-                canonical: `https://www.corelabui.com/${ROUTES.masking}`,
-                url: `https://www.corelabui.com/${ROUTES.masking}`,
+                canonical: `https://www.formfusion.dev/${ROUTES.masking}`,
+                url: `https://www.formfusion.dev/${ROUTES.masking}`,
                 description:
                     'Easily define formats for form fields like phones, dates, and credit card numbers with a simple syntax. Enhance the user experience with just one line of code.'
             }}

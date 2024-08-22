@@ -48,7 +48,7 @@ const MainPage = () => {
                 <meta name="description" content={META_DATA.description} />
                 <meta property="image" content={META_DATA.image} />
 
-                <meta property="og:url" content="https://www.corelabui.com" />
+                <meta property="og:url" content="https://www.formfusion.dev" />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -60,7 +60,7 @@ const MainPage = () => {
                 />
                 <meta property="og:image" content={META_DATA.image} />
                 <meta name="keywords" content={META_DATA.keywords}></meta>
-                <link rel="canonical" href="https://www.corelabui.com" />
+                <link rel="canonical" href="https://www.formfusion.dev" />
             </Head>
             <LPHeader />
             <section className={classes.hero}>

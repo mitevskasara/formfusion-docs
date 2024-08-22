@@ -1,7 +1,7 @@
 import ROUTES from './routes';
 
 const META_DATA = {
-    url: `https://www.corelabui.com/${ROUTES.home}`,
+    url: `https://www.formfusion.dev/${ROUTES.home}`,
     title: 'Lightweight library for easy building forms in React the right way',
     image: '/assets/meta-image.png',
     description:

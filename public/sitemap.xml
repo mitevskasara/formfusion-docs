@@ -5,102 +5,102 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://www.corelabui.com</loc>
+  <loc>https://www.formfusion.dev</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>1</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion</loc>
+  <loc>https://www.formfusion.dev/formfusion</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/api/form</loc>
+  <loc>https://www.formfusion.dev/formfusion/api/form</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/api/input</loc>
+  <loc>https://www.formfusion.dev/formfusion/api/input</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/api/textarea</loc>
+  <loc>https://www.formfusion.dev/formfusion/api/textarea</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/api/useform</loc>
+  <loc>https://www.formfusion.dev/formfusion/api/useform</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/api/connect</loc>
+  <loc>https://www.formfusion.dev/formfusion/api/connect</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/api/validation</loc>
+  <loc>https://www.formfusion.dev/formfusion/api/validation</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/integrations/mui</loc>
+  <loc>https://www.formfusion.dev/formfusion/integrations/mui</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/integrations/antdesign</loc>
+  <loc>https://www.formfusion.dev/formfusion/integrations/antdesign</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/integrations/chakraui</loc>
+  <loc>https://www.formfusion.dev/formfusion/integrations/chakraui</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/formfusion/integrations/reactstrap</loc>
+  <loc>https://www.formfusion.dev/formfusion/integrations/reactstrap</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/blog/2024/05/different-ways-to-handle-form</loc>
+  <loc>https://www.formfusion.dev/blog/2024/05/different-ways-to-handle-form</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/blog/2024/05/the-role-of-input-masking-in-web-forms</loc>
+  <loc>https://www.formfusion.dev/blog/2024/05/the-role-of-input-masking-in-web-forms</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/blog/2024/05/client-side-validation-using-formfusion</loc>
+  <loc>https://www.formfusion.dev/blog/2024/05/client-side-validation-using-formfusion</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/blog/2024/05/exploring-reacts-latest-extensions-to</loc>
+  <loc>https://www.formfusion.dev/blog/2024/05/exploring-reacts-latest-extensions-to</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/blog/2023/05/automating-component-generation-with</loc>
+  <loc>https://www.formfusion.dev/blog/2023/05/automating-component-generation-with</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/blog/2023/05/sharing-react-components-across</loc>
+  <loc>https://www.formfusion.dev/blog/2023/05/sharing-react-components-across</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/blog/2023/05/making-your-mark-how-junior-developers</loc>
+  <loc>https://www.formfusion.dev/blog/2023/05/making-your-mark-how-junior-developers</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://www.corelabui.com/blog/2024/08/privacy-first-how-to-securely-handle</loc>
+  <loc>https://www.formfusion.dev/blog/2024/08/privacy-first-how-to-securely-handle</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>

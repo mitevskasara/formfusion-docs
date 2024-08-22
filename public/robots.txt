@@ -11,4 +11,4 @@ Disallow: /[year]/[month]/[path]
 Disallow: /formfusion?src=devto
 
 
-Sitemap: https://www.corelabui.com/sitemap.xml
+Sitemap: https://www.formfusion.dev/sitemap.xml

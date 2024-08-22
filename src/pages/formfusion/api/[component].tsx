@@ -33,8 +33,8 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 ...META_DATA,
                 title: data?.metaTitle,
                 description: data?.metaDesc,
-                url: `https://www.corelabui.com/${ROUTES.home}/api/${data?.key}`,
-                canonical: `https://www.corelabui.com/${ROUTES.home}/api/${data?.key}`
+                url: `https://www.formfusion.dev/${ROUTES.home}/api/${data?.key}`,
+                canonical: `https://www.formfusion.dev/${ROUTES.home}/api/${data?.key}`
             }}
             theme={theme}
             setTheme={setTheme}>
