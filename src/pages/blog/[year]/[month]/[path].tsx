@@ -21,13 +21,13 @@ const DetailsPage = ({ data, other, theme, setTheme }: Props) => {
     return data ? (
         <BlogLayout
             {...{
-                url: `https://www.corelabui.com/${ROUTES.blog}${path}`,
+                url: `https://www.formfusion.dev/${ROUTES.blog}${path}`,
                 title: data?.title,
                 image: image || '',
                 description: plainText.slice(0, 160),
                 keywords:
                     'blog, react blog, javascript blog, react,react form,forms, validation,react hook, form validation, javascript, javascript form',
-                canonical: `https://www.corelabui.com/${ROUTES.blog}${path}`
+                canonical: `https://www.formfusion.dev/${ROUTES.blog}${path}`
             }}
             theme={theme}
             setTheme={setTheme}

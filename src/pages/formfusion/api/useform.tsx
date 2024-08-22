@@ -30,7 +30,7 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                 description:
                     'Custom React hook that offers access to the essential features of the Form component including: values, errors, touched fields, form utils & more.',
                 title: `Useform hook: Custom react hook for form management`,
-                canonical: `https://www.corelabui.com/${ROUTES.useform}`
+                canonical: `https://www.formfusion.dev/${ROUTES.useform}`
             }}
             theme={theme}
             setTheme={setTheme}>

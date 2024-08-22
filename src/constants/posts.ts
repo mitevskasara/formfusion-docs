@@ -1,6 +1,6 @@
 const posts = [
     {
-        url: 'https://www.corelabui.com/blog/2024/05/different-ways-to-handle-form',
+        url: 'https://www.formfusion.dev/blog/2024/05/different-ways-to-handle-form',
         title: 'Different ways to handle form submission in React',
         description:
             "Much like HTML, in React, forms are also used to allow user interaction within web pages. Adding a form in React is as simple as adding any other element.However, the default behaviour of form submission in React typically isn't what we want. Instead, we aim to override this default behaviour and allow React to manage the form. This gives us more control over how the form data changes and how it is submitted.",
@@ -8,7 +8,7 @@ const posts = [
         tag: 'LEARN & DO'
     },
     {
-        url: 'https://www.corelabui.com/blog/2024/05/the-role-of-input-masking-in-web-forms',
+        url: 'https://www.formfusion.dev/blog/2024/05/the-role-of-input-masking-in-web-forms',
         title: 'The Role of input masking in web forms',
         description:
             'Input masking is a technique used in software development to regulate and format user input within form fields. By defining an input mask, developers can restrict the format of information being typed into a field. This ensures users follow a specific pattern, such as for phone numbers, dates, or credit card numbers and more. It prevents errors and makes data entry smoother, resulting in more accurate and consistent information.',
@@ -16,7 +16,7 @@ const posts = [
         tag: 'LEARN & DO'
     },
     {
-        url: 'https://www.corelabui.com/blog/2024/05/client-side-validation-using-formfusion',
+        url: 'https://www.formfusion.dev/blog/2024/05/client-side-validation-using-formfusion',
         title: 'Client side validation using FormFusion',
         description:
             'Client-side validation is a fundamental aspect of web development, vital for delivering user-friendly interfaces and reinforcing the security of online platforms. It involves performing validation checks on the user’s device when filling out forms before sending the data to the server.',

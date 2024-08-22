@@ -78,25 +78,25 @@ export default class MyDocument extends Document {
               "@type": "ListItem",
               "position": 1,
               "name": "FormFusion",
-              "item": "https://www.corelabui.com/formfusion"
+              "item": "https://www.formfusion.dev/formfusion"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Getting started",
-              "item": "https://www.corelabui.com/formfusion"
+              "item": "https://www.formfusion.dev/formfusion"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "API",
-              "item": "https://www.corelabui.com/formfusion/api/form"
+              "item": "https://www.formfusion.dev/formfusion/api/form"
             },
             {
               "@type": "ListItem",
               "position": 4,
               "name": "Integrations",
-              "item": "https://www.corelabui.com/formfusion/integrations/mui"
+              "item": "https://www.formfusion.dev/formfusion/integrations/mui"
             }
           ]
         }`

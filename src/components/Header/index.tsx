@@ -34,7 +34,7 @@ const CustomHeader = ({
             <div className={classes.header__inner}>
                 <div className={classes.header__inner__left}>
                     <a
-                        href="https://www.corelabui.com"
+                        href="https://www.formfusion.dev"
                         title="Go to Landing page">
                         <span
                             className={`${classes.header__inner__left__logo_mobile} icon-formfusion-circle`}

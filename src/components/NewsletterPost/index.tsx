@@ -19,7 +19,7 @@ const NewsletterPost = ({
 }: INewsletterPostProps) => {
     const description = post?.content?.replace(/<[^>]+>|\n/g, '');
     const path = encode(new URL(post.url).pathname);
-    const url = `https://www.corelabui.com/${ROUTES.blog}${path}`;
+    const url = `https://www.formfusion.dev/${ROUTES.blog}${path}`;
 
     return (
         <div className={`${classes.post} ${classes['post_' + mode]}`}>
