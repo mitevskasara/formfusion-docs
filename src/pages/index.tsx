@@ -108,9 +108,7 @@ const MainPage = () => {
                                     <span>npm i&nbsp;</span>formfusion
                                 </code>
                             </div>
-                            <Button
-                                size="large"
-                                onClick={() => goTo('/formfusion')}>
+                            <Button size="large" onClick={() => goTo('/docs')}>
                                 Get started
                             </Button>
                         </div>
@@ -526,7 +524,7 @@ const MainPage = () => {
                     <Button
                         size="large"
                         variant="primary"
-                        onClick={() => goTo('/formfusion')}>
+                        onClick={() => goTo('/docs')}>
                         Get Started
                     </Button>
                 </div>

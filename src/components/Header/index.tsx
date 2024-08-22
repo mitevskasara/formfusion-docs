@@ -51,11 +51,11 @@ const CustomHeader = ({
                 </div>
                 <div className={classes.header__inner__right}>
                     <Link
-                        href="/formfusion"
+                        href="/docs"
                         className={`${
                             classes.header__inner__right__link_text
                         } ${
-                            isActive('/formfusion')
+                            isActive('/docs')
                                 ? classes.header__inner__right__link_text_active
                                 : ''
                         }`}
@@ -74,6 +74,19 @@ const CustomHeader = ({
                         title="Blog"
                         style={{ marginRight: '1em' }}>
                         Blog
+                    </Link>
+                    <Link
+                        href="/blog"
+                        className={`${
+                            classes.header__inner__right__link_text
+                        } ${
+                            isActive('/playground')
+                                ? classes.header__inner__right__link_text_active
+                                : ''
+                        }`}
+                        title="Blog"
+                        style={{ marginRight: '1em' }}>
+                        Playground
                     </Link>
                     <button
                         onClick={() =>

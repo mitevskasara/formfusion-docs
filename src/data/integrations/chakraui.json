@@ -4,6 +4,6 @@
     "subtitle": "How to Integrate FormFusion with Chakra UI components",
     "description": "Learn how to integrate FormFusion with Chakra UI components to improve your form management process.",
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-7ht9uz?file=src%2FApp.tsx",
-    "nextUrl": "/formfusion/integrations/reactstrap",
+    "nextUrl": "/docs/integrations/reactstrap",
     "nextUrlTitle": "Reactstrap"
 }

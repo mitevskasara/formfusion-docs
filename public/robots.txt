@@ -6,9 +6,9 @@ Disallow: /react-form-manager
 Disallow: /blog/2023/05/reducer
 Disallow: /reducer
 Disallow: /MyForm.jsx
-Disallow: /formfusion/api/[component]
+Disallow: /docs/api/[component]
 Disallow: /[year]/[month]/[path]
-Disallow: /formfusion?src=devto
+Disallow: /docs?src=devto
 
 
 Sitemap: https://www.formfusion.dev/sitemap.xml

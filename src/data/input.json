@@ -9,14 +9,14 @@
             "name": "type",
             "type": "string",
             "default": "text",
-            "description": "The 'type' property determines the validation pattern associated with the input element. See all available types <a href='/formfusion/api/types'>here</a>.",
+            "description": "The 'type' property determines the validation pattern associated with the input element. See all available types <a href='/docs/api/types'>here</a>.",
             "required": false
         },
         {
             "name": "mask",
             "type": "string",
             "default": "",
-            "description": "The 'mask' property determines the masking pattern associated with the input element. Read more <a href='/formfusion/api/masking'>here</a>.",
+            "description": "The 'mask' property determines the masking pattern associated with the input element. Read more <a href='/docs/api/masking'>here</a>.",
             "required": false
         },
         {
@@ -57,7 +57,7 @@
     ],
     "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-agfycc?file=src%2FApp.tsx",
     "exampleTitle": "FormFusion Basic Input usage",
-    "nextUrl": "/formfusion/api/textarea",
+    "nextUrl": "/docs/api/textarea",
     "nextUrlTitle": "Textarea",
     "metaTitle": "Advanced Input with built-in validation, accessibility and masking",
     "metaDesc": "Input component: Optimised and fully customisable extension of the standard HTML input element with built-in validation rules and input masking."
