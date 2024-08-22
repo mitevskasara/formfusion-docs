@@ -9,7 +9,7 @@
             "name": "validation",
             "type": "object",
             "default": "native validityState",
-            "description": "Overrides the native <a href='https://developer.mozilla.org/en-US/docs/Web/API/ValidityState' target='_blank'>validityState</a> error messages.",
+            "description": "Overrides the native <a href='https://developer.mozilla.org/en-US/docs/Web/API/ValidityState' target='_blank' rel='nofollow'>validityState</a> error messages.",
             "required": false
         },
         {

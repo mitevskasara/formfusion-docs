@@ -125,13 +125,15 @@ const NewsletterPostDetails = ({
                         <Link
                             href={`https://www.linkedin.com/sharing/share-offsite/?${url}`}
                             target="_blank"
-                            title="Share on LinkedIn">
+                            title="Share on LinkedIn"
+                            rel="nofollow">
                             <span className="icon-social-linkedin" />
                         </Link>
                         <Link
                             href={`https://www.facebook.com/sharer.php?u=${url}&p[title]=${data.title}`}
                             target="_blank"
-                            title="Share on Facebook">
+                            title="Share on Facebook"
+                            rel="nofollow">
                             <span className="icon-social-facebook" />
                         </Link>
                         <Link
@@ -143,7 +145,8 @@ const NewsletterPostDetails = ({
                         <Link
                             href={`http://pinterest.com/pin/create/button/?url=${url}`}
                             target="_blank"
-                            title="Share on Pinterest">
+                            title="Share on Pinterest"
+                            rel="nofollow">
                             <span className="icon-social-pinterest" />
                         </Link>
                         <button

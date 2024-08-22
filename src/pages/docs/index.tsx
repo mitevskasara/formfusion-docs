@@ -70,7 +70,8 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
                     FormFusion leverages the native HTML&nbsp;
                     <Link
                         href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation"
-                        target="_blank">
+                        target="_blank"
+                        rel="nofollow">
                         form validation
                     </Link>
                     &nbsp;by extending the list of&nbsp;
@@ -129,6 +130,7 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
                     <Button>
                         <Link
                             href="https://stackblitz.com/edit/vitejs-vite-ahj7lp?file=src%2FApp.tsx"
+                            rel="nofollow"
                             target="_blank"
                             icon="stackblitz"
                             internal={false}

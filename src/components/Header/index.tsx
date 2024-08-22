@@ -103,6 +103,7 @@ const CustomHeader = ({
                     </button>
                     <Link
                         href="https://github.com/corelabui"
+                        rel="nofollow"
                         target="_blank"
                         icon="github"
                         className={classes.header__inner__right__link_github}

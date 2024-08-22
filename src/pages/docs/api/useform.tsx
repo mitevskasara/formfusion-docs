@@ -105,6 +105,7 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                     <Button>
                         <Link
                             href="https://stackblitz.com/edit/vitejs-vite-pxpcbc?file=src%2FApp.tsx"
+                            rel="nofollow"
                             target="_blank"
                             icon="stackblitz"
                             internal={false}

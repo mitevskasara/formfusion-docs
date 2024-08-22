@@ -116,7 +116,8 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
                     of&nbsp;
                     <Link
                         href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types"
-                        target="_blank">
+                        target="_blank"
+                        rel="nofollow">
                         native input types
                     </Link>
                     <p style={{ display: 'inline' }}>
@@ -240,6 +241,7 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
                     <Button>
                         <Link
                             href="https://stackblitz.com/edit/vitejs-vite-oioblx?file=src%2FApp.tsx"
+                            rel="nofollow"
                             target="_blank"
                             icon="stackblitz"
                             internal={false}

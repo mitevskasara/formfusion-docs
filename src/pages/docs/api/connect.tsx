@@ -79,6 +79,7 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
                     <Button>
                         <Link
                             href="https://stackblitz.com/edit/vitejs-vite-iuykvw?file=src%2FApp.tsx"
+                            rel="nofollow"
                             target="_blank"
                             icon="stackblitz"
                             internal={false}

@@ -76,19 +76,22 @@ const NewsletterPost = ({
                         <Link
                             href={`https://www.linkedin.com/shareArticle?url=${url}`}
                             target="_blank"
-                            title="Share on LinkedIn">
+                            title="Share on LinkedIn"
+                            rel="nofollow">
                             <span className="icon-social-linkedin" />
                         </Link>
                         <Link
                             href={`https://www.facebook.com/sharer.php?u=${url}&p[title]=${post.title}`}
                             target="_blank"
-                            title="Share on Facebook">
+                            title="Share on Facebook"
+                            rel="nofollow">
                             <span className="icon-social-facebook" />
                         </Link>
                         <Link
                             href={`https://twitter.com/intent/tweet?url=${url}`}
                             target="_blank"
-                            title="Share on Twitter">
+                            title="Share on Twitter"
+                            rel="nofollow">
                             <span className="icon-twitter" />
                         </Link>
                         <Link

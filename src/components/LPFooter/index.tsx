@@ -78,18 +78,21 @@ const Footer = () => {
                         </Typography>
                         <Link
                             href="https://www.linkedin.com/in/sara-mitevska-75a4a6152"
+                            rel="nofollow"
                             target="_blank"
                             title="LinkedIn">
                             LinkedIn
                         </Link>
                         <Link
                             href="https://github.com/corelabui"
+                            rel="nofollow"
                             target="_blank"
                             title="Github">
                             Github
                         </Link>
                         <Link
-                            href="https://twitter.com/corelabui"
+                            href="https://twitter.com/formfusionjs"
+                            rel="nofollow"
                             target="_blank"
                             title="Twitter">
                             Twitter

@@ -78,6 +78,7 @@ const Mask = ({ theme, setTheme }: IMaskProps) => {
                     <Button>
                         <Link
                             href="https://stackblitz.com/edit/vitejs-vite-zgsjvv?file=src%2FApp.tsx"
+                            rel="nofollow"
                             target="_blank"
                             icon="stackblitz"
                             internal={false}
