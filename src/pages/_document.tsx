@@ -20,15 +20,13 @@ export default class MyDocument extends Document {
                 <Head>
                     {process.env.mode === 'PROD' && (
                         <Script
-                            defer
                             id="google-analytics-script"
                             strategy="afterInteractive"
                             dangerouslySetInnerHTML={{
                                 __html: `window.dataLayer = window.dataLayer || [];
-									function gtag(){dataLayer.push(arguments);}
-									gtag('js', new Date());
-
-									gtag('config', 'G-K7LJ0DNVH7');`
+                                        function gtag(){dataLayer.push(arguments);}
+                                        gtag('js', new Date());
+                                        gtag('config', 'G-PNVC81FSRT');`
                             }}
                         />
                     )}
