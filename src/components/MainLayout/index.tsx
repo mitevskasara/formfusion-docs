@@ -67,7 +67,6 @@ const MainLayout = ({
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={image} />
                 <meta name="keywords" content={keywords}></meta>
-                <link rel="canonical" href={canonical} />
             </Head>
             <Header
                 open={isOpen}

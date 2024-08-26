@@ -17,6 +17,42 @@ const nextConfig = {
                         value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=86400'
                     }
                 ]
+            },
+            {
+                source: '/:path*',
+                headers: [
+                    {
+                        key: 'X-Content-Type-Options',
+                        value: 'nosniff'
+                    }
+                ]
+            },
+            {
+                source: '/:path*',
+                headers: [
+                    {
+                        key: 'Content-Security-Policy',
+                        value: "default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-hashes' 'unsafe-inline'; img-src 'self' https://blogger.googleusercontent.com; connect-src 'self'; frame-src 'self' https://stackblitz.com;"
+                    }
+                ]
+            },
+            {
+                source: '/:path*',
+                headers: [
+                    {
+                        key: 'X-Frame-Options',
+                        value: 'SAMEORIGIN'
+                    }
+                ]
+            },
+            {
+                source: '/:path*',
+                headers: [
+                    {
+                        key: 'Referrer-Policy',
+                        value: 'strict-origin-when-cross-origin'
+                    }
+                ]
             }
         ];
     },

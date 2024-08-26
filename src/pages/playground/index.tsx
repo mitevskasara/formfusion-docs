@@ -46,10 +46,6 @@ const Playground = ({ theme, setTheme }: any) => {
                 />
                 <meta property="og:image" content={META_DATA.image} />
                 <meta name="keywords" content={META_DATA.keywords}></meta>
-                <link
-                    rel="canonical"
-                    href="https://www.formfusion.dev/playground"
-                />
             </Head>
             <Header
                 open={isOpen}

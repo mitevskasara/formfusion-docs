@@ -25,7 +25,7 @@ type Props = {
     setTheme: Dispatch<SetStateAction<string>>;
 };
 
-const MainLayout = ({
+const BlogLayout = ({
     children,
     url,
     title,
@@ -66,7 +66,6 @@ const MainLayout = ({
                 <meta property="og:description" content={description} />
                 <meta property="og:image" content={image} />
                 <meta name="keywords" content={keywords}></meta>
-                <link rel="canonical" href={canonical} />
             </Head>
             <div className={classes.header}>
                 <Header
@@ -88,4 +87,4 @@ const MainLayout = ({
     );
 };
 
-export default MainLayout;
+export default BlogLayout;

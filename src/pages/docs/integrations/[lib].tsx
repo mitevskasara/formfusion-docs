@@ -30,7 +30,6 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 ...META_DATA,
                 title: data?.subtitle,
                 url: `https://www.formfusion.dev/${ROUTES.integrations}/${data?.key}`,
-                canonical: `https://www.formfusion.dev/${ROUTES.integrations}/${data?.key}`,
                 description: data?.description ?? META_DATA.description
             }}
             theme={theme}

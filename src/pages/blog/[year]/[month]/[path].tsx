@@ -26,8 +26,7 @@ const DetailsPage = ({ data, other, theme, setTheme }: Props) => {
                 image: image || '',
                 description: plainText.slice(0, 160),
                 keywords:
-                    'blog, react blog, javascript blog, react,react form,forms, validation,react hook, form validation, javascript, javascript form',
-                canonical: `https://www.formfusion.dev/${ROUTES.blog}${path}`
+                    'blog, react blog, javascript blog, react,react form,forms, validation,react hook, form validation, javascript, javascript form'
             }}
             theme={theme}
             setTheme={setTheme}

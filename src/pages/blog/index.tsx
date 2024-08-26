@@ -21,8 +21,7 @@ const Blog = ({ posts, theme, setTheme }: IBlogProps) => {
                 description:
                     "Explore CorelabUI's tech blog with tons of articles and resources about technology development. Get tips and insights about React, JavaScritp, Web forms, and more!",
                 keywords:
-                    'blog, react blog, javascript blog, react,react form,forms, validation,react hook, form validation, javascript, javascript form',
-                canonical: 'https://www.formfusion.dev/blog'
+                    'blog, react blog, javascript blog, react,react form,forms, validation,react hook, form validation, javascript, javascript form'
             }}
             theme={theme}
             setTheme={setTheme}
