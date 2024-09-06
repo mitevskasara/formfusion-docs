@@ -32,7 +32,7 @@ const nextConfig = {
                 headers: [
                     {
                         key: 'Content-Security-Policy',
-                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.mouseflow.com https://www.googletagmanager.com; script-src-elem 'self' 'unsafe-inline' https://cdn.mouseflow.com https://www.googletagmanager.com; style-src 'self' 'unsafe-hashes' 'unsafe-inline'; img-src 'self' https://blogger.googleusercontent.com; connect-src 'self' https://cdn.mouseflow.com https://*.mouseflow.com https://vitals.vercel-insights.com; frame-src 'self' https://stackblitz.com;"
+                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.mouseflow.com https://www.googletagmanager.com; script-src-elem 'self' 'unsafe-inline' https://cdn.mouseflow.com https://www.googletagmanager.com; style-src 'self' 'unsafe-hashes' 'unsafe-inline'; img-src 'self' https://blogger.googleusercontent.com; connect-src 'self' https://cdn.mouseflow.com https://*.mouseflow.com https://vitals.vercel-insights.com https://www.google-analytics.com; frame-src 'self' https://stackblitz.com;"
                     }
                 ]
             },
