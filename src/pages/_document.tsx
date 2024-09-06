@@ -146,6 +146,7 @@ export default class MyDocument extends Document {
                             defer
                             id="mouseflow-script"
                             strategy="afterInteractive"
+                            nonce="RkQ0pTqJvJzCEhL4Y3d7Zw=="
                             dangerouslySetInnerHTML={{
                                 __html: `window._mfq = window._mfq || [];
                             (function() {
