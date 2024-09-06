@@ -140,12 +140,11 @@ export default class MyDocument extends Document {
                         </noscript>
                     )}
                     <Main />
-                    <NextScript nonce={process.env.mode === 'PROD' ? 'RkQ0pTqJvJzCEhL4Y3d7Zw==' : undefined} />
+                    <NextScript />
                     {process.env.mode === 'PROD' && (
                         <script
                             defer
                             id="mouseflow-script"
-                            nonce="RkQ0pTqJvJzCEhL4Y3d7Zw=="
                             dangerouslySetInnerHTML={{
                                 __html: `window._mfq = window._mfq || [];
                             (function() {
