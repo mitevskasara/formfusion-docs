@@ -140,7 +140,7 @@ export default class MyDocument extends Document {
                         </noscript>
                     )}
                     <Main />
-                    <NextScript nonce="RkQ0pTqJvJzCEhL4Y3d7Zw==" />
+                    <NextScript nonce={process.env.mode === 'PROD' ? 'RkQ0pTqJvJzCEhL4Y3d7Zw==' : undefined} />
                     {process.env.mode === 'PROD' && (
                         <script
                             defer
