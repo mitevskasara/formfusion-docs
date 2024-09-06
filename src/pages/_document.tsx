@@ -141,6 +141,22 @@ export default class MyDocument extends Document {
                     )}
                     <Main />
                     <NextScript />
+                    {process.env.mode === 'PROD' && (
+                        <Script
+                            defer
+                            id="mouseflow-script"
+                            strategy="afterInteractive"
+                            dangerouslySetInnerHTML={{
+                                __html: `window._mfq = window._mfq || [];
+                            (function() {
+                            var mf = document.createElement("script");
+                            mf.type = "text/javascript"; mf.defer = true;
+                            mf.src = "//cdn.mouseflow.com/projects/f0b9e7ca-03e2-4d9b-a83e-8193b9241bb9.js";
+                            document.getElementsByTagName("head")[0].appendChild(mf);
+                        })();`
+                            }}
+                        />
+                    )}
                 </body>
             </Html>
         );
