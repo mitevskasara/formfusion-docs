@@ -189,7 +189,7 @@
         object-fit: contain;
     }
 
-    & img:first-child {
+    & img[data-hide='true'] {
         display: none !important;
     }
 
