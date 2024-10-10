@@ -443,7 +443,7 @@ const MainPage = () => {
                         {posts.map((post, idx) => (
                             <>
                                 <Link
-                                    key={idx}
+                                    key={post.url}
                                     href={post.url}
                                     target="_blank"
                                     className={classes.blog__post}>
