@@ -74,7 +74,8 @@ export async function getStaticProps({ params }: any) {
             props: {
                 data: details,
                 other: allPosts?.items
-            }
+            },
+            revalidate: 86400
         };
     } catch (err) {
         console.log(`Error fetching data for post ${params.path}`, err);
