@@ -2,12 +2,16 @@ import { DetailsHTMLAttributes } from 'react';
 import classes from './accordion.module.scss';
 
 interface AccordionProps
-    extends Partial<DetailsHTMLAttributes<HTMLDetailsElement>> {}
+    extends Partial<DetailsHTMLAttributes<HTMLDetailsElement>> {
+    icon?: string;
+}
 
-const Accordion = ({ children, title, ...props }: AccordionProps) => {
+const Accordion = ({ children, title, icon, ...props }: AccordionProps) => {
     return (
         <details {...props}>
-            <summary className={classes.details__summary}>{title}</summary>
+            <summary className={classes.details__summary}>
+                <span className={`icon-${icon}`} /> {title}
+            </summary>
             {children}
         </details>
     );

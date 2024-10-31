@@ -9,9 +9,10 @@ import Head from 'next/head';
 
 import Header from '@/components/Header';
 import LeftSidebar from '@/components/LeftSidebar';
-import Footer from '@/components/Footer';
+import Footer from '@/components/LPFooter';
 
 import classes from './main.module.scss';
+import Breadcrumbs from '../Breadcrumbs';
 
 type Props = {
     children?: ReactNode;
@@ -74,6 +75,7 @@ const MainLayout = ({
                 theme={theme}
                 setTheme={setTheme}
             />
+            <Breadcrumbs />
             <div className={classes.container}>
                 {sidebar && (
                     <LeftSidebar

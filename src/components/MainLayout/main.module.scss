@@ -2,30 +2,23 @@
 @import '@/core/styles/media-queries';
 
 .container {
-    display: grid;
-    grid-template-areas: 'header header header header' 'left main main main' 'left footer footer footer';
-    gap: 3em;
-    padding: 0 $side-padding;
-    margin: 0 auto 0;
-
-    @include media(small) {
-        flex-direction: column;
-        grid-template-areas: 'header header header header' 'main main main main' 'footer footer footer footer';
-    }
-}
-
-.main {
-    grid-area: main;
-    padding-top: 2em;
+    display: flex;
+    column-gap: 2em;
+    margin: 121.8px auto 0;
     max-width: $container-width;
-    margin: 1em 0 auto;
 
     @include media(xlarge) {
         max-width: $container-width-xl;
     }
+}
+
+.main {
+    margin: 0 0 auto;
+    padding: $top-padding $side-padding * 2;
+    width: 79%;
 
     @include media(small) {
-        margin: 1em 0;
-        width: 100%;
+        margin: 0 0;
+        width: -webkit-fill-available;
     }
 }

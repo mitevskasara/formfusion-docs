@@ -118,24 +118,19 @@
     align-items: center;
     justify-content: center;
     margin: auto;
-    padding: 5em 0 4em;
+    padding: $header-height 0 4em;
     overflow-x: hidden;
 
     @include media(xlarge) {
         height: auto;
-        padding: 7em 0;
     }
 
     @include media(large) {
-        padding: 6em 0 4em;
-    }
-
-    @include media(smedium) {
-        padding: 6em 0 2em;
+        padding-bottom: 4em;
     }
 
     @include media(ssmall) {
-        padding: 8em 0 2em;
+        padding-bottom: 2em;
         background-position: top;
         background-size: 120%;
     }
@@ -147,7 +142,6 @@
 
     @include media(xsmall) {
         height: auto;
-        padding-top: 7em;
         background-position: bottom;
         background-size: 115%;
     }
@@ -157,11 +151,13 @@
     }
 
     &__inner {
-        display: flex;
-        justify-content: space-between;
         height: 100%;
         width: 100%;
         gap: 5em;
+        padding: 4em;
+        box-sizing: border-box;
+        background-color: #f9f8f7;
+        border-radius: 20px;
 
         @include media(xlarge) {
             max-width: $lp-container-width;
@@ -173,12 +169,16 @@
 
         @include media(medium) {
             max-width: unset;
-            width: 90%;
         }
 
         @include media(ssmall) {
             flex-direction: column;
             gap: 2em;
+            padding: 4em 2em;
+        }
+
+        @include media(xsmall) {
+            padding: 3em 2em;
         }
 
         &__left {
@@ -207,17 +207,22 @@
             }
 
             & > h2 {
-                width: 90%;
                 font-weight: normal;
+                line-height: 1.5;
 
                 @include media(ssmall) {
                     text-align: center;
-                    width: 60%;
                     margin: auto;
                 }
+            }
 
-                @include media(xsmall) {
-                    width: 80%;
+            &__version {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 1em;
+
+                & > img {
+                    width: 100px;
                 }
             }
         }
@@ -229,14 +234,26 @@
             justify-content: center;
             position: relative;
             align-self: center;
-            padding-top: $header-height;
+            padding-top: 3em;
+            width: 75%;
+            margin: auto;
+
+            @include media(large) {
+                width: 90%;
+            }
+
+            @include media(medium) {
+                width: 90%;
+            }
 
             @include media(ssmall) {
-                width: 95%;
+                width: 100%;
             }
 
             @include media(xsmall) {
                 width: 100%;
+                flex-direction: column;
+                gap: 1em;
             }
 
             &__editor {
@@ -244,22 +261,18 @@
                 border: 1px solid var(--surface);
                 box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
                 border-radius: 10px;
-                width: 96%;
-                height: 500px;
+                width: 70%;
                 overflow-y: hidden;
-                margin-left: auto;
                 position: relative;
-
-                @include media(ssmall) {
-                    width: 70%;
-                }
+                margin-right: auto;
 
                 @include media(small) {
-                    width: 75%;
+                    width: 90%;
                 }
 
                 @include media(xsmall) {
-                    width: 85%;
+                    width: 100%;
+                    height: 600px;
                 }
 
                 &_front {
@@ -267,7 +280,7 @@
                 }
 
                 &__toolbar {
-                    background-color: #000000;
+                    background-color: var(--background-color);
                     height: 46px;
                     border-radius: 10px;
                     border-bottom-left-radius: 0px;
@@ -303,15 +316,14 @@
 
                     &__middle {
                         height: 25px;
-                        border: 1px solid #726f6f;
-                        background-color: #1f1f1f;
+                        background-color: var(--background-color);
                         width: 40%;
                         border-radius: 5px;
                         flex: 1;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        color: #afafaf;
+                        color: var(--text);
 
                         @include media(xsmall) {
                             flex: 2;
@@ -349,30 +361,22 @@
                     background-color: var(--background);
                     border: 1px solid var(--surface);
                     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-                    width: 400px;
-                    min-height: 313px;
+                    width: 60%;
+                    top: 11em;
                     position: absolute;
-                    top: 50%;
-                    transform: translate(-31%, -31%);
+                    right: 0;
                     border-radius: 10px;
-
-                    @include media(smedium) {
-                        transform: scale(0.9) translate(-25%, -50%);
-                    }
 
                     @include media(ssmall) {
                         width: 70%;
-                        height: 335px;
-                        transform: scale(0.9) translate(-29%, -50%);
-                    }
-
-                    @media only screen and (max-width: 400px) {
-                        height: 433px;
                     }
 
                     @include media(xsmall) {
-                        width: 90%;
+                        width: 100%;
                         transform: scale(0.9) translate(-10%, -50%);
+                        position: initial;
+                        height: auto;
+                        transform: none;
                     }
 
                     &_front {
@@ -384,9 +388,10 @@
 
         &__action {
             display: flex;
+            justify-content: center;
             gap: 1em;
             margin: auto;
-            margin-top: 3em;
+            margin-top: 1em;
 
             @media screen and (min-width: 960px) and (max-width: 1132px) {
                 flex-direction: column;
@@ -463,12 +468,11 @@
             }
 
             & > div {
-                @media screen and (min-width: 960px) and (max-width: 1132px) {
-                    width: 100%;
-                }
+                margin: auto;
 
                 @include media(xsmall) {
                     width: auto;
+                    margin: auto;
                 }
 
                 @media only screen and (max-width: 460px) {
@@ -480,8 +484,7 @@
                 }
 
                 & > button {
-                    height: 53px;
-                    width: fit-content;
+                    width: 200px;
 
                     @media screen and (min-width: 960px) and (max-width: 1132px) {
                         width: 100%;
@@ -769,11 +772,5 @@
                 margin-bottom: 2em;
             }
         }
-    }
-}
-
-.section__footer {
-    & > footer {
-        border-top: 0;
     }
 }

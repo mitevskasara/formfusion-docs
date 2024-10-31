@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Button from 'corelabui/Button';
@@ -67,10 +67,20 @@ const MainPage = () => {
                 <div
                     className={`${classes.section__inner} ${classes.hero__inner}`}>
                     <div className={classes.hero__inner__left}>
-                        <Typography variant="heading1" htmlElement="h1">
-                            Build forms
-                            <br />
-                            the&nbsp;
+                        <Link
+                            href="https://www.npmjs.com/package/formfusion"
+                            target="_blank"
+                            className={`${classes.hero__inner__left__version}`}>
+                            <img
+                                alt="NPM Version"
+                                src="https://img.shields.io/npm/v/formfusion?style=social"
+                            />
+                        </Link>
+                        <Typography
+                            variant="heading1"
+                            htmlElement="h1"
+                            align="center">
+                            Build forms the&nbsp;
                             <Highlight
                                 textGradient={{
                                     direction: 'left',
@@ -79,13 +89,17 @@ const MainPage = () => {
                                 right way.&nbsp;
                             </Highlight>
                         </Typography>
-                        <Typography variant="subtitle1" htmlElement="h2">
-                            Lightweight library for building forms in React that
-                            offers built-in validation, input masking, error
-                            handling & more.
+                        <Typography
+                            variant="subtitle1"
+                            htmlElement="h2"
+                            align="center">
+                            Lightweight library for building forms in React
+                            <br />
+                            that offers built-in validation, input masking,
+                            error handling & more.
                         </Typography>
                         <div className={classes.hero__inner__action}>
-                            <div
+                            {/* <div
                                 className={classes.hero__inner__action__code}
                                 title="Copy"
                                 onClick={onClick}
@@ -107,8 +121,8 @@ const MainPage = () => {
                                     &nbsp;&nbsp;
                                     <span>npm i&nbsp;</span>formfusion
                                 </code>
-                            </div>
-                            <Button size="large" onClick={() => goTo('/docs')}>
+                            </div> */}
+                            <Button onClick={() => goTo('/docs')}>
                                 Get started
                             </Button>
                         </div>
@@ -137,7 +151,7 @@ const MainPage = () => {
                                     className={
                                         classes.hero__inner__right__editor__toolbar__middle
                                     }>
-                                    <span>Test Form</span>
+                                    <span>code</span>
                                 </div>
                                 <div />
                             </div>

@@ -161,10 +161,6 @@ const NewsletterPostDetails = ({
                 </div>
                 <br />
                 <br />
-                <Typography variant="heading5" htmlElement="h4">
-                    Read next
-                </Typography>
-                <br />
                 <div className={classes.details__outter__suggested}>
                     {other
                         .filter((p: any) => p.id !== data.id)

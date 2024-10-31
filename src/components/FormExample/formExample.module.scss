@@ -8,8 +8,6 @@
     flex: 2;
     margin: 1em auto 0;
     padding: 2em;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
 
     & > button {
         color: white;
@@ -24,5 +22,9 @@
 
     & > h5 {
         margin-top: 0;
+    }
+
+    & > div > label {
+        color: var(--title);
     }
 }

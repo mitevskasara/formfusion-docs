@@ -24,7 +24,7 @@ const Link = ({
             className={`${className} ${
                 !color ? classes.link : classes.link_noColor
             }`}
-            style={{ color }}>
+            style={{ ...props.style, color }}>
             {children}
             {icon && <span className={`icon-${icon}`} />}
         </Component>

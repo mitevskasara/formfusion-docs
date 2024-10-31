@@ -47,13 +47,14 @@
             gap: 0.5em;
 
             &__logo {
-                color: var(--primary);
-                font-weight: 500;
-                font-size: 1.2em;
+                color: var(--text);
+                font-weight: 600;
+                font-size: 1.3em;
+                font-family: monospace;
 
                 &_mobile {
                     color: var(--primary);
-                    font-size: 3em;
+                    font-size: 2em;
                 }
 
                 @include media(small) {

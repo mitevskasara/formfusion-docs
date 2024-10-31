@@ -4,15 +4,11 @@
 .container {
     padding: 0em $side-padding;
     padding-top: 3em;
-    max-width: $lp-container-width;
+    max-width: $container-width;
     margin: auto;
 
     @include media(xlarge) {
-        max-width: $lp-container-width;
-    }
-
-    @include media(large) {
-        max-width: $lp-container-width-medium;
+        max-width: $container-width;
     }
 
     @include media(small) {

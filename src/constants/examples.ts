@@ -373,25 +373,23 @@ const MyForm = () => {
                 placeholder="What's your first name"
                 required
             />
-            <div className={classes.form__inline}>
-                <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    label="Email"
-                    placeholder="Enter your email"
-                    required
-                />
-                <Input
-                    id="phone"
-                    name="phone"
-                    type="text"
-                    label="Phone number"
-                    mask="(+#) ### ### ####"
-                    placeholder="(+X) XXX XXX XXXX"
-                    required
-                />
-            </div>
+            <Input
+                id="email"
+                name="email"
+                type="email"
+                label="Email"
+                placeholder="Enter your email"
+                required
+            />
+            <Input
+                id="phone"
+                name="phone"
+                type="text"
+                label="Phone number"
+                mask="(+#) ### ### ####"
+                placeholder="(+X) XXX XXX XXXX"
+                required
+            />
             <button type="submit">Test me</button>
         </Form>
     );

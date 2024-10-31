@@ -6,8 +6,7 @@
     padding-bottom: 4.5em;
     padding-left: $side-padding;
     padding-right: $side-padding;
-    background-color: var(--lp-layout-background);
-    border: 1px solid var(--lp-layout-border);
+    border-top: 1px solid var(--border-color);
 
     @include media(small) {
         padding-left: $side-padding-sm;
@@ -28,7 +27,7 @@
 
         @include media(medium) {
             max-width: unset;
-            width: 90%;
+            width: 80%;
         }
 
         &__navigation {

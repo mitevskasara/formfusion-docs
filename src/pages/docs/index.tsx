@@ -19,6 +19,7 @@ import { COMPONENTS } from '@/constants/examples';
 import FormExample from '@/components/FormExample';
 import GridList from '@/components/GridList';
 import { rules } from 'formfusion';
+import CodePreview from '@/components/CodePreview';
 
 interface IFormFusionProps {
     theme: string;
@@ -40,62 +41,95 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
             setTheme={setTheme}>
             <Section
                 id="introduction"
-                title="Introduction"
+                title="Library Overview / What is FormFusion?"
                 margin={false}
                 titleVariant="p">
+                <br />
+                <br />
                 <h1 className="hidden">
                     Meet FormFusion: The New Way to Manage Forms in React
                 </h1>
-                <Typography variant="body1">
-                    Meet <strong>FormFusion</strong>,&nbsp;a toolkit what helps
-                    you build your web forms in <b>React</b> the right way. This
-                    broad library offers an efficient solution for{' '}
-                    <b>managing forms</b>, complete with{' '}
-                    <b>built-in validation</b>, integrated accessibility, and
-                    infinite customization capabilities. Optimize your
-                    development process and improve the user experience with
-                    ease, as you utilizing the full potential of{' '}
-                    <b>JavaScript forms&nbsp;</b>
-                    in your React applications.
-                    <br />
-                    <br />
-                    Our library seamlessly integrates with{' '}
-                    <b>popular design frameworks</b> including Material UI, Ant
-                    Design, Chakra UI, and &nbsp;Reactstrap, making it the
-                    perfect choice for your React-based projects.
+                <Typography variant="body1" htmlElement="div">
+                    Welcome! If you’re here, you likely understand that building
+                    forms in React can often feel repetitive and take up your
+                    valuable time.
+                    <b> FormFusion </b> is here to make it easier by handling
+                    the tricky parts for you:
+                    <List
+                        items={[
+                            'Managing form state',
+                            'Validating fields and showing errors',
+                            'Handling form submissions',
+                            'Building accessible forms'
+                        ]}
+                    />
                 </Typography>
                 <br />
+                <br />
+                <Typography variant="heading5" htmlElement="h3">
+                    How does it work?
+                </Typography>
                 <Typography variant="body1">
-                    FormFusion leverages the native HTML&nbsp;
+                    FormFusion is based on the native HTML form elements
+                    and&nbsp;
                     <Link
                         href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#using_built-in_form_validation"
                         target="_blank"
                         rel="nofollow">
-                        form validation
+                        built-in validation
                     </Link>
-                    &nbsp;by extending the list of&nbsp;
+                    &nbsp;and extends the list of&nbsp;
                     <Link href={`/${ROUTES.validation}`}>
                         native input types
                     </Link>
-                    &nbsp;and provides a large collection of thoroughly tested
-                    and ready to use validation rules such as:
+                    &nbsp;with a large collection of thoroughly tested and ready
+                    to use validation rules such as:
                 </Typography>
                 <ClientComponent>
                     <GridList items={patternsToList(rules)} />
                 </ClientComponent>
-                <Link href={ROUTES.validation} style={{ float: 'right' }}>
+                <Link
+                    href={ROUTES.validation}
+                    color="var(--text)"
+                    style={{
+                        float: 'right',
+                        fontSize: 'small',
+                        fontWeight: '500'
+                    }}>
                     See full list here
                 </Link>
                 <br />
-                &nbsp;
+                <br />
+                <br />
                 <Typography variant="heading5" htmlElement="h3">
-                    Features
+                    Motivation
+                </Typography>
+                <br />
+                <Typography variant="body1">
+                    After working with popular form libraries like Formik and
+                    React Hook Form, I noticed a recurring issue: while they
+                    reduced some of the repetitive work, they didn’t fully
+                    address validation needs. I often ended up writing custom
+                    validation functions and regex patterns repeatedly. Using
+                    yet another additional library just for validation felt like
+                    too much for managing forms only, especially with the
+                    dependency bloat it could bring. So I created FormFusion, a
+                    library that includes built-in validation to simplify the
+                    whole process. To offer even more, FormFusion makes your
+                    form fully accessible without you having to write a single
+                    line of code!
+                </Typography>
+                &nbsp;
+                <br />
+                <br />
+                <Typography variant="heading5" htmlElement="h3">
+                    Main Features
                 </Typography>
                 <List items={FEATURES} />
             </Section>
             <Section id="installation" title="Installation" titleVariant="h2">
                 <Typography variant="body1">
-                    To get started with our library, simply install it using npm
+                    To get started with formfusion, simply install it using npm
                     or yarn with the following command:
                 </Typography>
                 <br />
@@ -104,8 +138,8 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
                 </ClientComponent>
                 <br />
                 <Typography variant="body1">
-                    To use the styled version, import the styles file in your
-                    main file:
+                    Formfusion is unstyled by default. To use the styled
+                    version, simply import the styles file in your main file:
                 </Typography>
                 <br />
                 <ClientComponent>
@@ -126,43 +160,19 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
                         margin={false}>
                         Example
                     </Typography>
-                    <Button>
-                        <Link
-                            href="https://stackblitz.com/edit/vitejs-vite-ahj7lp?file=src%2FApp.tsx"
-                            rel="nofollow"
-                            target="_blank"
-                            icon="stackblitz"
-                            internal={false}
-                            color={'var(--light)'}>
-                            Try it out&nbsp;&nbsp;
-                        </Link>
-                    </Button>
                 </Flex>
                 <Typography variant="body1">
-                    Below is an example of how FormFusion simplifies the
-                    creation of an uncontrolled payment form with a card number
-                    and ccv validation:
+                    Here is an example of how you can build a simple, fully
+                    functional and accessible payment form in under a minute:
                 </Typography>
                 <br />
                 <ClientComponent>
-                    <Code language="javascript">{COMPONENTS.form}</Code>
+                    <CodePreview />
                 </ClientComponent>
-                <br />
-                <br />
-                <Typography variant="heading5" htmlElement="h3">
-                    Preview
-                </Typography>
-                <FormExample />
             </Section>
             <FooterNavigation url={`/${ROUTES.form}`} title="API" />
         </MainLayout>
     );
 };
-
-export async function getStaticProps() {
-    return {
-        props: {}
-    };
-}
 
 export default FormFusion;

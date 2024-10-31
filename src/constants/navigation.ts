@@ -5,6 +5,7 @@ export interface Nav {
     title: string;
     url: string;
     sublist?: Nav[];
+    icon?: string;
 }
 
 export default [
@@ -12,6 +13,7 @@ export default [
         key: 'api',
         title: 'API',
         url: `/${ROUTES.form}`,
+        icon: 'terminal',
         sublist: [
             {
                 key: 'form',
@@ -54,6 +56,7 @@ export default [
         key: 'integrations',
         title: 'Integrations',
         url: `/${ROUTES.integrations}`,
+        icon: 'code',
         sublist: [
             {
                 key: 'mui',

@@ -41,10 +41,13 @@ const CustomHeader = ({
                         />
                         <span
                             className={`${classes.header__inner__left__logo}`}>
-                            FormFusion&nbsp;
+                            formfusion&nbsp;
                             <span
                                 className={`${classes.header__inner__left__logo__version}`}>
-                                v1.1.12
+                                <img
+                                    alt="NPM Version"
+                                    src="https://img.shields.io/npm/v/formfusion?style=social"
+                                />
                             </span>
                         </span>
                     </a>
@@ -71,8 +74,7 @@ const CustomHeader = ({
                                 ? classes.header__inner__right__link_text_active
                                 : ''
                         }`}
-                        title="Blog"
-                        style={{ marginRight: '1em' }}>
+                        title="Blog">
                         Blog
                     </Link>
                     <Link
@@ -84,7 +86,7 @@ const CustomHeader = ({
                                 ? classes.header__inner__right__link_text_active
                                 : ''
                         }`}
-                        title="Blog"
+                        title="Playground"
                         style={{ marginRight: '1em' }}>
                         Playground
                     </Link>

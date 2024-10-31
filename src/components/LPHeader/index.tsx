@@ -11,11 +11,7 @@ const LPHeader = () => {
                         className={`${classes.header__inner__left__logo_mobile} icon-formfusion-circle`}
                     />
                     <span className={`${classes.header__inner__left__logo}`}>
-                        FormFusion&nbsp;
-                        <span
-                            className={`${classes.header__inner__left__logo__version}`}>
-                            v1.1.12
-                        </span>
+                        formfusion
                     </span>
                 </div>
                 <div className={classes.header__inner__right}>
@@ -23,7 +19,7 @@ const LPHeader = () => {
                         <Link
                             href="/docs"
                             className={classes.header__inner__right__nav__link}>
-                            Documentation
+                            Docs
                         </Link>
                         <Link
                             href="/blog"

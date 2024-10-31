@@ -1,0 +1,44 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.container {
+    border-bottom: 1px solid var(--border-color);
+    position: fixed;
+    top: $header-height;
+    width: 100%;
+    background: var(--background);
+    z-index: 3;
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: auto;
+        max-width: $container-width;
+        padding: 1em $side-padding;
+
+        @include media(xlarge) {
+            max-width: $container-width-xl;
+        }
+
+        &__item {
+            font-size: 15px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: var(--title);
+            }
+
+            &_active {
+                color: var(--title);
+                font-weight: 500;
+            }
+
+            &__separator {
+                margin: 0 0.5em;
+            }
+        }
+    }
+}
