@@ -1,9 +1,7 @@
 import { Dispatch, SetStateAction } from 'react';
 import Image from 'next/image';
-import Button from 'corelabui/Button';
 
 import HamburgerMenu from '@/components/HamburgerMenu';
-import ClientComponent from '@/components/ClientComponent';
 
 import classes from './header.module.scss';
 import Link from '../Link';
@@ -44,9 +42,11 @@ const CustomHeader = ({
                             formfusion&nbsp;
                             <span
                                 className={`${classes.header__inner__left__logo__version}`}>
-                                <img
+                                <Image
                                     alt="NPM Version"
                                     src="https://img.shields.io/npm/v/formfusion?style=social"
+                                    width={100}
+                                    height={22.99}
                                 />
                             </span>
                         </span>
@@ -66,7 +66,7 @@ const CustomHeader = ({
                         Learn
                     </Link>
                     <Link
-                        href="/blog"
+                        href="https://blog.formfusion.dev"
                         className={`${
                             classes.header__inner__right__link_text
                         } ${

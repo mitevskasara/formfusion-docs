@@ -7,7 +7,11 @@ const nextConfig = {
     output: 'standalone',
     reactStrictMode: true,
     images: {
-        domains: ['blogger.googleusercontent.com', 'https://badge.fury.io']
+        domains: [
+            'blogger.googleusercontent.com',
+            'https://badge.fury.io',
+            'img.shields.io'
+        ]
     },
     async headers() {
         return [

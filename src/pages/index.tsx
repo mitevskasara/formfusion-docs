@@ -5,7 +5,6 @@ import Button from 'corelabui/Button';
 import Typography from 'corelabui/Typography';
 import Highlight from 'corelabui/Highlight';
 
-import { copy } from '@/utils/general';
 import Code from '@/components/Code';
 
 import { LP_EXAMPLE } from '@/constants/examples';
@@ -20,15 +19,7 @@ import Link from 'next/link';
 import posts from '@/constants/posts';
 
 const MainPage = () => {
-    let timer: any = null;
-    const [title, setTitle] = useState('Copy');
     const [view, setView] = useState('demo');
-
-    const onClick = () => {
-        copy('npm i formfusion');
-        setTitle('Copied!');
-        timer = setTimeout(() => setTitle('Copy'), 3000);
-    };
 
     const goTo = (link: string) => window?.open(link, '_self');
 

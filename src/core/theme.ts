@@ -58,7 +58,7 @@ const dark = {
     stringColor: '#78c5e5',
     selectorColor: '#c77dff',
     attrNameColor: '#ff6f61',
-    attrValueColor: '#1da1f2',
+    attrValueColor: '#0B4F99',
     keywordColor: '#ff6f61',
     statementColor: '#f6b93b',
     placeholderColor: '#66b2ff',

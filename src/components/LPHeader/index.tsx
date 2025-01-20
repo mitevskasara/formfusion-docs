@@ -22,7 +22,7 @@ const LPHeader = () => {
                             Docs
                         </Link>
                         <Link
-                            href="/blog"
+                            href="https://blog.formfusion.dev"
                             className={classes.header__inner__right__nav__link}>
                             Blog
                         </Link>
