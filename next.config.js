@@ -83,6 +83,11 @@ const nextConfig = {
                 source: '/docs/api/types',
                 destination: '/docs/api/validation',
                 permanent: true
+            },
+            {
+                source: '/blog/:path*',
+                destination: 'https://www.codewithsara.dev',
+                permanent: true
             }
         ];
     }
