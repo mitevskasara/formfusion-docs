@@ -5,62 +5,62 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://formfusion.vercel.app</loc>
+  <loc>https://formfusion-eta.vercel.app</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>1</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs</loc>
+  <loc>https://formfusion-eta.vercel.app/docs</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs/api/form</loc>
+  <loc>https://formfusion-eta.vercel.app/docs/api/form</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs/api/input</loc>
+  <loc>https://formfusion-eta.vercel.app/docs/api/input</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs/api/textarea</loc>
+  <loc>https://formfusion-eta.vercel.app/docs/api/textarea</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs/api/useform</loc>
+  <loc>https://formfusion-eta.vercel.app/docs/api/useform</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs/api/connect</loc>
+  <loc>https://formfusion-eta.vercel.app/docs/api/connect</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs/api/validation</loc>
+  <loc>https://formfusion-eta.vercel.app/docs/api/validation</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs/integrations/mui</loc>
+  <loc>https://formfusion-eta.vercel.app/docs/integrations/mui</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs/integrations/antdesign</loc>
+  <loc>https://formfusion-eta.vercel.app/docs/integrations/antdesign</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs/integrations/chakraui</loc>
+  <loc>https://formfusion-eta.vercel.app/docs/integrations/chakraui</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://formfusion.vercel.app/docs/integrations/reactstrap</loc>
+  <loc>https://formfusion-eta.vercel.app/docs/integrations/reactstrap</loc>
   <lastmod>2024-08-20T09:00:17+00:00</lastmod>
   <priority>0.90</priority>
 </url>

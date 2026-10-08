@@ -10,4 +10,4 @@ Disallow: /[year]/[month]/[path]
 Disallow: /docs?src=devto
 
 
-Sitemap: https://formfusion.vercel.app/sitemap.xml
+Sitemap: https://formfusion-eta.vercel.app/sitemap.xml

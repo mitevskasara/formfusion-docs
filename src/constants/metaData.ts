@@ -1,6 +1,6 @@
 import ROUTES from './routes';
 
-export const SITE_URL = 'https://formfusion.vercel.app';
+export const SITE_URL = 'https://formfusion-eta.vercel.app';
 
 const META_DATA = {
     url: `${SITE_URL}/${ROUTES.home}`,
