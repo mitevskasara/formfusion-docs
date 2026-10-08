@@ -10,7 +10,7 @@ import Section from '@/components/Section';
 import PropsTable from '@/components/PropsTable';
 import Code from '@/components/Code';
 
-import META_DATA from '@/constants/metaData';
+import META_DATA, { SITE_URL } from '@/constants/metaData';
 import { CONNECT_USAGE } from '@/constants/examples';
 import ROUTES from '@/constants/routes';
 const params = require(`@/data/connect.json`);
@@ -28,8 +28,8 @@ const Connect = ({ theme, setTheme }: IConnectProps) => {
                 description:
                     'Connect is a custom hook that allows integrating Form component and all of its features with any UI library such as Material UI, AntDesign, Reactstrap and more',
                 title: 'Custom Hook for integrating Form component with any UI library.',
-                url: `https://www.formfusion.dev/${ROUTES.connect}`,
-                canonical: `https://www.formfusion.dev/${ROUTES.connect}`
+                url: `${SITE_URL}/${ROUTES.connect}`,
+                canonical: `${SITE_URL}/${ROUTES.connect}`
             }}
             theme={theme}
             setTheme={setTheme}>

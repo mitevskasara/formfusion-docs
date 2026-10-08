@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
 
-import META_DATA from '@/constants/metaData';
+import META_DATA, { SITE_URL } from '@/constants/metaData';
 import Header from '@/components/Header';
 import LPFooter from '@/components/LPFooter';
 
@@ -34,7 +34,7 @@ const Playground = ({ theme, setTheme }: any) => {
                 <meta name="description" content={META_DATA.description} />
                 <meta property="image" content={META_DATA.image} />
 
-                <meta property="og:url" content="https://www.formfusion.dev" />
+                <meta property="og:url" content={SITE_URL} />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -54,7 +54,9 @@ const Playground = ({ theme, setTheme }: any) => {
                 setTheme={setTheme}
             />
             <iframe
-                src="https://stackblitz.com/edit/vitejs-vite-2kwujk?embed=1&file=src%2Fpages%2FContactUs%2Findex.tsx&theme=light"
+                title="FormFusion playground"
+                src="https://stackblitz.com/edit/vitejs-vite-2kwujk?embed=1&corp=1&file=src%2Fpages%2FContactUs%2Findex.tsx&theme=light"
+                allow="cross-origin-isolated"
                 className={classes.container}></iframe>
             <div className={classes.section__footer}>
                 <LPFooter />

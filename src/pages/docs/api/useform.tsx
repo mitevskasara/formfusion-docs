@@ -7,7 +7,7 @@ import MainLayout from '@/components/MainLayout';
 import Link from '@/components/Link';
 import FooterNavigation from '@/components/FooterNavigation';
 import Section from '@/components/Section';
-import META_DATA from '@/constants/metaData';
+import META_DATA, { SITE_URL } from '@/constants/metaData';
 import PropsTable from '@/components/PropsTable';
 import Code from '@/components/Code';
 import Property from '@/components/Property';
@@ -30,7 +30,7 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                 description:
                     'Custom React hook that offers access to the essential features of the Form component including: values, errors, touched fields, form utils & more.',
                 title: `Useform hook: Custom react hook for form management`,
-                canonical: `https://www.formfusion.dev/${ROUTES.useform}`
+                canonical: `${SITE_URL}/${ROUTES.useform}`
             }}
             theme={theme}
             setTheme={setTheme}>

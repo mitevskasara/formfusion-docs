@@ -7,10 +7,11 @@ const nextConfig = {
     output: 'standalone',
     reactStrictMode: true,
     images: {
-        domains: [
-            'blogger.googleusercontent.com',
-            'https://badge.fury.io',
-            'img.shields.io'
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'img.shields.io'
+            }
         ]
     },
     async headers() {
@@ -38,7 +39,7 @@ const nextConfig = {
                 headers: [
                     {
                         key: 'Content-Security-Policy',
-                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.mouseflow.com https://www.googletagmanager.com; script-src-elem 'self' 'unsafe-inline' https://cdn.mouseflow.com https://www.googletagmanager.com; style-src 'self' 'unsafe-hashes' 'unsafe-inline'; img-src 'self' https://blogger.googleusercontent.com https://img.shields.io; connect-src 'self' https://cdn.mouseflow.com https://*.mouseflow.com https://vitals.vercel-insights.com https://www.google-analytics.com; frame-src 'self' https://stackblitz.com;"
+                        value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.mouseflow.com https://www.googletagmanager.com; script-src-elem 'self' 'unsafe-inline' https://cdn.mouseflow.com https://www.googletagmanager.com; style-src 'self' 'unsafe-hashes' 'unsafe-inline'; img-src 'self' https://img.shields.io; connect-src 'self' https://cdn.mouseflow.com https://*.mouseflow.com https://vitals.vercel-insights.com https://www.google-analytics.com; frame-src 'self' https://stackblitz.com;"
                     }
                 ]
             },
@@ -57,6 +58,19 @@ const nextConfig = {
                     {
                         key: 'Referrer-Policy',
                         value: 'strict-origin-when-cross-origin'
+                    }
+                ]
+            },
+            {
+                source: '/playground',
+                headers: [
+                    {
+                        key: 'Cross-Origin-Opener-Policy',
+                        value: 'same-origin'
+                    },
+                    {
+                        key: 'Cross-Origin-Embedder-Policy',
+                        value: 'credentialless'
                     }
                 ]
             }
@@ -82,11 +96,6 @@ const nextConfig = {
             {
                 source: '/docs/api/types',
                 destination: '/docs/api/validation',
-                permanent: true
-            },
-            {
-                source: '/blog/:path*',
-                destination: 'https://www.codewithsara.dev',
                 permanent: true
             }
         ];

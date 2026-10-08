@@ -12,6 +12,7 @@ import {
     flexItemStylesheet
 } from 'corelabui/Flex';
 import THEMES, { scrollBarStyle } from '@/core/theme';
+import { SITE_URL } from '@/constants/metaData';
 
 export default class MyDocument extends Document {
     render() {
@@ -75,25 +76,25 @@ export default class MyDocument extends Document {
               "@type": "ListItem",
               "position": 1,
               "name": "FormFusion",
-              "item": "https://www.formfusion.dev/docs"
+              "item": "${SITE_URL}/docs"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Getting started",
-              "item": "https://www.formfusion.dev/docs"
+              "item": "${SITE_URL}/docs"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "API",
-              "item": "https://www.formfusion.dev/docs/api/form"
+              "item": "${SITE_URL}/docs/api/form"
             },
             {
               "@type": "ListItem",
               "position": 4,
               "name": "Integrations",
-              "item": "https://www.formfusion.dev/docs/integrations/mui"
+              "item": "${SITE_URL}/docs/integrations/mui"
             }
           ]
         }`

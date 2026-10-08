@@ -8,7 +8,7 @@ import Link from '@/components/Link';
 import FooterNavigation from '@/components/FooterNavigation';
 import Section from '@/components/Section';
 
-import META_DATA from '@/constants/metaData';
+import META_DATA, { SITE_URL } from '@/constants/metaData';
 import ROUTES from '@/constants/routes';
 
 import { MASKING_USAGE } from '@/constants/examples';
@@ -29,8 +29,8 @@ const Mask = ({ theme, setTheme }: IMaskProps) => {
             {...{
                 ...META_DATA,
                 title: `Easy input masking in React forms for consistent data entry`,
-                canonical: `https://www.formfusion.dev/${ROUTES.masking}`,
-                url: `https://www.formfusion.dev/${ROUTES.masking}`,
+                canonical: `${SITE_URL}/${ROUTES.masking}`,
+                url: `${SITE_URL}/${ROUTES.masking}`,
                 description:
                     'Easily define formats for form fields like phones, dates, and credit card numbers with a simple syntax. Enhance the user experience with just one line of code.'
             }}

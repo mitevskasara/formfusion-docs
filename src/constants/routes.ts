@@ -1,5 +1,4 @@
 const ROUTES = {
-    blog: 'blog',
     home: 'docs',
     form: 'docs/api/form',
     input: 'docs/api/input',

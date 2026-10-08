@@ -13,7 +13,7 @@ import ClientComponent from '@/components/ClientComponent';
 
 import { patternsToList } from '@/utils/dataTransform';
 import FEATURES from '@/constants/features';
-import META_DATA from '@/constants/metaData';
+import META_DATA, { SITE_URL } from '@/constants/metaData';
 import ROUTES from '@/constants/routes';
 import { COMPONENTS } from '@/constants/examples';
 import FormExample from '@/components/FormExample';
@@ -33,7 +33,7 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
         <MainLayout
             {...{
                 ...META_DATA,
-                url: 'https://www.formfusion.dev/docs',
+                url: `${SITE_URL}/docs`,
                 description:
                     'Discover FormFusion for effortless form management, validation, and beyond. Speed up your development with intuitive solutions. Try it now!'
             }}
@@ -89,7 +89,7 @@ const FormFusion = ({ theme, setTheme }: IFormFusionProps) => {
                     <GridList items={patternsToList(rules)} />
                 </ClientComponent>
                 <Link
-                    href={ROUTES.validation}
+                    href={`/${ROUTES.validation}`}
                     color="var(--text)"
                     style={{
                         float: 'right',

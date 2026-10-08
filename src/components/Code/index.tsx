@@ -16,14 +16,21 @@ const Code = ({
     className?: string;
 }) => {
     const codeRef = useRef(null);
-    let timer: any = null;
+    const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
     const [title, setTitle] = useState('Copy');
 
     const onClick = () => {
         copy(children);
         setTitle('Copied!');
-        timer = setTimeout(() => setTitle('Copy'), 3000);
+        if (timer.current) clearTimeout(timer.current);
+        timer.current = setTimeout(() => setTitle('Copy'), 3000);
     };
+
+    useEffect(() => {
+        return () => {
+            if (timer.current) clearTimeout(timer.current);
+        };
+    }, []);
 
     useEffect(() => {
         Prism.highlightAll();

@@ -1,6 +1,4 @@
-import Button from 'corelabui/Button';
 import classes from './pagination.module.scss';
-import { useState } from 'react';
 
 interface PaginationProps {
     pages: number[];
@@ -14,20 +12,13 @@ const paginateArray = (
     activePage: number,
     boundary: number
 ) => {
-    let startIndex = Math.max(0, activePage - Math.floor(boundary / 2));
-    const allowNext = pages.length - Math.floor(boundary / 2);
+    if (pages.length <= boundary) return pages;
 
-    if (startIndex === pages.length - boundary) {
-        startIndex = pages.length - boundary;
-    }
+    const half = Math.floor(boundary / 2);
+    const maxStart = pages.length - boundary;
+    const startIndex = Math.min(Math.max(activePage - 1 - half, 0), maxStart);
 
-    const endIndex = Math.min(pages.length, startIndex + boundary);
-    const visibleItems =
-        activePage < allowNext
-            ? pages.slice(startIndex, endIndex)
-            : pages.slice(allowNext - 3, allowNext + 2);
-
-    return visibleItems;
+    return pages.slice(startIndex, startIndex + boundary);
 };
 
 const Pagination = ({
@@ -36,7 +27,7 @@ const Pagination = ({
     boundary = 6,
     onChange
 }: PaginationProps) => {
-    const allowNext = activePage < pages.length - 1 - Math.floor(boundary / 2);
+    const allowNext = activePage < pages.length;
     const allowPrevious = activePage > 1;
 
     const handlePrevious = () => {
@@ -50,15 +41,22 @@ const Pagination = ({
     return (
         <div className={classes.pagination}>
             <span
+                role="button"
+                tabIndex={allowPrevious ? 0 : -1}
+                aria-label="Previous page"
                 className={`icon-chevron-left ${classes.pagination__control} ${
                     !allowPrevious ? classes.pagination__control_disabled : ''
                 }`}
                 onClick={handlePrevious}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') handlePrevious();
+                }}
             />
             {paginateArray(pages, activePage, boundary).map((i) => (
                 <button
                     key={i}
                     onClick={() => onChange(i)}
+                    aria-current={activePage === i ? 'page' : undefined}
                     className={`${classes.pagination__page} ${
                         activePage === i ? classes.pagination__page_active : ''
                     }`}>
@@ -66,10 +64,16 @@ const Pagination = ({
                 </button>
             ))}
             <span
+                role="button"
+                tabIndex={allowNext ? 0 : -1}
+                aria-label="Next page"
                 className={`icon-chevron-right ${classes.pagination__control} ${
                     !allowNext ? classes.pagination__control_disabled : ''
                 }`}
                 onClick={handleNext}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') handleNext();
+                }}
             />
         </div>
     );

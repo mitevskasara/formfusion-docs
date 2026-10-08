@@ -1,7 +1,9 @@
 import ROUTES from './routes';
 
+export const SITE_URL = 'https://formfusion.vercel.app';
+
 const META_DATA = {
-    url: `https://www.formfusion.dev/${ROUTES.home}`,
+    url: `${SITE_URL}/${ROUTES.home}`,
     title: 'Lightweight library for easy building forms in React the right way',
     image: '/assets/meta-image.png',
     description:

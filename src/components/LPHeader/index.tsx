@@ -22,11 +22,6 @@ const LPHeader = () => {
                             Docs
                         </Link>
                         <Link
-                            href="https://www.codewithsara.dev"
-                            className={classes.header__inner__right__nav__link}>
-                            Blog
-                        </Link>
-                        <Link
                             href="/playground"
                             className={classes.header__inner__right__nav__link}>
                             Playground

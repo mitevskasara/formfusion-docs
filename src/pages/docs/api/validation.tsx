@@ -24,7 +24,7 @@ import Code from '@/components/Code';
 
 import info from '@/constants/patterns';
 
-import META_DATA from '@/constants/metaData';
+import META_DATA, { SITE_URL } from '@/constants/metaData';
 import { TYPES_TABLE_HEADERS, patternsToTableData } from '@/constants/tables';
 import ROUTES from '@/constants/routes';
 import { RULES } from '@/constants/examples';
@@ -59,12 +59,13 @@ const paginate = (arr: any[], chunk: number) => {
 };
 
 const removeNonStringProps = (obj: any) => {
-    for (const key in obj) {
-        if (typeof obj[key] !== 'string') {
-            delete obj[key];
+    const clone: any = { ...obj };
+    for (const key in clone) {
+        if (typeof clone[key] !== 'string') {
+            delete clone[key];
         }
     }
-    return obj;
+    return clone;
 };
 
 const Types = ({ theme, setTheme }: ITypesProps) => {
@@ -99,8 +100,8 @@ const Types = ({ theme, setTheme }: ITypesProps) => {
             {...{
                 ...META_DATA,
                 title: 'Rich collection of validation patterns for form validation in React',
-                url: `https://www.formfusion.dev/${ROUTES.validation}`,
-                canonical: `https://www.formfusion.dev/${ROUTES.validation}`,
+                url: `${SITE_URL}/${ROUTES.validation}`,
+                canonical: `${SITE_URL}/${ROUTES.validation}`,
                 description:
                     "FormFusion extends the native input types with 500+ validation patterns that can be easily applied to form fields in React by using the 'type' property."
             }}

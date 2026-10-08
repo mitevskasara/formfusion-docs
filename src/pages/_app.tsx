@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Albert_Sans } from 'next/font/google';
 import ThemeProvider from 'corelabui/ThemeProvider';
 
@@ -15,20 +15,23 @@ const font = Albert_Sans({
     subsets: ['latin']
 });
 
-const defaultTheme = Storage.get('CUI_theme') || 'standard';
-
 export default function MyApp({ Component, pageProps }: any) {
-    const [custom, setTheme] = useState<string>(defaultTheme);
+    const [custom, setTheme] = useState<string>('standard');
+
+    useEffect(() => {
+        const storedTheme = Storage.get('CUI_theme');
+        if (storedTheme && THEMES[storedTheme]) {
+            setTheme(storedTheme);
+        }
+    }, []);
 
     const applyTheme = (theme: string) => {
-        // if (!Storage.get('CUI_theme') || Storage.get('CUI_theme') !== theme) {
-        //     Storage.set('CUI_theme', theme);
-        // }
+        Storage.set('CUI_theme', theme);
         setTheme(theme);
     };
 
     return (
-        <ThemeProvider theme={THEMES[custom]}>
+        <ThemeProvider theme={THEMES[custom] ?? THEMES.standard}>
             <main className={font.className}>
                 <Component
                     {...pageProps}

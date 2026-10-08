@@ -10,7 +10,7 @@ import Section from '@/components/Section';
 import PropsTable from '@/components/PropsTable';
 import HTMLText from '@/components/HTMLText';
 
-import META_DATA from '@/constants/metaData';
+import META_DATA, { SITE_URL } from '@/constants/metaData';
 import { capitalize } from '@/utils/general';
 
 import { Component } from './interfaces';
@@ -33,8 +33,8 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 ...META_DATA,
                 title: data?.metaTitle,
                 description: data?.metaDesc,
-                url: `https://www.formfusion.dev/${ROUTES.home}/api/${data?.key}`,
-                canonical: `https://www.formfusion.dev/${ROUTES.home}/api/${data?.key}`
+                url: `${SITE_URL}/${ROUTES.home}/api/${data?.key}`,
+                canonical: `${SITE_URL}/${ROUTES.home}/api/${data?.key}`
             }}
             theme={theme}
             setTheme={setTheme}>

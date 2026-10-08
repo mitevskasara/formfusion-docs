@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
 import { Form } from 'formfusion';
@@ -6,32 +6,27 @@ import Input from 'corelabui/Input';
 import Typography from 'corelabui/Typography';
 import Button from 'corelabui/Button';
 
-import MAILERLITE_API_KEY from '@/constants/api-key';
-
 import classes from './footer.module.scss';
 
 const Footer = () => {
-    let successTimer: any = null;
+    const successTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
     const year = new Date().getFullYear();
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
+    useEffect(() => {
+        return () => {
+            if (successTimer.current) clearTimeout(successTimer.current);
+        };
+    }, []);
+
     const handleSubscribe = async (data: any) => {
         try {
-            await axios.post(
-                'https://connect.mailerlite.com/api/subscribers',
-                {
-                    email: data.email
-                },
-                {
-                    headers: {
-                        'Content-Type': 'application/json',
-                        Authorization: `Bearer ${MAILERLITE_API_KEY}`
-                    }
-                }
-            );
-            setSuccess('Thank you for subscripting!');
-            successTimer = setTimeout(() => setSuccess(''), 5000);
+            await axios.post('/api/subscribe', { email: data.email });
+            setError('');
+            setSuccess('Thank you for subscribing!');
+            if (successTimer.current) clearTimeout(successTimer.current);
+            successTimer.current = setTimeout(() => setSuccess(''), 5000);
         } catch (error) {
             setError('Subscription failed. Please try again.');
         }

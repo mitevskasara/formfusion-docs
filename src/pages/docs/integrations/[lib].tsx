@@ -8,7 +8,7 @@ import Link from '@/components/Link';
 import FooterNavigation from '@/components/FooterNavigation';
 import Section from '@/components/Section';
 
-import META_DATA from '@/constants/metaData';
+import META_DATA, { SITE_URL } from '@/constants/metaData';
 
 import { Component } from './interfaces';
 import Code from '@/components/Code';
@@ -29,7 +29,7 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
             {...{
                 ...META_DATA,
                 title: data?.subtitle,
-                url: `https://www.formfusion.dev/${ROUTES.integrations}/${data?.key}`,
+                url: `${SITE_URL}/${ROUTES.integrations}/${data?.key}`,
                 description: data?.description ?? META_DATA.description
             }}
             theme={theme}

@@ -5,6 +5,7 @@ import HamburgerMenu from '@/components/HamburgerMenu';
 
 import classes from './header.module.scss';
 import Link from '../Link';
+import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 
 interface CustomHeaderProps {
@@ -31,9 +32,7 @@ const CustomHeader = ({
         <header className={classes.header}>
             <div className={classes.header__inner}>
                 <div className={classes.header__inner__left}>
-                    <a
-                        href="https://www.formfusion.dev"
-                        title="Go to Landing page">
+                    <NextLink href="/" title="Go to Landing page">
                         <span
                             className={`${classes.header__inner__left__logo_mobile} icon-formfusion-circle`}
                         />
@@ -46,11 +45,12 @@ const CustomHeader = ({
                                     alt="NPM Version"
                                     src="https://img.shields.io/npm/v/formfusion?style=social"
                                     width={100}
-                                    height={22.99}
+                                    height={20}
+                                    unoptimized
                                 />
                             </span>
                         </span>
-                    </a>
+                    </NextLink>
                 </div>
                 <div className={classes.header__inner__right}>
                     <Link
@@ -64,18 +64,6 @@ const CustomHeader = ({
                         }`}
                         title="Documentation">
                         Learn
-                    </Link>
-                    <Link
-                        href="https://www.codewithsara.dev"
-                        className={`${
-                            classes.header__inner__right__link_text
-                        } ${
-                            isActive('/blog')
-                                ? classes.header__inner__right__link_text_active
-                                : ''
-                        }`}
-                        title="Blog">
-                        Blog
                     </Link>
                     <Link
                         href="/playground"

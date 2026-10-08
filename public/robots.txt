@@ -3,7 +3,6 @@ Allow: /
 
 Disallow: /App
 Disallow: /react-form-manager
-Disallow: /blog/2023/05/reducer
 Disallow: /reducer
 Disallow: /MyForm.jsx
 Disallow: /docs/api/[component]
@@ -11,4 +10,4 @@ Disallow: /[year]/[month]/[path]
 Disallow: /docs?src=devto
 
 
-Sitemap: https://www.formfusion.dev/sitemap.xml
+Sitemap: https://formfusion.vercel.app/sitemap.xml

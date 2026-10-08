@@ -10,13 +10,12 @@ import Code from '@/components/Code';
 import { LP_EXAMPLE } from '@/constants/examples';
 
 import classes from './main.module.scss';
-import META_DATA from '@/constants/metaData';
+import META_DATA, { SITE_URL } from '@/constants/metaData';
 import LPHeader from '@/components/LPHeader';
 import LPFooter from '@/components/LPFooter';
 import LPFormExample from '@/components/LPFormExample';
 import ROUTES from '@/constants/routes';
 import Link from 'next/link';
-import posts from '@/constants/posts';
 
 const MainPage = () => {
     const [view, setView] = useState('demo');
@@ -39,7 +38,7 @@ const MainPage = () => {
                 <meta name="description" content={META_DATA.description} />
                 <meta property="image" content={META_DATA.image} />
 
-                <meta property="og:url" content="https://www.formfusion.dev" />
+                <meta property="og:url" content={SITE_URL} />
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:title"
@@ -51,7 +50,7 @@ const MainPage = () => {
                 />
                 <meta property="og:image" content={META_DATA.image} />
                 <meta name="keywords" content={META_DATA.keywords}></meta>
-                <link rel="canonical" href="https://www.formfusion.dev" />
+                <link rel="canonical" href={SITE_URL} />
             </Head>
             <LPHeader />
             <section className={classes.hero}>
@@ -62,9 +61,13 @@ const MainPage = () => {
                             href="https://www.npmjs.com/package/formfusion"
                             target="_blank"
                             className={`${classes.hero__inner__left__version}`}>
-                            <img
+                            <Image
                                 alt="NPM Version"
                                 src="https://img.shields.io/npm/v/formfusion?style=social"
+                                width={100}
+                                height={20}
+                                priority
+                                unoptimized
                             />
                         </Link>
                         <Typography
@@ -125,7 +128,14 @@ const MainPage = () => {
                                     ? classes.hero__inner__right__editor_front
                                     : ''
                             }`}
-                            onClick={() => setView('code')}>
+                            role="button"
+                            tabIndex={view === 'code' ? -1 : 0}
+                            aria-label="Show code example"
+                            onClick={() => setView('code')}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ')
+                                    setView('code');
+                            }}>
                             <div
                                 className={
                                     classes.hero__inner__right__editor__toolbar
@@ -164,7 +174,14 @@ const MainPage = () => {
                                             : ''
                                     }
                                 `}
-                            onClick={() => setView('demo')}>
+                            role="button"
+                            tabIndex={view === 'demo' ? -1 : 0}
+                            aria-label="Show live demo"
+                            onClick={() => setView('demo')}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ')
+                                    setView('demo');
+                            }}>
                             <LPFormExample />
                         </div>
                     </div>
@@ -279,7 +296,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--title">
+                                    color="var(--title)">
                                     Custom React hooks for greater form control
                                 </Typography>
                                 <br />
@@ -310,7 +327,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--title">
+                                    color="var(--title)">
                                     Error handling
                                 </Typography>
                                 <br />
@@ -318,7 +335,7 @@ const MainPage = () => {
                                     variant="body1"
                                     htmlElement="p"
                                     margin={false}
-                                    color="var(--title">
+                                    color="var(--title)">
                                     FormFusion takes care of error handling by
                                     providing automated error messages depending
                                     on the field type while also offering full
@@ -340,7 +357,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--title">
+                                    color="var(--title)">
                                     500+ Validation rules
                                 </Typography>
                                 <br />
@@ -371,7 +388,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--title">
+                                    color="var(--title)">
                                     Input masking
                                 </Typography>
                                 <br />
@@ -403,7 +420,7 @@ const MainPage = () => {
                                     variant="heading5"
                                     htmlElement="h2"
                                     margin={false}
-                                    color="var(--title">
+                                    color="var(--title)">
                                     Integration with UI libraries
                                 </Typography>
                                 <br />
@@ -432,73 +449,6 @@ const MainPage = () => {
                             </Link>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section className={`${classes.section} ${classes.blog}`}>
-                <div className={`${classes.section__inner}`}>
-                    <Typography
-                        variant="heading4"
-                        htmlElement="h2"
-                        align="center">
-                        View our blog
-                    </Typography>
-                    <br />
-                    <br />
-                    <div className={classes.blog__outter}>
-                        {posts.map((post, idx) => (
-                            <>
-                                <Link
-                                    key={idx}
-                                    href={post.url}
-                                    target="_blank"
-                                    className={classes.blog__post}>
-                                    <div className={classes.blog__post__image}>
-                                        <Image
-                                            src={post.image}
-                                            alt={post.image}
-                                            fill
-                                            sizes="100%"
-                                        />
-                                    </div>
-                                    <Typography
-                                        variant="heading6"
-                                        htmlElement="h3"
-                                        className={classes.blog__post__title}
-                                        lines={2}
-                                        overflow="ellipsis">
-                                        {post.title}
-                                    </Typography>
-                                    <Typography
-                                        variant="body1"
-                                        htmlElement="p"
-                                        className={classes.blog__post__title}
-                                        lines={2}
-                                        overflow="ellipsis">
-                                        {post.description}
-                                    </Typography>
-                                    <br />
-                                    <Typography
-                                        variant="caption"
-                                        htmlElement="span"
-                                        color="var(--text-secondary)"
-                                        className={classes.blog__post__tag}>
-                                        {post.tag}
-                                    </Typography>
-                                </Link>
-                                {idx <= 1 && (
-                                    <div
-                                        className={classes.blog__post__divider}
-                                    />
-                                )}
-                            </>
-                        ))}
-                    </div>
-                    <Link
-                        href={`/${ROUTES.blog}`}
-                        target="_blank"
-                        className={classes.blog__outter__action}>
-                        Read more blog posts
-                    </Link>
                 </div>
             </section>
             <section className={`${classes.section} ${classes.cta}`}>
