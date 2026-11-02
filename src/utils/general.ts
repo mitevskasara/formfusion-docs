@@ -16,6 +16,19 @@ export const copy = (str: any) => {
     }
 };
 
+export const download = (contents: string, fileName: string) => {
+    if (typeof window === 'undefined') return;
+    const blob = new Blob([contents], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const el = document.createElement('a');
+    el.href = url;
+    el.download = fileName;
+    document.body.appendChild(el);
+    el.click();
+    document.body.removeChild(el);
+    URL.revokeObjectURL(url);
+};
+
 export const encode = (url: string) => url.replaceAll('.html', '');
 
 export const decode = (url: string) => url + '.html';

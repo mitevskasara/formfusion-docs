@@ -1,0 +1,44 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.container {
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-top: 1.5em;
+
+    &__tabs {
+        display: flex;
+        border-bottom: 1px solid var(--border);
+
+        &__tab {
+            background-color: var(--background);
+            padding: 1em 2em;
+            color: var(--text);
+            text-transform: uppercase;
+            font-size: small;
+            font-weight: bold;
+            cursor: pointer;
+
+            &_active {
+                @extend .container__tabs__tab;
+                background-color: var(--background-color);
+                border-bottom: 2px solid var(--primary);
+            }
+        }
+    }
+
+    &__tab__content {
+        display: none;
+        background-color: var(--background-color);
+
+        &_active {
+            @extend .container__tab__content;
+            display: flex;
+        }
+
+        & > div {
+            width: 100%;
+        }
+    }
+}

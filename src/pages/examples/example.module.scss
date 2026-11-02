@@ -1,0 +1,39 @@
+@import '@/core/styles/variables';
+@import '@/core/styles/media-queries';
+
+.container {
+    max-width: $lp-container-width-smedium;
+    margin: 0 auto;
+    padding: calc($header-height + 2.5em) $side-padding 5em;
+
+    @include media(medium) {
+        padding: calc($header-height + 2em) $side-padding-sm 4em;
+    }
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 1.5em;
+    color: var(--text-secondary);
+}
+
+.header {
+    margin-bottom: 1em;
+}
+
+.download {
+    margin-top: 0.5em;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    color: var(--text);
+    padding: 0.6em 1.2em;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        border-color: var(--primary-hover);
+        color: var(--primary-hover);
+    }
+}
