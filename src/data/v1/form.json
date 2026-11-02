@@ -1,0 +1,50 @@
+{
+    "key": "form",
+    "title": "Form",
+    "subtitle": "Form Component: Features and Properties for Effective Form Management in React",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attributes",
+    "description": "The <b>Form component</b> acts as a compact wrapper for an HTML form element, effectively handling context management and propagation to its child components. It accepts all standard HTML form properties and additionally offers the following properties:",
+    "props": [
+        {
+            "name": "children",
+            "type": "Node",
+            "default": "",
+            "description": "Children of the Form element such as Input, Textarea, Labels, Buttons etc.",
+            "required": true
+        },
+        {
+            "name": "onSubmit",
+            "type": "function",
+            "default": "",
+            "description": "This property specifies the function that executes when the form is submitted. It returns a values object containing all field values.",
+            "required": true
+        },
+        {
+            "name": "initialValues",
+            "type": "{ [field: string]: string }",
+            "default": "",
+            "description": "The initialValues property allows you to specify the default values for the form fields.",
+            "required": false
+        },
+        {
+            "name": "validateOnChange",
+            "type": "boolean",
+            "default": "false",
+            "description": "Determine whether the form should initiate validation and display errors in real-time while typing.",
+            "required": false
+        },
+        {
+            "name": "validateOnBlur",
+            "type": "boolean",
+            "default": "true",
+            "description": "Determine whether the form should initiate validation and display errors when a field loses focus.",
+            "required": false
+        }
+    ],
+    "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-ahj7lp?file=src%2FApp.tsx",
+    "exampleTitle": "FormFusion Basic Form example",
+    "nextUrl": "/docs/api/input",
+    "nextUrlTitle": "Input",
+    "metaTitle": "Advanced React Form with validation, error handling and more",
+    "metaDesc": "Form component: Optimised extension of the standard HTML form element with additional features for easier form management."
+}

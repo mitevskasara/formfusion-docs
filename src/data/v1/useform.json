@@ -1,0 +1,35 @@
+{
+    "key": "useform",
+    "title": "UseForm",
+    "subtitle": "UseForm Hook: Advanced Form Management with Custom Validation and Configuration in React",
+    "props": [
+        {
+            "name": "onSubmit",
+            "type": "function",
+            "default": "",
+            "description": "This parameter defines the function that is executed when the form is submitted. It plays a crutial role in form handling by returning the values object, which encapsulates all the field values.",
+            "required": true
+        },
+        {
+            "name": "initialValues",
+            "type": "{ [field: string]: string }",
+            "default": "",
+            "description": "The initialValues parameter allows you to specify the default values for the form fields.",
+            "required": true
+        },
+        {
+            "name": "validateOnChange",
+            "type": "boolean",
+            "default": "false",
+            "description": "Determine whether the form should initiate validation and display errors in real-time while typing.",
+            "required": false
+        },
+        {
+            "name": "validateOnBlur",
+            "type": "boolean",
+            "default": "true",
+            "description": "Determine whether the form should initiate validation and display errors when a field loses focus.",
+            "required": false
+        }
+    ]
+}

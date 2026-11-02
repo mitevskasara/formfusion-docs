@@ -1,4 +1,4 @@
-export const CONNECT_USAGE = `import { Form, useForm, connect } from 'formfusion';
+export const USECONNECT_USAGE = `import { Form, useForm, useConnect } from 'formfusion';
 import './App.css';
 
 const MyForm = () => {
@@ -12,9 +12,10 @@ const MyForm = () => {
   return (
     <Form config={config} className="form">
       <input
-        {...connect(config, 'alphabetic')}
-        id="alphabetic"
-        name="firstName"
+        {...useConnect(config, 'alphabetic', undefined, {
+          name: 'firstName',
+          id: 'firstName',
+        })}
         className="form__field"
       />
       {config.errors.firstName}
@@ -166,7 +167,7 @@ export default MyForm;
 const MUI_USAGE = `import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import { Form, useForm, connect } from 'formfusion';
+import { Form, useForm, useConnect } from 'formfusion';
 
 const MyForm = () => {
   const config = useForm({
@@ -181,7 +182,9 @@ const MyForm = () => {
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <TextField
-            inputProps={{ ...connect(config, 'alphabetic') }}
+            inputProps={{
+              ...useConnect(config, 'alphabetic', undefined, { name: 'firstName' }),
+            }}
             id="firstName"
             name="firstName"
             label="First name"
@@ -204,7 +207,7 @@ export default MyForm;
 `;
 
 const ANTDESIGN_USAGE = `import { Input, Space, Button, Typography } from 'antd';
-import { Form, useForm, connect } from 'formfusion';
+import { Form, useForm, useConnect } from 'formfusion';
 
 const { Text } = Typography;
 
@@ -220,9 +223,10 @@ const MyForm = () => {
     <Form config={config}>
       <Space direction="vertical" style={{ width: '100%' }}>
         <Input
-          {...connect(config, 'alphabetic')}
-          id="firstName"
-          name="firstName"
+          {...useConnect(config, 'alphabetic', undefined, {
+            name: 'firstName',
+            id: 'firstName',
+          })}
           label="First name"
           status={config.errors.firstName ? 'error' : ''}
           placeholder="Enter your first name"
@@ -243,7 +247,7 @@ export default MyForm;
 
 const CHAKRAUI_USAGE = `import React from "react";
 import { Button, Input, Stack, Text } from "@chakra-ui/react";
-import { Form, useForm, connect } from "formfusion";
+import { Form, useForm, useConnect } from "formfusion";
 
 const MyForm = () => {
   const onSubmit = (e) => {
@@ -259,9 +263,10 @@ const MyForm = () => {
     <Form config={config}>
       <Stack spacing={0}>
         <Input
-          {...connect(config, "alphabetic")}
-          id="firstName"
-          name="firstName"
+          {...useConnect(config, "alphabetic", undefined, {
+            name: "firstName",
+            id: "firstName"
+          })}
           isInvalid={Boolean(config.errors.firstName)}
           errorBorderColor="crimson"
           placeholder="Enter your first name"
@@ -281,7 +286,7 @@ export default MyForm;
 `;
 
 const REACTSTRAP_USAGE = `import { Input, Button, FormText } from 'reactstrap';
-import { Form, useForm, connect } from 'formfusion';
+import { Form, useForm, useConnect } from 'formfusion';
 
 const MyForm = () => {
   const config = useForm({
@@ -294,10 +299,11 @@ const MyForm = () => {
   return (
     <Form config={config} className="m-3">
       <Input
-        {...connect(config, 'alphabetic')}
+        {...useConnect(config, 'alphabetic', undefined, {
+          name: 'firstName',
+          id: 'firstName',
+        })}
         invalid={Boolean(config.errors.firstName)}
-        id="firstName"
-        name="firstName"
       />
       <FormText>{config.errors.firstName}</FormText>
       <br />

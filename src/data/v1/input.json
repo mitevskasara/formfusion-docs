@@ -1,0 +1,64 @@
+{
+    "key": "input",
+    "title": "Input",
+    "subtitle": "Input Component: Advanced Input Field with Validation and Masking Features in React",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attributes",
+    "description": "The Input component builds upon the native HTML input element and enhances it with an expanded range of field types, each associated with a specific validation pattern. You can specify the field type by utilizing the 'type' property. The Input component has access to the Form handler functions and utilities and should be used as a child in the Form component.",
+    "props": [
+        {
+            "name": "type",
+            "type": "string",
+            "default": "text",
+            "description": "The 'type' property determines the validation pattern associated with the input element. See all available types <a href='/docs/api/types'>here</a>.",
+            "required": false
+        },
+        {
+            "name": "mask",
+            "type": "string",
+            "default": "",
+            "description": "The 'mask' property determines the masking pattern associated with the input element. Read more <a href='/docs/api/masking'>here</a>.",
+            "required": false
+        },
+        {
+            "name": "validation",
+            "type": "object",
+            "default": "native validityState",
+            "description": "Overrides the native <a href='https://developer.mozilla.org/en-US/docs/Web/API/ValidityState' target='_blank'>validityState</a> error messages.",
+            "required": false
+        },
+        {
+            "name": "label",
+            "type": "string",
+            "default": "",
+            "description": "Label of the input field. Strongly recommended for accessibility, ensuring a more inclusive and user-friendly experience.",
+            "required": false
+        },
+        {
+            "name": "helperText",
+            "type": "string",
+            "default": "",
+            "description": "A small helper text shown bellow of the input field. Recommended for additional information about the field helpful for the user.",
+            "required": false
+        },
+        {
+            "name": "classes",
+            "type": "{ root: string; field: string; label: string; error: string; }",
+            "default": "",
+            "description": "Classes applied to the root, input, label and error elements.",
+            "required": false
+        },
+        {
+            "name": "hideArrows",
+            "type": "boolean",
+            "default": "",
+            "description": "show/hide the default arrows in an input type 'number'",
+            "required": false
+        }
+    ],
+    "exampleUrl": "https://stackblitz.com/edit/vitejs-vite-agfycc?file=src%2FApp.tsx",
+    "exampleTitle": "FormFusion Basic Input usage",
+    "nextUrl": "/docs/api/textarea",
+    "nextUrlTitle": "Textarea",
+    "metaTitle": "Advanced Input with built-in validation, accessibility and masking",
+    "metaDesc": "Input component: Optimised and fully customisable extension of the standard HTML input element with built-in validation rules and input masking."
+}

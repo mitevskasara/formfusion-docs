@@ -1,0 +1,21 @@
+{
+    "key": "connect",
+    "title": "connect",
+    "subtitle": "Connect Method: Integrate Custom Field Components and UI Libraries with FormFusion",
+    "props": [
+        {
+            "name": "config",
+            "type": "object",
+            "default": "",
+            "description": "The config parameter pertains to the form configuration, which is the object returned when you invoke the 'useForm()' function.",
+            "required": true
+        },
+        {
+            "name": "type",
+            "type": "string",
+            "default": "",
+            "description": "The FormFusion <a href='/docs/api/types'>input type</a> or <a href='/docs/api/types'>validation pattern</a> you intend to apply to the field.",
+            "required": false
+        }
+    ]
+}

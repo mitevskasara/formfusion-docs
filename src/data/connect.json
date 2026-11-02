@@ -1,21 +1,35 @@
 {
     "key": "connect",
-    "title": "connect",
-    "subtitle": "Connect Method: Integrate Custom Field Components and UI Libraries with FormFusion",
+    "title": "useConnect",
+    "subtitle": "useConnect Hook: Integrate Custom Field Components and UI Libraries with FormFusion",
     "props": [
         {
             "name": "config",
             "type": "object",
             "default": "",
-            "description": "The config parameter pertains to the form configuration, which is the object returned when you invoke the 'useForm()' function.",
+            "description": "The form configuration object returned when you invoke the 'useForm()' function.",
             "required": true
         },
         {
             "name": "type",
             "type": "string",
             "default": "",
-            "description": "The FormFusion <a href='/docs/api/types'>input type</a> or <a href='/docs/api/types'>validation pattern</a> you intend to apply to the field.",
+            "description": "The FormFusion <a href='/docs/api/validation'>input type</a> or <a href='/docs/api/validation'>validation pattern</a> you intend to apply to the field.",
             "required": false
+        },
+        {
+            "name": "validation",
+            "type": "object",
+            "default": "undefined",
+            "description": "Custom validity messages, keyed by the same validity-state names used by <a href='/docs/api/input'>Input</a>'s 'validation' prop (e.g. 'valueMissing', 'patternMismatch'). Pass 'undefined' to fall back to the type's default messages.",
+            "required": false
+        },
+        {
+            "name": "props",
+            "type": "object",
+            "default": "",
+            "description": "The props you'd otherwise pass straight to the underlying field, most importantly 'name' (now required - useConnect throws without it), plus optional 'id', 'pattern' and 'mask'. These are merged into the object useConnect returns.",
+            "required": true
         }
     ]
 }

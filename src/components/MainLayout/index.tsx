@@ -10,6 +10,8 @@ import Head from 'next/head';
 import Header from '@/components/Header';
 import LeftSidebar from '@/components/LeftSidebar';
 import Footer from '@/components/LPFooter';
+import VersionSwitcher from '@/components/VersionSwitcher';
+import Link from '@/components/Link';
 
 import classes from './main.module.scss';
 import Breadcrumbs from '../Breadcrumbs';
@@ -24,6 +26,7 @@ type Props = {
     canonical?: string;
     theme: string;
     sidebar?: boolean;
+    version?: 'v1' | 'v2';
     setTheme: Dispatch<SetStateAction<string>>;
 };
 
@@ -37,6 +40,7 @@ const MainLayout = ({
     canonical,
     theme,
     sidebar = true,
+    version = 'v2',
     setTheme
 }: Props) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -75,7 +79,9 @@ const MainLayout = ({
                 theme={theme}
                 setTheme={setTheme}
             />
-            <Breadcrumbs />
+            <Breadcrumbs
+                right={<VersionSwitcher version={version} />}
+            />
             <div className={classes.container}>
                 {sidebar && (
                     <LeftSidebar
@@ -83,9 +89,23 @@ const MainLayout = ({
                         toggle={setIsOpen}
                         theme={theme}
                         setTheme={setTheme}
+                        version={version}
                     />
                 )}
-                <main className={classes.main}>{children}</main>
+                <main className={classes.main}>
+                    {version === 'v1' && (
+                        <div className={classes.legacyNotice}>
+                            You&apos;re viewing legacy <strong>v1</strong>{' '}
+                            docs for formfusion 1.x.{' '}
+                            <Link href="/docs">Switch to the latest docs</Link>{' '}
+                            for
+                            formfusion 2.0. Interactive examples on this page
+                            run against the latest installed package, so they
+                            may not perfectly reflect 1.x behavior.
+                        </div>
+                    )}
+                    {children}
+                </main>
             </div>
             <Footer />
         </div>

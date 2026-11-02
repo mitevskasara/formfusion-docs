@@ -61,6 +61,18 @@ const UseForm = ({ theme, setTheme }: IUseFormProps) => {
                     components. With UseForm, you can tailor your form
                     management to your specific needs, ensuring a flexible and
                     adaptable solution for your web development projects.
+                    <br />
+                    <br />
+                    In TypeScript, <b>useForm</b> also accepts an optional
+                    generic so <code>values</code> comes back typed instead of
+                    <code>{' '}
+                        {`{ [key: string]: any }`}
+                    </code>
+                    , e.g.{' '}
+                    <code>
+                        {`useForm<{ email: string }>({ ... })`}
+                    </code>
+                    .
                 </Typography>
                 <br />
                 <Typography variant="heading5" htmlElement="h3">

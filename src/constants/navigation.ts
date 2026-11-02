@@ -8,7 +8,7 @@ export interface Nav {
     icon?: string;
 }
 
-export default [
+const NAV: Nav[] = [
     {
         key: 'api',
         title: 'API',
@@ -37,7 +37,7 @@ export default [
             },
             {
                 key: 'connect',
-                title: 'Connect',
+                title: 'useConnect',
                 url: `/${ROUTES.connect}`
             },
             {
@@ -80,4 +80,21 @@ export default [
             }
         ]
     }
-] as Nav[];
+];
+
+// Derived, not hand-maintained: same tree, URLs prefixed into /docs/v1/...,
+// with the one label that genuinely differs for the frozen v1 content.
+const withV1Prefix = (url: string) =>
+    url.replace(/^\/docs\//, '/docs/v1/').replace(/^\/docs$/, '/docs/v1');
+
+export const NAV_V1: Nav[] = NAV.map((item) => ({
+    ...item,
+    url: withV1Prefix(item.url),
+    sublist: item.sublist?.map((sublistItem) => ({
+        ...sublistItem,
+        url: withV1Prefix(sublistItem.url),
+        title: sublistItem.key === 'connect' ? 'Connect' : sublistItem.title
+    }))
+}));
+
+export default NAV;

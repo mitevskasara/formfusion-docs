@@ -9,10 +9,10 @@
     background: var(--background);
     z-index: 3;
 
-    &__list {
+    &__inner {
         display: flex;
-        list-style-type: none;
-        padding: 0;
+        align-items: center;
+        justify-content: space-between;
         margin: auto;
         max-width: $container-width;
         padding: 1em $side-padding;
@@ -20,6 +20,17 @@
         @include media(xlarge) {
             max-width: $container-width-xl;
         }
+    }
+
+    &__right {
+        flex-shrink: 0;
+    }
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
 
         &__item {
             font-size: 15px;

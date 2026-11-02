@@ -1,5 +1,6 @@
 export default {
     docs: 'Documentation',
+    v1: 'v1 (legacy)',
     api: 'API',
     form: 'Form component',
     input: 'Input component',

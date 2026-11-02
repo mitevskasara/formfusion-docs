@@ -10,8 +10,8 @@ import THEMES from '@/core/theme';
 
 import useClickAwayListener from '@/hook/useClickAwayListener';
 
-import NAV from '@/constants/navigation';
-import ROUTES from '@/constants/routes';
+import NAV, { NAV_V1 } from '@/constants/navigation';
+import ROUTES, { ROUTES_V1 } from '@/constants/routes';
 
 import classes from './leftSidebar.module.scss';
 import useIsOnClientSide from '@/hook/useIsOnClientSide';
@@ -21,12 +21,16 @@ interface Props {
     toggle: Dispatch<SetStateAction<boolean>>;
     theme: string;
     setTheme: Dispatch<SetStateAction<string>>;
+    version?: 'v1' | 'v2';
 }
 
-const LeftSidebar = ({ open, toggle, theme }: Props) => {
+const LeftSidebar = ({ open, toggle, theme, version = 'v2' }: Props) => {
     const { asPath } = useRouter();
     const iscsr = useIsOnClientSide();
     const isActive = (url: string) => iscsr && url === asPath;
+
+    const nav = version === 'v1' ? NAV_V1 : NAV;
+    const routes = version === 'v1' ? ROUTES_V1 : ROUTES;
 
     let classses = classes.leftSidebar;
     if (open) classses += ` ${classes.leftSidebar_open}`;
@@ -49,7 +53,7 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                             }>
                             <li
                                 className={
-                                    isActive(`/${ROUTES.home}#installation`)
+                                    isActive(`/${routes.home}#installation`)
                                         ? classes.leftSidebar__navigation__sublist__item_active
                                         : classes.leftSidebar__navigation__sublist__item
                                 }>
@@ -58,7 +62,7 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                                     margin={false}
                                     htmlElement="span">
                                     <Link
-                                        href={`/${ROUTES.home}#installation`}
+                                        href={`/${routes.home}#installation`}
                                         onClick={() => toggle(false)}
                                         color="inherit">
                                         Installation
@@ -67,7 +71,7 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                             </li>
                             <li
                                 className={
-                                    isActive(`/${ROUTES.home}#example`)
+                                    isActive(`/${routes.home}#example`)
                                         ? classes.leftSidebar__navigation__sublist__item_active
                                         : classes.leftSidebar__navigation__sublist__item
                                 }>
@@ -76,7 +80,7 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                                     margin={false}
                                     htmlElement="span">
                                     <Link
-                                        href={`/${ROUTES.home}#example`}
+                                        href={`/${routes.home}#example`}
                                         onClick={() => toggle(false)}
                                         color="inherit">
                                         Example
@@ -86,7 +90,7 @@ const LeftSidebar = ({ open, toggle, theme }: Props) => {
                         </ul>
                     </Accordion>
                 </Typography>
-                {NAV.map((item) =>
+                {nav.map((item) =>
                     item.sublist ? (
                         <Typography
                             variant="body1"

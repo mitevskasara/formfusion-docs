@@ -40,16 +40,17 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                     Integrating <b>FormFusion</b> with <b>{data?.title}</b>
                     &nbsp;is a straightforward process. To accomplish this, you
                     can use the{' '}
-                    <Link href={`/${ROUTES.connect}`}>connect&nbsp;</Link>
-                    method along with the{' '}
+                    <Link href={`/${ROUTES.connect}`}>useConnect&nbsp;</Link>
+                    hook along with the{' '}
                     <Link href={`/${ROUTES.useform}`}>UseForm</Link> hook to
                     initialize your form&apos;s configuration.
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    For a successful implementation of the <b>connect method</b>
-                    , you&apos;ll need access to the form configuration object
-                    and to select the
+                    For a successful implementation of{' '}
+                    <b>useConnect</b>, you&apos;ll need access to the form
+                    configuration object, a field <b>name</b> (its fourth
+                    argument is required), and to select the
                     <Link href={`/${ROUTES.validation}`}>
                         &nbsp;input type
                     </Link>{' '}
@@ -61,9 +62,9 @@ const API = ({ data, theme, setTheme }: IApiProps) => {
                 </Typography>
                 <br />
                 <Typography variant="body1">
-                    Important Note: To leverage the potential of the connect
-                    method, it&apos;s important to call it on the lower-level
-                    input component rendered by {data?.title}. This ensures the
+                    Important Note: To leverage the potential of useConnect,
+                    it&apos;s important to call it on the lower-level input
+                    component rendered by {data?.title}. This ensures the
                     synchronization of FormFusion with the {data?.title}{' '}
                     framework.
                 </Typography>

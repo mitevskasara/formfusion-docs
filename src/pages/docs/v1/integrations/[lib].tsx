@@ -1,0 +1,136 @@
+import React, { Dispatch, SetStateAction, useRef } from 'react';
+import Typography from 'corelabui/Typography';
+import Flex from 'corelabui/Flex';
+import Button from 'corelabui/Button';
+
+import MainLayout from '@/components/MainLayout';
+import Link from '@/components/Link';
+import FooterNavigation from '@/components/FooterNavigation';
+import Section from '@/components/Section';
+
+import META_DATA, { SITE_URL } from '@/constants/metaData';
+
+import { Component } from './interfaces';
+import Code from '@/components/Code';
+import { INTEGRATIONS } from '@/constants/examplesV1';
+import { ROUTES_V1 as ROUTES } from '@/constants/routes';
+
+interface IApiProps {
+    data: Component;
+    theme: string;
+    setTheme: Dispatch<SetStateAction<string>>;
+}
+
+const API = ({ data, theme, setTheme }: IApiProps) => {
+    const exampleRef = useRef<HTMLElement | null>(null);
+
+    return (
+        <MainLayout
+            {...{
+                ...META_DATA,
+                title: data?.subtitle,
+                url: `${SITE_URL}/${ROUTES.integrations}/${data?.key}`,
+                description: data?.description ?? META_DATA.description
+            }}
+            theme={theme}
+            setTheme={setTheme}
+            version="v1">
+            <Section title={`Integration with ${data?.title}`} margin={false}>
+                <h2 className="hidden">{data?.subtitle}</h2>
+                <Typography variant="body1">
+                    Integrating <b>FormFusion</b> with <b>{data?.title}</b>
+                    &nbsp;is a straightforward process. To accomplish this, you
+                    can use the{' '}
+                    <Link href={`/${ROUTES.connect}`}>connect&nbsp;</Link>
+                    method along with the{' '}
+                    <Link href={`/${ROUTES.useform}`}>UseForm</Link> hook to
+                    initialize your form&apos;s configuration.
+                </Typography>
+                <br />
+                <Typography variant="body1">
+                    For a successful implementation of the <b>connect method</b>
+                    , you&apos;ll need access to the form configuration object
+                    and to select the
+                    <Link href={`/${ROUTES.validation}`}>
+                        &nbsp;input type
+                    </Link>{' '}
+                    or
+                    <Link href={`/${ROUTES.validation}`}>
+                        &nbsp;validation pattern&nbsp;
+                    </Link>
+                    that aligns with your requirements.
+                </Typography>
+                <br />
+                <Typography variant="body1">
+                    Important Note: To leverage the potential of the connect
+                    method, it&apos;s important to call it on the lower-level
+                    input component rendered by {data?.title}. This ensures the
+                    synchronization of FormFusion with the {data?.title}{' '}
+                    framework.
+                </Typography>
+            </Section>
+            <Section id="example" ref={exampleRef}>
+                <Flex
+                    justifyContent="space-between"
+                    alignItems="center"
+                    margin="3em 0 2em 0">
+                    <Typography
+                        variant="heading5"
+                        htmlElement="h3"
+                        margin={false}>
+                        Example
+                    </Typography>
+                    <Button>
+                        <Link
+                            href={data?.exampleUrl}
+                            target="_blank"
+                            icon="stackblitz"
+                            internal={false}
+                            color={'var(--light)'}>
+                            Try it out&nbsp;&nbsp;
+                        </Link>
+                    </Button>
+                </Flex>
+                <Code language="javascript">{INTEGRATIONS[data?.key]}</Code>
+                <br />
+            </Section>
+            {data?.nextUrl && (
+                <FooterNavigation
+                    url={data?.nextUrl ?? ''}
+                    title={data?.nextUrlTitle}
+                />
+            )}
+        </MainLayout>
+    );
+};
+
+export async function getStaticPaths() {
+    return {
+        paths: [
+            { params: { lib: 'mui' } },
+            { params: { lib: 'antdesign' } },
+            { params: { lib: 'chakraui' } },
+            { params: { lib: 'reactstrap' } }
+        ],
+        fallback: true
+    };
+}
+
+export async function getStaticProps({ params }: any) {
+    try {
+        const data = await require(`@/data/v1/integrations/${params.lib}.json`);
+        return {
+            props: {
+                data
+            }
+        };
+    } catch (err) {
+        console.log(`Error fetching data for lib page ${params.lib}`, err);
+
+        return {
+            notFound: true
+        };
+    }
+}
+
+export default API;
